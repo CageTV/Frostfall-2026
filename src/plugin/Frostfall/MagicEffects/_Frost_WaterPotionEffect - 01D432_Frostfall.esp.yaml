@@ -1,0 +1,24 @@
+FormKey: 01D432:Frostfall.esp
+EditorID: _Frost_WaterPotionEffect
+Name:
+  TargetLanguage: English
+  Value: Snowberry Extract
+MenuDisplayObject: 0A0E7D:Skyrim.esm
+Keywords:
+- 01D433:Frostfall.esp
+Flags:
+- Recover
+- NoMagnitude
+- NoArea
+- FXPersist
+HitShader: 10BEA9:Skyrim.esm
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Allows you to swim in frigid water for <3> minutes.

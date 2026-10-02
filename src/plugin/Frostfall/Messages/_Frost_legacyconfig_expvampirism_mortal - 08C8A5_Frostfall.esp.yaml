@@ -1,0 +1,32 @@
+FormKey: 08C8A5:Frostfall.esp
+EditorID: _Frost_legacyconfig_expvampirism_mortal
+Description:
+  TargetLanguage: English
+  Value: >-
+    Vampire Behavior
+
+
+    Mortal: Exposure affects you normally, even as a vampire.
+
+    Supernatural: You are immune to frostbite and gain +100 Warmth. Penalties still apply.
+
+    Immortal: You are immune to frostbite and cannot succumb to exposure. Penalties still apply.
+
+
+    Current setting: Mortal
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Mortal
+- Text:
+    TargetLanguage: English
+    Value: Supernatural
+- Text:
+    TargetLanguage: English
+    Value: Immortal
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,28 @@
+FormKey: 08C8D0:Frostfall.esp
+EditorID: _Frost_legacyconfig_enduranceskillrestore
+Description:
+  TargetLanguage: English
+  Value: >-
+    Restore Skill Progress
+
+
+    This option is intended to be used to reclaim Endurance skill progress that was lost due to a clean save or mod uninstallation.
+
+
+    Increase or decrease the number of skill points you wish to restore, and then select Confirm and Exit.
+
+
+    Restore: %.0f Points
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Decrease (-1)
+- Text:
+    TargetLanguage: English
+    Value: Increase (+1)
+- Text:
+    TargetLanguage: English
+    Value: Confirm and Exit

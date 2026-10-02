@@ -1,0 +1,328 @@
+FormKey: 06DCF8:Frostfall.esp
+EditorID: _Frost_SkyUIConfigPanel
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_SkyUIConfigPanelScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeCoverage
+      Object: 067B91:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeExposure
+      Object: 00183D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWarmth
+      Object: 067B8F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWetness
+      Object: 06458C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_MaxCoverage
+      Object: 068111:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_MaxWarmth
+      Object: 068110:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DatastoreInitialized
+      Object: 065B31:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DS_Body_InitProgress
+      Object: 06DCFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DS_Cloak_InitProgress
+      Object: 06DD00:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DS_Feet_InitProgress
+      Object: 06DCFF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DS_Hands_InitProgress
+      Object: 06DCFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DS_Head_InitProgress
+      Object: 06DCFE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Cold
+      Object: 04000E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Exposure
+      Object: 04000B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Wet
+      Object: 04000C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HotkeyWeathersense
+      Object: 053011:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_Adaptation
+      Object: 067B8D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_FrostWarding
+      Object: 067BA6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_GlacialSwimmer
+      Object: 067BA4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_InnerFire
+      Object: 067BA8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_WellInsulated
+      Object: 067B9C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_Windbreaker
+      Object: 067B98:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_1PAnimationAllowed
+      Object: 06AC6F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Animation
+      Object: 049268:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_AutoSaveLoad
+      Object: 06DCF9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ConditionMessages
+      Object: 03EA72:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_CurrentProfile
+      Object: 06DCFA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayAttributesInWeathersense
+      Object: 03EA71:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayAttributeValuesInWeathersense
+      Object: 081656:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayTutorials
+      Object: 04000F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposurePauseCombat
+      Object: 068117:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposurePauseDialogue
+      Object: 03EA6E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposureRate
+      Object: 011BE4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FollowerAnimation
+      Object: 06DD0C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ForceFeedback
+      Object: 048CED:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FrigidWaterIsLethal
+      Object: 00E5B7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FrostShaderOn
+      Object: 068120:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FullScreenEffects
+      Object: 068116:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MaxExposureMode
+      Object: 068115:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterAspectRatio
+      Object: 06DD0D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterDisplayMode
+      Object: 05CE05:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterDisplayTime
+      Object: 05E39A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureColor
+      Object: 07CA8A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureColorWarm
+      Object: 07CAA6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureFillDirection
+      Object: 07CA8B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureHAnchor
+      Object: 07CA8E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureHeight
+      Object: 07CA8C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureOpacity
+      Object: 07CA89:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureVAnchor
+      Object: 07CA8F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureWidth
+      Object: 07CA8D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureXPos
+      Object: 07CA90:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureYPos
+      Object: 07CA91:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterOpacity
+      Object: 05E390:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseColor
+      Object: 07CA9B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseFillDirection
+      Object: 07CA9C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseHAnchor
+      Object: 07CA9D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseHeight
+      Object: 07CA9E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseOpacity
+      Object: 07CA9F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseVAnchor
+      Object: 07CAA0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseWidth
+      Object: 07CAA1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseXPos
+      Object: 07CAA2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWeathersenseYPos
+      Object: 07CAA3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessColor
+      Object: 07CA92:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessFillDirection
+      Object: 07CA93:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessHAnchor
+      Object: 07CA94:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessHeight
+      Object: 07CA95:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessOpacity
+      Object: 07CA96:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessVAnchor
+      Object: 07CA97:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessWidth
+      Object: 07CA98:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessXPos
+      Object: 07CA99:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterWetnessYPos
+      Object: 07CA9A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MovementPenalty
+      Object: 0430F4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_NoFastTravel
+      Object: 01AE47:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Notifications_EquipmentSummary
+      Object: 06F2AD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Notifications_EquipmentValues
+      Object: 06AC6E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_NoWaiting
+      Object: 06DD0B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_SoundEffects
+      Object: 048CEC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_VampireMode
+      Object: 06DD0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_WeatherMessages
+      Object: 066094:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_WeathersenseDisplayMode
+      Object: 05E39C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_WetShaderOn
+      Object: 064AF4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SettingsProfileVersion
+      Object: 06E270:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Weathersense_Spell
+      Object: 016215:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorPrecache
+      Object: 07EAF6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointProgress
+      Object: 064028:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPoints
+      Object: 064027:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointsEarned
+      Object: 06811B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointsTotal
+      Object: 06811C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ExposureMeter
+      Object: 05CDFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ExposureMeterHandler
+      Object: 05CDFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallMain
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallRunning
+      Object: 06DCFB:Frostfall.esp
+    - MutagenObjectType: ScriptStringProperty
+      Name: ModName
+      Data: Frostfall
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: StartFrostfall
+      Object: 048CD6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WeathersenseMeter
+      Object: 068BEE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WeathersenseMeterHandler
+      Object: 068BEE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WetnessMeter
+      Object: 05CDFF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WetnessMeterHandler
+      Object: 05CDFF:Frostfall.esp
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 06DCF8:Frostfall.esp
+      Alias: 0
+    Scripts:
+    - Name: SKI_PlayerLoadGameAlias
+Name:
+  TargetLanguage: English
+  Value: Configuration
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 1
+Aliases:
+- Name: PlayerAlias
+  Flags: []
+  ForcedReference: 000014:Skyrim.esm
+  VoiceTypes: Null

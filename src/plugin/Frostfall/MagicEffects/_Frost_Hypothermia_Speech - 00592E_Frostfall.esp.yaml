@@ -1,0 +1,23 @@
+FormKey: 00592E:Frostfall.esp
+EditorID: _Frost_Hypothermia_Speech
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Speech'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E934:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Speech
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

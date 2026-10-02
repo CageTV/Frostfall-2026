@@ -1,0 +1,23 @@
+FormKey: 0063FE:Frostfall.esp
+EditorID: _Frost_Hypothermia_StaminaRateMult_3
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Very Cold'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E931:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- FXPersist
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Rate 3.

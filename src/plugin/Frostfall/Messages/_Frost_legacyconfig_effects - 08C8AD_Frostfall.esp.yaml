@@ -1,0 +1,30 @@
+FormKey: 08C8AD:Frostfall.esp
+EditorID: _Frost_legacyconfig_effects
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Effects
+
+    (Page 1 of 3)
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Frost
+- Text:
+    TargetLanguage: English
+    Value: Wetness
+- Text:
+    TargetLanguage: English
+    Value: Sound
+- Text:
+    TargetLanguage: English
+    Value: More...
+- Text:
+    TargetLanguage: English
+    Value: Back

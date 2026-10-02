@@ -1,0 +1,32 @@
+FormKey: 08C8BB:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxplayeranim_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Player Hand-Warming Animations
+
+
+    Off: You will never warm your hands.
+
+    Auto: You will automatically begin warming your hands when facing a fire. Must be standing in 3rd person mode with weapons sheathed.
+
+    Prompt: You will be prompted to warm your hands when facing fires, even in 1st person mode. Must be standing with weapons sheathed.
+
+
+    Current setting: Off
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Off
+- Text:
+    TargetLanguage: English
+    Value: Auto
+- Text:
+    TargetLanguage: English
+    Value: Prompt
+- Text:
+    TargetLanguage: English
+    Value: Back

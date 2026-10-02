@@ -1,0 +1,25 @@
+FormKey: 08C8AA:Frostfall.esp
+EditorID: _Frost_legacyconfig_waiting_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Waiting while Outdoors
+
+
+    Whether or not to enable the ability to wait while outdoors. If disabled, you can still wait when indoors. It may take up to 5 seconds for this setting to take effect after you change it. 
+
+
+    WARNING: Disabling waiting outdoors will also disable Fast Travel.
+
+
+    Current setting: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Disable
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,23 @@
+FormKey: 00592A:Frostfall.esp
+EditorID: _Frost_Hypothermia_Sneak
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Sneak'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E934:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Sneak
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

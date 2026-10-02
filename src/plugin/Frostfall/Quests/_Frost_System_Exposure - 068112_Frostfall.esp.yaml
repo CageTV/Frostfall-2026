@@ -1,0 +1,269 @@
+FormKey: 068112:Frostfall.esp
+EditorID: _Frost_System_Exposure
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ExposureSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeCoverage
+      Object: 067B91:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeExposure
+      Object: 00183D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeExposureMeter
+      Object: 08827A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWarmth
+      Object: 067B8F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_ExtremeMultiplier
+      Object: 06810C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_ExtremeTemp
+      Object: 06810E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_MaxCoverage
+      Object: 068111:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_MaxWarmth
+      Object: 068110:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_StasisMultiplier
+      Object: 06810D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_StasisTemp
+      Object: 06810F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level3
+      Object: 01A8D6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level4
+      Object: 01A8D5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level5
+      Object: 01A8D4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceSize
+      Object: 064AFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentTemperature
+      Object: 0665F9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyItem
+      Object: 06B1D8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureCap_Warm
+      Object: 0446C1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureDeathMsg
+      Object: 0446C3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureExceptions
+      Object: 06E7E6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureLevel
+      Object: 068119:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureTarget
+      Object: 0805E4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Female_FreezingSM
+      Object: 04AD5F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Female_FreezingToDeathSM
+      Object: 04AD60:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteBodyKW
+      Object: 069153:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteChance
+      Object: 0696DF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteFeetKW
+      Object: 069155:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteHandsKW
+      Object: 069154:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteHeadKW
+      Object: 069156:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteMessage_Body
+      Object: 062FFB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteMessage_Feet
+      Object: 0696E2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteMessage_Hands
+      Object: 0696E1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbiteMessage_Head
+      Object: 0696E0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbittenPotionBody
+      Object: 062FEC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbittenPotionFeet
+      Object: 068125:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbittenPotionHands
+      Object: 068121:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostbittenPotionHead
+      Object: 068123:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Help_Exposure
+      Object: 022AFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Exposure
+      Object: 04000B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_0
+      Object: 009A0D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_0_Min
+      Object: 009A0E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_1
+      Object: 009A08:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_2
+      Object: 009A09:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_3
+      Object: 009A0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_4
+      Object: 009A0B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HypoState_5
+      Object: 009A0C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InnerFireSpell
+      Object: 0696DC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MainQuest
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Male_FreezingSM
+      Object: 04AD63:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Male_FreezingToDeathSM
+      Object: 04AD64:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkAdvancement
+      Object: 06811A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkEarned
+      Object: 06811D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_InnerFire
+      Object: 067BA8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PlayerDialogueDetect
+      Object: 0924C6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ConditionMessages
+      Object: 03EA72:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayTutorials
+      Object: 04000F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposureOn
+      Object: 068113:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposurePauseCombat
+      Object: 068117:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposurePauseDialogue
+      Object: 03EA6E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ExposureRate
+      Object: 011BE4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ForceFeedback
+      Object: 048CED:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FullScreenEffects
+      Object: 068116:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MaxExposureMode
+      Object: 068115:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_SoundEffects
+      Object: 048CEC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_VampireMode
+      Object: 06DD0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Fire_Chilly
+      Object: 086CEB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireShelter_Chilly
+      Object: 0826CD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Shelter_Chilly
+      Object: 0826BF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmUpMessage
+      Object: 00AFAE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetLevel
+      Object: 06458D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ActorTypeDragon
+      Object: 035D59:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CampfireHeatsourceOverrideNormal
+      Object: CC0E09:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CampfireHeatsourceOverrideWarm
+      Object: CC0E0A:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DialogueSpeaker
+      Object: 0924C6:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointProgress
+      Object: 064028:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPoints
+      Object: 064027:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointsEarned
+      Object: 06811B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EndurancePerkPointsTotal
+      Object: 06811C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallAttributeExposureReadOnly
+      Object: CC0E03:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallExposureLevelReadOnly
+      Object: CC0E06:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HeatSource
+      Object: 064AF9:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TimeScale
+      Object: 00003A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 068114:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: XMarker
+      Object: 00003B:Skyrim.esm
+  - Name: _Frost_FallbackReceiverExposureSystem
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Exposure System
+NextAliasID: 0

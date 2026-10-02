@@ -1,0 +1,33 @@
+FormKey: 016216:Frostfall.esp
+EditorID: _Frost_Weathersense_Effect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_WeathersenseScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MainQuest
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_WeathersenseDisplayMode
+      Object: 05E39C:Frostfall.esp
+Name:
+  TargetLanguage: English
+  Value: Weathersense
+MenuDisplayObject: 104F70:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds:
+- Type: Release
+  Sound: 0F4A20:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: Displays your current exposure, wetness, and the condition of the weather around you.

@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalFloat
+FormKey: 07CAA5:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_AttributeWetnessMax
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 750

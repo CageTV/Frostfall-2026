@@ -1,0 +1,54 @@
+FormKey: 004E57:Frostfall.esp
+EditorID: _Frost_Hypothermia_Spell_2
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Cold'
+MenuDisplayObject: 0F5E0B:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: You feel chilly. <-10%> Health, Magicka, and Stamina Regeneration.
+Type: Ability
+Effects:
+- BaseEffect: 004E52:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp
+    ComparisonValue: 2
+- BaseEffect: 004E51:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp
+    ComparisonValue: 2
+- BaseEffect: 004E55:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp
+    ComparisonValue: 2

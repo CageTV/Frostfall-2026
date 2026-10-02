@@ -1,0 +1,12 @@
+FormKey: 08F99B:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_defaultsingleconfirm
+Description:
+  TargetLanguage: English
+  Value: The default protection of this type of equipment has been restored.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

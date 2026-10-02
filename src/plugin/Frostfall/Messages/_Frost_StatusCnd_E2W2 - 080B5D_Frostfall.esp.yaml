@@ -1,0 +1,7 @@
+FormKey: 080B5D:Frostfall.esp
+EditorID: _Frost_StatusCnd_E2W2
+Description:
+  TargetLanguage: English
+  Value: 'You are comfortable and damp. (Exposure: %.0f%%, Wet: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,7 @@
+FormKey: 08166F:Frostfall.esp
+EditorID: _frost_StatusTemp_Colder_Indoors_NoValue
+Description:
+  TargetLanguage: English
+  Value: 'You cannot sense the outside weather. You are getting colder. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,7 @@
+FormKey: 06B73C:Frostfall.esp
+EditorID: _Frost_VaporBlastError_Swimming
+Description:
+  TargetLanguage: English
+  Value: You can't cast this while swimming.
+INAM: 0x00000000
+DisplayTime: 2

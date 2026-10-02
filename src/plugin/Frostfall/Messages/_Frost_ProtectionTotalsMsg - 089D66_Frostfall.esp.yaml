@@ -1,0 +1,7 @@
+FormKey: 089D66:Frostfall.esp
+EditorID: _Frost_ProtectionTotalsMsg
+Description:
+  TargetLanguage: English
+  Value: 'Total Warmth: %.0f, Total Coverage: %.0f'
+INAM: 0x00000000
+DisplayTime: 2

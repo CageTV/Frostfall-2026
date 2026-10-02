@@ -1,0 +1,87 @@
+FormKey: 050A21:Frostfall.esp
+EditorID: _Frost_HandWarmingSpell
+Name:
+  TargetLanguage: English
+  Value: Hand Warming Spell
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 050A1F:Frostfall.esp
+  Data: {}
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsMovingConditionData
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: GreaterThanOrEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 049268:Frostfall.esp
+    ComparisonValue: 2
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetVMQuestVariableConditionData
+      Quest: 064AF8:Frostfall.esp
+      VariableName: ::IsInDialogue_var
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: NotEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 02EE01:Campfire.esm
+    ComparisonValue: 2
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThanOrEqualTo
+    Data:
+      MutagenObjectType: GetDistanceConditionData
+      Target: 0877B3:Frostfall.esp
+    ComparisonValue: 240
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetSleepingConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetSittingConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsSwimmingConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsRidingMountConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsOnFlyingMountConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsWeaponOutConditionData
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsSneakingConditionData
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThanOrEqualTo
+    Flags:
+    - OR
+    Data:
+      MutagenObjectType: GetHeadingAngleConditionData
+      Target: 0877B3:Frostfall.esp
+    ComparisonValue: 30
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 064AFC:Frostfall.esp
+    ComparisonValue: 3
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: GreaterThanOrEqualTo
+    Flags:
+    - OR
+    Data:
+      MutagenObjectType: GetHeadingAngleConditionData
+      Target: 0877B3:Frostfall.esp
+    ComparisonValue: -30
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 064AFC:Frostfall.esp
+    ComparisonValue: 3

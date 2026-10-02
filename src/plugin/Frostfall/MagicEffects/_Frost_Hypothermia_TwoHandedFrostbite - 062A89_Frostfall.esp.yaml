@@ -1,0 +1,21 @@
+FormKey: 062A89:Frostfall.esp
+EditorID: _Frost_Hypothermia_TwoHandedFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Two-Handed'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: TwoHanded
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

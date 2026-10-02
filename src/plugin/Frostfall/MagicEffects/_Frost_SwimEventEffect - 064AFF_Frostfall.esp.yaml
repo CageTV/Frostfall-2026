@@ -1,0 +1,28 @@
+FormKey: 064AFF:Frostfall.esp
+EditorID: _Frost_SwimEventEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_SwimEvent
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrigidWater_ForceKillPlayer
+      Object: 06AC70:Frostfall.esp
+Name:
+  TargetLanguage: English
+  Value: Swim Event Effect
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,7 @@
+FormKey: 0446B9:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_RainToSnow
+Description:
+  TargetLanguage: English
+  Value: Snowflakes begin to form in the freezing rain.
+INAM: 0x00000000
+DisplayTime: 2

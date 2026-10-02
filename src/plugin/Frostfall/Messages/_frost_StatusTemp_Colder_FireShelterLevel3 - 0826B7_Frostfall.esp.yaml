@@ -1,0 +1,7 @@
+FormKey: 0826B7:Frostfall.esp
+EditorID: _frost_StatusTemp_Colder_FireShelterLevel3
+Description:
+  TargetLanguage: English
+  Value: 'The frigid air cuts through the heat. Getting colder. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

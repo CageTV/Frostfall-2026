@@ -1,0 +1,7 @@
+FormKey: 08F423:Frostfall.esp
+EditorID: _Frost_ProtArmor_Poor_Max
+Description:
+  TargetLanguage: English
+  Value: Provides poor warmth (%.0f) and complete coverage (%.0f).
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,22 @@
+FormKey: 08C8B2:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxwet_on
+Description:
+  TargetLanguage: English
+  Value: >-
+    Player Wetness Shader
+
+
+    Toggles the dripping water effect seen on the player when wet. If you use another mod that shows player wet effects, disable this option for the best visual results.
+
+
+    Current setting: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Disable
+- Text:
+    TargetLanguage: English
+    Value: Back

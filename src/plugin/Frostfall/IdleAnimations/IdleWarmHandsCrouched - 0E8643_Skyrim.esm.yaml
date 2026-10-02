@@ -1,0 +1,15 @@
+FormKey: 0E8643:Skyrim.esm
+EditorID: IdleWarmHandsCrouched
+Version2: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsTorchOutConditionData
+Filename: Actors\Character\Behaviors\0_Master.hkx
+AnimationEvent: IdleWarmHandsCrouched
+RelatedIdles:
+- Null
+- Null
+Flags:
+- Parent
+AnimationGroupSection: 101

@@ -1,0 +1,30 @@
+FormKey: 08C8C2:Frostfall.esp
+EditorID: _Frost_legacyconfig_notifications
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Notifications
+
+    (Page 1 of 2)
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Condition
+- Text:
+    TargetLanguage: English
+    Value: Weather Transitions
+- Text:
+    TargetLanguage: English
+    Value: Attribute Values
+- Text:
+    TargetLanguage: English
+    Value: More...
+- Text:
+    TargetLanguage: English
+    Value: Back

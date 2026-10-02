@@ -1,0 +1,26 @@
+FormKey: 01E9DB:Frostfall.esp
+EditorID: _Frost_WetStateEffect1
+Name:
+  TargetLanguage: English
+  Value: Damp
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 0245FB:Frostfall.esp
+Flags:
+- Detrimental
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- FXPersist
+- Painless
+HitShader: 045C4F:Frostfall.esp
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You are damp. Exposure will increase slightly faster when outdoors. You are <12>% weaker to shock damage and <12>% more resistant to fire damage.

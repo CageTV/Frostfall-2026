@@ -1,0 +1,22 @@
+FormKey: 08C890:Frostfall.esp
+EditorID: _Frost_legacyconfig_activate_enabled
+Description:
+  TargetLanguage: English
+  Value: >-
+    Enable or Disable Frostfall
+
+
+    Select to toggle Frostfall and all of its features on or off.
+
+
+    Frostfall is: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Disable
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,18 @@
+FormKey: 08ADA2:Frostfall.esp
+EditorID: _Frost_LegacyArmorDatastoreQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_LegacyArmorDatastore
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DatastoreInitialized
+      Object: 065B31:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

@@ -1,0 +1,7 @@
+FormKey: 08F41C:Frostfall.esp
+EditorID: _Frost_ProtArmor_Good_Excellent
+Description:
+  TargetLanguage: English
+  Value: Provides good warmth (%.0f) and excellent coverage (%.0f).
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,8 @@
+FormKey: 052AAA:Frostfall.esp
+EditorID: IdleFrostfallShieldKneel
+Filename: Actors\Character\Behaviors\0_Master.hkx
+RelatedIdles:
+- Null
+- Null
+Flags:
+- Parent

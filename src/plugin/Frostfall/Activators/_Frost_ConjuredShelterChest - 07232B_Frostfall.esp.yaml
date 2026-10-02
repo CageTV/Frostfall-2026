@@ -1,0 +1,26 @@
+FormKey: 07232B:Frostfall.esp
+EditorID: _Frost_ConjuredShelterChest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlaceableContainer
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_LinkedContainerRef
+      Object: 0591BF:Frostfall.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_BypassMenu
+      Data: True
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_IsConjured
+      Data: True
+Name:
+  TargetLanguage: English
+  Value: Conjured Chest
+Model:
+  File: Clutter\Upperclass\UpperChest01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Open
+Flags: []

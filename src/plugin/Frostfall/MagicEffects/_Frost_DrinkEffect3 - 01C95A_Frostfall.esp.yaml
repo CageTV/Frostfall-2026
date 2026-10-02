@@ -1,0 +1,41 @@
+FormKey: 01C95A:Frostfall.esp
+EditorID: _Frost_DrinkEffect3
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_TempRestoreExposureScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WearOffExp_Alcohol
+      Object: 06FD75:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WearOffExp_Spell
+      Object: 06FD77:Frostfall.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: exposure_penalty_amount
+      Data: 25
+    - MutagenObjectType: ScriptFloatProperty
+      Name: exposure_restore_amount
+      Data: 20
+    - MutagenObjectType: ScriptBoolProperty
+      Name: is_alcohol
+      Data: True
+Name:
+  TargetLanguage: English
+  Value: Decrease Exposure
+MenuDisplayObject: 04E264:Skyrim.esm
+Keywords:
+- 0670C3:Frostfall.esp
+Flags:
+- Recover
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your drink reduces exposure by <20> for <3> minutes. You will gain <25> exposure when the effect wears off.

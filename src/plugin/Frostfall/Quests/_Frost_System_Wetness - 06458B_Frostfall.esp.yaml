@@ -1,0 +1,72 @@
+FormKey: 06458B:Frostfall.esp
+EditorID: _Frost_System_Wetness
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_FallbackReceiverWetnessSystem
+  - Name: _Frost_WetnessSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeCoverage
+      Object: 067B91:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWetness
+      Object: 06458C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calc_MaxCoverage
+      Object: 068111:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Help_Wet
+      Object: 022AFE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Wet
+      Object: 04000C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ConditionMessages
+      Object: 03EA72:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayTutorials
+      Object: 04000F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Waterfalls
+      Object: 0497D0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetLevel
+      Object: 06458D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetStateMsg_Dry
+      Object: 009A0F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetStateMsg_LeakingWater
+      Object: 0446C0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetStateMsg_Wet1
+      Object: 0214F6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetStateMsg_Wet2
+      Object: 0214F7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetStateMsg_Wet3
+      Object: 0214F8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallAttributeWetnessReadOnly
+      Object: CC0E04:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallWetLevelReadOnly
+      Object: CC0E05:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 06458E:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Wetness System
+NextAliasID: 0

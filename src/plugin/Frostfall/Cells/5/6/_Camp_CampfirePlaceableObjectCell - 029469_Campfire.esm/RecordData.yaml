@@ -1,0 +1,201 @@
+FormKey: 029469:Campfire.esm
+IsCompressed: True
+MajorRecordFlagsRaw: 262144
+EditorID: _Camp_CampfirePlaceableObjectCell
+SkyrimMajorRecordFlags:
+- Compressed
+Name:
+  TargetLanguage: English
+  Value: Campfire Object Staging Cell
+Flags:
+- IsInteriorCell
+Lighting:
+  AmbientColor: '#00202621'
+  DirectionalColor: '#00000000'
+  FogNearColor: '#00172116'
+  FogFar: 4500
+  FogPower: 0.6
+  AmbientColors:
+    DirectionalXPlus: '#00232622'
+    DirectionalXMinus: '#001C261F'
+    DirectionalYPlus: '#00202721'
+    DirectionalYMinus: '#00202421'
+    DirectionalZPlus: '#000F120E'
+    DirectionalZMinus: '#00303933'
+    Specular: '#00172116'
+    Scale: 1
+  FogFarColor: '#00172116'
+  FogMax: 1
+  Inherits:
+  - AmbientColor
+  - DirectionalColor
+  - FogColor
+  - FogNear
+  - FogFar
+  - ClipDistance
+WaterHeight: -2.1474836E+09
+ImageSpace: 013B32:Skyrim.esm
+Persistent:
+- MutagenObjectType: PlacedObject
+  FormKey: 06915D:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Camp_CampfireBaseMarkerRef002
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 03231A:Campfire.esm
+  Placement:
+    Position: -320, 576, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 06915E:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PerkController_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: -320, 576, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 06915F:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurancePerkArtPlane_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 06915C:Frostfall.esp
+  Placement:
+    Position: -320, 529, 7533.329
+- MutagenObjectType: PlacedObject
+  FormKey: 069160:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_Adaptation_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -320.6956, 515.7681, 7475.6367
+- MutagenObjectType: PlacedObject
+  FormKey: 069161:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_FrostWard_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -338.2518, 515.7681, 7499.8296
+- MutagenObjectType: PlacedObject
+  FormKey: 069162:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_GlacialSwimmer_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -303.1881, 515.7681, 7499.8296
+- MutagenObjectType: PlacedObject
+  FormKey: 069163:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_WellInsulated_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -338.2518, 515.7681, 7561.52
+- MutagenObjectType: PlacedObject
+  FormKey: 069164:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_Windbreaker_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -303.1881, 515.7681, 7561.52
+- MutagenObjectType: PlacedObject
+  FormKey: 069165:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_PNEndur_InnerFlame_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043811:Campfire.esm
+  Placement:
+    Position: -320.6956, 515.7681, 7589.355
+- MutagenObjectType: PlacedObject
+  FormKey: 069166:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_1_2_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 0.51
+  Placement:
+    Position: -320.6956, 515.7681, 7475.863
+    Rotation: 1.5707964, 0, 3.769911
+- MutagenObjectType: PlacedObject
+  FormKey: 069167:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_1_4_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 0.51
+  Placement:
+    Position: -319.6956, 515.7681, 7475.863
+    Rotation: 1.5707964, 0, 2.5132742
+- MutagenObjectType: PlacedObject
+  FormKey: 069168:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_2_3_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 1.01
+  Placement:
+    Position: -337.8614, 515.7681, 7501.492
+    Rotation: 1.5707964, 0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 069169:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_4_5_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 1.01
+  Placement:
+    Position: -302.5559, 515.7681, 7501.492
+    Rotation: 1.5707964, 0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 06916A:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_3_6_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 0.53
+  Placement:
+    Position: -337.5842, 515.7681, 7562.5737
+    Rotation: 1.5707964, 0, 2.565634
+- MutagenObjectType: PlacedObject
+  FormKey: 06916B:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_EndurPerkLine_5_6_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 043832:Campfire.esm
+  Scale: 0.53
+  Placement:
+    Position: -303.4641, 515.7681, 7562.6216
+    Rotation: 1.5707964, 0, 3.7175512
+MajorFlags:
+- 0x40000

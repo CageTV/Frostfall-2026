@@ -1,0 +1,13 @@
+FormKey: 05F404:Frostfall.esp
+EditorID: _Frost_LoadingScreen20
+Description:
+  TargetLanguage: English
+  Value: Vapor Blast only deals damage if the caster is wet.
+LoadingScreenNif: 10D187:Skyrim.esm
+InitialScale: 2.5
+InitialRotation: 0, -15, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -10, 0, -15
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

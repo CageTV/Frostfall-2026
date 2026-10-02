@@ -1,0 +1,21 @@
+FormKey: 052AAD:Frostfall.esp
+EditorID: IdleShieldKneelExit
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsEnteringInteractionQuickConditionData
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetSittingConditionData
+  ComparisonValue: 3
+- MutagenObjectType: ConditionFloat
+  CompareOperator: LessThanOrEqualTo
+  Data:
+    MutagenObjectType: GetSittingConditionData
+  ComparisonValue: 4
+AnimationEvent: IdleChairExitStart
+RelatedIdles:
+- 052AAA:Frostfall.esp
+- 052AAC:Frostfall.esp
+AnimationGroupSection: 32

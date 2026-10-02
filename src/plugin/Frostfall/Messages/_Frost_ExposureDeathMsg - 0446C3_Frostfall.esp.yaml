@@ -1,0 +1,7 @@
+FormKey: 0446C3:Frostfall.esp
+EditorID: _Frost_ExposureDeathMsg
+Description:
+  TargetLanguage: English
+  Value: You succumb to exposure.
+INAM: 0x00000000
+DisplayTime: 2

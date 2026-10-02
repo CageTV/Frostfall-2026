@@ -1,0 +1,9 @@
+FormKey: 058155:Frostfall.esp
+EditorID: _Frost_BoundCloakEnchantment
+Name:
+  TargetLanguage: English
+  Value: Bound Cloak Enchantment
+EnchantType: Enchantment
+Effects:
+- BaseEffect: 057BE3:Frostfall.esp
+  Data: {}

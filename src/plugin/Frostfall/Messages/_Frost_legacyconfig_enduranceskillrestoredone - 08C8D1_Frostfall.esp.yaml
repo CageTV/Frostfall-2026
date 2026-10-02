@@ -1,0 +1,12 @@
+FormKey: 08C8D1:Frostfall.esp
+EditorID: _Frost_legacyconfig_enduranceskillrestoredone
+Description:
+  TargetLanguage: English
+  Value: Skill points restored successfully.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

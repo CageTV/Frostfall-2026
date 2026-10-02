@@ -1,0 +1,31 @@
+FormKey: 08C88F:Frostfall.esp
+EditorID: _Frost_legacyconfig_root
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Options
+
+
+    Select "Enable or Disable Frostfall" to turn the entire mod on or off.
+
+
+    Select "Settings Presets" to choose a preset, which sets up the entire mod at once according to your preferences.
+
+
+    Select "All Options" to view and change each available option.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable or Disable Frostfall
+- Text:
+    TargetLanguage: English
+    Value: Settings Presets
+- Text:
+    TargetLanguage: English
+    Value: All Options
+- Text:
+    TargetLanguage: English
+    Value: Exit

@@ -1,0 +1,26 @@
+FormKey: 0235CB:Frostfall.esp
+EditorID: _Frost_RegionDetect8_Snow
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_RegionDetectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Climate
+      Object: 066096:Frostfall.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: region_id
+      Data: 8
+Name:
+  TargetLanguage: English
+  Value: 'Region Detect: Snow'
+Flags:
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

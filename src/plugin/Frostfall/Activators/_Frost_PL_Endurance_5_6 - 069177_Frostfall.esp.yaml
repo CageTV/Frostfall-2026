@@ -1,0 +1,7 @@
+FormKey: 069177:Frostfall.esp
+EditorID: _Frost_PL_Endurance_5_6
+Model:
+  File: campfire\_camp_intperkline01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []

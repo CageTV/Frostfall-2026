@@ -1,0 +1,25 @@
+FormKey: 01D430:Frostfall.esp
+MajorRecordFlagsRaw: 536870912
+EditorID: _Frost_WaterPotion
+SkyrimMajorRecordFlags:
+- 0x20000000
+Name:
+  TargetLanguage: English
+  Value: Snowberry Extract
+Model:
+  File: frostfall\_Frost_snowberrybottle.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 25
+Flags:
+- NoAutoCalc
+- Medicine
+ConsumeSound: 106614:Skyrim.esm
+Effects:
+- BaseEffect: 01D432:Frostfall.esp
+  Data:
+    Duration: 180
+MajorFlags:
+- Medicine

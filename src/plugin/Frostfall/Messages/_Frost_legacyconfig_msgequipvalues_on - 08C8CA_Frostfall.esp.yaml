@@ -1,0 +1,22 @@
+FormKey: 08C8CA:Frostfall.esp
+EditorID: _Frost_legacyconfig_msgequipvalues_on
+Description:
+  TargetLanguage: English
+  Value: >-
+    Warmth / Coverage Values On Equip
+
+
+    If enabled, you will receive a notification describing the Warmth and Coverage provided by gear that you equip.
+
+
+    Current setting: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Disable
+- Text:
+    TargetLanguage: English
+    Value: Back

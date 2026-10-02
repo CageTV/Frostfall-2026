@@ -1,0 +1,13 @@
+FormKey: 03DF3F:Frostfall.esp
+EditorID: _Frost_LoadingScreen13
+Description:
+  TargetLanguage: English
+  Value: As your exposure increases, all of your skills will suffer. Your warmth rating determines how quickly you gain exposure.
+LoadingScreenNif: 03DF3C:Frostfall.esp
+InitialScale: 0.9
+InitialRotation: -10, 0, -35
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: 35, 0, -46
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

@@ -1,0 +1,7 @@
+FormKey: 009A0F:Frostfall.esp
+EditorID: _Frost_WetStateMsg_Dry
+Description:
+  TargetLanguage: English
+  Value: You are completely dry.
+INAM: 0x00000000
+DisplayTime: 2

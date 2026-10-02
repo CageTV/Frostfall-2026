@@ -1,0 +1,22 @@
+FormKey: 090474:Frostfall.esp
+EditorID: _Frost_Help_Warmth2
+Description:
+  TargetLanguage: English
+  Value: >-
+    Warmth is higher with gear that has insulation and furs. It slows down your rate of exposure at all times.
+
+
+    Coverage is higher with gear that has tight fittings and water-repellant materials, blocking the wind and rain. This slows down how quickly you get wet in rain, and your rate of exposure in severe weather.
+
+
+    You can modify the protection of any equipment by selecting the Inspect Equipment power from the Magic menu and pressing Shout.
+Name:
+  TargetLanguage: English
+  Value: Warmth and Coverage
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

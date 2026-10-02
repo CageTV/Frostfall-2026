@@ -1,0 +1,7 @@
+FormKey: 00AFAE:Frostfall.esp
+EditorID: _Frost_WarmUpMessage
+Description:
+  TargetLanguage: English
+  Value: You begin to warm up.
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,21 @@
+FormKey: 062A83:Frostfall.esp
+EditorID: _Frost_Hypothermia_PickpocketFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Pickpocket'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Pickpocket
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

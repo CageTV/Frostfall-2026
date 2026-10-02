@@ -1,0 +1,13 @@
+FormKey: 05F406:Frostfall.esp
+EditorID: _Frost_LoadingScreen21
+Description:
+  TargetLanguage: English
+  Value: Soothe spells trick the caster into believing that they're warmer than they actually are for a short time.
+LoadingScreenNif: 10D186:Skyrim.esm
+InitialScale: 2.5
+InitialRotation: 0, -15, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -10, 0, -15
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

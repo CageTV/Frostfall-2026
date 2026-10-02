@@ -1,0 +1,40 @@
+FormKey: 009F78:Frostfall.esp
+EditorID: _Frost_ColdWater_Effect4_Death
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ColdWaterEffect4
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_ForceBlackVFX
+      Object: 053168:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackHoldImod
+      Object: 0F756E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackImod
+      Object: 0F756D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Cold Water
+Keywords:
+- 01EA70:Skyrim.esm
+Flags:
+- Hostile
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Paralysis
+  Type: Paralysis
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

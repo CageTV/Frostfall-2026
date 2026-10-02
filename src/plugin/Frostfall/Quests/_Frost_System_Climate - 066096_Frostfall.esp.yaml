@@ -1,0 +1,169 @@
+FormKey: 066096:Frostfall.esp
+EditorID: _Frost_System_Climate
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ClimateSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeMeterTempLevel
+      Object: 07CAA7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Calm2Msg
+      Object: 091F63:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CalmMsg
+      Object: 091F62:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentTemperature
+      Object: 0665F9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentWaterTemperature
+      Object: 06B1D3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Help_Cold
+      Object: 02FE8E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Help_ColdSE
+      Object: 08E3CB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Cold
+      Object: 04000E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_OvercastWeatherList
+      Object: 04671A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RegionDetect_ForceUpdate
+      Object: 0696E3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayTutorials
+      Object: 04000F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_WeatherMessages
+      Object: 066094:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_BlizzardToClear
+      Object: 0446AD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog1
+      Object: 0446AE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog2
+      Object: 0446AF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog3
+      Object: 0446B0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog4
+      Object: 0446B1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog5
+      Object: 0446B2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog6
+      Object: 0446B3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToFog7
+      Object: 0446B4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToRain
+      Object: 0446BE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToSnow
+      Object: 0446B6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToSnowMountain
+      Object: 0446B7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToSnowSevere
+      Object: 0446B8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_ClearToStorm
+      Object: 0446BF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_FogToRain
+      Object: 0446BC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_FogToStorm
+      Object: 0446BD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_RainToClear
+      Object: 0446AA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_RainToFog
+      Object: 0446B5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_RainToSnow
+      Object: 0446B9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_RainToSnowSevere
+      Object: 0446BA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_SnowToClear
+      Object: 0446AC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_SnowToRain
+      Object: 0446BB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WeatherTransMsg_StormToClear
+      Object: 0446AB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorCoast
+      Object: 03922D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorFallForest
+      Object: 0339E4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorOblivion
+      Object: 03922E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorPineForest
+      Object: 039229:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorReach
+      Object: 094A7B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorSnowy
+      Object: 0339E5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorTundraMarsh
+      Object: 03922C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorVolcanicTundra
+      Object: 03922A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorWhiterun
+      Object: 03922B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallCurrentTemperatureReadOnly
+      Object: CC0E07:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Tamriel
+      Object: 00003C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 066095:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmPitWorldspace
+      Object: 0D45F0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmWorld
+      Object: 01691D:Skyrim.esm
+  - Name: _Frost_FallbackReceiverClimateSystem
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Climate System
+NextAliasID: 0

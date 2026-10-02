@@ -1,0 +1,19 @@
+FormKey: 079A15:Frostfall.esp
+EditorID: _Frost_CriticalError_JSONReadWrite
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Error - Profile Read/Write Failed
+
+
+    Frostfall failed to read / write your settings profile, which is required. This is likely due to not having folder permissions to Skyrim/ Data/ SKSE/ Plugins (MO users: Mod Organizer/ overwrite/ SKSE/ Plugins). Try to create a folder named FrostfallData inside the SKSE/Plugins/ folder yourself. If Plugins doesn't exist, create that, too. Also try to run Skyrim as an Administrator.
+
+
+    EXIT NOW and resolve this problem before continuing.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

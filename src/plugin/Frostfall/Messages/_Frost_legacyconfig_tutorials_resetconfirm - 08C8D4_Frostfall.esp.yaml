@@ -1,0 +1,15 @@
+FormKey: 08C8D4:Frostfall.esp
+EditorID: _Frost_legacyconfig_tutorials_resetconfirm
+Description:
+  TargetLanguage: English
+  Value: Reset all tutorials?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK
+- Text:
+    TargetLanguage: English
+    Value: Cancel

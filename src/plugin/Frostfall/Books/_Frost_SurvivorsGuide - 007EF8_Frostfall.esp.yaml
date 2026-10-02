@@ -1,0 +1,224 @@
+FormKey: 007EF8:Frostfall.esp
+EditorID: _Frost_SurvivorsGuide
+ObjectBounds:
+  First: -9, -11, -2
+  Second: 9, 11, 2
+Name:
+  TargetLanguage: English
+  Value: Survivor's Guide to Skyrim
+Model:
+  File: frostfall\_Frost_SurvivorsGuide.nif
+  Data: 0x020000000000000000000000
+BookText:
+  TargetLanguage: English
+  Value: >-
+    [pagebreak]
+
+    <p align="center">
+
+
+    Falkreath to Dawnstar 
+
+
+    A Survivor's Guide to Skyrim
+
+
+    by Verick Gaerford
+
+    Explorer, Pioneer, and minor Adventurer
+
+
+    Penned with the assistance of Carius Harmevus on this day, 16th of Frostfall, 4E 118
+
+    [pagebreak]
+
+
+    <p align='center'><img src='img://textures/frostfall/_Frost_bookart0.dds' height='367' width='281'></p>
+
+    [pagebreak]
+
+    <p align="center">FOREWORD
+
+
+    <p align="left">It has been said that Skyrim itself is more dangerous than any man, mer, giant, or sabre cat within her borders.  Any who have felt the biting chill of The Pale or seen the frozen corpses upon the steps of High Hrothgar can attest to this. It takes the souls of the foolhardy, brave, astute, and unprepared with equal, enthusiastic swiftness.
+
+
+    My aim is to provide you with guidance on surviving the trials of Skyrim's harshest regions.  My hope is that you, dear reader, will avoid the fate of those mentioned above. Wisdom is your only weapon against the cold, so arm yourself with it on the following pages. Even with this knowledge, however, I cannot guarantee your safety; one can only be so prepared. If such a guarantee was made by the merchant who sold you this book, you have my sincerest apologies.
+
+
+    Now, without any further deviation, let us discuss the subject at hand.</p>
+
+
+    [pagebreak]
+
+    <p align="center">THE COLD ROAD AHEAD
+
+
+    <p align="left">Cold is the enemy. It is as dangerous as a seasoned fighter with a honed blade and a score to settle. It is an insidious enemy, seeping into your bones, your mind, robbing you of the very will to survive. But like any enemy, it can be defended against. You must adapt to defeat it.
+
+
+    If cold is an agent of death, fire is life. A fire gives many gifts, chief of which are warmth and dry skin. The act of building a campfire should become second nature to you, as routine as putting on your boots. Build campfires early and often, and seek out wood far in advance of when you think you'll need it. It may take several hours to find enough wood to build a campfire of a useful size. If caught in a blizzard or after having fallen in a frozen lake, that's several hours you do not have to spare. Carry some quality tinder in your pack for emergencies; some straw or cotton will do fine. Fire is a friend, but a hungry one.
+
+
+    When preparing to travel, the first thing to address is your attire. Wearing warm clothing from head to toe is the single most important thing you can do to ensure your survival. Each part of your body that you leave exposed makes it increasingly difficult to stay warm and dry. You may think yourself safe in the southern Holds, but getting soaked in a rainstorm can easily sap the heat from your body.
+
+
+    There are many ways to improve your resistance to exposure. Your body will grow more accustomed to Skyrim's climate in time. It will happen slowly and naturally, and only for those who live long enough to discover that the change has taken place. A torch can be very beneficial, warming the arms and face. A cloak can help act as another helpful barrier against frost and rain. Soups can warm from the inside out. Finally, trinkets which grant a magical resistance to frost provide aid to their wearers.
+
+
+    There is no single way to prepare for a cold journey, but all of these things together will help keep you on this side of the eternal.
+
+
+    <p align='center'><img src='img://textures/frostfall/_Frost_bookart1.dds' height='256' width='256'></p>
+
+
+    [pagebreak]
+
+    <p align="center">SURVIVING FROZEN WATERS
+
+
+    <p align="left">Sometimes, even after having done one's best to be careful near Skyrim's treacherously frigid bodies of water, disaster can strike; a loose rock results in lost footing, or a fragile plate of ice on a frozen lake goes unnoticed. Suddenly, you are submerged head-to-toe in water only barely above freezing. The body will go through a series of responses that may be shocking to the uninitiated, but by reviewing what will happen should this occur, one can mentally prepare for the occasion. With a strong will and some luck, one may even live to tell about it.
+
+
+    First, your body will involuntarily gasp deeply for air. When this happens, you will feel (paradoxically) as if the wind has been knocked out of you, unable to catch breath. You will feel completely without energy, and your eyes may have trouble focusing.
+
+
+    Next, assuming you have not breathed in a lungful of freezing water, you should have regained enough of your senses to be able to find a way back on shore. This is a narrow window of opportunity; do not waste it!
+
+
+    After getting out of the water, it is imperative that you make camp or retreat to the nearest warm shelter immediately, as your body has already become dangerously cold. Many have saved themselves from a watery death only to die on land minutes later.
+
+
+    If for some reason you are unable to bring yourself to shore quickly enough, you will find your limbs difficult to move until they become so numb that they stop responding entirely. Drowning at this point is the most likely outcome.
+
+
+    [pagebreak]
+
+    <p align="center">GEAR FOR THE JOURNEY
+
+
+    <p align="left">The right skills - a positive mindset - a few supplies. With each of these things you bring with you, you improve your chances of overcoming any obstacle you may face while on the trail. It all starts with a simple axe.
+
+
+    A woodcutter's axe is by far the most essential tool you can carry. With it, you can gather larger logs from nearby fallen trees quickly and easily. Keep it sharp!
+
+
+    If an axe is unavailable, a crude stone hatchet can be assembled. Find a suitable branch, and tie or hammer a nearby stone to it. This tool will take much longer to use than a proper axe, but it will get the job done.
+
+
+    While the most obvious use for the wood you harvest is for building a crackling fire, there are other useful supplies that can be created with any spare pieces you may have left. A bow for hunting game; a simple walking stick; a rack for tanning leather.
+
+
+    With a tent, you can outlast freezing rain and blizzards in the open country. A campfire is of limited usefulness when you remain exposed to the elements. When traveling in the southern Holds, where the air is warmer and rain comes frequently, a leather tent will keep you dry while blocking the mild night chill. If venturing out to the north, a tent made of animal hides is more suitable. These tents trap heat much more effectively, but are prone to leaking in rainstorms. If caught in a rainstorm with no tent available, take shelter under the nearest suitable structure and wait for it to pass.
+
+
+    A small cooking pot made of steel can help you cook hot meals while on the road, far from the nearest hearth.
+
+
+    Finally, a properly constructed backpack can do wonders for helping you haul your belongings over vast distances without straining your neck and back. A good backpack should have space for stowing everything you need with some room to spare.
+
+    [pagebreak]
+
+
+    <p align='center'><img src='img://textures/frostfall/_Frost_bookart3.dds' height='367' width='281'></p>
+
+    [pagebreak]
+
+    <p align="center">FOOD AND BREW
+
+
+    <p align="left">Not all foods are created equal. Some are much better suited to helping the body cope with traveling in the cold.
+
+
+    In general, hot soups, stews, and broths should be consumed when traveling long distances across cold terrain. They provide warmth from within, which helps prevent the loss of warmth from without.
+
+
+    Snowberries, a common sight in the northern Holds, have also been rumored to aid in fending off the cold. Travelers of the northern lands swear by them, even though there is no alchemical proof one way or the other. Whether these small fruit actually provide a real boon or is just a trick of the mind, I leave the reader to decide.
+
+
+    A special note about every Nord's favorite topic, brew. While one may be quick to believe that ale and mead bring fire to the belly, many who turn to stiff drink in order to avoid an icy death only hasten it in the end. That being said, mental and physical toughness play equal roles in your survival. A quick swig of ale might be exactly what you need to give you the determination to make a last push to safety. This is a choice you will have to make for yourself when the time comes.
+
+    <p align="center"><img src='img://textures/frostfall/_Frost_bookart4.dds' height='256' width='256'></p>
+
+    [pagebreak]
+
+    <p align="center">
+
+    SKYRIM
+
+    AND ITS ENVIRONS
+
+    <p align='center'><img src='img://textures/frostfall/_Frost_bookart5.dds' height='281' width='281'></p>
+
+    [pagebreak]
+
+    <p align="left">Skyrim is a nation divided into territories known has Holds. Each Hold has unique environmental characteristics that aid or hinder those that travel through them. They are presented here, in order of increasing harshness and unpredictability.
+
+    [pagebreak]
+
+    Falkreath Hold
+
+    The area surrounding Falkreath is a temperate evergreen forest with relative warmth and refreshing waters. Days are comfortable even at sun's height, and nights are mild enough that one is wont to go star-gazing when the sky is clear. This Hold is truly the most hospitable in all of Skyrim.
+
+    [pagebreak]
+
+    Eastmarch
+
+    While Eastmarch is cooler than Falkreath due to being farther north, this Hold is lined with volcanic fissures that discharge great plumes of hot steam that keep the area warm enough to occupy without pause day or night, year-round.
+
+
+    The Rift
+
+    This Hold is home to a sprawling broadleaf mixed forest in Skyrim's southeast. Though it is positioned on Skyrim's southern border, its elevation, tree canopy, and humidity make this area much cooler than it may first appear.  While a clear day in the Rift is almost as nice as Falkreath, the rain with high winds can sap a warrior's strength faster than she cares to admit. The Rift's many streams and lakes are pleasurable to swim in on sunny days.
+
+
+    The Reach
+
+    The Hold of Markarth sits along Skyrim's western border and is identified by a great river that runs through a deep, sheer valley. The winds that roll off the western mountains and into the valley are chilly most of the day.  The night air combined with cold showers may prompt wise travelers to build a campfire, or seek shelter.  The Reach's waters are quite cold, but should not pose a threat if one is diligent enough to dry off once the affair is over with.
+
+
+    Whiterun Hold
+
+    The heart of Skyrim is a cold tundra dotted by what few trees can manage to take root through the permafrost. Farmers toil tirelessly here to break ground and grow what little they can in the inches of soil afforded them. Foreigners may find this area to be uncomfortably cold during the day - nothing a sturdy pair of boots and gloves can't remedy. At night, the high winds across the open plains cut through fabric and flesh. It never snows in Whiterun (contrary to its name), but the ground remains cold enough to freeze rain the moment it strikes the earth. Whiterun's chilly brooks are usually shallow enough to not worry of becoming completely drenched.
+
+
+    Hjaalmarch
+
+    The tundra marshlands of Hjaalmarch are inhospitable to the unprepared. The ground is almost entirely permafrost, and the northern bogs have waters that remain at or below the freezing point. Set up camp early, and do not stray far from it. If night or dark clouds approach, build or seek shelter at once. Never attempt to swim in the waters here; always find a land bridge or a way around.
+
+    [pagebreak]
+
+    The Pale and Mountains
+
+    The frozen wastes of the Pale are life-threatening even under the best of circumstances. Make camp often. Avoid nightfall outdoors. If a blizzard strikes, you are in grave danger and your survival is measured in minutes. Seek shelter immediately. Better to be a living cave rat than a dead hero. The sheer winds and breath-freezing air of the mountains will push your endurance to its limits and beyond. Needless to say, the Sea of Ghosts lives up to its name. The same goes for the icy rivers that run east and south of Windhelm.
+
+    [pagebreak]
+
+    <p align="center">MAGIC
+
+
+    <p align="left">It is reasonable to believe that keeping oneself warm with fire spells should be easy, since spells of flame are amongst the first any student of the Destruction school learns. Be warned; turning spells against oneself is incredibly dangerous and is a practice best left avoided. Direct your flames toward your campfire instead.
+
+
+    There are known to be certain spells that can help fend off the cold, conjure shelters from thin air, and even reduce exposure directly. Seek out a mage to learn more, as such topics are beyond the scope of this book.
+
+
+    [pagebreak]
+
+    <p align="center">CONCLUSION
+
+
+    <p align="left">If you have made it this far, congratulations! You are now much more prepared for the cold road ahead. I hope you have found my instruction enlightening. Although this author hopes that you never need this book, I advise you to take it on your travels so that you may consult it whenever such a need arises.
+
+
+    Stay warm! Stay dry! Stay alert!
+Keywords:
+- 0937A2:Skyrim.esm
+Teaches:
+  MutagenObjectType: BookTeachesNothing
+Value: 5
+Weight: 1
+InventoryArt: 05EE61:Frostfall.esp
+Description:
+  TargetLanguage: English
+  Value: ''

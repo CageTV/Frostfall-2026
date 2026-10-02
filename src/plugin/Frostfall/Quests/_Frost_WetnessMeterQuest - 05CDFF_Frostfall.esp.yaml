@@ -1,0 +1,79 @@
+FormKey: 05CDFF:Frostfall.esp
+EditorID: _Frost_WetnessMeterQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_Meter
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Alpha
+    - MutagenObjectType: ScriptBoolProperty
+      Name: charge_meter
+      Data: True
+  - Name: _frost_wetnessmeterinterfacehandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeMax
+      Object: 07CAA5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeValue
+      Object: 06458C:Frostfall.esp
+    - MutagenObjectType: ScriptFloatListProperty
+      Name: contextual_display_thresholds
+      Data:
+      - 200
+      - 550
+      - 700
+      - 750
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DebugGlobal
+      Object: 06458F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayMode
+      Object: 05CE05:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayTime
+      Object: 05E39A:Frostfall.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: improvement_display_delta_threshold
+      Data: 30
+    - MutagenObjectType: ScriptBoolProperty
+      Name: lower_is_better
+      Data: True
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MainPrimaryColor
+      Object: 07CA92:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Meter
+      Object: 05CDFF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Opacity
+      Object: 07CA96:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_flash
+      Data:
+      - False
+      - False
+      - False
+      - False
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_stay_on
+      Data:
+      - False
+      - False
+      - False
+      - False
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Wetness Meter
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

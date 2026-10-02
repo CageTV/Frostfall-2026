@@ -1,0 +1,13 @@
+FormKey: 03D9A3:Frostfall.esp
+EditorID: _Frost_LoadingScreen1
+Description:
+  TargetLanguage: English
+  Value: Skyrim is coldest at night. When the sun goes down, it may be best to find an inn or set up camp and rest until morning.
+LoadingScreenNif: 03DF3C:Frostfall.esp
+InitialScale: 0.9
+InitialRotation: -10, 0, -35
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: 35, 0, -46
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

@@ -1,0 +1,773 @@
+FormKey: 021FCC:Frostfall.esp
+IsCompressed: True
+MajorRecordFlagsRaw: 262144
+EditorID: _Frost_ConjuredShelterCell
+SkyrimMajorRecordFlags:
+- Compressed
+Name:
+  TargetLanguage: English
+  Value: Frostfall Conjured Shelter Cell
+Flags:
+- IsInteriorCell
+Lighting:
+  AmbientColor: '#00202621'
+  DirectionalColor: '#00000000'
+  FogNearColor: '#00172116'
+  FogFar: 4500
+  FogPower: 0.6
+  AmbientColors:
+    DirectionalXPlus: '#00232622'
+    DirectionalXMinus: '#001C261F'
+    DirectionalYPlus: '#00202721'
+    DirectionalYMinus: '#00202421'
+    DirectionalZPlus: '#000F120E'
+    DirectionalZMinus: '#00303933'
+    Specular: '#00172116'
+    Scale: 1
+  FogFarColor: '#00172116'
+  FogMax: 1
+  Inherits:
+  - AmbientColor
+  - DirectionalColor
+  - FogColor
+  - FogNear
+  - FogFar
+  - ClipDistance
+WaterHeight: 0
+ImageSpace: 013B32:Skyrim.esm
+NavigationMeshes:
+- FormKey: 021FCD:Frostfall.esp
+  IsCompressed: True
+  MajorRecordFlagsRaw: 262144
+  SkyrimMajorRecordFlags:
+  - Compressed
+  Data:
+    Parent:
+      MutagenObjectType: CellNavmeshParent
+      Parent: 021FCC:Frostfall.esp
+    Vertices:
+    - 2112, 2176, 6976
+    - 2688, 2176, 6976
+    - 2112, 1856, 6976
+    - 2688, 1856, 6976
+    Triangles:
+    - Vertices: 0, 2, 1
+      EdgeLink_0_1: -1
+      EdgeLink_1_2: 1
+      EdgeLink_2_0: -1
+      Flags:
+      - Found
+    - Vertices: 1, 2, 3
+      EdgeLink_1_2: -1
+      EdgeLink_2_0: -1
+      Flags:
+      - Found
+    NavmeshGridDivisor: 1
+    MaxDistanceX: 576
+    MaxDistanceY: 320
+    Min: 2112, 1856, 6976
+    Max: 2688, 2176, 6976
+    NavmeshGrid: 0x0200000000000100
+  MajorFlags:
+  - 0x40000
+Persistent:
+- MutagenObjectType: PlacedObject
+  FormKey: 095010:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_MakeshiftCamp_BedPosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: -1528.368, 427.111, 7439.9404
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 095011:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_MakeshiftCamp_LanternPosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: -1555.6849, 503.19415, 7446.8823
+    Rotation: 0, -0, 5.9864793
+- MutagenObjectType: PlacedObject
+  FormKey: 02202C:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_AnchorRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: 1579.2732, 2061.7732, 6976
+- MutagenObjectType: PlacedObject
+  FormKey: 024B65:Frostfall.esp
+  MajorRecordFlagsRaw: 1073744896
+  EditorID: _Frost_ShelterDetectOriginRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - InitiallyDisabled
+  - 0x40000000
+  Base: 024B64:Frostfall.esp
+  Placement:
+    Position: 3309.539, 1444.9102, 7375.4995
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE0E:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _DE_Shelter1_Bed
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 030091:Skyrim.esm
+  Placement:
+    Position: 661.8246, 111.13355, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE36:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _DE_Shelter1_Fire
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 04318B:Skyrim.esm
+  Scale: 0.6
+  Placement:
+    Position: 573.313, 335.88058, 7441.6587
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE3C:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _DE_Shelter1_Fireplace
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 05F227:Skyrim.esm
+  Placement:
+    Position: 572.264, 335.43506, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE4F:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _DE_Shelter1_Table
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0E25DC:Skyrim.esm
+  Placement:
+    Position: 452.4172, 284.74362, 7424
+    Rotation: 0, -0, 5.6831894
+- MutagenObjectType: PlacedObject
+  FormKey: 058C33:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Bed_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 06B36B:Skyrim.esm
+  Placement:
+    Position: 1598.23, 112.354996, 7420.3716
+- MutagenObjectType: PlacedObject
+  FormKey: 058C34:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_GShelter_Chest_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 04CE62:Frostfall.esp
+  Placement:
+    Position: 1784.83, 99.564354, 7417.2217
+    Rotation: 0, -0, 5.397789
+- MutagenObjectType: PlacedObject
+  FormKey: 058C3A:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Enchanting_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0D5501:Skyrim.esm
+  Placement:
+    Position: 1688.7556, 293.9598, 7412.818
+    Rotation: 0, -0, 0.7853982
+- MutagenObjectType: PlacedObject
+  FormKey: 058C3D:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_EnchantingTable_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0D4A2C:Skyrim.esm
+  Placement:
+    Position: 1733.6982, 339.5312, 7413.261
+    Rotation: 0, -0, 0.7853982
+- MutagenObjectType: PlacedObject
+  FormKey: 058C3E:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_AlchemyTable_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0D4A2C:Skyrim.esm
+  Placement:
+    Position: 1466.3682, 339.5312, 7413.261
+    Rotation: 0, -0, 5.4977875
+- MutagenObjectType: PlacedObject
+  FormKey: 058C3F:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Alchemy_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0D54FF:Skyrim.esm
+  Placement:
+    Position: 1511.4744, 293.9598, 7413.564
+    Rotation: 0, -0, 5.4977875
+- MutagenObjectType: PlacedObject
+  FormKey: 058C43:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Table_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 02EC1F:Skyrim.esm
+  Placement:
+    Position: 938.53094, 137.23569, 7421.8135
+    Rotation: 0, -0, 6.205801
+- MutagenObjectType: PlacedObject
+  FormKey: 058C47:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Glass_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0319E3:Skyrim.esm
+  Placement:
+    Position: 919.2497, 139.92606, 7484.062
+    Rotation: 0, -0, 4.4953785
+- MutagenObjectType: PlacedObject
+  FormKey: 058C48:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Plate_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0E2617:Skyrim.esm
+  Placement:
+    Position: 944.46655, 151.10048, 7483.28
+    Rotation: 0, -0, 6.205801
+- MutagenObjectType: PlacedObject
+  FormKey: 058C4D:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Bed_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 03B420:Skyrim.esm
+  Placement:
+    Position: 1089.7225, 72.27387, 7422.507
+- MutagenObjectType: PlacedObject
+  FormKey: 058C4F:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Plate_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 098624:Skyrim.esm
+  Placement:
+    Position: 1453.8083, 75.25507, 7477.694
+    Rotation: 0, -0, 3.9269907
+- MutagenObjectType: PlacedObject
+  FormKey: 058C50:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Table_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 02136B:Skyrim.esm
+  Placement:
+    Position: 1452.6025, 57.98452, 7415.4453
+    Rotation: 0, -0, 3.9269907
+- MutagenObjectType: PlacedObject
+  FormKey: 058C51:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Light_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 086016:Skyrim.esm
+  Placement:
+    Position: 1451.7559, 38.07202, 7477.694
+    Rotation: 0, -0, 3.5430183
+- MutagenObjectType: PlacedObject
+  FormKey: 058C52:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Glass_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 098621:Skyrim.esm
+  Placement:
+    Position: 1426.4984, 57.065727, 7477.694
+    Rotation: 0, -0, 3.9269907
+- MutagenObjectType: PlacedObject
+  FormKey: 058C53:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_LShelter_Chest_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 04CE62:Frostfall.esp
+  Placement:
+    Position: 1258.3654, 135.32394, 7422.7397
+    Rotation: 0, -0, 5.197789
+- MutagenObjectType: PlacedObject
+  FormKey: 058C55:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Fireplace_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0C3D36:Skyrim.esm
+  Placement:
+    Position: 1090.0974, 338.9525, 7440.5684
+    Rotation: 0, 0, 4.712389
+- MutagenObjectType: PlacedObject
+  FormKey: 058C56:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_PotHolder_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 10C73A:Skyrim.esm
+  Placement:
+    Position: 1084.0818, 248.29396, 7421.7524
+- MutagenObjectType: PlacedObject
+  FormKey: 058C57:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_CookingPot_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 1010B3:Skyrim.esm
+  Placement:
+    Position: 1083.8267, 248.97328, 7421.496
+- MutagenObjectType: PlacedObject
+  FormKey: 0591BD:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_TanningRack_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0727A1:Skyrim.esm
+  Placement:
+    Position: 1089.4973, -83.51588, 7422.507
+- MutagenObjectType: PlacedObject
+  FormKey: 0591BE:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_TanningRack_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0727A1:Skyrim.esm
+  Placement:
+    Position: 1598.7343, -59.306534, 7420.1826
+- MutagenObjectType: PlacedObject
+  FormKey: 0591BF:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_ConjurationMasterChest
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 04CE62:Frostfall.esp
+  Placement:
+    Position: 1792, 576, 7424
+    Rotation: 0, -0, 4.712389
+- MutagenObjectType: PlacedObject
+  FormKey: 0591CF:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base4_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 045598:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 986.8168, 199.51491, 7268.1514
+- MutagenObjectType: PlacedObject
+  FormKey: 0591D1:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base1_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 045599:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 1191.9016, 199.5149, 7419.706
+- MutagenObjectType: PlacedObject
+  FormKey: 0591D2:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base3_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 045598:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 1191.9016, 199.5149, 7268.1514
+- MutagenObjectType: PlacedObject
+  FormKey: 0591D3:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base2_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 045599:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 984.8168, 199.5149, 7419.706
+- MutagenObjectType: PlacedObject
+  FormKey: 0591E3:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base5_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 03E21A:Skyrim.esm
+  Scale: 1.1
+  Placement:
+    Position: 1090.0974, 337.9525, 7306.376
+    Rotation: 0, 0, 2.3561945
+- MutagenObjectType: PlacedObject
+  FormKey: 059CBC:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Chair_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 02EC1C:Skyrim.esm
+  Placement:
+    Position: 920.3468, 207.48132, 7423.46
+    Rotation: 0, -0, 1.018879
+- MutagenObjectType: PlacedObject
+  FormKey: 05A227:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Base7_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 045598:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 1094.2799, -4.5221586, 7267.55
+    Rotation: 0, -0, 1.5707964
+- MutagenObjectType: PlacedObject
+  FormKey: 05A228:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_LShelter_Base6_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 045599:Skyrim.esm
+  Scale: 0.79
+  Placement:
+    Position: 1094.2799, -4.5221586, 7419.706
+    Rotation: 0, -0, 1.5707964
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2A4:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Firewood_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 035F4A:Skyrim.esm
+  Scale: 0.75
+  Placement:
+    Position: 1090.1915, 337.506, 7436.1504
+    Rotation: 0, -0, 1.5707964
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2A6:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Deadwood_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 04318B:Skyrim.esm
+  Placement:
+    Position: 1089.3032, 340.7261, 7434.388
+    Rotation: 0, -0, 3.926991
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2B0:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Base1_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 109E57:Skyrim.esm
+  Scale: 1.16
+  Placement:
+    Position: 1598.9662, 192.9475, 7360.9624
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2B1:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Base2_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0B9C28:Skyrim.esm
+  Scale: 0.23
+  Placement:
+    Position: 1598.9662, 192.9475, 7455.5713
+    Rotation: 3.1415927, 0, 0
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2B4:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Chair_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 10E42F:Skyrim.esm
+  Placement:
+    Position: 1417.4728, 127.19321, 7415.018
+    Rotation: 0, -0, 1.0000057
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2DA:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Deadwood_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 04318B:Skyrim.esm
+  Placement:
+    Position: 1599.5547, 386.07712, 7429.301
+    Rotation: 0, -0, 3.926991
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2DB:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_PotHolder_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 10C73A:Skyrim.esm
+  Placement:
+    Position: 1594.3333, 293.64496, 7416.665
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2DC:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Fireplace_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0C3D36:Skyrim.esm
+  Placement:
+    Position: 1600.3489, 384.30353, 7435.481
+    Rotation: 0, 0, 4.712389
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2DD:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_CookingPot_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 1010B3:Skyrim.esm
+  Placement:
+    Position: 1594.0781, 294.32428, 7416.4087
+- MutagenObjectType: PlacedObject
+  FormKey: 05B2E0:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_GShelter_Firewood_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 035F4A:Skyrim.esm
+  Scale: 0.75
+  Placement:
+    Position: 1600.4431, 382.85703, 7431.063
+    Rotation: 0, -0, 1.5707964
+- MutagenObjectType: PlacedObject
+  FormKey: 062A63:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_RescueDestinationMarker
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 000034:Skyrim.esm
+  Placement:
+    Position: 1739.3187, 2139.5232, 6976
+- MutagenObjectType: PlacedObject
+  FormKey: 0702DA:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_LShelter_Sphere_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 05DE6D:Campfire.esm
+  Placement:
+    Position: 1089.7225, 161.28171, 7422.507
+- MutagenObjectType: PlacedObject
+  FormKey: 0702DB:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_GShelter_Sphere_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 05DE6D:Campfire.esm
+  Placement:
+    Position: 1598.9662, 192.9475, 7422.044
+- MutagenObjectType: PlacedObject
+  FormKey: 07232A:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_LShelter_Lantern_PosRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 02D847:Skyrim.esm
+  Placement:
+    Position: 936.88654, 117.50632, 7485.722
+    Rotation: 0, -0, 3.7831998
+- MutagenObjectType: PlacedObject
+  FormKey: 083C5C:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_ShelterDetectTargetRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 024B64:Frostfall.esp
+  Placement:
+    Position: 2478.3481, 1919.9402, 8006.4214
+- MutagenObjectType: PlacedObject
+  FormKey: 0877B2:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_HandWarmingInteractTriggerREF
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 0877B1:Frostfall.esp
+  Primitive:
+    Bounds: 320, 320, 320
+    Color: '#00CC4C33'
+    Unknown: 0.15
+    Type: Box
+  CollisionLayer: 15
+  Placement:
+    Position: 2050.2393, 1010.6728, 7171.755
+- MutagenObjectType: PlacedObject
+  FormKey: 0877B3:Frostfall.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Frost_CurrentHeatSourceMarker
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: 1886.153, 958.23944, 7201.994
+- MutagenObjectType: PlacedObject
+  FormKey: 0877B4:Frostfall.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Frost_HandWarmingExitTriggerREF
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 0877B5:Frostfall.esp
+  Primitive:
+    Bounds: 320, 320, 320
+    Color: '#00CC4C33'
+    Unknown: 0.15
+    Type: Box
+  CollisionLayer: 15
+  Placement:
+    Position: 2469.8403, 1010.67285, 7171.755
+Temporary:
+- MutagenObjectType: PlacedObject
+  FormKey: 025BC0:Frostfall.esp
+  Base: 035F4C:Skyrim.esm
+  Placement:
+    Position: 3326.3347, 844.7689, 7445.84
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE08:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 703.99963, 63.999958, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE09:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 447.99963, 64.000305, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE0A:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 704, 320, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE0B:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 448, 320, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE48:Frostfall.esp
+  MajorRecordFlagsRaw: 1073741824
+  SkyrimMajorRecordFlags:
+  - 0x40000000
+  Base: 05DE6D:Campfire.esm
+  Placement:
+    Position: 576, 192, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE61:Frostfall.esp
+  Base: 0C3D37:Skyrim.esm
+  Placement:
+    Position: 640.9745, 261.45013, 7441.914
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE63:Frostfall.esp
+  Base: 04CE62:Frostfall.esp
+  Placement:
+    Position: 514.9561, 222.42876, 7424
+    Rotation: 0, -0, 4.7269955
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE6E:Frostfall.esp
+  Base: 02136B:Skyrim.esm
+  Placement:
+    Position: 489.85675, 121.83965, 7424
+    Rotation: 0, -0, 3.926991
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE76:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 1728, 576, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE79:Frostfall.esp
+  Base: 0A33D9:Skyrim.esm
+  Placement:
+    Position: 1984, 576, 7424
+    Rotation: 0, -0, 3.1415927
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE8E:Frostfall.esp
+  Base: 086016:Skyrim.esm
+  Placement:
+    Position: 489.01007, 101.927155, 7486.2485
+    Rotation: 0, -0, 3.5415936
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE8F:Frostfall.esp
+  Base: 098621:Skyrim.esm
+  Placement:
+    Position: 463.75262, 120.92086, 7486.2485
+    Rotation: 0, -0, 3.926991
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE90:Frostfall.esp
+  Base: 098624:Skyrim.esm
+  Placement:
+    Position: 491.06256, 139.11021, 7486.2485
+    Rotation: 0, -0, 3.926991
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE99:Frostfall.esp
+  Base: 10C73A:Skyrim.esm
+  Placement:
+    Position: 685.5888, 259.2297, 7424
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE9A:Frostfall.esp
+  Base: 1010B3:Skyrim.esm
+  Placement:
+    Position: 684.56555, 239.61322, 7423.7437
+- MutagenObjectType: PlacedObject
+  FormKey: 04CE9C:Frostfall.esp
+  Base: 033DA4:Skyrim.esm
+  Placement:
+    Position: 671.11255, 277.31528, 7438.0747
+MajorFlags:
+- 0x40000

@@ -1,0 +1,21 @@
+FormKey: 067B8B:Frostfall.esp
+EditorID: _Frost_WetState_ShockWeakness
+Name:
+  TargetLanguage: English
+  Value: Weakness to Shock
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- HideInUI
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: ResistShock
+SkillUsageMultiplier: 1
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

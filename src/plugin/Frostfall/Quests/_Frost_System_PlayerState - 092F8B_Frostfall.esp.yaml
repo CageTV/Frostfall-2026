@@ -1,0 +1,47 @@
+FormKey: 092F8B:Frostfall.esp
+EditorID: _Frost_System_PlayerState
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _frost_playerstatesystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FastTravelExceptions
+      Object: 00E040:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MainQuest
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_NoWait_Spell
+      Object: 0089C1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_NoFastTravel
+      Object: 01AE47:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_NoWaiting
+      Object: 06DD0B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_VampireMode
+      Object: 06DD0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SleepObjects
+      Object: 012147:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorOblivion
+      Object: 03922E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesFTException
+      Object: 06E7E8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 092F8C:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Exposure System
+NextAliasID: 0

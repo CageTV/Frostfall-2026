@@ -1,0 +1,7 @@
+FormKey: 08F411:Frostfall.esp
+EditorID: _Frost_ProtArmor_Fair_Fair
+Description:
+  TargetLanguage: English
+  Value: Provides fair warmth (%.0f) and fair coverage (%.0f).
+INAM: 0x00000000
+DisplayTime: 2

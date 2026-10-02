@@ -1,0 +1,22 @@
+FormKey: 08C8B9:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxforcefeedback_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Controller Force Feedback
+
+
+    You will feel a shiver effect when you begin "Freezing" or "Freezing to Death". You will also feel a heartbeat pulse when swimming in frigid water.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,7 @@
+FormKey: 0446AD:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_BlizzardToClear
+Description:
+  TargetLanguage: English
+  Value: The snowstorm begins to subside.
+INAM: 0x00000000
+DisplayTime: 2

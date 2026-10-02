@@ -1,0 +1,23 @@
+FormKey: 005929:Frostfall.esp
+EditorID: _Frost_Hypothermia_Archery
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Archery'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E934:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Archery
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

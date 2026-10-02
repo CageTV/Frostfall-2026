@@ -1,0 +1,125 @@
+FormKey: 068BED:Frostfall.esp
+EditorID: FrostfallStrings
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_Strings
+    Properties:
+    - MutagenObjectType: ScriptStringProperty
+      Name: ArmorBanditCuirass1Name
+      Data: Fur Armor (Bare Top)
+    - MutagenObjectType: ScriptStringProperty
+      Name: ArmorBanditCuirass2Name
+      Data: Fur Armor (Bare Top, Shawl)
+    - MutagenObjectType: ScriptStringProperty
+      Name: ArmorBanditCuirass3Name
+      Data: Fur Armor (Sleeveless)
+    - MutagenObjectType: ScriptStringProperty
+      Name: coverage
+      Data: 'Coverage:'
+    - MutagenObjectType: ScriptStringProperty
+      Name: ExposurePrompt
+      Data: 'Exposure: '
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallAccessoryExtraPartDesc
+      Data: "'s Accessory"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallAccessoryUnnamed
+      Data: An Accessory
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallBodyExtraPartDesc
+      Data: "'s Body Gear"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallBodyUnnamed
+      Data: Body Gear
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallCloakExtraPartDesc
+      Data: "'s Cloak"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallCloakUnnamed
+      Data: A Cloak
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallFeetExtraPartDesc
+      Data: "'s Foot Gear"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallFeetUnnamed
+      Data: Foot Gear
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallHandsExtraPartDesc
+      Data: "'s Hand Gear"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallHandsUnnamed
+      Data: Hand Gear
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallHeadExtraPartDesc
+      Data: "'s Head Gear"
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallHeadUnnamed
+      Data: Head Gear
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallNoProtectionUnnamed
+      Data: Hidden Equipment
+    - MutagenObjectType: ScriptStringProperty
+      Name: FrostfallShieldUnnamed
+      Data: A Shield
+    - MutagenObjectType: ScriptStringProperty
+      Name: hood
+      Data: hood
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level1
+      Data: The air is frigid and deadly.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level10
+      Data: The sun is radiant.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level2
+      Data: The air is bone-chilling.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level3
+      Data: The air is biting cold.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level4
+      Data: The air is cold.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level5
+      Data: The air is chilly.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level6
+      Data: The air is cool.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level7
+      Data: The air is temperate.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level8
+      Data: The air is pleasant.
+    - MutagenObjectType: ScriptStringProperty
+      Name: Level9
+      Data: The air is warm.
+    - MutagenObjectType: ScriptStringProperty
+      Name: LevelIndoors
+      Data: You cannot sense the outside weather.
+    - MutagenObjectType: ScriptStringProperty
+      Name: LevelOblivion
+      Data: This plane of Oblivion is warm.
+    - MutagenObjectType: ScriptStringProperty
+      Name: robes
+      Data: robes
+    - MutagenObjectType: ScriptStringProperty
+      Name: TotalCoverage
+      Data: 'Total Coverage:'
+    - MutagenObjectType: ScriptStringProperty
+      Name: TotalWarmth
+      Data: 'Total Warmth:'
+    - MutagenObjectType: ScriptStringProperty
+      Name: warmth
+      Data: 'Warmth:'
+    - MutagenObjectType: ScriptStringProperty
+      Name: WetnessPrompt
+      Data: 'Wet: '
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall String Properties
+NextAliasID: 0

@@ -1,0 +1,12 @@
+FormKey: 060448:Frostfall.esp
+MajorRecordFlagsRaw: 134217728
+EditorID: _DE_LightableCampfire_None
+SkyrimMajorRecordFlags:
+- 0x8000000
+Model:
+  File: frostfall\_de_campfire_ringbase_static.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000
+MajorFlags:
+- NavMeshGenerationBoundingBox

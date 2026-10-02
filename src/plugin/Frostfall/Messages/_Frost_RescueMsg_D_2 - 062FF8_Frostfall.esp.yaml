@@ -1,0 +1,8 @@
+FormKey: 062FF8:Frostfall.esp
+EditorID: _Frost_RescueMsg_D_2
+Description:
+  TargetLanguage: English
+  Value: After collapsing, your animal's noise alerts a passerby, who quickly drags you to safety. You awake with a start and begin rubbing your freezing hands.
+INAM: 0x00000000
+Flags:
+- MessageBox

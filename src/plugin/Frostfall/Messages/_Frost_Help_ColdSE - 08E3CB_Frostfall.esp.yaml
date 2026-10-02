@@ -1,0 +1,18 @@
+FormKey: 08E3CB:Frostfall.esp
+EditorID: _Frost_Help_ColdSE
+Description:
+  TargetLanguage: English
+  Value: >-
+    COLD WEATHER
+
+
+    This area is cold, and your exposure will begin to increase.
+
+
+    The messages at the top of your screen will tell you when the weather changes.
+Name:
+  TargetLanguage: English
+  Value: Cold
+INAM: 0x00000000
+Flags:
+- MessageBox

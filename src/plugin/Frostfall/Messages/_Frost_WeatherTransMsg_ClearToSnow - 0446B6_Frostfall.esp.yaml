@@ -1,0 +1,7 @@
+FormKey: 0446B6:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_ClearToSnow
+Description:
+  TargetLanguage: English
+  Value: Light snow begins to fall.
+INAM: 0x00000000
+DisplayTime: 2

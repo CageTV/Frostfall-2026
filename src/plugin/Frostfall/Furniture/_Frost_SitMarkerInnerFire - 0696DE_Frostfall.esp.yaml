@@ -1,0 +1,26 @@
+FormKey: 0696DE:Frostfall.esp
+EditorID: _Frost_SitMarkerInnerFire
+Name:
+  TargetLanguage: English
+  Value: Sit Down
+Model:
+  File: Furniture\SitCrossLeggedMarker.nif
+  Data: 0x020000000000000000000000
+Keywords:
+- 06E9C7:Skyrim.esm
+- 0F688E:Skyrim.esm
+- 0A56D8:Skyrim.esm
+PNAM: 0x00000000
+Flags:
+- IgnoredBySandbox
+- 0x40000000
+InteractionKeyword: 099306:Skyrim.esm
+WorkbenchData:
+  UsesSkill: 255
+Markers:
+- Enabled: True
+  EntryPoints:
+    Type:
+    - Sit
+    Points:
+    - Behind

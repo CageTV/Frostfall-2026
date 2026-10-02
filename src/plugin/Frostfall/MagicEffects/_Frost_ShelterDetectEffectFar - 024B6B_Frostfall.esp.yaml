@@ -1,0 +1,27 @@
+FormKey: 024B6B:Frostfall.esp
+EditorID: _Frost_ShelterDetectEffectFar
+Name:
+  TargetLanguage: English
+  Value: Shelter Detect Far Effect
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- NoHitEffect
+BaseCost: 1.95
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+Projectile: 04365B:Frostfall.esp
+CastType: FireAndForget
+TargetType: Aimed
+SkillUsageMultiplier: 1.4
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,30 @@
+FormKey: 050A1F:Frostfall.esp
+EditorID: _Frost_HandWarmingEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_WarmHandsScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_1PAnimationAllowed
+      Object: 06AC6F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Heat
+      Object: 064AF9:Frostfall.esp
+Name:
+  TargetLanguage: English
+  Value: Warming Hands
+Flags:
+- NoHitEvent
+- NoMagnitude
+- NoArea
+- FXPersist
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

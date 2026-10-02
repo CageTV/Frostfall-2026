@@ -1,0 +1,8 @@
+FormKey: 062FF6:Frostfall.esp
+EditorID: _Frost_RescueMsg_F_5
+Description:
+  TargetLanguage: English
+  Value: Your companion wastes no time building a campfire from nearby fallen limbs and branches. You awaken only a few feet from the spot you collapsed. A look of relief crosses your companion's face as you begin to stir.
+INAM: 0x00000000
+Flags:
+- MessageBox

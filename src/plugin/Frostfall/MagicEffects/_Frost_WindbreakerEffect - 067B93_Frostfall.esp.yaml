@@ -1,0 +1,24 @@
+FormKey: 067B93:Frostfall.esp
+EditorID: _Frost_WindbreakerEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_WindbreakerEffectScript
+Name:
+  TargetLanguage: English
+  Value: Windbreaker Effect
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

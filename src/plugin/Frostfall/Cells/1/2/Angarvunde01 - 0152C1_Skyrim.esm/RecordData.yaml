@@ -1,0 +1,63 @@
+FormKey: 0152C1:Skyrim.esm
+IsCompressed: True
+MajorRecordFlagsRaw: 262144
+EditorID: Angarvunde01
+Version2: 2
+SkyrimMajorRecordFlags:
+- Compressed
+Name:
+  TargetLanguage: English
+  Value: Angarvunde
+Flags:
+- IsInteriorCell
+- ShowSky
+Lighting:
+  AmbientColor: '#002C2C23'
+  DirectionalColor: '#00000000'
+  FogNearColor: '#00B0DCF7'
+  FogNear: 340
+  FogFar: 14000
+  FogPower: 1
+  AmbientColors:
+    DirectionalXPlus: '#002C2418'
+    DirectionalXMinus: '#00232415'
+    DirectionalYPlus: '#00282517'
+    DirectionalYMinus: '#00282217'
+    DirectionalZPlus: '#0013110A'
+    DirectionalZMinus: '#003C3623'
+    Specular: '#00B0DCF7'
+    Scale: 1
+  FogFarColor: '#00B0DCF7'
+  FogMax: 1
+  Inherits:
+  - DirectionalColor
+  - FogColor
+  - FogNear
+  - FogFar
+  - DirectionalRotation
+  - DirectionalFade
+  - ClipDistance
+  - FogPower
+  - FogMax
+  - LightFadeDistances
+LightingTemplate: 094E50:Skyrim.esm
+WaterHeight: -2.1474836E+09
+Location: 018EE3:Skyrim.esm
+SkyAndWeatherFromRegion: 0C5857:Skyrim.esm
+AcousticSpace: 01989F:Skyrim.esm
+EncounterZone: 03EBE8:Skyrim.esm
+Music: 094BDD:Skyrim.esm
+ImageSpace: 0A2687:Skyrim.esm
+Temporary:
+- MutagenObjectType: PlacedObject
+  FormKey: 05F3F9:Frostfall.esp
+  MajorRecordFlagsRaw: 1073741824
+  SkyrimMajorRecordFlags:
+  - 0x40000000
+  Base: 059CBF:Frostfall.esp
+  RagdollData: 0x00066368B4390541D5BD5B33BBD195BFDC0FC9BF00000080C376484000696F72BA9E1740060072B900E8542C00000080000000806FA5C93F
+  Placement:
+    Position: 4470.669, -10303.39, -1181.6765
+    Rotation: 0, -0, 4.583194
+MajorFlags:
+- 0x40000

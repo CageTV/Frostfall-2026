@@ -1,0 +1,53 @@
+FormKey: 012C12:Frostfall.esp
+EditorID: _Frost_Hypothermia_Spell_0
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Warm'
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: Time spent by the fire has left you feeling warm and soothed. <+10> Health, Magicka, and Stamina.
+Type: Ability
+Effects:
+- BaseEffect: 005E98:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThanOrEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp
+- BaseEffect: 005E9A:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThanOrEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp
+- BaseEffect: 005E9B:Frostfall.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetQuestRunningConditionData
+      Quest: 068112:Frostfall.esp
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThanOrEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 068119:Frostfall.esp

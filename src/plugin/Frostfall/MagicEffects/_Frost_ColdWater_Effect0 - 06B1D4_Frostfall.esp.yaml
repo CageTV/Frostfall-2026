@@ -1,0 +1,28 @@
+FormKey: 06B1D4:Frostfall.esp
+EditorID: _Frost_ColdWater_Effect0
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ColdWaterEffect0
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterTemp0Msg
+      Object: 00AFA7:Frostfall.esp
+Name:
+  TargetLanguage: English
+  Value: Cold Water
+Keywords:
+- 06B1D5:Frostfall.esp
+Flags:
+- NoArea
+- HideInUI
+- NoRecast
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+ImageSpaceModifier: 000162:Skyrim.esm
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

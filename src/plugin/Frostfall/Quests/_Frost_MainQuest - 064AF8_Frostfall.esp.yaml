@@ -1,0 +1,1011 @@
+FormKey: 064AF8:Frostfall.esp
+EditorID: _Frost_MainQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ConditionValues
+  - Name: _Frost_FallbackReceiverMain
+  - Name: _Frost_Main
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_ArmorSonsBoots
+      Object: 0415C8:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Cloak_BasicBurlap
+      Object: 03FA9C:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Tent_LeatherSmall1BR_MISC
+      Object: 01A314:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CheckInitialEquipment
+      Object: 06DD06:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level3
+      Object: 01A8D6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level4
+      Object: 01A8D5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdISM_Level5
+      Object: 01A8D4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DatastoreInitialized
+      Object: 065B31:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyBoots
+      Object: 06DD01:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyCuirass
+      Object: 06DD02:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyGauntlets
+      Object: 06DD03:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyHelmet
+      Object: 06DD04:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyShield
+      Object: 06DD07:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FirstStartup_1
+      Object: 015CAD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FirstStartup_2
+      Object: 015CAF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FirstStartup_3
+      Object: 015CB0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FirstStartup_3SE
+      Object: 090473:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_LegacyConfig_Spell
+      Object: 08C8BF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_NoWait_Spell
+      Object: 0089C1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkNodeController_Endurance
+      Object: 064026:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StartingUpDoneMsg
+      Object: 090F3A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StartingUpMsg
+      Object: 090F39:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StartStarsMsg
+      Object: 06DD09:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SurvivorsGuide
+      Object: 007EF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_TrackingQuest
+      Object: 0177D7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallRunning
+      Object: 06DCFB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerAlias
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodFriend
+      Object: 04E50D:Skyrim.esm
+      Alias: 3
+  - Name: _Frost_WeathersenseMessages
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Help_Shelter
+      Object: 08E3CD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HelpDone_Shelter
+      Object: 08E3CE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayAttributesInWeathersense
+      Object: 03EA71:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayAttributeValuesInWeathersense
+      Object: 081656:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_DisplayTutorials
+      Object: 04000F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W1
+      Object: 080B56:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W1_NoValue
+      Object: 081657:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W2
+      Object: 080B5C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W2_NoValue
+      Object: 081658:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W3
+      Object: 080B62:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W3_NoValue
+      Object: 081659:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W4
+      Object: 080B68:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E1W4_NoValue
+      Object: 08165A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W1
+      Object: 080B57:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W1_NoValue
+      Object: 08165B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W2
+      Object: 080B5D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W2_NoValue
+      Object: 08165C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W3
+      Object: 080B63:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W3_NoValue
+      Object: 08165D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W4
+      Object: 080B69:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E2W4_NoValue
+      Object: 08165E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W1
+      Object: 080B58:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W1_NoValue
+      Object: 08165F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W2
+      Object: 080B5E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W2_NoValue
+      Object: 081660:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W3
+      Object: 080B64:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W3_NoValue
+      Object: 081661:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W4
+      Object: 080B6A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E3W4_NoValue
+      Object: 081662:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W1
+      Object: 080B59:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W1_NoValue
+      Object: 081663:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W2
+      Object: 080B5F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W2_NoValue
+      Object: 081664:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W3
+      Object: 080B65:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W3_NoValue
+      Object: 081665:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W4
+      Object: 080B6B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E4W4_NoValue
+      Object: 081666:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W1
+      Object: 080B5A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W1_NoValue
+      Object: 081667:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W2
+      Object: 080B60:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W2_NoValue
+      Object: 081668:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W3
+      Object: 080B66:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W3_NoValue
+      Object: 081669:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W4
+      Object: 080B6C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E5W4_NoValue
+      Object: 08166A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W1
+      Object: 080B5B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W1_NoValue
+      Object: 08166B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W2
+      Object: 080B61:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W2_NoValue
+      Object: 08166C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W3
+      Object: 080B67:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W3_NoValue
+      Object: 08166D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W4
+      Object: 080B6D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_StatusCnd_E6W4_NoValue
+      Object: 08166E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel1
+      Object: 08214B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel1_NoValue
+      Object: 08214E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel2
+      Object: 08214C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel2_NoValue
+      Object: 08214F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel3
+      Object: 08214D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireLevel3_NoValue
+      Object: 082150:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel1
+      Object: 082151:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel1_NoValue
+      Object: 0826B4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel2
+      Object: 0826B5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel2_NoValue
+      Object: 0826B6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel3
+      Object: 0826B7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_FireShelterLevel3_NoValue
+      Object: 0826B8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Indoors
+      Object: 081651:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Indoors_NoValue
+      Object: 08166F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level1
+      Object: 0810D9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level1_NoValue
+      Object: 081670:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level10
+      Object: 0810D0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level10_NoValue
+      Object: 081671:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level2
+      Object: 0810D8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level2_NoValue
+      Object: 081672:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level3
+      Object: 0810D7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level3_NoValue
+      Object: 081673:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level4
+      Object: 0810D6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level4_NoValue
+      Object: 081674:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level5
+      Object: 0810D5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level5_NoValue
+      Object: 081675:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level6
+      Object: 0810D4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level6_NoValue
+      Object: 081676:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level7
+      Object: 0810D3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level7_NoValue
+      Object: 081677:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level8
+      Object: 0810D2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level8_NoValue
+      Object: 081678:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level9
+      Object: 0810D1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Level9_NoValue
+      Object: 081679:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Oblivion
+      Object: 081653:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Oblivion_NoValue
+      Object: 08167A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Shelter
+      Object: 0826B9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Colder_Shelter_NoValue
+      Object: 0826BA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Fire_Chilly
+      Object: 086CEB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireLevel1
+      Object: 0826BB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireLevel2
+      Object: 0826BD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireLevel3
+      Object: 0826BE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireShelter_Chilly
+      Object: 0826CD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_FireShelter_Warm
+      Object: 0826CE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Indoors
+      Object: 081652:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level1
+      Object: 0810E4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level10
+      Object: 0810E5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level2
+      Object: 0810E6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level3
+      Object: 0810E7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level4
+      Object: 0810E8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level5
+      Object: 0810E9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level6
+      Object: 0810EA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level7
+      Object: 0810EB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level8
+      Object: 0810EC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Level9
+      Object: 0810ED:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Oblivion
+      Object: 081655:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Shelter_Chilly
+      Object: 0826BF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Steady_Shelter_Warm
+      Object: 0826C0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel1
+      Object: 0826C1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel1_NoValue
+      Object: 0826C3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel2
+      Object: 0826C2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel2_NoValue
+      Object: 0826C4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel3
+      Object: 0826C5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireLevel3_NoValue
+      Object: 0826C6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel1
+      Object: 0826C7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel1_NoValue
+      Object: 0826C8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel2
+      Object: 0826C9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel2_NoValue
+      Object: 0826CA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel3
+      Object: 0826CB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_FireShelterLevel3_NoValue
+      Object: 0826CC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Indoors
+      Object: 081650:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Indoors_NoValue
+      Object: 08167B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level1
+      Object: 0810DA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level1_NoValue
+      Object: 08167C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level10
+      Object: 0810DB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level10_NoValue
+      Object: 08167D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level2
+      Object: 0810DC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level2_NoValue
+      Object: 08167E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level3
+      Object: 0810DD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level3_NoValue
+      Object: 08167F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level4
+      Object: 0810DE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level4_NoValue
+      Object: 081680:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level5
+      Object: 0810DF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level5_NoValue
+      Object: 081681:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level6
+      Object: 0810E0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level6_NoValue
+      Object: 081682:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level7
+      Object: 0810E1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level7_NoValue
+      Object: 081683:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level8
+      Object: 0810E2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level8_NoValue
+      Object: 081684:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level9
+      Object: 0810E3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Level9_NoValue
+      Object: 081685:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Oblivion
+      Object: 081654:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Oblivion_NoValue
+      Object: 081686:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Shelter
+      Object: 0826CF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _frost_StatusTemp_Warmer_Shelter_NoValue
+      Object: 0826D0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    Scripts:
+    - Name: _Frost_PlayerFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_DrinkEffectPotion1
+        Object: 01CEBD:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_DrinkEffectPotion2
+        Object: 01CEBF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_DrinkEffectPotion3
+        Object: 01CEC1:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_DrinkKeyword
+        Object: 0670C3:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Drinks10
+        Object: 041B41:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Drinks15
+        Object: 041B40:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Drinks20
+        Object: 041B3D:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_FoodBuffKeyword
+        Object: 066B5E:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_FoodEffectPotion
+        Object: 066B5F:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SoupsList
+        Object: 066B5C:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: FrostfallWarmFoodDrinkKeyword
+        Object: CC0E08:Update.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+    - Name: _Frost_PlayerEquipMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Help_Warmth
+        Object: 08E3CC:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Help_Warmth2
+        Object: 090474:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_HelpDone_Warmth
+        Object: 08E3CA:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_MainQuest
+        Object: 064AF8:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_DisplayTutorials
+        Object: 04000F:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _FrostData_ArmorPrecache
+        Object: 07EAF6:Frostfall.esp
+    - Name: _frost_playerdialoguemonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: Conditions
+        Object: 064AF8:Frostfall.esp
+    - Name: _Frost_InnerFireMonitorScript
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SitMarkerInnerFire
+        Object: 0696DE:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+    - Name: _Frost_Compatibility
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_ArmorBanditCuirass1
+        Object: 0415C3:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_ArmorBanditCuirass2
+        Object: 0415C4:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_ArmorBanditCuirass3
+        Object: 0415C5:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_HeatSources_All
+        Object: 028F06:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_HeatSources_Other
+        Object: 028F05:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_IsSpecialEdition
+        Object: 0742B9:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Camp_WorldspacesInteriors
+        Object: 0339E3:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_AttributeExposureMeter
+        Object: 08827A:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_CriticalError_Campfire
+        Object: 06868A:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_CriticalError_JSONReadWrite
+        Object: 079A15:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_CriticalError_SKSE
+        Object: 064AF6:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_CriticalError_SkyUIInterfacePackage
+        Object: 06D233:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_CriticalError_SkyUIInterfacePackageOld
+        Object: 08724E:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Error_WearableLanterns
+        Object: 07D00B:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ExposureExceptions
+        Object: 06E7E6:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_FastTravelExceptions
+        Object: 00E040:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_FrostfallVersion
+        Object: 06E27A:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_FrostResistWarmthModPerk
+        Object: 08E3C8:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_HotkeyWeathersense
+        Object: 053011:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_InspectEquipment_Spell
+        Object: 08F9A3:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_LegacyConfig_Spell
+        Object: 08C8BF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_OvercastWeatherList
+        Object: 04671A:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_PerkNodeController_Endurance
+        Object: 064026:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_PreviousVersion
+        Object: 06F810:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_RegionDetect
+        Object: 023062:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ReleaseNotes_3_3_1
+        Object: 090F3B:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ReleaseNotes_3_4
+        Object: 0934EF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollBask
+        Object: 0609BB:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollBearskin
+        Object: 0609B3:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollBoundCloakGreater
+        Object: 05F3FC:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollBoundCloakLesser
+        Object: 0609AB:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollConjureShelterGreater
+        Object: 0609B7:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollConjureShelterLesser
+        Object: 0609B5:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollFoxskin
+        Object: 0609AF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollKindle
+        Object: 0609AD:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollRevel
+        Object: 0609BD:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollSoothe
+        Object: 0609B9:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollVaporBlast
+        Object: 0609BF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_ScrollWolfskin
+        Object: 0609B1:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_1PAnimationAllowed
+        Object: 06AC6F:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_DisplayTutorials
+        Object: 04000F:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_MeterExposureColor
+        Object: 07CA8A:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_MeterExposureColorWarm
+        Object: 07CAA6:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_Notifications_EquipmentSummary
+        Object: 06F2AD:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Setting_Notifications_EquipmentValues
+        Object: 06AC6E:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SevereWeatherList
+        Object: 024098:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeBearskin
+        Object: 056647:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeBoundCloakGreater
+        Object: 058C31:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeBoundCloakLesser
+        Object: 058C30:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeConjureShelterGreater
+        Object: 05B849:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeConjureShelterLesser
+        Object: 059CBF:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeFoxskin
+        Object: 056645:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeKindle
+        Object: 058C2F:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeSoothe1
+        Object: 05B854:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeSoothe2
+        Object: 05B855:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeSoothe3
+        Object: 05B856:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeTransmuteWood
+        Object: 056641:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeVaporBlast
+        Object: 05C897:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_SpellTomeWolfskin
+        Object: 056646:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_0_1
+        Object: 06F811:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_0_2
+        Object: 073E16:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_1
+        Object: 0773F5:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_2
+        Object: 086226:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_2_1
+        Object: 0887DD:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_3_1
+        Object: 08F986:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Upgraded_3_4
+        Object: 0934F0:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_Weathersense_Spell
+        Object: 016215:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_WorldspacesFTException
+        Object: 06E7E8:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _FrostData_ArmorPrecache
+        Object: 07EAF6:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: ArmorBanditCuirass1
+        Object: 10594B:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: ArmorBanditCuirass2
+        Object: 10594D:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: ArmorBanditCuirass3
+        Object: 10594F:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: ArmorHideCuirass
+        Object: 013911:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: Conditions
+        Object: 064AF8:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemScroll00Skill
+        Object: 0A44C7:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemScroll100Skill
+        Object: 0A44CB:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemScroll25Skill
+        Object: 0A44C8:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemScroll50Skill
+        Object: 0A44C9:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemScroll75Skill
+        Object: 0A44CA:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes00AllIllusion
+        Object: 10F651:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes00AllSpells
+        Object: 0A297A:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes00Illusion
+        Object: 09E2B3:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes00Spells
+        Object: 10FD8C:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes100Conjuration
+        Object: 0A273A:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25AllAlteration
+        Object: 0A297D:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25AllConjuration
+        Object: 0A297E:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25AllIllusion
+        Object: 0A2980:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25Alteration
+        Object: 0A272A:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25Conjuration
+        Object: 0A272B:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes25Illusion
+        Object: 0A272D:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50AllAlteration
+        Object: 0A298C:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50AllConjuration
+        Object: 0A298D:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LitemSpellTomes50AllDestruction
+        Object: 0A298E:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50AllIllusion
+        Object: 0A298F:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTOmes50AllRestoration
+        Object: 0A2990:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50Alteration
+        Object: 0A2735:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50Conjuration
+        Object: 0A2730:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LitemSpellTomes50Destruction
+        Object: 0A2731:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50Illusion
+        Object: 0A2732:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTOmes50Restoration
+        Object: 0A2734:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes50Spells
+        Object: 10FCF0:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes75AllAlteration
+        Object: 0A2982:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes75AllConjuration
+        Object: 0A2983:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes75Alteration
+        Object: 0A272F:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes75Conjuration
+        Object: 0A2736:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LItemSpellTomes75Spells
+        Object: 10FCF1:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: MGRitualConjurationBooks
+        Object: 0FDE78:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerAlias
+        Object: 064AF8:Frostfall.esp
+        Alias: 0
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+    - Name: _Frost_PlayerSpellMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_PerkRank_FrostWarding
+        Object: 067BA6:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_WetLevel
+        Object: 06458D:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Frost_WetStateKeyword
+        Object: 0245FB:Frostfall.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: MagicDamageFire
+        Object: 01CEAD:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: MagicDamageFrost
+        Object: 01CEAE:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: SteamFXShader
+        Object: 10FDF9:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Frostfall Main Quest
+NextAliasID: 1
+Aliases:
+- Name: _Frost_PlayerAlias
+  Flags:
+  - Optional
+  - AllowReserved
+  ForcedReference: 000014:Skyrim.esm
+  Spells:
+  - 064AF3:Frostfall.esp
+  - 064AFE:Frostfall.esp
+  - 013C40:Frostfall.esp
+  - 067B9A:Frostfall.esp
+  - 067B94:Frostfall.esp
+  - 050A21:Frostfall.esp
+  - 06B1D6:Frostfall.esp
+  - 06E272:Frostfall.esp
+  - 06E277:Frostfall.esp
+  - 06E275:Frostfall.esp
+  - 012C12:Frostfall.esp
+  - 004E56:Frostfall.esp
+  - 004E57:Frostfall.esp
+  - 004E5A:Frostfall.esp
+  - 004E5C:Frostfall.esp
+  - 004E5E:Frostfall.esp
+  VoiceTypes: Null

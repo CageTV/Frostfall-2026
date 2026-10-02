@@ -1,0 +1,22 @@
+FormKey: 08C8BE:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxfolloweranim_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Follower Hand Warming Animations
+
+
+    If enabled, followers (up to 3) will gather around heat sources and warm their hands when the player does. Requires Player Hand Warming Animations be set to Auto or Prompt.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

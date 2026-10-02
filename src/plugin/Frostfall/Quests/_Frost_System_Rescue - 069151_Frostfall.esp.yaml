@@ -1,0 +1,218 @@
+FormKey: 069151:Frostfall.esp
+EditorID: _Frost_System_Rescue
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_FallbackReceiverRescueSystem
+  - Name: _Frost_RescueSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Campfire
+      Object: 031DAF:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Campfire_Light_3
+      Object: 025BBB:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_ForceBlackVFX
+      Object: 053168:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Fuel_Flickering_BranchesLit
+      Object: 0328A6:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Fuel_Flickering_BranchesUnlit
+      Object: 0328A7:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_LastUsedCampfireSize
+      Object: CC0E0C:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Trees
+      Object: 01D441:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerDawnstar
+      Object: 05226F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerDragonbridge
+      Object: 10C072:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerFalkreath
+      Object: 10C075:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerIvarstead
+      Object: 10C074:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerKynesgrove
+      Object: 020A08:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerMarkarth
+      Object: 0F9952:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerMorthal
+      Object: 10DE51:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerNightgateInn
+      Object: 020059:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerRiften
+      Object: 05CE28:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerRiverwood
+      Object: 013164:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerRorikstead
+      Object: 10C078:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerSolitude
+      Object: 10C073:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerTamriel
+      Object: 0DC1C8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerWhiterun
+      Object: 0769DD:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerWindhelm
+      Object: 047CAE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MarkerWinterhold
+      Object: 01EB7F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueDestinationMarker
+      Object: 062A63:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueLetterSettlement
+      Object: 062A76:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueLetterSpouse
+      Object: 062A77:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_A_1
+      Object: 062FF0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_A_2
+      Object: 062FF1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_D_1
+      Object: 062FF7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_D_2
+      Object: 062FF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_D_3
+      Object: 062FF9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_D_4
+      Object: 062FFA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_F_1
+      Object: 062FF2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_F_2
+      Object: 062FF3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_F_3
+      Object: 062FF4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_F_4
+      Object: 062FF5:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_F_5
+      Object: 062FF6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RescueMsg_Failsafe
+      Object: 062FFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterOther
+      Object: 062A66:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Dawnstar
+      Object: 062A75:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_DragonBridge
+      Object: 062A6A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Falkreath
+      Object: 062A73:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Ivarstead
+      Object: 062A6B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Kynesgrove
+      Object: 062A69:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Markarth
+      Object: 062A70:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Morthal
+      Object: 062A74:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_NightgateInn
+      Object: 062A6C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Riften
+      Object: 062A72:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Riverwood
+      Object: 062A67:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Rorikstead
+      Object: 062A68:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Solitude
+      Object: 062A6F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Whiterun
+      Object: 062A71:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Windhelm
+      Object: 062A6E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_RobLetterSettlement_Winterhold
+      Object: 062A6D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Alias_LoveInterest
+      Object: 021382:Skyrim.esm
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: COCMarkerHeading
+      Object: 000032:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackHoldImod
+      Object: 0F756E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackImod
+      Object: 0F756D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Gold001
+      Object: 00000F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Idle_1stPersonWoozyGetUpFromBed
+      Object: 0CF2C6:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PHYGenericDirtHeavyH
+      Object: 044678:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SleepyTimeFadeIn
+      Object: 0F342B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Tamriel
+      Object: 00003C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TG05_KnockOut
+      Object: 0D17FB:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Warmth System
+NextAliasID: 0

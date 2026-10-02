@@ -1,0 +1,7 @@
+FormKey: 0826CB:Frostfall.esp
+EditorID: _frost_StatusTemp_Warmer_FireShelterLevel3
+Description:
+  TargetLanguage: English
+  Value: 'Your shelter is filled with warmth. Getting warmer. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

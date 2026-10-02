@@ -1,0 +1,8 @@
+FormKey: 062FF7:Frostfall.esp
+EditorID: _Frost_RescueMsg_D_1
+Description:
+  TargetLanguage: English
+  Value: Darkness overcomes you. Time passes. To your surprise, you are not dead. Your animal companion seems to have pulled you by the leg to an abandoned campsite. You pat yourself, checking for injuries. Satisfied, you slowly begin to stand.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,18 @@
+FormKey: 022AFE:Frostfall.esp
+EditorID: _Frost_Help_Wet
+Description:
+  TargetLanguage: English
+  Value: >-
+    WETNESS
+
+
+    You are soaking wet from rain or swimming, which significantly increases your rate of exposure. Dry off by standing near a fire or spending enough time out of the rain and not swimming.
+
+
+    Increasing your coverage can help prevent getting wet in the rain.
+Name:
+  TargetLanguage: English
+  Value: Wet
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,25 @@
+FormKey: 08C8D3:Frostfall.esp
+EditorID: _Frost_legacyconfig_tutorials_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Show Tutorials
+
+
+    If enabled, Frostfall will display certain tutorial messages when it is contextually relevant. If you are already an experienced Frostfall player, you can safely disable this feature.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Reset Tutorials
+- Text:
+    TargetLanguage: English
+    Value: Back

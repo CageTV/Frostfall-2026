@@ -1,0 +1,13 @@
+FormKey: 03D9A7:Frostfall.esp
+EditorID: _Frost_LoadingScreen5
+Description:
+  TargetLanguage: English
+  Value: Leather tents are waterproof, but aren't as warm as fur.
+LoadingScreenNif: 0800DC:Skyrim.esm
+InitialScale: 0.4
+InitialRotation: 0, 0, 165
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: 0, 0, -50
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

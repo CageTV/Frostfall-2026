@@ -1,0 +1,8 @@
+FormKey: 062FF1:Frostfall.esp
+EditorID: _Frost_RescueMsg_A_2
+Description:
+  TargetLanguage: English
+  Value: While out on a walk, a passerby discovers your shivering body. You feel yourself being moved somewhere nearby. You awaken in unfamiliar surroundings, the flames of a fire hot against your face.
+INAM: 0x00000000
+Flags:
+- MessageBox

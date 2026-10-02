@@ -1,0 +1,7 @@
+FormKey: 090F3A:Frostfall.esp
+EditorID: _Frost_StartingUpDoneMsg
+Description:
+  TargetLanguage: English
+  Value: (Done! Frostfall is enabled.)
+INAM: 0x00000000
+DisplayTime: 2

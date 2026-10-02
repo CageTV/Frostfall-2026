@@ -1,0 +1,34 @@
+FormKey: 056643:Frostfall.esp
+EditorID: _Frost_PerkArmorFFSelf50
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ArmorSpellScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ActivePerkGlobal
+      Object: 056649:Frostfall.esp
+Name:
+  TargetLanguage: English
+  Value: Armor 50 Perk bonus
+MenuDisplayObject: 109AC2:Skyrim.esm
+Keywords:
+- 104AB7:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- FXPersist
+- HideInUI
+- PowerAffectsDuration
+MagicSkill: Alteration
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+  Association: 104AB7:Skyrim.esm
+CastType: FireAndForget
+SkillUsageMultiplier: 1
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

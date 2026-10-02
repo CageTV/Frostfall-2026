@@ -1,0 +1,206 @@
+FormKey: 064590:Frostfall.esp
+EditorID: FrostfallSystem
+VirtualMachineAdapter:
+  Scripts:
+  - Name: FrostfallAPI
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_APIVersion
+      Object: 06E27B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeCoverage
+      Object: 067B91:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeExposure
+      Object: 00183D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWarmth
+      Object: 067B8F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWetness
+      Object: 06458C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceDistance
+      Object: 064AFB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceSize
+      Object: 064AFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentTemperature
+      Object: 0665F9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureExceptions
+      Object: 06E7E6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureLevel
+      Object: 068119:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureTarget
+      Object: 0805E4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FastTravelExceptions
+      Object: 00E040:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostfallVersion
+      Object: 06E27A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsTakingShelter
+      Object: 068118:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_NearFire
+      Object: 064AFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_OvercastWeatherList
+      Object: 04671A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SevereWeatherList
+      Object: 024098:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SleepObjects
+      Object: 012147:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WetLevel
+      Object: 06458D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesExteriorOblivion
+      Object: 03922E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WorldspacesFTException
+      Object: 06E7E8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorShield
+      Object: 0965B2:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Climate
+      Object: 066096:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Clothing
+      Object: 064B04:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClothingDatastoreHandler
+      Object: 064B04:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: coverage
+      Object: 067B90:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_DispelBoundCloaks
+      Object: 08D3A0:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_FrostfallLoaded
+      Object: 08ADA0:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnConjuredObjectIDUpdated
+      Object: 08D3A1:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnInnerFireMeditate
+      Object: 08AD99:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnPlayerStartSwimming
+      Object: 08AD9A:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnPlayerStopSwimming
+      Object: 08AD9B:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnRescuePlayer
+      Object: 08AD98:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnTamrielRegionChange
+      Object: 07FB1F:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_SoupEffectStart
+      Object: 08AD9C:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_SoupEffectStop
+      Object: 08AD9D:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_StartFrostfall
+      Object: 08AD9E:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_StopFrostfall
+      Object: 08AD9F:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_UpdateCoverage
+      Object: 08ADA1:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_UpdateWarmth
+      Object: 07F059:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Exposure
+      Object: 068112:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ExposureMeterHandler
+      Object: 05CDFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallEnableKeywordProtection
+      Object: CC0E28:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallIsCloakCloth
+      Object: CC0E1B:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallIsCloakFur
+      Object: CC0E1E:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallIsCloakLeather
+      Object: CC0E1D:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostResist
+      Object: 0773F3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HeatSource
+      Object: 064AF9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Interface
+      Object: 065B30:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LegacyArmorDatastore
+      Object: 08ADA2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerState
+      Object: 092F8B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Rescue
+      Object: 069151:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Shelter
+      Object: 06811E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WAF_ClothingCloak
+      Object: AF0128:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: warmth
+      Object: 067B8E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WeathersenseMeterHandler
+      Object: 068BEE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: wetness
+      Object: 06458B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WetnessMeterHandler
+      Object: 05CDFF:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+NextAliasID: 0

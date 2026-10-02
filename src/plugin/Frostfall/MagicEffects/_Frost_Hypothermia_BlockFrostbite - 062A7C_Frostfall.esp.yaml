@@ -1,0 +1,21 @@
+FormKey: 062A7C:Frostfall.esp
+EditorID: _Frost_Hypothermia_BlockFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Block'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Block
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

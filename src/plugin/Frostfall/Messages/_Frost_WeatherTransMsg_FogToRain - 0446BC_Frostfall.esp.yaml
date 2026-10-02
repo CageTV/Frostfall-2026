@@ -1,0 +1,7 @@
+FormKey: 0446BC:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_FogToRain
+Description:
+  TargetLanguage: English
+  Value: The sound of rain can be heard nearby.
+INAM: 0x00000000
+DisplayTime: 2

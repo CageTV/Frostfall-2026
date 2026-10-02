@@ -1,0 +1,22 @@
+FormKey: 08C8CE:Frostfall.esp
+EditorID: _Frost_legacyconfig_enduranceskill
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Endurance Skill
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Respec Skill Points
+- Text:
+    TargetLanguage: English
+    Value: Restore Skill Progress
+- Text:
+    TargetLanguage: English
+    Value: Back

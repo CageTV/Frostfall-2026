@@ -1,0 +1,20 @@
+FormKey: 06E274:Frostfall.esp
+EditorID: _Frost_ImmuneEffect
+Name:
+  TargetLanguage: English
+  Value: Exposure Immunity
+MenuDisplayObject: 04E264:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your race makes you completely immune to exposure.

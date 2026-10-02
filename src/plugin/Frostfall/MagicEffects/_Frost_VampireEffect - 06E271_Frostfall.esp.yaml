@@ -1,0 +1,20 @@
+FormKey: 06E271:Frostfall.esp
+EditorID: _Frost_VampireEffect
+Name:
+  TargetLanguage: English
+  Value: Fortify Warmth
+MenuDisplayObject: 04E264:Skyrim.esm
+Flags:
+- NoHitEvent
+- NoMagnitude
+- NoArea
+- NoHitEffect
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your undead nature makes you less susceptible to the effects of exposure. Your Warmth Rating is increased by <100> points, and you are immune to frostbite.

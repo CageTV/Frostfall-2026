@@ -1,0 +1,15 @@
+FormKey: 08F99E:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspectextrascloak
+Description:
+  TargetLanguage: English
+  Value: Does this equipment also include a cloak?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No

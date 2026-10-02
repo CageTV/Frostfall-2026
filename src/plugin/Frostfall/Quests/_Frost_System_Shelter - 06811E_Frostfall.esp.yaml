@@ -1,0 +1,45 @@
+FormKey: 06811E:Frostfall.esp
+EditorID: _Frost_System_Shelter
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ShelterSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AnchorRef
+      Object: 02202C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsTakingShelter
+      Object: 068118:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ShelterDetectBeamFar
+      Object: 024B69:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ShelterDetectBeamNear
+      Object: 083C61:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ShelterDetectLastSeenTime
+      Object: 024B6D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ShelterDetectOriginRef
+      Object: 024B65:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ShelterDetectTargetRef
+      Object: 083C5C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 06811F:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Overhead Shelter System
+NextAliasID: 0

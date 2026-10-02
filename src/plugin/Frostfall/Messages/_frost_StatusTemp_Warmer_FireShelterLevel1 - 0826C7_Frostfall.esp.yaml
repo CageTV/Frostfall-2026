@@ -1,0 +1,7 @@
+FormKey: 0826C7:Frostfall.esp
+EditorID: _frost_StatusTemp_Warmer_FireShelterLevel1
+Description:
+  TargetLanguage: English
+  Value: 'Your shelter traps the faint heat. Getting warmer. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

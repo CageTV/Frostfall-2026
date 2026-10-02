@@ -1,0 +1,22 @@
+FormKey: 08C8CD:Frostfall.esp
+EditorID: _Frost_legacyconfig_msgequipsummary_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Warmth / Coverage Totals
+
+
+    If enabled, you will receive a notification describing your total Warmth and Coverage when you change equipment.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

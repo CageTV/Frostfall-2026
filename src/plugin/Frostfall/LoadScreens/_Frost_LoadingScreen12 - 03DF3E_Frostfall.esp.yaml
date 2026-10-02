@@ -1,0 +1,13 @@
+FormKey: 03DF3E:Frostfall.esp
+EditorID: _Frost_LoadingScreen12
+Description:
+  TargetLanguage: English
+  Value: Being wet causes you to gain exposure much more rapidly.
+LoadingScreenNif: 03DF3C:Frostfall.esp
+InitialScale: 0.9
+InitialRotation: -10, 0, -35
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: 35, 0, -46
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

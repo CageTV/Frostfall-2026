@@ -1,0 +1,7 @@
+FormKey: 0826CA:Frostfall.esp
+EditorID: _frost_StatusTemp_Warmer_FireShelterLevel2_NoValue
+Description:
+  TargetLanguage: English
+  Value: Your shelter is warm near the fire. You are getting warmer.
+INAM: 0x00000000
+DisplayTime: 2

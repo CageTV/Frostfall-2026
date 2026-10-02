@@ -1,0 +1,28 @@
+FormKey: 08D3A0:Frostfall.esp
+EditorID: _Frost_EventEmitter_DispelBoundCloaks
+VirtualMachineAdapter:
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 08D3A0:Frostfall.esp
+      Alias: 0
+    Scripts:
+    - Name: FallbackEventEmitter
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: FallbackEventHandleMarker
+        Object: 0727BD:Campfire.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 1
+Aliases:
+- Name: Player
+  Flags: []
+  ForcedReference: 000014:Skyrim.esm
+  VoiceTypes: Null

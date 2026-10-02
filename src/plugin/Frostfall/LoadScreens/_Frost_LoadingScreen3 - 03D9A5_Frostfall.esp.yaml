@@ -1,0 +1,13 @@
+FormKey: 03D9A5:Frostfall.esp
+EditorID: _Frost_LoadingScreen3
+Description:
+  TargetLanguage: English
+  Value: Campfires can quickly warm you up, dry you off, and be used for cooking.
+LoadingScreenNif: 035F4C:Skyrim.esm
+InitialScale: 0.5
+InitialRotation: -10, -5, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: 0, 0, -50
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

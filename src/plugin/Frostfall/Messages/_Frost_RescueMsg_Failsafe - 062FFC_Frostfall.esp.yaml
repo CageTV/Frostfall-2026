@@ -1,0 +1,8 @@
+FormKey: 062FFC:Frostfall.esp
+EditorID: _Frost_RescueMsg_Failsafe
+Description:
+  TargetLanguage: English
+  Value: You wake to find yourself in a distant tavern. You are unsure of how you arrived, but thankful to be alive just the same.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,111 @@
+FormKey: 064026:Frostfall.esp
+MajorRecordFlagsRaw: 8389120
+EditorID: _Frost_PerkNodeController_Endurance
+SkyrimMajorRecordFlags:
+- 0x200
+- 0x800000
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNodeControllerBehavior
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_PerkGeneral_UpgradeVerify
+      Object: 043826:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkArtPlane
+      Object: 06915C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkArtPlane_PositionRef
+      Object: 06915F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine00
+      Object: 069172:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine00_PositionRef
+      Object: 069166:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine01
+      Object: 069173:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine01_PositionRef
+      Object: 069168:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine02
+      Object: 069174:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine02_PositionRef
+      Object: 06916A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine03
+      Object: 069175:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine03_PositionRef
+      Object: 069167:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine04
+      Object: 069176:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine04_PositionRef
+      Object: 069169:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine05
+      Object: 069177:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine05_PositionRef
+      Object: 06916B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode00
+      Object: 06916C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode00_PositionRef
+      Object: 069160:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode01
+      Object: 06916D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode01_PositionRef
+      Object: 069161:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode02
+      Object: 06916E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode02_PositionRef
+      Object: 069163:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode03
+      Object: 06916F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode03_PositionRef
+      Object: 069162:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode04
+      Object: 069170:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode04_PositionRef
+      Object: 069164:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode05
+      Object: 069171:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode05_PositionRef
+      Object: 069165:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNodeController_PositionRef
+      Object: 06915E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_point_progress
+      Object: 064028:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_points_available
+      Object: 064027:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 0510F1:Campfire.esm
+Model:
+  File: MarkerX.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- HiddenFromLocalMap
+- IsMarker

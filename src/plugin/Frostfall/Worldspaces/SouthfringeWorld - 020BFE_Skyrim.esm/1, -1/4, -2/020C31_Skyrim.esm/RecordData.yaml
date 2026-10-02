@@ -1,0 +1,21 @@
+FormKey: 020C31:Skyrim.esm
+Version2: 1
+Flags:
+- HasWater
+Grid:
+  Point: 33, -15
+  Flags: 2077012736
+WaterHeight: -2.1474836E+09
+AcousticSpace: 02B3AE:Skyrim.esm
+Music: 05228A:Skyrim.esm
+Temporary:
+- MutagenObjectType: PlacedObject
+  FormKey: 05EE87:Frostfall.esp
+  MajorRecordFlagsRaw: 1073741824
+  SkyrimMajorRecordFlags:
+  - 0x40000000
+  Base: 056646:Frostfall.esp
+  RagdollData: 0x00FF8031B4390541D5BD5B33BBD195BFDC0FC9BF00000080C376484000417661BA9E1740060072B900E8542C00000080000000806FA5C93F
+  Placement:
+    Position: 135635.77, -61398.965, 9934.012
+    Rotation: 0, -0, 0.7000008

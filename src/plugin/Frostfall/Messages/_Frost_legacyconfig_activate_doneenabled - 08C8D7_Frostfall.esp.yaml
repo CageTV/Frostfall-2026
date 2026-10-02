@@ -1,0 +1,12 @@
+FormKey: 08C8D7:Frostfall.esp
+EditorID: _Frost_legacyconfig_activate_doneenabled
+Description:
+  TargetLanguage: English
+  Value: Frostfall has been enabled. Exiting menu so the setting can take effect.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

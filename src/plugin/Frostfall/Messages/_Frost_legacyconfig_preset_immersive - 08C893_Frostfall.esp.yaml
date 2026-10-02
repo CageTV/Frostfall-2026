@@ -1,0 +1,32 @@
+FormKey: 08C893:Frostfall.esp
+EditorID: _Frost_legacyconfig_preset_immersive
+Description:
+  TargetLanguage: English
+  Value: >-
+    Immersive
+
+
+    This preset is designed to add immersion and a small amount of extra challenge while avoiding interrupting gameplay.
+
+
+    The exposure rate is slightly lower than normal (0.8x).
+
+    At max exposure, you will not pass out.
+
+    Fast travel is enabled.
+
+    Frigid water is not lethal.
+
+    Exposure is paused during combat.
+
+    You will move normally at high exposure.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Activate Preset
+- Text:
+    TargetLanguage: English
+    Value: Back

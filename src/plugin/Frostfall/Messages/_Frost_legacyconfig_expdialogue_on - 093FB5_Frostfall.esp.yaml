@@ -1,0 +1,22 @@
+FormKey: 093FB5:Frostfall.esp
+EditorID: _Frost_legacyconfig_expdialogue_on
+Description:
+  TargetLanguage: English
+  Value: >-
+    Pause Exposure During Dialogue
+
+
+    If enabled, exposure changes will pause when talking to other NPCs.
+
+
+    Current setting: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Disable
+- Text:
+    TargetLanguage: English
+    Value: Back

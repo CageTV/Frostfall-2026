@@ -1,0 +1,27 @@
+FormKey: 08C8AF:Frostfall.esp
+EditorID: _Frost_legacyconfig_effects3
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Effects
+
+    (Page 3 of 3)
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Player Hand-Warming
+- Text:
+    TargetLanguage: English
+    Value: Follower Hand-Warming
+- Text:
+    TargetLanguage: English
+    Value: More...
+- Text:
+    TargetLanguage: English
+    Value: Back

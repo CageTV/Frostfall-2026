@@ -1,0 +1,18 @@
+FormKey: 05BDCF:Frostfall.esp
+EditorID: _Frost_VaporBlastExplosion
+Model:
+  File: frostfall\_Frost_VaporBlastAreaEffect.nif
+  Data: 0x020000000000000000000000
+ImageSpaceModifier: 05BDCE:Frostfall.esp
+Sound1: 000E00:Skyrim.esm
+ImpactDataSet: 10FDF7:Skyrim.esm
+Force: 150
+Damage: 1
+Radius: 2100
+ISRadius: 1024
+VerticalOffsetMult: 0.2
+Flags:
+- 0x1
+- AlwaysUsesWorldOrientation
+- IgnoreImageSpaceSwap
+SoundLevel: Normal

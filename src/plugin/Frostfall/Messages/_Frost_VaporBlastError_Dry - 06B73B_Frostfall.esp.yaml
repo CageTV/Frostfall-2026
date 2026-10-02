@@ -1,0 +1,7 @@
+FormKey: 06B73B:Frostfall.esp
+EditorID: _Frost_VaporBlastError_Dry
+Description:
+  TargetLanguage: English
+  Value: You must be wet to cast this.
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,19 @@
+FormKey: 083C61:Frostfall.esp
+EditorID: _Frost_ShelterDetectBeamNear
+Name:
+  TargetLanguage: English
+  Value: Shelter Detect Beam
+MenuDisplayObject: 09FA64:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 1
+Flags:
+- NoAbsorbOrReflect
+CastType: FireAndForget
+TargetType: Aimed
+HalfCostPerk: 0F2CA8:Skyrim.esm
+Effects:
+- BaseEffect: 083C60:Frostfall.esp
+  Data: {}

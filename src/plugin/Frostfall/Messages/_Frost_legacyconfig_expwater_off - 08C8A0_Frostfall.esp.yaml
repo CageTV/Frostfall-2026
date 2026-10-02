@@ -1,0 +1,22 @@
+FormKey: 08C8A0:Frostfall.esp
+EditorID: _Frost_legacyconfig_expwater_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frigid Water is Lethal
+
+
+    If enabled, being in frigid water can incapacitate or kill you. If disabled, cold water still saps your stamina.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

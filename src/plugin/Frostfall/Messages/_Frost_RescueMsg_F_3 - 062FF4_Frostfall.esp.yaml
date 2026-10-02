@@ -1,0 +1,8 @@
+FormKey: 062FF4:Frostfall.esp
+EditorID: _Frost_RescueMsg_F_3
+Description:
+  TargetLanguage: English
+  Value: Your companion pulls you to a nearby abandoned campsite. As you begin to stand, you wonder what fate may have befallen those that tended this camp before you arrived.
+INAM: 0x00000000
+Flags:
+- MessageBox

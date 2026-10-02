@@ -1,0 +1,15 @@
+FormKey: 08F99F:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspectextrashead
+Description:
+  TargetLanguage: English
+  Value: Does this equipment also include head gear, such as a hood that is also part of this equipment?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No

@@ -1,0 +1,11 @@
+FormKey: 06B1D8:Frostfall.esp
+MajorRecordFlagsRaw: 4
+EditorID: _Frost_DummyItem
+SkyrimMajorRecordFlags:
+- NotPlayable
+Model:
+  File: Clutter\Dining Set\BasicFork01.nif
+  Data: 0x020000000000000000000000
+Weight: 0.1
+MajorFlags:
+- NonPlayable

@@ -1,0 +1,267 @@
+FormKey: 064B04:Frostfall.esp
+EditorID: _Frost_System_Clothing
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_APDatastoreDefaultData
+  - Name: _frost_armorprotectiondatastorehandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Backpacks
+      Object: 02C274:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CoverageExcellent
+      Object: CC0E19:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CoverageFair
+      Object: CC0E17:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CoverageGood
+      Object: CC0E18:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CoverageMax
+      Object: CC0E1A:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CoveragePoor
+      Object: CC0E15:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DatastoreInitialized
+      Object: 065B31:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_EnableKeywordProtection
+      Object: CC0E28:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraCloakCloth
+      Object: CC0E25:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraCloakFur
+      Object: CC0E27:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraCloakLeather
+      Object: CC0E26:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraHeadCloth
+      Object: CC0E21:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraHeadWarm
+      Object: CC0E24:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExtraHeadWeatherproof
+      Object: CC0E23:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Ignore
+      Object: CC0E0E:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsCloakCloth
+      Object: CC0E1B:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsCloakFur
+      Object: CC0E1E:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsCloakLeather
+      Object: CC0E1D:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsWarmAccessory
+      Object: CC0E20:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsWeatherproofAccessory
+      Object: CC0E1F:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_CurrentProfile
+      Object: 06DCFA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmthExcellent
+      Object: CC0E13:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmthFair
+      Object: CC0E11:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmthGood
+      Object: CC0E12:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmthMax
+      Object: CC0E14:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WarmthPoor
+      Object: CC0E0F:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorBody
+      Object: 065067:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorCloak
+      Object: 0655CD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorFeet
+      Object: 0655CC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorHands
+      Object: 0655CB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorHead
+      Object: 0655CA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorIgnore
+      Object: 06E7E7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorPrecache
+      Object: 07EAF6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorShield
+      Object: 067B92:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorBoots
+      Object: 06C0ED:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorClothing
+      Object: 06BBE8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorCuirass
+      Object: 06C0EC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorGauntlets
+      Object: 06C0EF:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorHeavy
+      Object: 06BBD2:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorHelmet
+      Object: 06C0EE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorJewelry
+      Object: 06BBE9:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArmorLight
+      Object: 06BBD3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClothingBody
+      Object: 0A8657:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClothingFeet
+      Object: 10CD12:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClothingHands
+      Object: 10CD13:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClothingHead
+      Object: 10CD11:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WAF_ClothingCloak
+      Object: AF0128:Update.esm
+  - Name: _Frost_ClothingSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CheckInitialEquipment
+      Object: 06DD06:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyArmorKW
+      Object: 06DD05:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Excellent_Excellent
+      Object: 08F41A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Excellent_Fair
+      Object: 08F410:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Excellent_Good
+      Object: 08F415:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Excellent_Max
+      Object: 08F41F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Excellent_Poor
+      Object: 08F40E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Fair_Excellent
+      Object: 08F41B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Fair_Fair
+      Object: 08F411:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Fair_Good
+      Object: 08F416:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Fair_Max
+      Object: 08F420:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Fair_Poor
+      Object: 08F40C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Good_Excellent
+      Object: 08F41C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Good_Fair
+      Object: 08F412:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Good_Good
+      Object: 08F417:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Good_Max
+      Object: 08F421:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Good_Poor
+      Object: 08F40D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Max_Excellent
+      Object: 08F41D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Max_Fair
+      Object: 08F413:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Max_Good
+      Object: 08F418:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Max_Max
+      Object: 08F422:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Max_Poor
+      Object: 08F40F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Poor_Excellent
+      Object: 08F41E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Poor_Fair
+      Object: 08F414:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Poor_Good
+      Object: 08F419:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Poor_Max
+      Object: 08F423:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtArmor_Poor_Poor
+      Object: 08F40B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ProtectionTotalsMsg
+      Object: 089D66:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Notifications_EquipmentSummary
+      Object: 06F2AD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Notifications_EquipmentValues
+      Object: 06AC6E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WornGearData
+      Object: 0773F1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _FrostData_ArmorPrecache
+      Object: 07EAF6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EquipMon
+      Object: 064AF8:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallRunning
+      Object: 06DCFB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WAF_ClothingCloak
+      Object: AF0128:Update.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Clothing System
+NextAliasID: 0

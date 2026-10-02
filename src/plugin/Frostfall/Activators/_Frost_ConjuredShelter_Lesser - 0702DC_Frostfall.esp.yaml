@@ -1,0 +1,157 @@
+FormKey: 0702DC:Frostfall.esp
+EditorID: _Frost_ConjuredShelter_Lesser
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_OnConjuredObjectIDReceiver
+  - Name: campconjuredshelter
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MGTeleportInEffect
+      Object: 102730:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic1
+      Object: 0591D1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic2
+      Object: 0591D3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic3
+      Object: 0591D2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic4
+      Object: 0591CF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic5
+      Object: 0591E3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic6
+      Object: 05A228:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_BaseStatic7
+      Object: 05A227:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_CenterObjectOverride
+      Object: 0702DA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterActivator1
+      Object: 058C53:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterFurniture1
+      Object: 059CBC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterFurniture2
+      Object: 0591BD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterFurniture3
+      Object: 058C57:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterFurniture4
+      Object: 058C55:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterMisc1
+      Object: 058C47:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterMisc2
+      Object: 058C48:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterStatic1
+      Object: 058C43:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterStatic2
+      Object: 058C56:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Lantern1
+      Object: 07232A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Sphere
+      Object: 0702DA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RequiredPositionRef_PlayerBed
+      Object: 058C4D:Frostfall.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_Flammable
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_IsConjured
+      Data: True
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_PlayerUsesFullBed
+      Data: True
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Setting_StartUpRotation
+      Data: 180
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_UseShelterSphere
+      Data: True
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ShockDisintegrate01FXS
+      Object: 0D22FB:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SummonTargetFXActivator
+      Object: 07CD55:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic1
+      Object: 045599:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic2
+      Object: 045599:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic3
+      Object: 045598:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic4
+      Object: 045598:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic5
+      Object: 03E21A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic6
+      Object: 045599:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_BaseStatic7
+      Object: 045598:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterActivator1
+      Object: 07232B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterFurniture1
+      Object: 02EC1C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterFurniture2
+      Object: 0727A1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterFurniture3
+      Object: 05EE95:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterFurniture4
+      Object: 05E932:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterMisc1
+      Object: 0319E3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterMisc2
+      Object: 0E2617:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterStatic1
+      Object: 02EC1F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterStatic2
+      Object: 10C73A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UniqueConjuredObjectIDGlobal
+      Object: 063A19:Campfire.esm
+Name:
+  TargetLanguage: English
+  Value: Your Conjured Bed
+Model:
+  File: Furniture\Common\CommonBed01.nif
+  Data: 0x020000000000000000000000
+Keywords:
+- 02AFC9:Campfire.esm
+- 03AB3B:Campfire.esm
+- 03AB3A:Campfire.esm
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Use
+Flags:
+- IgnoredBySandbox

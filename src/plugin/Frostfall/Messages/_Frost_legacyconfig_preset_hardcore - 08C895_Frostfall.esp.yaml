@@ -1,0 +1,32 @@
+FormKey: 08C895:Frostfall.esp
+EditorID: _Frost_legacyconfig_preset_hardcore
+Description:
+  TargetLanguage: English
+  Value: >-
+    Hardcore
+
+
+    For true survival gameplay enthusiasts. Traveling takes time, the weather is unforgiving, and exposure is a concern even during combat.
+
+
+    The exposure rate is normal (1.0x)
+
+    At max exposure, you will die.
+
+    Fast travel is disabled.
+
+    Frigid water is lethal.
+
+    Exposure is active during combat.
+
+    You will move slowly at high exposure.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Activate Preset
+- Text:
+    TargetLanguage: English
+    Value: Back

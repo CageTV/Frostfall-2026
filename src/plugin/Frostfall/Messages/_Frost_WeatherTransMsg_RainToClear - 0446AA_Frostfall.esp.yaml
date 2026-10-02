@@ -1,0 +1,7 @@
+FormKey: 0446AA:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_RainToClear
+Description:
+  TargetLanguage: English
+  Value: The clouds part as the rain passes on.
+INAM: 0x00000000
+DisplayTime: 2

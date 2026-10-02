@@ -1,0 +1,8 @@
+FormKey: 062FF2:Frostfall.esp
+EditorID: _Frost_RescueMsg_F_1
+Description:
+  TargetLanguage: English
+  Value: Unable to go on, you collapse on the cold earth. Hours pass in seconds. Suddenly, you awaken to the sights and sounds of a tavern, your companion standing nearby. They grin widely as you begin to rise to your feet.
+INAM: 0x00000000
+Flags:
+- MessageBox

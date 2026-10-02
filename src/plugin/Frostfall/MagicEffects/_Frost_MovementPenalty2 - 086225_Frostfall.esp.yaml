@@ -1,0 +1,31 @@
+FormKey: 086225:Frostfall.esp
+EditorID: _Frost_MovementPenalty2
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_PlayerSpeedEffectScript
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: effectMagnitude
+      Data: 40
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Movement Severe'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

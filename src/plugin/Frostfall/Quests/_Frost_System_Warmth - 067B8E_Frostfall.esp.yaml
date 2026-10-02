@@ -1,0 +1,54 @@
+FormKey: 067B8E:Frostfall.esp
+EditorID: _Frost_System_Warmth
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_FallbackReceiverWarmthSystem
+  - Name: _Frost_WarmthSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ArmorPerk1Active
+      Object: 056648:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ArmorPerk2Active
+      Object: 056649:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ArmorPerk3Active
+      Object: 05664A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeWarmth
+      Object: 067B8F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DatastoreInitialized
+      Object: 065B31:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureArmorFFSelf_1
+      Object: 04CEBF:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureArmorFFSelf_2
+      Object: 04CEC0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ExposureArmorFFSelf_3
+      Object: 04CEC1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MainQuest
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_Adaptation
+      Object: 067B8D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_VampireMode
+      Object: 06DD0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostfallAttributeWarmthReadOnly
+      Object: CC0E02:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Warmth System
+NextAliasID: 0

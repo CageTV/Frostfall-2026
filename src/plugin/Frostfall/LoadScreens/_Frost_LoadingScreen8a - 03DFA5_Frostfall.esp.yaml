@@ -1,0 +1,13 @@
+FormKey: 03DFA5:Frostfall.esp
+EditorID: _Frost_LoadingScreen8a
+Description:
+  TargetLanguage: English
+  Value: The Create Item power can be used to create a variety of useful supplies.
+LoadingScreenNif: 03DFA6:Frostfall.esp
+InitialScale: 1.6
+InitialRotation: -80, 30, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -16, 0, -40
+CameraPath: Cameras\LSCameraPanDown01.nif

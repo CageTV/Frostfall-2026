@@ -1,0 +1,23 @@
+FormKey: 069158:Frostfall.esp
+EditorID: _Frost_FrostbiteHandsEffect
+Name:
+  TargetLanguage: English
+  Value: Frostbite (Hands)
+Keywords:
+- 069154:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: <-10> Archery, Block, One-Handed, and Two-Handed; <-30> Pickpocket and Lockpicking.

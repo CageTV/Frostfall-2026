@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 068111:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_Calc_MaxCoverage
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 360

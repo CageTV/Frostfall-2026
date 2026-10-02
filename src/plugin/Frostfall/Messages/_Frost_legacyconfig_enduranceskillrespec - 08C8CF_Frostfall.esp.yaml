@@ -1,0 +1,22 @@
+FormKey: 08C8CF:Frostfall.esp
+EditorID: _Frost_legacyconfig_enduranceskillrespec
+Description:
+  TargetLanguage: English
+  Value: >-
+    Respec Skill Points
+
+
+    Select "Confirm" to have all spent skill points refunded.
+
+
+    Are you sure you want to refund all earned Endurance skill points so you can reallocate them?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Confirm
+- Text:
+    TargetLanguage: English
+    Value: Back

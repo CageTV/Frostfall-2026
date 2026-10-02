@@ -1,0 +1,20 @@
+FormKey: 04365B:Frostfall.esp
+EditorID: _Frost_ShelterProjectileFar
+Model:
+  File: Effects\FXEmptyObject.nif
+  Data: 0x020000000000000000000000
+Flags:
+- Explosion
+- AltTrigger
+- PassThroughSmallTransparent
+Type: Missile
+Speed: 30000
+Range: 10000
+ExplosionAltTriggerTimer: 0.1
+Explosion: 083195:Frostfall.esp
+FadeDuration: 0.5
+CollisionRadius: 10
+Lifetime: 0.35
+RelaunchInterval: 1.75
+MuzzleFlashModel: ''
+SoundLevel: 2

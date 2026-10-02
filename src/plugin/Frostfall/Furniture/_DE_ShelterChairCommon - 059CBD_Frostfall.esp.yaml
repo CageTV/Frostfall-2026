@@ -1,0 +1,29 @@
+FormKey: 059CBD:Frostfall.esp
+MajorRecordFlagsRaw: 536870912
+EditorID: _DE_ShelterChairCommon
+SkyrimMajorRecordFlags:
+- 0x20000000
+Name:
+  TargetLanguage: English
+  Value: Chair
+Model:
+  File: Furniture\Common\CommonChair01.nif
+  Data: 0x020000000000000000000000
+PNAM: 0x00000000
+Flags:
+- IgnoredBySandbox
+- 0x40000000
+InteractionKeyword: 013794:Skyrim.esm
+WorkbenchData:
+  UsesSkill: 255
+Markers:
+- Enabled: True
+  EntryPoints:
+    Type:
+    - Sit
+    Points:
+    - Front
+    - Right
+    - Left
+MajorFlags:
+- ChildCanUse

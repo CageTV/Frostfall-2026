@@ -1,0 +1,7 @@
+FormKey: 0446AE:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_ClearToFog1
+Description:
+  TargetLanguage: English
+  Value: A fog rolls in silently.
+INAM: 0x00000000
+DisplayTime: 2

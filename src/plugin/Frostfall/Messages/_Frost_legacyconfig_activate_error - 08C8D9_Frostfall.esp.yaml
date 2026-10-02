@@ -1,0 +1,19 @@
+FormKey: 08C8D9:Frostfall.esp
+EditorID: _Frost_legacyconfig_activate_error
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall cannot start right now.
+
+
+    You are restrained or controls are disabled (such as during the game's intro). Or, you are in an interior.
+
+
+    Step outside after having finished the game's intro sequence and try again.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

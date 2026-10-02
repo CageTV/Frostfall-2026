@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 067BA5:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_PerkRank_GlacialSwimmer_Max
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 2

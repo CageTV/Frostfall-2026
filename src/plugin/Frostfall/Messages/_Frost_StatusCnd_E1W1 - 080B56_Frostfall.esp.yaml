@@ -1,0 +1,7 @@
+FormKey: 080B56:Frostfall.esp
+EditorID: _Frost_StatusCnd_E1W1
+Description:
+  TargetLanguage: English
+  Value: 'You are warm. (Exposure: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,7 @@
+FormKey: 080B66:Frostfall.esp
+EditorID: _Frost_StatusCnd_E5W3
+Description:
+  TargetLanguage: English
+  Value: 'You are freezing and wet. (Exposure: %.0f%%, Wet: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

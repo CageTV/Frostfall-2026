@@ -1,0 +1,7 @@
+FormKey: 0446BA:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_RainToSnowSevere
+Description:
+  TargetLanguage: English
+  Value: The rain turns to driving snow and wind.
+INAM: 0x00000000
+DisplayTime: 2

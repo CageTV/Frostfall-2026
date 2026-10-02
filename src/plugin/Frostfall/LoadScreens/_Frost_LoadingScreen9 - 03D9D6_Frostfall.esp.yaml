@@ -1,0 +1,13 @@
+FormKey: 03D9D6:Frostfall.esp
+EditorID: _Frost_LoadingScreen9
+Description:
+  TargetLanguage: English
+  Value: Wielding a torch and eating soups and stews provide a small bonus to warmth.
+LoadingScreenNif: 03DF39:Frostfall.esp
+InitialScale: 1.6
+InitialRotation: -20, 0, 160
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: 0, 0, -50
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

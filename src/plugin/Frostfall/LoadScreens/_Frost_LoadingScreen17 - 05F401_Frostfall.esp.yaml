@@ -1,0 +1,13 @@
+FormKey: 05F401:Frostfall.esp
+EditorID: _Frost_LoadingScreen17
+Description:
+  TargetLanguage: English
+  Value: The Kindle spell is just as ineffective in the rain or snow as a normal campfire when not combined with suitable shelter.
+LoadingScreenNif: 10D185:Skyrim.esm
+InitialScale: 2.5
+InitialRotation: 0, -15, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -10, 0, -15
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

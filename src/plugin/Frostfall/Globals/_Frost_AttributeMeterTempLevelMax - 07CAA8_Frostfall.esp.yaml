@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 07CAA8:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_AttributeMeterTempLevelMax
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 10

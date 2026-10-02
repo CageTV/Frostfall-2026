@@ -1,0 +1,96 @@
+FormKey: 08CE3C:Frostfall.esp
+MajorRecordFlagsRaw: 134217728
+EditorID: _Frost_SpellTestBarrel
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -27, -27, 0
+  Second: 27, 27, 80
+Name:
+  TargetLanguage: English
+  Value: Frostfall Spell Test Barrel
+Model:
+  File: Clutter\Barrel01.NIF
+  Data: 0x020000000000000000000000
+Items:
+- Item:
+    Item: 0609BB:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609B3:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05F3FC:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609AB:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609B7:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609B5:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609AF:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609AD:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609BD:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609B9:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609BF:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 0609B1:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 056647:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 058C31:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 058C30:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05B849:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 059CBF:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 056645:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 058C2F:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05B854:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05B855:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05B856:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 056641:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 05C897:Frostfall.esp
+    Count: 1
+- Item:
+    Item: 056646:Frostfall.esp
+    Count: 1
+Flags:
+- Respawns
+OpenSound: 03C86D:Skyrim.esm
+CloseSound: 03C870:Skyrim.esm
+MajorFlags:
+- NavMeshGenerationBoundingBox

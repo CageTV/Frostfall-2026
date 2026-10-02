@@ -1,0 +1,31 @@
+FormKey: 0591C2:Frostfall.esp
+MajorRecordFlagsRaw: 268435456
+EditorID: _DE_Shelter_G_Controller
+SkyrimMajorRecordFlags:
+- 0x10000000
+Name:
+  TargetLanguage: English
+  Value: Conjured Bed
+Model:
+  File: Furniture\Noble\NobleBedSingle01.nif
+  Data: 0x020000000000000000000000
+Keywords:
+- 0FD0E1:Skyrim.esm
+PNAM: 0x00000000
+Flags:
+- IgnoredBySandbox
+- MustExitToTalk
+- 0x80000000
+InteractionKeyword: 013794:Skyrim.esm
+WorkbenchData:
+  UsesSkill: 255
+Markers:
+- Enabled: True
+  EntryPoints:
+    Type:
+    - Lay
+    Points:
+    - Right
+    - Left
+MajorFlags:
+- MustExitToTalk

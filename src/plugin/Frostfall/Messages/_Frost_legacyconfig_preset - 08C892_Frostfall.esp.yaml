@@ -1,0 +1,28 @@
+FormKey: 08C892:Frostfall.esp
+EditorID: _Frost_legacyconfig_preset
+Description:
+  TargetLanguage: English
+  Value: >-
+    Settings Presets
+
+
+    Set your desired experience with Frostfall by activating a Settings Preset. By activating one, you configure many gameplay options at once. You can still change each option individually by selecting "All Options" from the Frostfall Options menu.
+
+
+    Select a preset below to learn more.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Immersive
+- Text:
+    TargetLanguage: English
+    Value: Ice and Valor
+- Text:
+    TargetLanguage: English
+    Value: Hardcore
+- Text:
+    TargetLanguage: English
+    Value: Back

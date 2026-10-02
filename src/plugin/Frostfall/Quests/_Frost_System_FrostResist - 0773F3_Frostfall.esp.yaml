@@ -1,0 +1,32 @@
+FormKey: 0773F3:Frostfall.esp
+EditorID: _Frost_System_FrostResist
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _frost_frostresistsystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostResistBonusSpell
+      Object: 067627:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrostResistWarmthModPerk
+      Object: 08E3C8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 0773F4:Frostfall.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Frost Resist System
+NextAliasID: 1
+Aliases:
+- Name: HeatSource
+  Flags:
+  - Optional
+  - AllowReserved
+  VoiceTypes: Null

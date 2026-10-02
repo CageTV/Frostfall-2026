@@ -1,0 +1,17 @@
+FormKey: 083C5D:Frostfall.esp
+EditorID: _Frost_ShelterProjectileNear
+Model:
+  File: Effects\FXEmptyObject.nif
+  Data: 0x020000000000000000000000
+Flags:
+- Explosion
+- PassThroughSmallTransparent
+Type: Beam
+Speed: 5000
+Range: 10000
+Explosion: 083C5E:Frostfall.esp
+FadeDuration: 0.5
+CollisionRadius: 10
+RelaunchInterval: 0.25
+MuzzleFlashModel: ''
+SoundLevel: 2

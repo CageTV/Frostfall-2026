@@ -1,0 +1,20 @@
+FormKey: 067B8C:Frostfall.esp
+EditorID: _Frost_WetState_FireResist
+Name:
+  TargetLanguage: English
+  Value: Resist Fire
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- Recover
+- NoDuration
+- HideInUI
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: ResistFire
+SkillUsageMultiplier: 1
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

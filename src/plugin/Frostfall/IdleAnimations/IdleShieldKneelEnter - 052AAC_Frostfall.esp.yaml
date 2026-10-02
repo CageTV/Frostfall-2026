@@ -1,0 +1,11 @@
+FormKey: 052AAC:Frostfall.esp
+EditorID: IdleShieldKneelEnter
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsEnteringInteractionQuickConditionData
+AnimationEvent: IdleGreybeardMeditateEnter
+RelatedIdles:
+- 052AAA:Frostfall.esp
+- 052AAB:Frostfall.esp
+AnimationGroupSection: 101

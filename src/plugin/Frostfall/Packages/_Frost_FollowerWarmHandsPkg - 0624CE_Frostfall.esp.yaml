@@ -1,0 +1,120 @@
+FormKey: 0624CE:Frostfall.esp
+EditorID: _Frost_FollowerWarmHandsPkg
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_Frag_WarmHandsFollowerPackage
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Follower1AnimLock
+      Object: 0624D2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Follower2AnimLock
+      Object: 0624D1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Follower3AnimLock
+      Object: 0624D0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleStop_Loose
+      Object: 10D9EE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleWarmHandsCrouched
+      Object: 0E8643:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleWarmHandsStanding
+      Object: 0E8642:Skyrim.esm
+  ScriptFragments:
+    FileName: _Frost_Frag_WarmHandsFollowerPackage
+    OnEnd:
+      ExtraBindDataVersion: 1
+      ScriptName: _Frost_Frag_WarmHandsFollowerPackage
+      FragmentName: Fragment_0
+    OnChange:
+      ExtraBindDataVersion: 1
+      ScriptName: _Frost_Frag_WarmHandsFollowerPackage
+      FragmentName: Fragment_1
+Type: Package
+PreferredSpeed: Run
+Unknown: 47
+InterruptFlags:
+- RandomConversations
+- ObserveCombatBehavior
+- GreetCorpseBehavior
+- ReactionToPlayerActions
+- FriendlyFireComments
+- AggroRadiusBehavior
+- WorldInteractions
+- 0x400
+- 0x800
+- 0x1000
+- 0x2000
+- 0x4000
+- 0x8000
+ScheduleMonth: -1
+ScheduleDayOfWeek: Any
+ScheduleHour: -1
+ScheduleMinute: -1
+Unknown3: 0x436F6D
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 049268:Frostfall.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 06DD0C:Frostfall.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  CompareOperator: NotEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 064AFB:Frostfall.esp
+  ComparisonValue: -1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetSleepingConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetSittingConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsSwimmingConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsRidingMountConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsOnFlyingMountConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsWeaponOutConditionData
+OwnerQuest: 069C47:Frostfall.esp
+PackageTemplate: 016FAA:Skyrim.esm
+DataInputVersion: 3
+Data:
+- Key: 0
+  Value:
+    MutagenObjectType: PackageDataLocation
+    Location:
+      Target:
+        MutagenObjectType: LocationFallback
+        Type: AliasForReference
+        Data: 4
+      Radius: 230
+- Key: 2
+  Value:
+    MutagenObjectType: PackageDataBool
+- Key: 4
+  Value:
+    MutagenObjectType: PackageDataBool
+XnamMarker: 0x05
+OnBegin:
+  Topics:
+  - MutagenObjectType: TopicReference
+OnEnd:
+  Topics:
+  - MutagenObjectType: TopicReference
+OnChange:
+  Topics:
+  - MutagenObjectType: TopicReference

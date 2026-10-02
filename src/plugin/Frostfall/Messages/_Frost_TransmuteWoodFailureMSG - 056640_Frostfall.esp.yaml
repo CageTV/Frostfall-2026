@@ -1,0 +1,7 @@
+FormKey: 056640:Frostfall.esp
+EditorID: _Frost_TransmuteWoodFailureMSG
+Description:
+  TargetLanguage: English
+  Value: You have no wood that can be transmuted.
+INAM: 0x00000000
+DisplayTime: 2

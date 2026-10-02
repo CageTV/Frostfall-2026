@@ -1,0 +1,7 @@
+FormKey: 03DF3C:Frostfall.esp
+EditorID: _Frost_LoadingScreen_ExposureSkeleton
+Model:
+  File: frostfall\_Frost_loadingscreenexposureskeleton.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000

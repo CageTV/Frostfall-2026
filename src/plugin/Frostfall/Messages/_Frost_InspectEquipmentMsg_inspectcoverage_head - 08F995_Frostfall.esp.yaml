@@ -1,0 +1,31 @@
+FormKey: 08F995:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspectcoverage_head
+Description:
+  TargetLanguage: English
+  Value: >-
+    Initially, this equipment appears to provide %.0f coverage.
+
+
+    After inspecting the fittings and stitching, the coverage it really provides is...
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Poor (14)
+- Text:
+    TargetLanguage: English
+    Value: Fair (29)
+- Text:
+    TargetLanguage: English
+    Value: Good (43)
+- Text:
+    TargetLanguage: English
+    Value: Excellent (58)
+- Text:
+    TargetLanguage: English
+    Value: Complete (72)
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,7 @@
+FormKey: 0696E0:Frostfall.esp
+EditorID: _Frost_FrostbiteMessage_Head
+Description:
+  TargetLanguage: English
+  Value: Your head is suffering from frostbite.
+INAM: 0x00000000
+DisplayTime: 2

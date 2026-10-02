@@ -1,0 +1,7 @@
+FormKey: 0810D8:Frostfall.esp
+EditorID: _frost_StatusTemp_Colder_Level2
+Description:
+  TargetLanguage: English
+  Value: 'The air is bone-chilling. You are getting colder. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

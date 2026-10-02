@@ -1,0 +1,12 @@
+FormKey: 07D00B:Frostfall.esp
+EditorID: _Frost_Error_WearableLanterns
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Error - Wearable Lanterns Out of Date
+
+
+    Wearable Lanterns was detected, but it is out of date. Frostfall should be used with Wearable Lanterns %.4f or newer, or your meters may not work as intended due to a bug in a shared piece of code. Please update to the latest version of Wearable Lanterns.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,7 @@
+FormKey: 080B68:Frostfall.esp
+EditorID: _Frost_StatusCnd_E1W4
+Description:
+  TargetLanguage: English
+  Value: 'You are warm and drenched. (Exposure: %.0f%%, Wet: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

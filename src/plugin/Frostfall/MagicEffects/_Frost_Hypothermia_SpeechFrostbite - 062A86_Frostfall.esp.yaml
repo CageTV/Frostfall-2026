@@ -1,0 +1,21 @@
+FormKey: 062A86:Frostfall.esp
+EditorID: _Frost_Hypothermia_SpeechFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Speech'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Speech
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

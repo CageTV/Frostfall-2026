@@ -1,0 +1,32 @@
+FormKey: 08C89C:Frostfall.esp
+EditorID: _Frost_legacyconfig_explethality_on
+Description:
+  TargetLanguage: English
+  Value: >-
+    Exposure Lethality
+
+
+    Nothing: Nothing happens at maximum exposure.
+
+    Rescue: Pass out and awaken somewhere else. The most story-driven option.
+
+    Death: You and your followers perish.
+
+
+    Current setting: Death
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Nothing
+- Text:
+    TargetLanguage: English
+    Value: Rescue
+- Text:
+    TargetLanguage: English
+    Value: Death
+- Text:
+    TargetLanguage: English
+    Value: Back

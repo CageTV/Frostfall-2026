@@ -1,0 +1,90 @@
+FormKey: 05CDFD:Frostfall.esp
+EditorID: _Frost_ExposureMeterQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _frost_exposuremeterinterfacehandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeMax
+      Object: 07CAA4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeValue
+      Object: 08827A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AuxPrimaryColor
+      Object: 07CAA6:Frostfall.esp
+    - MutagenObjectType: ScriptFloatListProperty
+      Name: contextual_display_thresholds
+      Data:
+      - 0
+      - 20
+      - 40
+      - 60
+      - 80
+      - 100
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DebugGlobal
+      Object: 06458F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayMode
+      Object: 05CE05:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayTime
+      Object: 05E39A:Frostfall.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: improvement_display_delta_threshold
+      Data: 2
+    - MutagenObjectType: ScriptBoolProperty
+      Name: lower_is_better
+      Data: True
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MainPrimaryColor
+      Object: 07CA8A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Meter
+      Object: 05CDFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Opacity
+      Object: 07CA89:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_flash
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - False
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_stay_on
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - False
+  - Name: _Frost_Meter
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureColorWarm
+      Object: 07CAA6:Frostfall.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Alpha
+    - MutagenObjectType: ScriptBoolProperty
+      Name: charge_meter
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Exposure Meter
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

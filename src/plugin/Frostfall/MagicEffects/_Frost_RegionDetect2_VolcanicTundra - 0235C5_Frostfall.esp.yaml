@@ -1,0 +1,26 @@
+FormKey: 0235C5:Frostfall.esp
+EditorID: _Frost_RegionDetect2_VolcanicTundra
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_RegionDetectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Climate
+      Object: 066096:Frostfall.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: region_id
+      Data: 2
+Name:
+  TargetLanguage: English
+  Value: 'Region Detect: Volcanic Tundra'
+Flags:
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

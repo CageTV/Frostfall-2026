@@ -1,0 +1,19 @@
+FormKey: 08E3CC:Frostfall.esp
+EditorID: _Frost_Help_Warmth
+Description:
+  TargetLanguage: English
+  Value: >-
+    WARMTH & COVERAGE
+
+
+    Clothing and armor add Warmth and Coverage, which are like an Armor Rating against the environment. The more you have of each, the longer you can survive in difficult conditions.
+Name:
+  TargetLanguage: English
+  Value: Warmth and Coverage
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

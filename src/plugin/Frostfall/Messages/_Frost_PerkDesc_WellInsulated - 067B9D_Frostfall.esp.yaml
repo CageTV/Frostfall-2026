@@ -1,0 +1,33 @@
+FormKey: 067B9D:Frostfall.esp
+EditorID: _Frost_PerkDesc_WellInsulated
+Description:
+  TargetLanguage: English
+  Value: >-
+    Increase the warmth of all worn equipment by %.0f%% if wearing armor or clothing in every slot; head, chest, hands, feet.
+
+
+    Rank: %.0f/%.0f
+
+
+    Perks to increase: %.0f
+
+    Next perk progress: %.0f%%
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Choose Perk
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: CC0D02:Update.esm
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: About Endurance
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,7 @@
+FormKey: 058C2C:Frostfall.esp
+EditorID: _Frost_KindleWoodError
+Description:
+  TargetLanguage: English
+  Value: You lack the materials required to cast this spell.
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,25 @@
+FormKey: 083C5F:Frostfall.esp
+MajorRecordFlagsRaw: 8388608
+EditorID: _Frost_ShelterDetectExplosionObjNear
+SkyrimMajorRecordFlags:
+- 0x800000
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ShelterDetectScriptNear
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_WarmBaseTents
+      Object: 06FCA0:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_IsTakingShelter
+      Object: 068118:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Model:
+  File: MarkerX.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- IsMarker

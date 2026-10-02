@@ -1,0 +1,23 @@
+FormKey: 00592D:Frostfall.esp
+EditorID: _Frost_Hypothermia_Block
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Block'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E934:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Block
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,23 @@
+FormKey: 06915A:Frostfall.esp
+EditorID: _Frost_FrostbiteBodyEffect
+Name:
+  TargetLanguage: English
+  Value: Frostbite (Body)
+Keywords:
+- 069153:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: <-25>% Health, Magicka, and Stamina regeneration.

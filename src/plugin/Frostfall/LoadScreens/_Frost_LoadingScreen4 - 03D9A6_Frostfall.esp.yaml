@@ -1,0 +1,13 @@
+FormKey: 03D9A6:Frostfall.esp
+EditorID: _Frost_LoadingScreen4
+Description:
+  TargetLanguage: English
+  Value: Fur tents are very warm, but leak when it rains.
+LoadingScreenNif: 03DFA4:Frostfall.esp
+InitialScale: 0.4
+InitialRotation: 0, 0, 165
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: 0, 0, -50
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

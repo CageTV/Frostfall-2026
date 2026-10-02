@@ -1,0 +1,12 @@
+FormKey: 04AD5E:Frostfall.esp
+EditorID: _Frost_Female_FreezingToDeath
+Type: Standard
+Category: 0172A1:Skyrim.esm
+SoundFiles:
+- data\sound\fx\frostfall\frostfall_female_freezing2death.wav
+OutputModel: 07EDCA:Skyrim.esm
+LoopAndRumble:
+  Unknown: 1
+PercentFrequencyVariance: 4
+Priority: 88
+StaticAttenuation: 6.61

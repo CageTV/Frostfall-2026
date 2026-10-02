@@ -1,0 +1,19 @@
+FormKey: 08724E:Frostfall.esp
+EditorID: _Frost_CriticalError_SkyUIInterfacePackageOld
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Error - SkyUI Add-on Out of Date
+
+
+    The Frostfall SkyUI Add-on is out of date. This will cause SkyUI to have serious problems. Please upgrade to the correct version of the Add-on for this version of Frostfall.
+
+
+    This message will repeat. DO NOT SAVE YOUR GAME, exit now and check your installation.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

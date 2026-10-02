@@ -1,0 +1,19 @@
+FormKey: 08F99C:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_defaultall
+Description:
+  TargetLanguage: English
+  Value: >-
+    Do you want to restore the default exposure protection of ALL equipment in the entire game?
+
+
+    CAUTION: This will remove all of your custom armor protection settings!
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: Back

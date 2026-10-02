@@ -1,0 +1,24 @@
+FormKey: 03AD88:Frostfall.esp
+EditorID: _Frost_WetStateEffect3NoShader
+Name:
+  TargetLanguage: English
+  Value: Drenched
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 0245FB:Frostfall.esp
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- FXPersist
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You are wet. Exposure will increase much faster when outdoors. You are <50>% weaker to shock damage and <50>% more resistant to fire damage.

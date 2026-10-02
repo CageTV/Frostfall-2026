@@ -1,0 +1,17 @@
+FormKey: 0089C0:Frostfall.esp
+EditorID: _Frost_NoWait
+Name:
+  TargetLanguage: English
+  Value: Waiting Disabled
+Flags:
+- Detrimental
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Health
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

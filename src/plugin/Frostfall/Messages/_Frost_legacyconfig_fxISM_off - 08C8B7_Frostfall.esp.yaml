@@ -1,0 +1,22 @@
+FormKey: 08C8B7:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxISM_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Full Screen Effects
+
+
+    Enables or disables the full screen effects seen at high levels of exposure.
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

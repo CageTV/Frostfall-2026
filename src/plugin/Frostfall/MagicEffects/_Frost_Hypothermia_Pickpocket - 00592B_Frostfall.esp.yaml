@@ -1,0 +1,23 @@
+FormKey: 00592B:Frostfall.esp
+EditorID: _Frost_Hypothermia_Pickpocket
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Pickpocket'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E933:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Pickpocket
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

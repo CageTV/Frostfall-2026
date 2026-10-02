@@ -1,0 +1,7 @@
+FormKey: 0446B5:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_RainToFog
+Description:
+  TargetLanguage: English
+  Value: The ground begins to steam as the rain passes.
+INAM: 0x00000000
+DisplayTime: 2

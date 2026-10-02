@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 067B9F:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_PerkRank_WellInsulated_Max
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 1

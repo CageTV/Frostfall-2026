@@ -1,0 +1,19 @@
+FormKey: 05B84A:Frostfall.esp
+EditorID: _Frost_ConjureShelter_Greater
+Name:
+  TargetLanguage: English
+  Value: Conjure Shelter, Greater
+MenuDisplayObject: 0A6459:Skyrim.esm
+EquipmentType: 013F45:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 985
+Flags:
+- ManualCostCalc
+ChargeTime: 3
+CastType: FireAndForget
+HalfCostPerk: 0C44BE:Skyrim.esm
+Effects:
+- BaseEffect: 05B84C:Frostfall.esp
+  Data: {}

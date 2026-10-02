@@ -1,0 +1,21 @@
+FormKey: 062A7B:Frostfall.esp
+EditorID: _Frost_Hypothermia_ArcheryFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Archery'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Archery
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

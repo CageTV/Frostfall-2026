@@ -1,0 +1,12 @@
+FormKey: 08F99D:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_defaultallconfirm
+Description:
+  TargetLanguage: English
+  Value: The default protection of all equipment in the game has been restored.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

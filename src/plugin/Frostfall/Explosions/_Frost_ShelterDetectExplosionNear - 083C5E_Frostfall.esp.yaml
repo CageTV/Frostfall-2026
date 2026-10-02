@@ -1,0 +1,8 @@
+FormKey: 083C5E:Frostfall.esp
+EditorID: _Frost_ShelterDetectExplosionNear
+PlacedObject: 083C5F:Frostfall.esp
+Flags:
+- 0x1
+- IgnoreImageSpaceSwap
+- NoControllerVibration
+SoundLevel: Silent

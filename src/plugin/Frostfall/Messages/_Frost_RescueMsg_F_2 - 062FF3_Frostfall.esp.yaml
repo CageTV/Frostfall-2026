@@ -1,0 +1,8 @@
+FormKey: 062FF3:Frostfall.esp
+EditorID: _Frost_RescueMsg_F_2
+Description:
+  TargetLanguage: English
+  Value: Spotting a hunter's camp flickering on the horizon, your companion begins to pull you onward. Upon seeing your condition, a hunter ushers you and your companion onward to the camp. You awaken a short time later, numb but alive.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,16 @@
+FormKey: 0924C6:Frostfall.esp
+EditorID: _Frost_PlayerDialogueDetect
+NextAliasID: 1
+Aliases:
+- Name: DialoguePartner
+  Flags:
+  - Optional
+  - MatchingRefInLoadedArea
+  - AllowReserved
+  - MatchingRefClosest
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsInDialogueWithPlayerConditionData
+    ComparisonValue: 1
+  VoiceTypes: Null

@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 06811C:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: EndurancePerkPointsTotal
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 12

@@ -1,0 +1,7 @@
+FormKey: 0446C0:Frostfall.esp
+EditorID: _Frost_WetStateMsg_LeakingWater
+Description:
+  TargetLanguage: English
+  Value: Water leaks slowly from above. You remain damp.
+INAM: 0x00000000
+DisplayTime: 2

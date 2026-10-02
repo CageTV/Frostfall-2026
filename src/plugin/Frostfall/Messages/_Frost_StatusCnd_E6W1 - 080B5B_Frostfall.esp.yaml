@@ -1,0 +1,7 @@
+FormKey: 080B5B:Frostfall.esp
+EditorID: _Frost_StatusCnd_E6W1
+Description:
+  TargetLanguage: English
+  Value: 'You are freezing to death. (Exposure: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

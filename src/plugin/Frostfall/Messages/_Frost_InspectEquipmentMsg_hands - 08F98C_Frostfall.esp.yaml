@@ -1,0 +1,22 @@
+FormKey: 08F98C:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_hands
+Description:
+  TargetLanguage: English
+  Value: >-
+    Worn Hands Gear
+
+
+    Current protection: %.0f Warmth, %.0f Coverage
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Modify
+- Text:
+    TargetLanguage: English
+    Value: Restore Defaults
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,27 @@
+FormKey: 062A77:Frostfall.esp
+EditorID: _Frost_RescueLetterSpouse
+Name:
+  TargetLanguage: English
+  Value: Wanderer's Note
+Model:
+  File: Clutter\Books\Note01.nif
+  Data: 0x020000000000000000000000
+BookText:
+  TargetLanguage: English
+  Value: >+
+    <font face="$HandwrittenFont">I found you lying in the dirt, trembling from the cold. I could not in good conscious leave you to your death, so I heaved you into the wagon with the rest of my supplies.
+
+
+    A short while into the journey, you began to utter a name, over and over, calling out to them. While stopped in a nearby village, I began asking around. It didn't take long to learn who this name belonged to and where they lived, and since it wasn't that far from where I was headed, I decided to take you to them.
+
+
+    Now that you are reunited with your loved one, I hope you will give up on whatever fool's errand you embarked on in the first place and appreciate the things you have here at home.
+PickUpSound: 0C7A54:Skyrim.esm
+Keywords:
+- 0937A2:Skyrim.esm
+Teaches:
+  MutagenObjectType: BookTeachesNothing
+InventoryArt: 097788:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

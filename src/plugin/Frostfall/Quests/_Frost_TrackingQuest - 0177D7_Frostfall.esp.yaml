@@ -1,0 +1,57 @@
+FormKey: 0177D7:Frostfall.esp
+EditorID: _Frost_TrackingQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: QF__DE_TrackingQuest_010177D7
+  FileName: QF__DE_TrackingQuest_010177D7
+  Fragments:
+  - Stage: 10
+    Unknown2: 1
+    ScriptName: QF__DE_TrackingQuest_010177D7
+    FragmentName: Fragment_0
+  - Stage: 15
+    Unknown2: 1
+    ScriptName: QF__DE_TrackingQuest_010177D7
+    FragmentName: Fragment_3
+  - Stage: 20
+    Unknown2: 1
+    ScriptName: QF__DE_TrackingQuest_010177D7
+    FragmentName: Fragment_2
+Name:
+  TargetLanguage: English
+  Value: Frostfall
+Flags:
+- StartGameEnabled
+- 0x10
+Type: SideQuest
+Stages:
+- LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: Initial State
+- Index: 10
+  LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: I should find my lost copy of "A Survivor's Guide to Skyrim" to refresh my memory on cold weather survival skills.                                                           (Activate Frostfall by staring at the night sky between 7PM and 7AM, or via the Frostfall Mod Configuration Menu.)
+- Index: 15
+  LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: "I should find my lost copy of \"A Survivor's Guide to Skyrim\" to refresh my memory on cold weather survival skills.                                                           (Activate Frostfall by staring at the night sky between 7PM and 7AM, or by selecting Options: Frostfall from the Magic menu and pressing Shout.)"
+- Index: 20
+  LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: I found my lost copy of "A Survivor's Guide to Skyrim", and feel prepared to face the biting cold of the north.
+Objectives:
+- Index: 10
+  Flags: []
+  DisplayText:
+    TargetLanguage: English
+    Value: Reflect on cold weather survival. (See Quest Journal for details)
+NextAliasID: 0

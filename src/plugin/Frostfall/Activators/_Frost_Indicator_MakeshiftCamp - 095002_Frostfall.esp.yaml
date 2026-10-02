@@ -1,0 +1,22 @@
+FormKey: 095002:Frostfall.esp
+MajorRecordFlagsRaw: 512
+EditorID: _Frost_Indicator_MakeshiftCamp
+SkyrimMajorRecordFlags:
+- 0x200
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlacementIndicator
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_activator_to_place
+      Object: 095003:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_inventory_item
+      Object: 095001:Frostfall.esp
+Model:
+  File: campfire\_Camp_Indicator_smallhidetent_1br.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- HiddenFromLocalMap

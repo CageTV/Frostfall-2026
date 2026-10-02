@@ -1,0 +1,13 @@
+FormKey: 03D9A4:Frostfall.esp
+EditorID: _Frost_LoadingScreen2
+Description:
+  TargetLanguage: English
+  Value: The woodcutter's axe is an essential tool. Use it to harvest wood for building campfires and other supplies. Branches can be harvested without an axe.
+LoadingScreenNif: 02F2F5:Skyrim.esm
+InitialScale: 1.4
+InitialRotation: 0, 180, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -10, 0, -30
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

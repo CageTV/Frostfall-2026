@@ -1,0 +1,15 @@
+FormKey: 08F9AB:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_defaultworn
+Description:
+  TargetLanguage: English
+  Value: Do you want to restore the default protection of all currently worn gear?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: Back

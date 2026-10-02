@@ -1,0 +1,7 @@
+FormKey: 00AFA8:Frostfall.esp
+EditorID: _Frost_WaterTemp1Msg
+Description:
+  TargetLanguage: English
+  Value: This water is cold.
+INAM: 0x00000000
+DisplayTime: 2

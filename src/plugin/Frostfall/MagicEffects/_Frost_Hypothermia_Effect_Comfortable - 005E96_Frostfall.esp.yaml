@@ -1,0 +1,19 @@
+FormKey: 005E96:Frostfall.esp
+EditorID: _Frost_Hypothermia_Effect_Comfortable
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Comfortable'
+MenuDisplayObject: 0A0E7D:Skyrim.esm
+Flags:
+- Recover
+- NoDuration
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

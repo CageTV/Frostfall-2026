@@ -1,0 +1,120 @@
+FormKey: 08F9A5:Frostfall.esp
+EditorID: _Frost_InspectEquipment_Effect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_InspectEquipment
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_body
+      Object: 08F98A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_cloak
+      Object: 08F98E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_defaultall
+      Object: 08F99C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_defaultallconfirm
+      Object: 08F99D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_defaultsingle
+      Object: 08F99A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_defaultsingleconfirm
+      Object: 08F99B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_feet
+      Object: 08F98D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_hands
+      Object: 08F98C:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_head
+      Object: 08F98B:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspect_cloak
+      Object: 08F9A0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectconfirm
+      Object: 08F999:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectcoverage_body
+      Object: 08F994:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectcoverage_feet
+      Object: 08F997:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectcoverage_hands
+      Object: 08F996:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectcoverage_head
+      Object: 08F995:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectextrascloak
+      Object: 08F99E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectextrascloakconfirm
+      Object: 08F9A2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectextrashead
+      Object: 08F99F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectextrasheadconfirm
+      Object: 08F9A1:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectwarmth_body
+      Object: 08F98F:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectwarmth_feet
+      Object: 08F992:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectwarmth_hands
+      Object: 08F991:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_inspectwarmth_head
+      Object: 08F990:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_root
+      Object: 08F988:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectEquipmentMsg_select
+      Object: 08F989:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectHasBody
+      Object: 08F9A6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectHasCloak
+      Object: 08F9AA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectHasFeet
+      Object: 08F9A9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectHasHands
+      Object: 08F9A8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_InspectHasHead
+      Object: 08F9A7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Check Condition & Worn Gear
+MenuDisplayObject: 104F70:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds:
+- Type: Release
+  Sound: 0F4A20:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

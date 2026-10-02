@@ -1,0 +1,25 @@
+FormKey: 08C8A9:Frostfall.esp
+EditorID: _Frost_legacyconfig_fasttravel_on
+Description:
+  TargetLanguage: English
+  Value: >-
+    Fast Travel
+
+
+    Whether or not fast travel is enabled.
+
+
+    It may take up to 5 seconds for this setting to take effect after you change it.
+
+
+    Fast Travel is: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,26 @@
+FormKey: 090F3B:Frostfall.esp
+EditorID: _Frost_ReleaseNotes_3_3_1
+Description:
+  TargetLanguage: English
+  Value: >-
+    FROSTFALL 3.3.1 PATCH NOTES
+
+
+    - Bound cloak spells are now available.
+
+    - Added Inspect Equipment power to customize protection.
+
+    - Fixed a crash to desktop / Xbox Home when quitting to main menu.
+
+    - Endurance Skill now progresses 25%% faster.
+
+    - Dozens of bug fixes and enhancements.
+
+    For full patch notes, see http://ow.ly/aLWy306fQ75
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

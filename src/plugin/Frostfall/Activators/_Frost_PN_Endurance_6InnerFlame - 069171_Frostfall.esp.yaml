@@ -1,0 +1,49 @@
+FormKey: 069171:Frostfall.esp
+EditorID: _Frost_PN_Endurance_6InnerFlame
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNode
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: description_value_iterator
+      Data: 67
+    - MutagenObjectType: ScriptIntProperty
+      Name: description_value_modifier
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_line_1
+      Object: 069174:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_line_2
+      Object: 069177:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_node_1
+      Object: 06916E:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_node_2
+      Object: 069170:Frostfall.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: required_description_value_count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_description
+      Object: 067BA2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global
+      Object: 067BA8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global_max
+      Object: 067BA9:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 0510F1:Campfire.esm
+Name:
+  TargetLanguage: English
+  Value: Inner Flame
+Model:
+  File: campfire\_camp_intperkstars01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Select
+Flags: []

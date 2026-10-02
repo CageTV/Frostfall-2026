@@ -1,0 +1,9 @@
+FormKey: 01D434:Frostfall.esp
+EditorID: _Frost_RecipeWaterPotion
+Items:
+- Item:
+    Item: 01B3BD:Skyrim.esm
+    Count: 15
+CreatedObject: 01D430:Frostfall.esp
+WorkbenchKeyword: 019831:Campfire.esm
+CreatedObjectCount: 1

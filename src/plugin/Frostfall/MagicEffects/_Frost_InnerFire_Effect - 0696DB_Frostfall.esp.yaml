@@ -1,0 +1,34 @@
+FormKey: 0696DB:Frostfall.esp
+EditorID: _Frost_InnerFire_Effect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_InnerFire_EffectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SitMarkerInnerFire
+      Object: 0696DE:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Inner Fire
+MenuDisplayObject: 104F70:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+HitShader: 10BEA9:Skyrim.esm
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+ImageSpaceModifier: 037E91:Skyrim.esm
+Sounds:
+- Type: OnHit
+  Sound: 1040DD:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,22 @@
+FormKey: 06D233:Frostfall.esp
+EditorID: _Frost_CriticalError_SkyUIInterfacePackage
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Error - SkyUI Add-on Mismatch
+
+
+    The version of SkyUI and the version of Frostfall SkyUI Add-on do not match. This will cause SkyUI to have serious problems. Please ensure that the version of the Frostfall SkyUI Add-on you installed matches the version of SkyUI you are using.
+
+
+    Expected SkyUI Version: %.0f.x
+
+
+    This message will repeat. DO NOT SAVE YOUR GAME, exit now and check your installation.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

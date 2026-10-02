@@ -1,0 +1,19 @@
+FormKey: 067627:Frostfall.esp
+EditorID: _Frost_FrostResistBonusSpell
+Name:
+  TargetLanguage: English
+  Value: Resist Frost
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 067626:Frostfall.esp
+  Data: {}
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: GreaterThan
+    Data:
+      MutagenObjectType: GetActorValueConditionData
+      ActorValue: ResistFrost

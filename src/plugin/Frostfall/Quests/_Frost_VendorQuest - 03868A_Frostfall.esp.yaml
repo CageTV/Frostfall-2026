@@ -1,0 +1,112 @@
+FormKey: 03868A:Frostfall.esp
+EditorID: _Frost_VendorQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_VendorStock
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SpellTomeSoothe1
+      Object: 05B854:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_SurvivorsGuide
+      Object: 007EF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterPotion
+      Object: 01D430:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AvalAtheronChest
+      Object: 0A3F0A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AvalAtheronChestAlias
+      Object: 03868A:Frostfall.esp
+      Alias: 16
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BirnaChest
+      Object: 09DA64:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BirnaChestAlias
+      Object: 03868A:Frostfall.esp
+      Alias: 14
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GrayPineGoodsChest
+      Object: 0A6BFD:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GrayPineGoodsChestAlias
+      Object: 03868A:Frostfall.esp
+      Alias: 8
+    - MutagenObjectType: ScriptObjectProperty
+      Name: NiranyeChest
+      Object: 0A3F08:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: NiranyeChestAlias
+      Object: 03868A:Frostfall.esp
+      Alias: 20
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodTraderChestAlias
+      Object: 03868A:Frostfall.esp
+      Alias: 7
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodTraderMerchantContainer
+      Object: 078C0B:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Vendor Quest
+NextAliasID: 21
+Aliases:
+- ID: 7
+  Name: RiverwoodTraderChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 078C0B:Skyrim.esm
+  Items:
+  - Item:
+      Item: 05B854:Frostfall.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 16
+  Name: AvalAtheronChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A3F0A:Skyrim.esm
+  Items:
+  - Item:
+      Item: 01D430:Frostfall.esp
+      Count: 3
+  VoiceTypes: Null
+- ID: 14
+  Name: BirnaChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 09DA64:Skyrim.esm
+  Items:
+  - Item:
+      Item: 007EF8:Frostfall.esp
+      Count: 1
+  - Item:
+      Item: 01D430:Frostfall.esp
+      Count: 2
+  VoiceTypes: Null
+- ID: 8
+  Name: GrayPineGoodsChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A6BFD:Skyrim.esm
+  Items:
+  - Item:
+      Item: 007EF8:Frostfall.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 20
+  Name: NiranyeChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A3F08:Skyrim.esm
+  Items:
+  - Item:
+      Item: 01D430:Frostfall.esp
+      Count: 3
+  VoiceTypes: Null

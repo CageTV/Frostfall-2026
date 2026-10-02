@@ -1,0 +1,21 @@
+FormKey: 057BE3:Frostfall.esp
+EditorID: _Frost_BoundCloakFX
+Name:
+  TargetLanguage: English
+  Value: Bound Cloak Flame FX
+Flags:
+- NoDuration
+- FXPersist
+- HideInUI
+- PowerAffectsDuration
+HitShader: 057BE4:Frostfall.esp
+EnchantShader: 057BE4:Frostfall.esp
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

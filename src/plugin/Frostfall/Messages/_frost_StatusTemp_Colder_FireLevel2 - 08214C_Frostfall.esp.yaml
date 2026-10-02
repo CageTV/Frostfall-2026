@@ -1,0 +1,7 @@
+FormKey: 08214C:Frostfall.esp
+EditorID: _frost_StatusTemp_Colder_FireLevel2
+Description:
+  TargetLanguage: English
+  Value: 'Without shelter, the heat feels distant. Getting colder. (Max: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

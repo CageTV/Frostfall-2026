@@ -1,0 +1,102 @@
+FormKey: 064AF9:Frostfall.esp
+EditorID: _Frost_System_Heat
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_HeatSourceSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_All
+      Object: 028F06:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_Fire
+      Object: 02899F:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_Fire_Large
+      Object: 028F04:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_Fire_Medium
+      Object: 028F03:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_Fire_Small
+      Object: 028F02:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_HeatSources_Other
+      Object: 028F05:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceDistance
+      Object: 064AFB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceMarker
+      Object: 0877B3:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceSize
+      Object: 064AFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_MainQuest
+      Object: 064AF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_NearFire
+      Object: 064AFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HeatSource
+      Object: 064AF9:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeInn
+      Object: 01CB87:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 064AFA:Frostfall.esp
+  - Name: _Frost_WarmHandsLogic
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_CurrentHeatSourceSize
+      Object: 064AFC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HandWarmingExitTriggerREF
+      Object: 0877B4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_HandWarmingInteractTriggerREF
+      Object: 0877B2:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_Animation
+      Object: 049268:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Follower
+      Object: 069C47:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HeatSource
+      Object: 064AF9:Frostfall.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleBowHeadAtGrave_01
+      Object: 0977EF:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleStop_Loose
+      Object: 10D9EE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleWarmHandsCrouched
+      Object: 0E8643:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleWarmHandsStanding
+      Object: 0E8642:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Frostfall Heat System
+NextAliasID: 1
+Aliases:
+- Name: HeatSource
+  Flags:
+  - Optional
+  - AllowReserved
+  VoiceTypes: Null

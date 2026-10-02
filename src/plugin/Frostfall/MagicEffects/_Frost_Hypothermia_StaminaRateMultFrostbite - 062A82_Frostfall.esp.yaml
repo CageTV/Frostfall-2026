@@ -1,0 +1,22 @@
+FormKey: 062A82:Frostfall.esp
+EditorID: _Frost_Hypothermia_StaminaRateMultFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Stamina Regeneration'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- FXPersist
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: StaminaRateMult
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

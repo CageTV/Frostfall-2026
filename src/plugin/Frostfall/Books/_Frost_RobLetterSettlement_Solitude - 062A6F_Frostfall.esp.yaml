@@ -1,0 +1,24 @@
+FormKey: 062A6F:Frostfall.esp
+EditorID: _Frost_RobLetterSettlement_Solitude
+Name:
+  TargetLanguage: English
+  Value: Rider's Note
+Model:
+  File: Clutter\Books\Note01.nif
+  Data: 0x020000000000000000000000
+BookText:
+  TargetLanguage: English
+  Value: >-
+    <font face="$HandwrittenFont">We spotted you a ways off the road while riding on our way to Solitude. We thought you were dead, but since you weren't, we decided to toss you in the cart. As soon as we get there, we're dropping you in the local inn. You're somebody else's problem after that.
+
+
+    A bit sad I didn't get to take that pretty armor of yours, so instead, I'll just relieve you of a few septims. Consider your fare paid! Ha!
+PickUpSound: 0C7A54:Skyrim.esm
+Keywords:
+- 0937A2:Skyrim.esm
+Teaches:
+  MutagenObjectType: BookTeachesNothing
+InventoryArt: 097788:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

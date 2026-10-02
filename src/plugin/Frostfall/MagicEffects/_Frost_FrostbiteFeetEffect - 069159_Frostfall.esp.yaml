@@ -1,0 +1,23 @@
+FormKey: 069159:Frostfall.esp
+EditorID: _Frost_FrostbiteFeetEffect
+Name:
+  TargetLanguage: English
+  Value: Frostbite (Feet)
+Keywords:
+- 069155:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: <-10> Sneak; <-20>% movement speed.

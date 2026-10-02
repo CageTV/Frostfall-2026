@@ -1,0 +1,8 @@
+FormKey: 062FFA:Frostfall.esp
+EditorID: _Frost_RescueMsg_D_4
+Description:
+  TargetLanguage: English
+  Value: Your animal dutifully pulls you by the leg across harsh terrain until a nearby villager notices you. The sound of plates, mugs, and a roaring hearth fills your ears.
+INAM: 0x00000000
+Flags:
+- MessageBox

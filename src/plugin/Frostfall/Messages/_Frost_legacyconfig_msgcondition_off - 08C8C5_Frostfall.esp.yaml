@@ -1,0 +1,25 @@
+FormKey: 08C8C5:Frostfall.esp
+EditorID: _Frost_legacyconfig_msgcondition_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Condition Change Notifications
+
+
+    If enabled, you will receive periodic notifications about changes to your status (exposure and wetness).
+
+
+    WARNING: This is the primary way Frostfall notifies you of worsening player conditions. Disable at your own risk!
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

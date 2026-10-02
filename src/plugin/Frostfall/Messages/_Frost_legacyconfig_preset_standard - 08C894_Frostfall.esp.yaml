@@ -1,0 +1,32 @@
+FormKey: 08C894:Frostfall.esp
+EditorID: _Frost_legacyconfig_preset_standard
+Description:
+  TargetLanguage: English
+  Value: >-
+    Ice and Valor
+
+
+    This is the default preset. You must plan ahead, wear warm clothing and armor, and set up camp when necessary.
+
+
+    The exposure rate is normal (1.0x)
+
+    At max exposure, you will pass out and awaken elsewhere.
+
+    Fast travel is enabled.
+
+    Frigid water is lethal.
+
+    Exposure is paused during combat.
+
+    You will move slowly at high exposure.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Activate Preset
+- Text:
+    TargetLanguage: English
+    Value: Back

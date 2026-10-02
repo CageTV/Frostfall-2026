@@ -1,0 +1,25 @@
+FormKey: 08C89B:Frostfall.esp
+EditorID: _Frost_legacyconfig_exposurerate
+Description:
+  TargetLanguage: English
+  Value: >-
+    Exposure Rate
+
+
+    Adjusts the overall rate of exposure. Ranges from 0.0x to 3.0x (default: 1.0x).
+
+
+    Rate: %.1fx
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Decrease (-0.1)
+- Text:
+    TargetLanguage: English
+    Value: Increase (+0.1)
+- Text:
+    TargetLanguage: English
+    Value: Back

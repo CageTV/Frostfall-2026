@@ -1,0 +1,22 @@
+FormKey: 08C8AC:Frostfall.esp
+EditorID: _Frost_legacyconfig_travelwaiting
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Travel and Waiting
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Fast Travel
+- Text:
+    TargetLanguage: English
+    Value: Waiting Outdoors
+- Text:
+    TargetLanguage: English
+    Value: Back

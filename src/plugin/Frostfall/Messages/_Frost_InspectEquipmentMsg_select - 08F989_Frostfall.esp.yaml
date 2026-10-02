@@ -1,0 +1,57 @@
+FormKey: 08F989:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_select
+Description:
+  TargetLanguage: English
+  Value: Select a piece of currently worn gear you would like to modify.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Body
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 08F9A6:Frostfall.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Head
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 08F9A7:Frostfall.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Hands
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 08F9A8:Frostfall.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Feet
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 08F9A9:Frostfall.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Cloak
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 08F9AA:Frostfall.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Back

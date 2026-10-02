@@ -1,0 +1,21 @@
+FormKey: 062A84:Frostfall.esp
+EditorID: _Frost_Hypothermia_RestorationFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Restoration'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Restoration
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

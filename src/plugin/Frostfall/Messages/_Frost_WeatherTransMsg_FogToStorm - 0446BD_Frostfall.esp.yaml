@@ -1,0 +1,7 @@
+FormKey: 0446BD:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_FogToStorm
+Description:
+  TargetLanguage: English
+  Value: The fog darkens as a storm approaches.
+INAM: 0x00000000
+DisplayTime: 2

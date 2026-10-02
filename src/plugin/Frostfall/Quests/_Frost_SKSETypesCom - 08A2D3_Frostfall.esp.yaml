@@ -1,0 +1,45 @@
+FormKey: 08A2D3:Frostfall.esp
+EditorID: _Frost_SKSETypesCom
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_SKSETypesDelegate
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_AttributeExposureMeter
+      Object: 08827A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureColor
+      Object: 07CA8A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MeterExposureColorWarm
+      Object: 07CAA6:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ExposureMeterHandler
+      Object: 05CDFD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FrostConfig
+      Object: 06DCF8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WetnessMeterHandler
+      Object: 05CDFF:Frostfall.esp
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 08A2D3:Frostfall.esp
+      Alias: 0
+    Scripts:
+    - Name: _Frost_SKSETypesAlias
+Name:
+  TargetLanguage: English
+  Value: Frostfall SKSE Types Communication Delegate
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 1
+Aliases:
+- Name: Player
+  Flags: []
+  ForcedReference: 000014:Skyrim.esm
+  VoiceTypes: Null

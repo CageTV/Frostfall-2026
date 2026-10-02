@@ -1,0 +1,7 @@
+FormKey: 090F39:Frostfall.esp
+EditorID: _Frost_StartingUpMsg
+Description:
+  TargetLanguage: English
+  Value: (Frostfall is starting up, please wait.)
+INAM: 0x00000000
+DisplayTime: 2

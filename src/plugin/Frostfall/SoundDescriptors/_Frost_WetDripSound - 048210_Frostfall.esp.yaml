@@ -1,0 +1,14 @@
+FormKey: 048210:Frostfall.esp
+EditorID: _Frost_WetDripSound
+Type: Standard
+Category: 0F23BB:Skyrim.esm
+SoundFiles:
+- fx\amb\water\amb_water_drips_splash_lp.wav
+OutputModel: 0D78B4:Skyrim.esm
+LoopAndRumble:
+  Unknown: 1
+  Loop: Loop
+PercentFrequencyVariance: 4
+Priority: 128
+Variance: 2
+StaticAttenuation: 17.62

@@ -1,0 +1,12 @@
+FormKey: 08C896:Frostfall.esp
+EditorID: _Frost_legacyconfig_presetapplied
+Description:
+  TargetLanguage: English
+  Value: The preset was applied successfully, and your settings have been changed.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

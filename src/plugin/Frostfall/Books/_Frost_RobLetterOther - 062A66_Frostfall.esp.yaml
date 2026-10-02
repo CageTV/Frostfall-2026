@@ -1,0 +1,36 @@
+FormKey: 062A66:Frostfall.esp
+EditorID: _Frost_RobLetterOther
+Name:
+  TargetLanguage: English
+  Value: Pilgrim's Note
+Model:
+  File: Clutter\Books\Note01.nif
+  Data: 0x020000000000000000000000
+BookText:
+  TargetLanguage: English
+  Value: >-
+    <font face="$HandwrittenFont">Traveler,
+
+
+    We found you frozen near to death while passing through this area. While the others in my group suggested we leave you to your fate, I spotted an unoccupied camp nearby and insisted that we move you there. To your great fortune, they agreed.
+
+
+    It pains me to admit it, but we took a few coins from your pack. Such is generally not our way, but without proper supplies, we may never make it to our destination. Perhaps it was fate that we meet one another under these peculiar circumstances.
+
+
+    You are beginning to stir, so I suppose this is farewell. Whatever you seek, I hope that you find it.
+
+
+    Sincerely,
+
+
+    A Fellow Pilgrim
+PickUpSound: 0C7A54:Skyrim.esm
+Keywords:
+- 0937A2:Skyrim.esm
+Teaches:
+  MutagenObjectType: BookTeachesNothing
+InventoryArt: 097788:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

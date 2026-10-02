@@ -1,0 +1,13 @@
+FormKey: 05F402:Frostfall.esp
+EditorID: _Frost_LoadingScreen18
+Description:
+  TargetLanguage: English
+  Value: Conjurers can summon shelters with many of the comforts of home, and create magical cloaks that provide resistance to exposure and rain.
+LoadingScreenNif: 10D188:Skyrim.esm
+InitialScale: 2.5
+InitialRotation: 0, -15, 0
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: -10, 0, -15
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

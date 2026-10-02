@@ -1,0 +1,8 @@
+FormKey: 062FF9:Frostfall.esp
+EditorID: _Frost_RescueMsg_D_3
+Description:
+  TargetLanguage: English
+  Value: As your body tumbles forward, your animal's sounds draw the attention of a nearby hunter. You awaken a short time later to a hot fire and the smell of cooking meat, your faithful companion by your side.
+INAM: 0x00000000
+Flags:
+- MessageBox

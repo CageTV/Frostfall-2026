@@ -1,0 +1,18 @@
+FormKey: 02FE8E:Frostfall.esp
+EditorID: _Frost_Help_Cold
+Description:
+  TargetLanguage: English
+  Value: >-
+    COLD WEATHER
+
+
+    This area is cold, and your exposure will begin to increase.
+
+
+    The indicator at the top of your screen (if enabled) shows the current temperature, ranging from frigid (nearly empty) to warm (full).
+Name:
+  TargetLanguage: English
+  Value: Cold
+INAM: 0x00000000
+Flags:
+- MessageBox

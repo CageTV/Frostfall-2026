@@ -1,0 +1,37 @@
+FormKey: 06916C:Frostfall.esp
+EditorID: _Frost_PN_Endurance_1Adaptation
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNode
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: description_value_iterator
+      Data: 20
+    - MutagenObjectType: ScriptIntProperty
+      Name: description_value_modifier
+    - MutagenObjectType: ScriptIntProperty
+      Name: required_description_value_count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_description
+      Object: 067BA0:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global
+      Object: 067B8D:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global_max
+      Object: 067B96:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 0510F1:Campfire.esm
+Name:
+  TargetLanguage: English
+  Value: Adaptation
+Model:
+  File: campfire\_camp_intperkstars01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Select
+Flags: []

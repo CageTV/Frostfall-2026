@@ -1,0 +1,63 @@
+FormKey: 009F77:Frostfall.esp
+EditorID: _Frost_ColdWater_Effect3
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_ColdWaterEffect3
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_ColdWaterDeathSpell
+      Object: 06FD74:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_FrigidWater_ForceKillPlayer
+      Object: 06AC70:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_PerkRank_GlacialSwimmer
+      Object: 067BA4:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ConditionMessages
+      Object: 03EA72:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_ForceFeedback
+      Object: 048CED:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_FrigidWaterIsLethal
+      Object: 00E5B7:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_MaxExposureMode
+      Object: 068115:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_Setting_VampireMode
+      Object: 06DD0A:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterTemp3aMsg
+      Object: 00AFAB:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterTemp3bMsg
+      Object: 00AFAC:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterTemp3cMsg
+      Object: 00AFAD:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WaterTemp3Msg
+      Object: 00AFAA:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Cold Water
+Flags:
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Stamina
+DualCastScale: 1
+ImageSpaceModifier: 081967:Skyrim.esm
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

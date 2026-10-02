@@ -1,0 +1,19 @@
+FormKey: 005E9B:Frostfall.esp
+EditorID: _Frost_Hypothermia_WarmStamina
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Warm'
+MenuDisplayObject: 0A0E7D:Skyrim.esm
+Flags:
+- Recover
+- NoDuration
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Stamina
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

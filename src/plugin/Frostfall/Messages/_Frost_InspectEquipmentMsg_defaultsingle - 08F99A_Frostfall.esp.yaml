@@ -1,0 +1,15 @@
+FormKey: 08F99A:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_defaultsingle
+Description:
+  TargetLanguage: English
+  Value: Do you want to restore the default protection of this type of equipment?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: Back

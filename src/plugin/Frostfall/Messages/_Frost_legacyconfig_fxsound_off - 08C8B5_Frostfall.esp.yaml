@@ -1,0 +1,22 @@
+FormKey: 08C8B5:Frostfall.esp
+EditorID: _Frost_legacyconfig_fxsound_off
+Description:
+  TargetLanguage: English
+  Value: >-
+    Sound Effects
+
+
+    If enabled, you will play a shivering sound effect when you begin "Freezing" or "Freezing to Death".
+
+
+    Current setting: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable
+- Text:
+    TargetLanguage: English
+    Value: Back

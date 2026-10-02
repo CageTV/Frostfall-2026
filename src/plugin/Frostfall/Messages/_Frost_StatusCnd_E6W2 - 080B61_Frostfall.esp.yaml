@@ -1,0 +1,7 @@
+FormKey: 080B61:Frostfall.esp
+EditorID: _Frost_StatusCnd_E6W2
+Description:
+  TargetLanguage: English
+  Value: 'You are freezing to death and damp. (Exposure: %.0f%%, Wet: %.0f%%)'
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,33 @@
+FormKey: 08C899:Frostfall.esp
+EditorID: _Frost_legacyconfig_exposure
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Exposure
+
+    (Page 1 of 2)
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Exposure Rate
+- Text:
+    TargetLanguage: English
+    Value: Lethality
+- Text:
+    TargetLanguage: English
+    Value: Frigid Water
+- Text:
+    TargetLanguage: English
+    Value: Dialogue
+- Text:
+    TargetLanguage: English
+    Value: More...
+- Text:
+    TargetLanguage: English
+    Value: Back

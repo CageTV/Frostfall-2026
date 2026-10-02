@@ -1,0 +1,21 @@
+FormKey: 022AFC:Frostfall.esp
+EditorID: _Frost_Help_Exposure
+Description:
+  TargetLanguage: English
+  Value: >-
+    EXPOSURE
+
+
+    Your exposure has increased, and your skills are beginning to suffer. You should find a fire to warm up.
+
+
+    Increasing your total Warmth (by wearing warm armor) can reduce your rate of exposure.
+
+
+    At very high exposure, you will pass out and awaken elsewhere by default.
+Name:
+  TargetLanguage: English
+  Value: Exposure has increased
+INAM: 0x00000000
+Flags:
+- MessageBox

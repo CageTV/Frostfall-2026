@@ -1,0 +1,21 @@
+FormKey: 062A81:Frostfall.esp
+EditorID: _Frost_Hypothermia_MagickaRateMultFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Magicka Regeneration'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: MagickaRateMult
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

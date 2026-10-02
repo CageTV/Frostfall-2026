@@ -1,0 +1,13 @@
+FormKey: 03DF3D:Frostfall.esp
+EditorID: _Frost_LoadingScreen11
+Description:
+  TargetLanguage: English
+  Value: Blizzards are a deadly force in the northern Holds. Camp often, and seek shelter when necessary.
+LoadingScreenNif: 03DF3C:Frostfall.esp
+InitialScale: 0.9
+InitialRotation: -10, 0, -35
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: 35, 0, -46
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

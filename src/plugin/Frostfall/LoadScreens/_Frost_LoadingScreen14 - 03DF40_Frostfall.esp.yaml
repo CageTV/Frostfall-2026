@@ -1,0 +1,13 @@
+FormKey: 03DF40:Frostfall.esp
+EditorID: _Frost_LoadingScreen14
+Description:
+  TargetLanguage: English
+  Value: The Endurance skill can improve your warmth, coverage, and how long you can swim in icy waters.
+LoadingScreenNif: 03DF3C:Frostfall.esp
+InitialScale: 0.9
+InitialRotation: -10, 0, -35
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: 35, 0, -46
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

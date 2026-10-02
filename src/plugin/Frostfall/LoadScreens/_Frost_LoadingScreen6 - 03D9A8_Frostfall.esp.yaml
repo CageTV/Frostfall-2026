@@ -1,0 +1,13 @@
+FormKey: 03D9A8:Frostfall.esp
+EditorID: _Frost_LoadingScreen6
+Description:
+  TargetLanguage: English
+  Value: A fire won't help much when standing in the rain or snow. Take shelter from the elements when trying to warm up and dry off.
+LoadingScreenNif: 03DFA4:Frostfall.esp
+InitialScale: 0.4
+InitialRotation: 0, 0, 165
+RotationOffsetConstraints:
+  Min: -180
+  Max: 180
+InitialTranslationOffset: 0, 0, -50
+CameraPath: Cameras\LSCameraPanZoomInSmall.nif

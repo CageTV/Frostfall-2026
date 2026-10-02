@@ -1,0 +1,27 @@
+FormKey: 083C60:Frostfall.esp
+EditorID: _Frost_ShelterDetectEffectNear
+Name:
+  TargetLanguage: English
+  Value: Shelter Detect Near Effect
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- NoHitEffect
+BaseCost: 1.95
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+Projectile: 083C5D:Frostfall.esp
+CastType: FireAndForget
+TargetType: Aimed
+SkillUsageMultiplier: 1.4
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

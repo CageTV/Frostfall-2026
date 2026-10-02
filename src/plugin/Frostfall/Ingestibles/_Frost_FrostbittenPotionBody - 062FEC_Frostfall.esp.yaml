@@ -1,0 +1,31 @@
+FormKey: 062FEC:Frostfall.esp
+EditorID: _Frost_FrostbittenPotionBody
+Name:
+  TargetLanguage: English
+  Value: Frostbite (Body)
+Model:
+  File: frostfall\_Frost_snowberrybottle.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 25
+Flags:
+- NoAutoCalc
+- FoodItem
+Effects:
+- BaseEffect: 062A81:Frostfall.esp
+  Data:
+    Magnitude: 25
+    Duration: 300
+- BaseEffect: 062A82:Frostfall.esp
+  Data:
+    Magnitude: 25
+    Duration: 300
+- BaseEffect: 062A87:Frostfall.esp
+  Data:
+    Magnitude: 25
+    Duration: 300
+- BaseEffect: 06915A:Frostfall.esp
+  Data:
+    Duration: 300

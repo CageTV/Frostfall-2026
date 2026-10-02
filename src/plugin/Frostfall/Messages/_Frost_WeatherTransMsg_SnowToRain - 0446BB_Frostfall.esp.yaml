@@ -1,0 +1,7 @@
+FormKey: 0446BB:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_SnowToRain
+Description:
+  TargetLanguage: English
+  Value: The snow turns to rain as the air warms.
+INAM: 0x00000000
+DisplayTime: 2

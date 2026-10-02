@@ -1,0 +1,31 @@
+FormKey: 08F98F:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspectwarmth_body
+Description:
+  TargetLanguage: English
+  Value: >-
+    This equipment appears to provide %.0f warmth at first glance.
+
+
+    However, after checking the lining of the equipment, the warmth it really provides is...
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Poor (60)
+- Text:
+    TargetLanguage: English
+    Value: Fair (110)
+- Text:
+    TargetLanguage: English
+    Value: Good (140)
+- Text:
+    TargetLanguage: English
+    Value: Excellent (175)
+- Text:
+    TargetLanguage: English
+    Value: Complete (190)
+- Text:
+    TargetLanguage: English
+    Value: Back

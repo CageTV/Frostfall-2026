@@ -1,0 +1,31 @@
+FormKey: 068127:Frostfall.esp
+EditorID: _Frost_Frostbite_MovementPenalty
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_FrostbiteMovementUpdateScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_DummyItem
+      Object: 06B1D8:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased Movement'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: SpeedMult
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

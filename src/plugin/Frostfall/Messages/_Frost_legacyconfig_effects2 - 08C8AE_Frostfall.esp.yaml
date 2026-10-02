@@ -1,0 +1,27 @@
+FormKey: 08C8AE:Frostfall.esp
+EditorID: _Frost_legacyconfig_effects2
+Description:
+  TargetLanguage: English
+  Value: >-
+    All Options > Effects
+
+    (Page 2 of 3)
+
+
+    Select the feature you would like to configure below.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Full Screen Effects
+- Text:
+    TargetLanguage: English
+    Value: Force Feedback
+- Text:
+    TargetLanguage: English
+    Value: More...
+- Text:
+    TargetLanguage: English
+    Value: Back

@@ -1,0 +1,21 @@
+FormKey: 064AF6:Frostfall.esp
+EditorID: _Frost_CriticalError_SKSE
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall and SKSE
+
+
+    SKSE is not installed, or is out of date. Frostfall needs SKSE in order to enable all features. If you are OK with running Frostfall in Special Edition mode (with a reduced set of features), you can ignore this message. You CANNOT switch to using SKSE later at this time, so consider this a permanent choice. See skyrimsurvival.com/FrostfallSE for more info.
+
+
+    Detected version: %.4f
+
+    Expected version: %.4f or greater
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

@@ -1,0 +1,23 @@
+FormKey: 004E51:Frostfall.esp
+EditorID: _Frost_Hypothermia_HealRateMult
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Health Regeneration'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E931:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: HealRateMult
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

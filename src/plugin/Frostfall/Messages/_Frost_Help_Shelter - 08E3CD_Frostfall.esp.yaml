@@ -1,0 +1,21 @@
+FormKey: 08E3CD:Frostfall.esp
+EditorID: _Frost_Help_Shelter
+Description:
+  TargetLanguage: English
+  Value: >-
+    FIRE & SHELTER
+
+
+    This area is so cold that, even with a fire, you can't get any warmer. Shelters trap heat, making your fire more effective. You can usually get warmer by pitching a tent near the fire and getting inside of it.
+
+
+    You can also take shelter inside a nearby building or cave, or underneath anything large enough to cover you.
+
+
+    Larger fires are warmer than smaller fires. Fur tents are warmer than leather tents.
+Name:
+  TargetLanguage: English
+  Value: Wet
+INAM: 0x00000000
+Flags:
+- MessageBox

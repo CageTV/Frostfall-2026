@@ -1,0 +1,62 @@
+FormKey: 05B857:Frostfall.esp
+EditorID: _Frost_SootheEffect2
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_TempRestoreExposureScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WearOffExp_Alcohol
+      Object: 06FD75:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_WearOffExp_Spell
+      Object: 06FD77:Frostfall.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: exposure_penalty_amount
+      Data: 20
+    - MutagenObjectType: ScriptFloatProperty
+      Name: exposure_restore_amount
+      Data: 20
+    - MutagenObjectType: ScriptBoolProperty
+      Name: is_spell
+      Data: True
+Name:
+  TargetLanguage: English
+  Value: Soothe
+MenuDisplayObject: 0A59AD:Skyrim.esm
+Keywords:
+- 05B863:Frostfall.esp
+Flags:
+- Recover
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 3.9
+MagicSkill: Illusion
+CastingLight: 07331B:Skyrim.esm
+TaperWeight: 1
+HitShader: 073321:Skyrim.esm
+MinimumSkillLevel: 25
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+CastingArt: 07331A:Skyrim.esm
+HitEffectArt: 07331C:Skyrim.esm
+SkillUsageMultiplier: 0.25
+DualCastScale: 1
+Sounds:
+- Sound: 07BBAB:Skyrim.esm
+- Type: Charge
+  Sound: 06F6D3:Skyrim.esm
+- Type: Ready
+  Sound: 07C720:Skyrim.esm
+- Type: Release
+  Sound: 08196D:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: Exposure is reduced by <mag> for <30> seconds. When the effect wears off, the exposure is gained again.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: HasMagicEffectKeywordConditionData
+    Keyword: 05B863:Frostfall.esp

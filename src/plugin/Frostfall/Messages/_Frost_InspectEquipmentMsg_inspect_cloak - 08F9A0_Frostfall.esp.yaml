@@ -1,0 +1,25 @@
+FormKey: 08F9A0:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspect_cloak
+Description:
+  TargetLanguage: English
+  Value: >-
+    Initially, this equipment appears to provide %.0f warmth and %.0f coverage.
+
+
+    After inspecting the stitching and material of this cloak, it most closely resembles...
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Cloth (20 Warm. 20 Cov.)
+- Text:
+    TargetLanguage: English
+    Value: Leather (12 Warm. 40 Cov.)
+- Text:
+    TargetLanguage: English
+    Value: Fur (40 Warm. 12 Cov.)
+- Text:
+    TargetLanguage: English
+    Value: Back

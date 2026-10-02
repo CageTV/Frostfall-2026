@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 06E27A:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_FrostfallVersion
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 30400

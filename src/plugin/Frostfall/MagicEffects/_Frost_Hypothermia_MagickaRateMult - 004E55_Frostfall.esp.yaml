@@ -1,0 +1,23 @@
+FormKey: 004E55:Frostfall.esp
+EditorID: _Frost_Hypothermia_MagickaRateMult
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Decreased Magicka Regeneration'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E931:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

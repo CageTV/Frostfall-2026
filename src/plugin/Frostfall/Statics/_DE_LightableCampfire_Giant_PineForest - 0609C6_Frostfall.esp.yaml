@@ -1,0 +1,14 @@
+FormKey: 0609C6:Frostfall.esp
+EditorID: _DE_LightableCampfire_Giant_PineForest
+Model:
+  File: frostfall\_DE_giantcampfire01off.nif
+  Data: 0x020000000000000000000000
+  AlternateTextures:
+  - Name: L1_Land:7
+    NewTexture: 0137CB:Skyrim.esm
+    Index: 4
+  - Name: L1_Land:6
+    NewTexture: 0137CB:Skyrim.esm
+    Index: 3
+MaxAngle: 90
+Unused: 0x000000

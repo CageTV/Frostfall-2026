@@ -1,0 +1,12 @@
+FormKey: 08F999:Frostfall.esp
+EditorID: _Frost_InspectEquipmentMsg_inspectconfirm
+Description:
+  TargetLanguage: English
+  Value: The protection of this type of equipment has been changed.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Ok

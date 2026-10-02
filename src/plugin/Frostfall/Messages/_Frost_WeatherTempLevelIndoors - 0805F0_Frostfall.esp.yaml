@@ -1,0 +1,7 @@
+FormKey: 0805F0:Frostfall.esp
+EditorID: _Frost_WeatherTempLevelIndoors
+Description:
+  TargetLanguage: English
+  Value: You cannot sense the outside weather.
+INAM: 0x00000000
+DisplayTime: 2

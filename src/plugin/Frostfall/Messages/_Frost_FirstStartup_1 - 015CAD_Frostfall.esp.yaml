@@ -1,0 +1,8 @@
+FormKey: 015CAD:Frostfall.esp
+EditorID: _Frost_FirstStartup_1
+Description:
+  TargetLanguage: English
+  Value: Lost in thought, you reflect back on how much the wilds have taught you about yourself over the last several days. You recall a book you once lost that was full of wisdom about survival in the open country. On a whim, you open your pack, and find the Survivor's Guide to Skyrim staring back up at you. Had it always been there, or had thought alone summoned it...? You push aside the thought as you thumb through its pages, and then carefully place it back, knowing that some things are never truly lost.
+INAM: 0x00000000
+Flags:
+- MessageBox

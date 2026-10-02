@@ -1,0 +1,6 @@
+{
+  "name": "frostfall-native",
+  "version-string": "4.0.0",
+  "dependencies": [ "spdlog", "commonlibsse-ng" ],
+  "builtin-baseline": "e03dc9b29710050cd1018bc5674688108658d327"
+}

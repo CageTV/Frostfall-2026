@@ -1,0 +1,7 @@
+FormKey: 03D9D5:Frostfall.esp
+EditorID: _Frost_LoadingScreen_TentItem
+Model:
+  File: campfire\_camp_largehidetentmiscobject_4br.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000

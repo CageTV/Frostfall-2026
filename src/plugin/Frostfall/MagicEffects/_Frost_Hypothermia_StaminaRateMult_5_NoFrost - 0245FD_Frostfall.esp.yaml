@@ -1,0 +1,22 @@
+FormKey: 0245FD:Frostfall.esp
+EditorID: _Frost_Hypothermia_StaminaRateMult_5_NoFrost
+Name:
+  TargetLanguage: English
+  Value: 'Exposure: Freezing to Death'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Keywords:
+- 08E931:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Rate 5.

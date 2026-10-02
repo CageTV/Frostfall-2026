@@ -1,0 +1,21 @@
+FormKey: 062A80:Frostfall.esp
+EditorID: _Frost_Hypothermia_OneHandedFrostbite
+Name:
+  TargetLanguage: English
+  Value: 'Frostbite: Decreased One-Handed'
+MenuDisplayObject: 09DB72:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: OneHanded
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

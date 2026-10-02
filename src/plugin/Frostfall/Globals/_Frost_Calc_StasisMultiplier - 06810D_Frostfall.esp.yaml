@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 06810D:Frostfall.esp
+MajorRecordFlagsRaw: 64
+EditorID: _Frost_Calc_StasisMultiplier
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 0

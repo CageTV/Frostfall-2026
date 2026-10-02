@@ -1,0 +1,18 @@
+FormKey: 01CEC1:Frostfall.esp
+EditorID: _Frost_DrinkEffectPotion3
+Name:
+  TargetLanguage: English
+  Value: Strong Brew
+Model:
+  File: Clutter\Ingredients\Mead01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Value: 5
+Flags:
+- NoAutoCalc
+- FoodItem
+Effects:
+- BaseEffect: 01C95A:Frostfall.esp
+  Data:
+    Duration: 180

@@ -1,0 +1,45 @@
+FormKey: 069C47:Frostfall.esp
+EditorID: _Frost_System_Follower
+Name:
+  TargetLanguage: English
+  Value: Frostfall Follower System
+Priority: 97
+NextAliasID: 5
+Aliases:
+- Name: Follower1
+  Flags:
+  - Optional
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 0
+  PackageData:
+  - 0624CE:Frostfall.esp
+  VoiceTypes: Null
+- ID: 1
+  Name: Follower2
+  Flags:
+  - Optional
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 1
+  PackageData:
+  - 0624CE:Frostfall.esp
+  VoiceTypes: Null
+- ID: 2
+  Name: Follower3
+  Flags:
+  - Optional
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 2
+  PackageData:
+  - 0624CE:Frostfall.esp
+  VoiceTypes: Null
+- ID: 4
+  Name: HeatSource
+  Flags:
+  - Optional
+  External:
+    Quest: 064AF9:Frostfall.esp
+    AliasID: 0
+  VoiceTypes: Null

@@ -1,0 +1,10 @@
+FormKey: 06915C:Frostfall.esp
+EditorID: _Frost_PerkArtPlane
+ObjectBounds:
+  First: -64, 0, -64
+  Second: 64, 0, 64
+Model:
+  File: frostfall\_Frost_PerkArtPlane.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000

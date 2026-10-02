@@ -1,0 +1,15 @@
+FormKey: 095004:Frostfall.esp
+MajorRecordFlagsRaw: 134217728
+EditorID: _Frost_MakeshiftLeanToStatic
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -142, -101, -77
+  Second: 90, 101, 150
+Model:
+  File: creationclub\qdrsse002\ccqdrsse002_leanto.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000
+MajorFlags:
+- NavMeshGenerationBoundingBox

@@ -1,0 +1,13 @@
+FormKey: 03DF3B:Frostfall.esp
+EditorID: _Frost_LoadingScreen10
+Description:
+  TargetLanguage: English
+  Value: Alcohol can reduce exposure for a short time. When the effect wears off, more exposure is gained than was lost.
+LoadingScreenNif: 10BFBB:Skyrim.esm
+InitialScale: 0.51
+InitialRotation: 0, 0, 45
+RotationOffsetConstraints:
+  Min: -45
+  Max: 45
+InitialTranslationOffset: -16, 0, -55
+CameraPath: Cameras\LSCameraPanDown01.nif

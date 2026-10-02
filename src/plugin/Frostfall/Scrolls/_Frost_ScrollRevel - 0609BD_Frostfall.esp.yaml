@@ -1,0 +1,23 @@
+FormKey: 0609BD:Frostfall.esp
+EditorID: _Frost_ScrollRevel
+Name:
+  TargetLanguage: English
+  Value: Scroll of Revel
+MenuDisplayObject: 076E8F:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Model:
+  File: Clutter\Common\Scroll04.nif
+  Data: 0x020000000000000000000000
+Value: 100
+Weight: 0.5
+BaseCost: 550
+ChargeTime: 0.5
+CastType: 3
+Effects:
+- BaseEffect: 05B858:Frostfall.esp
+  Data:
+    Magnitude: 30
+    Duration: 30

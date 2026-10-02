@@ -1,0 +1,7 @@
+FormKey: 0446AC:Frostfall.esp
+EditorID: _Frost_WeatherTransMsg_SnowToClear
+Description:
+  TargetLanguage: English
+  Value: The skies clear as the snow begins to settle.
+INAM: 0x00000000
+DisplayTime: 2

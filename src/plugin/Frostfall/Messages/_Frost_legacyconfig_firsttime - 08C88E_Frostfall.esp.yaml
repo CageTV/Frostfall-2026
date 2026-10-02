@@ -1,0 +1,19 @@
+FormKey: 08C88E:Frostfall.esp
+EditorID: _Frost_legacyconfig_firsttime
+Description:
+  TargetLanguage: English
+  Value: >-
+    Start Frostfall?
+
+
+    (You will be able to configure settings after start-up is complete by using this power again.)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: Back

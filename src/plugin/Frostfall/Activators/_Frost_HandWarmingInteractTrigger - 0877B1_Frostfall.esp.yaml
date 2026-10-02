@@ -1,0 +1,22 @@
+FormKey: 0877B1:Frostfall.esp
+EditorID: _Frost_HandWarmingInteractTrigger
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_EnterWarmHandsAct
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Heat
+      Object: 064AF9:Frostfall.esp
+ObjectBounds:
+  First: -160, -160, -160
+  Second: 160, 160, 160
+Name:
+  TargetLanguage: English
+  Value: Hands
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Warm
+Flags:
+- IgnoredBySandbox
+InteractionKeyword: 099306:Skyrim.esm

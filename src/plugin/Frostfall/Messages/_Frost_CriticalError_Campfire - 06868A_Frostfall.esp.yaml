@@ -1,0 +1,24 @@
+FormKey: 06868A:Frostfall.esp
+EditorID: _Frost_CriticalError_Campfire
+Description:
+  TargetLanguage: English
+  Value: >-
+    Frostfall Error - Campfire Out of Date
+
+
+    Campfire was detected, but it is out of date. Frostfall requires Campfire to function. Please update to the latest version of Campfire.
+
+
+    Detected version: %.4f
+
+    Expected version: %.4f or greater
+
+
+    This message will repeat. DO NOT SAVE YOUR GAME, exit now and upgrade Campfire.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: OK

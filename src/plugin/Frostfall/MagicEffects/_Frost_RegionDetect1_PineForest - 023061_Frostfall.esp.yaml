@@ -1,0 +1,26 @@
+FormKey: 023061:Frostfall.esp
+EditorID: _Frost_RegionDetect1_PineForest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_RegionDetectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Frost_System_Climate
+      Object: 066096:Frostfall.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: region_id
+      Data: 1
+Name:
+  TargetLanguage: English
+  Value: 'Region Detect: Pine Forest'
+Flags:
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,34 @@
+FormKey: 06FD74:Frostfall.esp
+EditorID: _Frost_ColdWaterDeathSpell
+Name:
+  TargetLanguage: English
+  Value: Cold Water Death
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+CastType: FireAndForget
+Effects:
+- BaseEffect: 009F78:Frostfall.esp
+  Data:
+    Magnitude: 500
+    Duration: 20
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 01D433:Frostfall.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: IsSwimmingConditionData
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: LessThan
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 06B1D3:Frostfall.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 00E5B7:Frostfall.esp
+    ComparisonValue: 2

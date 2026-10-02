@@ -1,0 +1,30 @@
+FormKey: 06DD02:Frostfall.esp
+MajorRecordFlagsRaw: 4
+EditorID: _Frost_DummyCuirass
+SkyrimMajorRecordFlags:
+- NotPlayable
+Name:
+  TargetLanguage: English
+  Value: DO NOT USE Dummy Cuirass
+WorldModel:
+  Male:
+    Model:
+      File: Armor\Iron\Male\CuirassLightGND.nif
+      Data: 0x020000000000000000000000
+  Female:
+    Model:
+      File: Armor\Iron\F\CuirassLightGND.nif
+      Data: 0x020000000000000000000000
+BodyTemplate:
+  FirstPersonFlags:
+  - Body
+  ArmorType: Clothing
+  ActsLike44: True
+Race: 000019:Skyrim.esm
+Keywords:
+- 06DD05:Frostfall.esp
+Description:
+  TargetLanguage: English
+  Value: ''
+MajorFlags:
+- NonPlayable

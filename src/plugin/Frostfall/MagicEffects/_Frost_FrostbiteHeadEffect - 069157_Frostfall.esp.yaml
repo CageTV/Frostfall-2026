@@ -1,0 +1,23 @@
+FormKey: 069157:Frostfall.esp
+EditorID: _Frost_FrostbiteHeadEffect
+Name:
+  TargetLanguage: English
+  Value: Frostbite (Head)
+Keywords:
+- 069156:Frostfall.esp
+Flags:
+- Recover
+- Detrimental
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: <-10> Speech, Alteration, Restoration, Conjuration, Destruction, and Illusion.

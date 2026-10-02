@@ -1,0 +1,8 @@
+FormKey: 062FF5:Frostfall.esp
+EditorID: _Frost_RescueMsg_F_4
+Description:
+  TargetLanguage: English
+  Value: As you collapse, you feel your companion beginning to pull you onward. You are noticed by a passerby who, together with your companion, move you to safety.
+INAM: 0x00000000
+Flags:
+- MessageBox
