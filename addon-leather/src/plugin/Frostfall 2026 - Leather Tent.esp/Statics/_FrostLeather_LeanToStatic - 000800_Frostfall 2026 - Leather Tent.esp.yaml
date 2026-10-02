@@ -1,0 +1,15 @@
+FormKey: 000800:Frostfall 2026 - Leather Tent.esp
+MajorRecordFlagsRaw: 134217728
+EditorID: _FrostLeather_LeanToStatic
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -66, -127, -6
+  Second: 145, 136, 194
+Model:
+  File: frostfall\_frostleather_leanto.nif
+  Data: 0x020000000000000000000000
+MaxAngle: 90
+Unused: 0x000000
+MajorFlags:
+- NavMeshGenerationBoundingBox

@@ -1,0 +1,103 @@
+FormKey: 000801:Frostfall 2026 - Leather Tent.esp
+EditorID: _FrostLeather_Camp_ACT
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Frost_MakeshiftCampTent
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_AnimalLayDownMarker
+      Object: 039AF1:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_ClutterStatic1
+      Object: 03AD4D:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_FrontExitMarker
+      Object: 03AD59:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Lantern1
+      Object: 03AD56:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_ArmorBoots
+      Object: 03AD54:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_ArmorCuirass
+      Object: 0250DB:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_ArmorGauntlets
+      Object: 0514F1:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_ArmorHelm
+      Object: 03AD53:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_Backpack
+      Object: 03AD55:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_Shield
+      Object: 03AD4E:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_ShieldInterior
+      Object: 052A94:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_WeaponBow
+      Object: 03AD57:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_WeaponMainHand
+      Object: 03AD52:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_WeaponOffHand
+      Object: 03AD50:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Player_WeaponTwoHand
+      Object: 03AD51:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Shelter
+      Object: 0365B9:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PositionRef_Ward
+      Object: 03C400:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_InventoryItem
+      Object: 095001:Frostfall.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RequiredPositionRef_PlayerBed
+      Object: 03AD58:Campfire.esm
+    - MutagenObjectType: ScriptBoolProperty
+      Name: UseOwnBedroll
+      Data: True
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_Flammable
+      Data: True
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ClutterStatic1
+      Object: 036B3E:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_LargeTentTriggerVolume
+      Object: 0536E9:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ShelterModelExterior
+      Object: 000800:Frostfall 2026 - Leather Tent.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ShelterModelMaterialAsh
+      Object: 000800:Frostfall 2026 - Leather Tent.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TentAsset_ShelterModelMaterialSnow
+      Object: 000800:Frostfall 2026 - Leather Tent.esp
+ObjectBounds:
+  First: -42, -88, 0
+  Second: 42, 88, 12
+Name:
+  TargetLanguage: English
+  Value: Your Bed Roll
+Model:
+  File: Furniture\Bedroll\Bedroll01.nif
+  Data: 0x020000000000000000000000
+Keywords:
+- 095012:Frostfall.esp
+- 02AFC9:Campfire.esm
+- 03AB3B:Campfire.esm
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Use
+Flags:
+- IgnoredBySandbox

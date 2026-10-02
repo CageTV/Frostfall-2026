@@ -26,9 +26,11 @@ float property BED_X = 25.0 autoReadOnly
 float property BED_Y = 12.0 autoReadOnly
 float property BED_Z = 15.0 autoReadOnly
 bool moved_onto_bedding = false
+; Set by the leather camp (add-on): its own mesh has no bedding, so the activator stays where Campfire placed it.
+bool property UseOwnBedroll = false auto
 
 function MoveOntoBedding()
-	if moved_onto_bedding
+	if moved_onto_bedding || UseOwnBedroll
 		return
 	endif
 	moved_onto_bedding = true

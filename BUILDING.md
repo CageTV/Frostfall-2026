@@ -25,6 +25,12 @@ CommonLibSSE-NG plugin built with CMake + Ninja + MSVC and vcpkg (manifest in `p
 run `plugin/build.cmd` (edit the Visual Studio path in it for your install). Output: `plugin/build/release/Frostfall.dll`.
 Uses [SKSE Menu Framework 3](https://www.nexusmods.com/skyrimspecialedition/mods/120352) at runtime.
 
+## 4. Leather Tent add-on (`addon-leather/` -> `Frostfall 2026 - Leather Tent.esp`)
+`addon-leather/src/plugin/Frostfall 2026 - Leather Tent.esp` is a Spriggit YAML export (ESL-flagged, masters Skyrim.esm,
+Campfire.esm, Frostfall.esp). Deserialize it with the Spriggit CLI as above, then `tools/build_release_addon.py` lays the plugin,
+`addon-leather/meshes/` and the add-on's README/LICENSE out as in `release-contents-leather-tent/`. Its scripts are part of the
+main layer (`_Frost_MakeshiftCamp`, `_Frost_MakeshiftCampTent`); the add-on has none of its own.
+
 ## Logo and icons
 `assets/frostfall_logo.png` is the in-game start-up logo (920x200); `assets/frostfall_logo_master.png` is the full-size
 version. `tools/make_icons.py` redraws the HUD icons.

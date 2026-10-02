@@ -18,11 +18,18 @@ shelter that uses the Creation Club Camping lean-to by reference. Full details, 
 Get `Frostfall 2026 4.0.0.zip` from the [Releases](../../releases) page and install it with your mod manager *after* the
 original Frostfall and Campfire.
 
+**Optional add-on:** `Frostfall 2026 - Leather Tent 1.0.0.zip` (same release page) adds a leather camp to the Make Camp menu
+(4 Branches, 1 Linen Wrap, 2 Leather) that shelters better than the simple camp. It is an ESL-flagged plugin with one mesh,
+the small hide tent mesh by Tumbajamba (modified, used with permission), so it is kept out of the main download. Install it
+after Frostfall 2026.
+
 ## Layout of this repository
 
 | Path | What it is |
 |---|---|
-| `release-contents/` | Exactly what is in the release zip (the files players install) |
+| `release-contents/` | Exactly what is in the Frostfall 2026 release zip (the files players install) |
+| `release-contents-leather-tent/` | Exactly what is in the Leather Tent add-on zip |
+| `addon-leather/` | The add-on's plugin as Spriggit YAML, and its mesh |
 | `src/scripts/` | Papyrus sources of the scripts this layer changes or adds |
 | `src/plugin/Frostfall/` | The plugin as Spriggit YAML (deserialize to rebuild `Frostfall.esp`) |
 | `plugin/` | The SKSE plugin (`Frostfall.dll`) C++ source |

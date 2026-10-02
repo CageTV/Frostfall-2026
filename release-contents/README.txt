@@ -104,6 +104,12 @@ The "Make Camp" makeshift shelter uses the Creation Club Camping lean-to mesh by
 layer. It needs the Creation Club Camping content (ccqdrsse002-firewood.esl). With CC Camping - Comfy Sleeping installed
 the lean-to gets a raised hay platform and bedroll, and the camp's bedroll, lamp and lie-down spot line up with it.
 
+OPTIONAL ADD-ON: LEATHER CAMP
+-----------------------------
+"Frostfall 2026 - Leather Tent" (a separate download, ESL-flagged) adds a second, better camp to the same menu: 4 Branches,
+1 Linen Wrap and 2 Leather make a leather camp with its own lean-to, which shelters better than the simple camp (the cold
+is held back by one more exposure level while you sit or lie in it). Install it after this mod; this mod works without it.
+
 
 CREDITS
 -------

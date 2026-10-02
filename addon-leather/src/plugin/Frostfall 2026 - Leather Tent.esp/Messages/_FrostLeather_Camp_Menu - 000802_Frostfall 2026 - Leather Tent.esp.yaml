@@ -1,0 +1,21 @@
+FormKey: 000802:Frostfall 2026 - Leather Tent.esp
+EditorID: _FrostLeather_Camp_Menu
+Description:
+  TargetLanguage: English
+  Value: You have your bedroll and the makings of a shelter. A leather camp (4 Branches, 1 Linen Wrap, 2 Leather) keeps the cold off better than the simple one. Make camp here?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Simple Camp
+- Text:
+    TargetLanguage: English
+    Value: Leather Camp
+- Text:
+    TargetLanguage: English
+    Value: Campfire
+- Text:
+    TargetLanguage: English
+    Value: Cancel

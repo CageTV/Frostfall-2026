@@ -1,0 +1,20 @@
+SpriggitSource:
+  PackageName: Spriggit.Yaml.Skyrim
+  Version: 0.41
+ModKey: Frostfall 2026 - Leather Tent.esp
+GameRelease: SkyrimSE
+ModHeader:
+  Stats:
+    Version: 1.7
+  Flags:
+  - Small
+  Author: Frostfall 2026
+  Description: Optional add-on for Frostfall 2026. A leather makeshift camp with better insulation (uses Tumbajamba's small hide tent mesh, with permission).
+  MasterReferences:
+  - Master: Skyrim.esm
+    FileSize: 0
+  - Master: Campfire.esm
+    FileSize: 0
+  - Master: Frostfall.esp
+    FileSize: 0
+  INTV: 1

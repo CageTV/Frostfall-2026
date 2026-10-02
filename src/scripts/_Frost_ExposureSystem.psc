@@ -232,7 +232,9 @@ float function CalculateExposureTarget()
 	bool takingShelter = IsPlayerTakingShelter()
 	float SHELTER_MOD = 0.0
 	if tent
-		if IsTentWarm(tent)
+		if IsTentInsulated(tent)
+			SHELTER_MOD = 100.0
+		elseif IsTentWarm(tent)
 			SHELTER_MOD = 80.0
 		elseif IsTentWaterproof(tent) || takingShelter
 			SHELTER_MOD = 50.0
@@ -258,6 +260,17 @@ float function CalculateExposureTarget()
 	endif
 
 	return target
+endFunction
+
+; Frostfall 2026: a tent flagged insulated (the leather makeshift camp add-on) shelters better than any warm tent:
+; 100 off the target instead of 80, one exposure level more. Looked up at run time so no quest property is needed.
+Keyword insulated_tent_keyword
+
+bool function IsTentInsulated(ObjectReference akTent)
+	if !insulated_tent_keyword
+		insulated_tent_keyword = Game.GetFormFromFile(0x095012, "Frostfall.esp") as Keyword
+	endif
+	return insulated_tent_keyword && akTent.GetBaseObject().HasKeyword(insulated_tent_keyword)
 endFunction
 
 function UpdateExposure(float afExposureTarget)
