@@ -27,6 +27,21 @@ Two more mods live in this repository, each with its own release:
   bedroll when you rest in a tent, and pickup mods can take it, duplicating the item; this stops the copy being made.
   Scripts only; works with or without Frostfall 2026.
 
+## ESL variant (Frostfall.esp and Campfire.esm both as light plugins)
+
+For a load order short of plugin slots there is a second set of downloads built for the **ESL Campfire**
+("CAMPFIRE ESL UPDATED", Nexus 193472, by another author, not included here), so that Frostfall and Campfire together take no
+regular plugin slot. It is a separate build, not an add-on to the normal one:
+
+- **Frostfall 2026 (ESL)**: Frostfall.esp flagged ESL (its 1110 records renumbered to 000800 upward) and its own `Frostfall.dll`.
+- **Frostfall 2026 - Leather Tent (ESL)**: the leather camp add-on for the ESL pair.
+- **Campfire ESL - Script Fixes**: Campfire's own scripts look records up by hard-coded FormID, which the ESL Campfire changed; this is
+  12 of them with the ids corrected (Chesko's MIT source, nothing else changed). Required by the ESL build.
+
+Use it for a **new game**: because the FormIDs changed, saves from the normal build do not carry over, and patches that point into
+Frostfall.esp's records do not work with it. Anything you generated against the normal build (Synthesis, PGPatcher and the like) must be
+regenerated. The normal downloads above are unchanged.
+
 ## Layout of this repository
 
 | Path | What it is |
@@ -34,6 +49,8 @@ Two more mods live in this repository, each with its own release:
 | `release-contents/` | Exactly what is in the Frostfall 2026 release zip (the files players install) |
 | `release-contents-leather-tent/` | Exactly what is in the Leather Tent add-on zip |
 | `addon-leather/` | The add-on's plugin as Spriggit YAML, and its mesh |
+| `release-contents-esl/`, `release-contents-leather-tent-esl/`, `release-contents-campfire-esl-script-fixes/` | Exactly what is in the three ESL zips |
+| `esl/` | The Campfire and Frostfall FormID maps the ESL build uses (old id -> new id) |
 | `release-contents-no-gear-dupes/` | Exactly what is in the No Gear Display Dupes zip (script, its source, README, licence) |
 | `nodupe/` | Compile-only stub for Go To Bed's `GTB_UIUtil` (see `tools/build_nodupes.py`) |
 | `src/scripts/` | Papyrus sources of the scripts this layer changes or adds |

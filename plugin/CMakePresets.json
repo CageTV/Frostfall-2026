@@ -14,7 +14,25 @@
         "VCPKG_MANIFEST_DIR": "${sourceDir}/build-local",
         "VCPKG_TARGET_TRIPLET": "x64-windows-static-md"
       }
+    },
+    {
+      "name": "release-esl",
+      "displayName": "Release (ESL Frostfall.esp)",
+      "inherits": "release",
+      "binaryDir": "${sourceDir}/build/release-esl",
+      "cacheVariables": {
+        "FROSTFALL_ESL": "ON"
+      }
     }
   ],
-  "buildPresets": [ { "name": "release", "configurePreset": "release" } ]
+  "buildPresets": [
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "release-esl",
+      "configurePreset": "release-esl"
+    }
+  ]
 }

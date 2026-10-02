@@ -1,0 +1,10 @@
+Frostfall 2026 - Leather Tent, version 1.0.0
+
+The plugin (Frostfall 2026 - Leather Tent.esp) and anything else in this add-on that is new work is released under the MIT
+License (see the LICENSE.txt of Frostfall 2026): Copyright (c) 2018 Chesko for the parts that are his, and the changes for this
+add-on under the same terms.
+
+The one exception is the mesh meshes/frostfall/_frostleather_leanto.nif. It is made from the small hide tent mesh by
+Tumbajamba (credited on Chesko's Frostfall Nexus page), modified for this add-on, and is used with Tumbajamba's permission
+(given on Nexus). It is not covered by the MIT License; it stays under its author's terms. Do not reuse it without asking
+Tumbajamba.

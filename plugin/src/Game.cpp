@@ -1,5 +1,6 @@
 #include "PCH.h"
 #include "Game.h"
+#include "GameIds.h"
 #include "Settings.h"
 
 namespace Game
@@ -38,18 +39,18 @@ namespace Game
 
 	bool Init()
 	{
-		g.running = Lookup(0x06DCFB, "FrostfallRunning");
-		g.exposure = Lookup(0x08827A, "_Frost_AttributeExposureMeter");
-		g.exposureMax = Lookup(0x07CAA4, "_Frost_AttributeExposureMax");
-		g.wetness = Lookup(0x06458C, "_Frost_AttributeWetness");
-		g.wetnessMax = Lookup(0x07CAA5, "_Frost_AttributeWetnessMax");
-		g.tempLevel = Lookup(0x07CAA7, "_Frost_AttributeMeterTempLevel");
-		g.tempLevelMax = Lookup(0x07CAA8, "_Frost_AttributeMeterTempLevelMax");
-		g.warmth = Lookup(0x067B8F, "_Frost_AttributeWarmth");
-		g.warmthMax = Lookup(0x068110, "_Frost_Calc_MaxWarmth");
-		g.coverage = Lookup(0x067B91, "_Frost_AttributeCoverage");
-		g.coverageMax = Lookup(0x068111, "_Frost_Calc_MaxCoverage");
-		g.meterMode = Lookup(0x05CE05, "_Frost_Setting_MeterDisplayMode");
+		g.running = Lookup(ids::FrostfallRunning, "FrostfallRunning");
+		g.exposure = Lookup(ids::Frost_AttributeExposureMeter, "_Frost_AttributeExposureMeter");
+		g.exposureMax = Lookup(ids::Frost_AttributeExposureMax, "_Frost_AttributeExposureMax");
+		g.wetness = Lookup(ids::Frost_AttributeWetness, "_Frost_AttributeWetness");
+		g.wetnessMax = Lookup(ids::Frost_AttributeWetnessMax, "_Frost_AttributeWetnessMax");
+		g.tempLevel = Lookup(ids::Frost_AttributeMeterTempLevel, "_Frost_AttributeMeterTempLevel");
+		g.tempLevelMax = Lookup(ids::Frost_AttributeMeterTempLevelMax, "_Frost_AttributeMeterTempLevelMax");
+		g.warmth = Lookup(ids::Frost_AttributeWarmth, "_Frost_AttributeWarmth");
+		g.warmthMax = Lookup(ids::Frost_Calc_MaxWarmth, "_Frost_Calc_MaxWarmth");
+		g.coverage = Lookup(ids::Frost_AttributeCoverage, "_Frost_AttributeCoverage");
+		g.coverageMax = Lookup(ids::Frost_Calc_MaxCoverage, "_Frost_Calc_MaxCoverage");
+		g.meterMode = Lookup(ids::Frost_Setting_MeterDisplayMode, "_Frost_Setting_MeterDisplayMode");
 		ready = g.running && g.exposure && g.wetness && g.tempLevel && g.warmth && g.coverage;
 		SKSE::log::info("Frostfall globals {}", ready ? "found" : "MISSING - is Frostfall.esp enabled?");
 		return ready;

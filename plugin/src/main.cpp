@@ -120,7 +120,11 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SetupLog();
+	#ifdef FROSTFALL_ESL
+	SKSE::log::info("Frostfall.dll 4.0.0 (ESL build), game {}", REL::Module::get().version().string());
+#else
 	SKSE::log::info("Frostfall.dll 4.0.0, game {}", REL::Module::get().version().string());
+#endif
 	Settings::Get().Load();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);

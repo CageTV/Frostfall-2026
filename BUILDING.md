@@ -36,6 +36,19 @@ Builds `_camp_tentsystem.pex` from Campfire's own `_Camp_TentSystem.psc` (Chesko
 display copies into `None` and opens Go To Bed's sleep menu when Gotobed.esp is installed. `tools/build_release_nodupes.py` lays the
 result out as in `release-contents-no-gear-dupes/`. The compile-only stub for Go To Bed's script is in `nodupe/stubs`.
 
+## 6. ESL variant (`tools/esl_step*.py`)
+The ESL set is generated from the same sources; the scripts document the process and expect the author's workspace layout (an `esl-work/`
+folder next to `src/`, `release-layer/` built as above), so treat them as a recipe rather than a one-command build.
+0. `esl_step0_map.py`: pairs the original Campfire.esm with the ESL Campfire.esm by EditorID (export both with Spriggit first; the ESL mod's
+   export is someone else's work and stays local) -> `esl/map_full.json` (1354 records, all unique).
+1. `esl_step1_campfire_remap.py`: points the Frostfall / add-on YAML at the ESL Campfire's records.
+2. `esl_step2_compact.py`: renumbers Frostfall.esp's own records into 000800+ (1110 records), sets the Small flag, re-homes cell folders ->
+   `esl/map_frostfall.json`. Deserialize the result with Spriggit as in step 2 above.
+3. `esl_step3_scripts.py`: rewrites hard-coded ids in the scripts (hex and decimal, `"id___Plugin"` armor keys), makes the armor datastore key
+   light-plugin aware, and compiles Frostfall's and Campfire's affected scripts (Campfire's from Chesko's MIT source only).
+4. `plugin/build-esl.cmd` (`cmake --preset release-esl`, `-DFROSTFALL_ESL=ON`): `Frostfall.dll` that looks its globals up by the new ids.
+5. `esl_step5_package.py` (with `esl_step7_inis.py` for the FormList Manipulator ids): lays out and zips the three ESL packages.
+
 ## Logo and icons
 `assets/frostfall_logo.png` is the in-game start-up logo (920x200); `assets/frostfall_logo_master.png` is the full-size
 version. `tools/make_icons.py` redraws the HUD icons.

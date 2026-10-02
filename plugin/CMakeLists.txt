@@ -5,6 +5,9 @@ project(Frostfall VERSION 4.0.0 LANGUAGES CXX)
 
 find_package(CommonLibSSE CONFIG REQUIRED)
 
+# The ESL build is for the ESL-flagged Frostfall.esp (compacted FormIDs): it looks the globals up by their new ids.
+option(FROSTFALL_ESL "Build for the ESL (compacted FormID) Frostfall.esp" OFF)
+
 add_commonlibsse_plugin(${PROJECT_NAME} NAME "Frostfall" AUTHOR "CageTV" SOURCES
     src/main.cpp
     src/Settings.cpp
@@ -18,3 +21,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE src include)
 target_precompile_headers(${PROJECT_NAME} PRIVATE src/PCH.h)
 target_compile_options(${PROJECT_NAME} PRIVATE $<$<CONFIG:Release>:/Z7>)
 target_link_options(${PROJECT_NAME} PRIVATE $<$<CONFIG:Release>:/DEBUG /OPT:REF /OPT:ICF>)
+if(FROSTFALL_ESL)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE FROSTFALL_ESL)
+endif()
