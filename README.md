@@ -18,10 +18,14 @@ shelter that uses the Creation Club Camping lean-to by reference. Full details, 
 Get `Frostfall 2026 4.0.0.zip` from the [Releases](../../releases) page and install it with your mod manager *after* the
 original Frostfall and Campfire.
 
-**Optional add-on:** `Frostfall 2026 - Leather Tent 1.0.0.zip` (same release page) adds a leather camp to the Make Camp menu
-(4 Branches, 1 Linen Wrap, 2 Leather) that shelters better than the simple camp. It is an ESL-flagged plugin with one mesh,
-the small hide tent mesh by Tumbajamba (modified, used with permission), so it is kept out of the main download. Install it
-after Frostfall 2026.
+Two more mods live in this repository, each with its own release:
+
+- **Frostfall 2026 - Leather Tent** (optional add-on): adds a leather camp to the Make Camp menu (4 Branches, 1 Linen Wrap,
+  2 Leather) that shelters better than the simple camp. An ESL-flagged plugin with one mesh, the small hide tent mesh by
+  Tumbajamba (modified, used with permission), so it is kept out of the main download. Install it after Frostfall 2026.
+- **Frostfall - No Gear Display Dupes**: a one-script fix for Campfire. Campfire lays a real copy of your gear next to the
+  bedroll when you rest in a tent, and pickup mods can take it, duplicating the item; this stops the copy being made.
+  Scripts only; works with or without Frostfall 2026.
 
 ## Layout of this repository
 
@@ -30,6 +34,8 @@ after Frostfall 2026.
 | `release-contents/` | Exactly what is in the Frostfall 2026 release zip (the files players install) |
 | `release-contents-leather-tent/` | Exactly what is in the Leather Tent add-on zip |
 | `addon-leather/` | The add-on's plugin as Spriggit YAML, and its mesh |
+| `release-contents-no-gear-dupes/` | Exactly what is in the No Gear Display Dupes zip (script, its source, README, licence) |
+| `nodupe/` | Compile-only stub for Go To Bed's `GTB_UIUtil` (see `tools/build_nodupes.py`) |
 | `src/scripts/` | Papyrus sources of the scripts this layer changes or adds |
 | `src/plugin/Frostfall/` | The plugin as Spriggit YAML (deserialize to rebuild `Frostfall.esp`) |
 | `plugin/` | The SKSE plugin (`Frostfall.dll`) C++ source |
