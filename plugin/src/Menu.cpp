@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include "Game.h"
 #include "Hud.h"
+#include "NativeMcm.h"
 #include "Settings.h"
 
 #include "SKSEMenuFramework.h"
@@ -95,7 +96,26 @@ namespace Menu
 
 			Spacing();
 			Separator();
-			TextWrapped("Frostfall's other settings (gameplay, equipment, profiles) are still in the SkyUI Mod Configuration Menu.");
+			TextWrapped("Frostfall's settings are on the pages in this section: Gameplay, Interface, HUD, Advanced and Profiles. "
+			            "Only the Equipment page (the per-armor warmth and coverage editor) is still in the SkyUI Mod Configuration Menu.");
+		}
+
+		void __stdcall RenderGameplay() { NativeMcm::DrawPage(0); }
+		void __stdcall RenderInterface() { NativeMcm::DrawPage(1); }
+
+		void __stdcall RenderAdvanced()
+		{
+			NativeMcm::DrawPage(2);
+			NativeMcm::DrawAdvancedExtras();
+		}
+
+		void __stdcall RenderProfiles() { NativeMcm::DrawProfiles(); }
+
+		// Drawn every frame whether or not the menu is open: flushes profile writes a moment after the last change, then draws the bars.
+		void __stdcall Frame()
+		{
+			NativeMcm::Tick(std::clamp(GetIO()->DeltaTime, 0.0f, 0.1f));
+			Hud::Render();
 		}
 
 		void __stdcall RenderHud()
@@ -160,8 +180,12 @@ namespace Menu
 		}
 		SKSEMenuFramework::SetSection("Frostfall");
 		SKSEMenuFramework::AddSectionItem("Overview", RenderOverview);
+		SKSEMenuFramework::AddSectionItem("Gameplay", RenderGameplay);
+		SKSEMenuFramework::AddSectionItem("Interface", RenderInterface);
 		SKSEMenuFramework::AddSectionItem("HUD", RenderHud);
-		SKSEMenuFramework::AddHudElement(Hud::Render);
+		SKSEMenuFramework::AddSectionItem("Advanced", RenderAdvanced);
+		SKSEMenuFramework::AddSectionItem("Profiles", RenderProfiles);
+		SKSEMenuFramework::AddHudElement(Frame);
 		registered = true;
 		SKSE::log::info("Registered with SKSE Menu Framework {}", SKSEMenuFramework::GetMenuFrameworkVersion());
 	}

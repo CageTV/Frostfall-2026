@@ -1,5 +1,5 @@
 FROSTFALL 2026 — Hypothermia, Camping, Survival
-Version 4.0.0 (pre-release), ESL BUILD, an update layer for Chesko's Frostfall
+Version 4.1.0, ESL BUILD, an update layer for Chesko's Frostfall
 Updated for Skyrim Special Edition / Anniversary Edition (1.6.x)
 ==================================================================
 
@@ -35,9 +35,9 @@ REQUIREMENTS
 - Skyrim Script Extender (SKSE64) and Address Library for SKSE Plugins
 - PapyrusUtil SE (Nexus 13048)
 - powerofthree's Papyrus Extender (Nexus 22854)
-- SKSE Menu Framework 3 (Nexus 120352) — for the new HUD bars, the start-up logo, the settings page and auto-start.
-  Without it, Frostfall falls back to its SkyUI meters, start-up messages and manual start.
-- SkyUI SE (for Frostfall's remaining settings in the Mod Configuration Menu)
+- SKSE Menu Framework 3 (Nexus 120352) — for the HUD bars, the start-up logo, all settings pages and auto-start.
+  Without it Frostfall has no settings pages (only the SkyUI Equipment page) and falls back to its SkyUI meters, start-up messages and manual start.
+- SkyUI SE (for the Equipment page in the Mod Configuration Menu)
 - Recommended: CC Camping - Comfy Sleeping (Nexus 58840, by Missile) — gives the lean-to a raised hay platform with a
   bedroll. Optional; it overrides the CC mesh, so Make Camp picks it up automatically (the bedroll, lamp and the spot
   you lie down in are set to match its platform). Without it you get the plain Creation Club lean-to.
@@ -78,8 +78,11 @@ WHAT'S NEW
 - New HUD: four flat vertical bars on the right of the screen — exposure (cold), wetness, temperature, and warmth +
   coverage — replacing the old SkyUI meters. Always on or contextual (fades while you're comfortable), 2 x 2 grid or a
   single row, and movable / resizable in game.
-- Settings page in SKSE Menu Framework (Frostfall > Overview / HUD): status, start / stop, auto-start, bar layout.
-  The rest of Frostfall's settings are still in the Mod Configuration Menu for now.
+- Settings in SKSE Menu Framework (Frostfall > Overview / Gameplay / Interface / HUD / Advanced / Profiles): status, start / stop, auto-start,
+  every gameplay and interface option, the Endurance skill's respec and restore, tutorials, the 10 settings profiles, and the bar layout.
+  Every option, default, hover text and profile key is Frostfall's own; profiles are still saved to Data/SKSE/Plugins/FrostfallData, so your
+  existing profiles keep working. Only the Equipment page (the per-armor warmth and coverage editor) stays in the SkyUI Mod Configuration
+  Menu. The old SkyUI meter-position page is gone: the HUD page replaces it.
 
 
 WHAT'S FIXED

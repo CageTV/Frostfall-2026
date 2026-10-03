@@ -224,14 +224,8 @@ int[] ProtectionListCoverageIndex
 
 
 Event OnConfigInit()
-	Pages = new string[7]
-	Pages[0] = "$FrostfallOverviewPage"
-	Pages[1] = "$FrostfallGameplayPage"
-	Pages[2] = "$FrostfallEquipmentPage"
-	Pages[3] = "$FrostfallInterfacePage"
-	Pages[4] = "$FrostfallMetersPage"
-	Pages[5] = "$FrostfallSaveLoadPage"
-	Pages[6] = "$FrostfallAdvancedPage"
+	Pages = new string[1]
+	Pages[0] = "$FrostfallEquipmentPage"
 
 	MaxExposureModeList = new string[3]
 	MaxExposureModeList[0] = "$FrostfallMaxExposureNothing"
@@ -392,7 +386,7 @@ Event OnConfigInit()
 endEvent
 
 int function GetVersion()
-	return 3
+	return 4
 endFunction
 
 Event OnVersionUpdate(int a_version)
@@ -406,20 +400,8 @@ event OnPageReset(string page)
 		UnloadCustomContent()
 	endif
 
-	if page == "$FrostfallOverviewPage"
-		PageReset_Overview()
-	elseif page == "$FrostfallGameplayPage"
-		PageReset_Gameplay()
-	elseif page == "$FrostfallEquipmentPage"
+	if page == "$FrostfallEquipmentPage"
 		PageReset_Equipment()
-	elseif page == "$FrostfallInterfacePage"
-		PageReset_Interface()
-	elseif page == "$FrostfallMetersPage"
-		PageReset_Meters()
-	elseif page == "$FrostfallSaveLoadPage"
-		PageReset_SaveLoad()
-	elseif page == "$FrostfallAdvancedPage"
-		PageReset_Advanced()
 	endif
 endEvent
 
@@ -438,170 +420,6 @@ Event OnConfigClose()
 	meter_being_configured = METER_BEING_CONFIGURED_NONE
 	config_is_open = false
 EndEvent
-
-function PageReset_Overview()
-	SetCursorFillMode(TOP_TO_BOTTOM)
-
-	AddHeaderOption("$FrostfallOverviewHeaderStatus")
-	if FrostfallRunning.GetValueInt() == 2
-		if _Frost_DatastoreInitialized.GetValueInt() == 2
-			if !must_exit
-				Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallEnabled")
-			else
-				Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallEnabled", OPTION_FLAG_DISABLED)
-			endif
-			Overview_RunSubStatusText_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		else
-			Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallStartingUp", OPTION_FLAG_DISABLED)
-			Overview_RunSubStatusText_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		endif
-	else
-		if Game.IsFightingControlsEnabled()
-			if !must_exit
-				Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallDisabled")
-			else
-				Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallDisabled", OPTION_FLAG_DISABLED)
-			endif
-			Overview_RunSubStatusText_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		else
-			Overview_RunStatusText_OID = AddTextOption("$FrostfallOverviewCtrlStatus", "$FrostfallDisabled", OPTION_FLAG_DISABLED)
-			Overview_RunSubStatusText_OID = AddTextOption("$FrostfallCantStart", "", OPTION_FLAG_DISABLED)
-		endif
-	endif
-
-	AddHeaderOption("$FrostfallOverviewHeaderInfo")
-	if FrostfallRunning.GetValueInt() == 2
-		if _Frost_DatastoreInitialized.GetValueInt() == 2
-			Overview_InfoLine1_OID = AddTextOption("$FrostfallOverviewRunning", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine2_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine3_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine4_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine5_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine6_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine7_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine8_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		else
-			Overview_InfoLine1_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine2_OID = AddTextOption("$FrostfallStartUpProgress", "$FrostfallGeneralExitMenuPrompt")
-			Overview_InfoLine3_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine4_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine5_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine6_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine7_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-			Overview_InfoLine8_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		endif
-	else
-		Overview_InfoLine1_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine2_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine3_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine4_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine5_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine6_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine7_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-		Overview_InfoLine8_OID = AddTextOption("", "", OPTION_FLAG_DISABLED)
-	endif
-
-	SetCursorPosition(1) ; Move cursor to top right position
-
-	AddHeaderOption("$FrostfallOverviewHeaderPlayerAttributes")
-	if GetExposureSystem().IsSystemRunning()
-		string exp_val
-		int exposure = (Math.Floor(GetPlayerExposure()) - 20)
-		if exposure < 0
-			exp_val = "+" + (Math.Abs(exposure) as Int)
-		else
-			exp_val = exposure
-		endif
-		Overview_ExposureStatusText_OID = AddTextOption("$FrostfallOverviewExposureValue", exp_val)
-	else
-		Overview_ExposureStatusText_OID = AddTextOption("$FrostfallOverviewExposureValue", "")
-	endif
-	if GetWetnessSystem().IsSystemRunning()
-		Overview_WetnessStatusText_OID = AddTextOption("$FrostfallOverviewWetnessValue", (((_Frost_AttributeWetness.GetValueInt() / 750.0) * 100.0) as int) + "%")
-	else
-		Overview_WetnessStatusText_OID = AddTextOption("$FrostfallOverviewWetnessValue", "")
-	endif
-
-	AddEmptyOption()
-
-	AddHeaderOption("$FrostfallOverviewHeaderPlayerStats")
-	if GetWarmthSystem().IsSystemRunning()
-		Overview_WarmthStatusText_OID = AddTextOption("$FrostfallOverviewWarmthValue", _Frost_AttributeWarmth.GetValueInt())
-	else
-		Overview_WarmthStatusText_OID = AddTextOption("$FrostfallOverviewWarmthValue", "")
-	endif
-	if GetCoverageSystem().IsSystemRunning()
-		Overview_CoverageStatusText_OID = AddTextOption("$FrostfallOverviewCoverageValue", _Frost_AttributeCoverage.GetValueInt())
-	else
-		Overview_CoverageStatusText_OID = AddTextOption("$FrostfallOverviewCoverageValue", "")
-	endif
-	AddEmptyOption()
-	AddEmptyOption()
-endFunction
-
-function PageReset_Gameplay()
-	SetCursorFillMode(TOP_TO_BOTTOM)
-	if FrostfallRunning.GetValueInt() != 2 || must_exit
-		AddTextOption("$FrostfallNotRunningError", "", OPTION_FLAG_DISABLED)
-		return
-	endif
-
-	AddHeaderOption("$FrostfallGameplayHeaderPlayer")
-	Gameplay_ExposureRate_OID = AddSliderOption("$FrostfallGameplaySettingExposureRate", _Frost_Setting_ExposureRate.GetValue(), "{1}x")
-	Gameplay_MaxExposureMode_OID = AddMenuOption("$FrostfallGameplaySettingPlayerExposureMode", MaxExposureModeList[_Frost_Setting_MaxExposureMode.GetValueInt() - 1])
-	if _Frost_Setting_FrigidWaterIsLethal.GetValueInt() == 2
-		Gameplay_FrigidWater_OID = AddToggleOption("$FrostfallGameplaySettingExposureWaterLethality", true)
-	else
-		Gameplay_FrigidWater_OID = AddToggleOption("$FrostfallGameplaySettingExposureWaterLethality", false)
-	endif
-	if _Frost_Setting_ExposurePauseDialogue.GetValueInt() == 2
-		Gameplay_ExposurePauseDialogue_OID = AddToggleOption("$FrostfallGameplaySettingExposureDialoguePause", true)
-	else
-		Gameplay_ExposurePauseDialogue_OID = AddToggleOption("$FrostfallGameplaySettingExposureDialoguePause", false)
-	endif
-	if _Frost_Setting_ExposurePauseCombat.GetValueInt() == 2
-		Gameplay_ExposurePauseCombat_OID = AddToggleOption("$FrostfallGameplaySettingExposureCombatPause", true)
-	else
-		Gameplay_ExposurePauseCombat_OID = AddToggleOption("$FrostfallGameplaySettingExposureCombatPause", false)
-	endif
-	if _Frost_Setting_MovementPenalty.GetValueInt() == 2
-		Gameplay_MovementPenalty_OID = AddToggleOption("$FrostfallGameplaySettingPlayerMovement", true)
-	else
-		Gameplay_MovementPenalty_OID = AddToggleOption("$FrostfallGameplaySettingPlayerMovement", false)
-	endif
-	Gameplay_VampirismMode_OID = AddMenuOption("$FrostfallGameplaySettingPlayerVampirism", VampirismModeList[_Frost_Setting_VampireMode.GetValueInt()])
-
-	AddHeaderOption("$FrostfallGameplayHeaderFastTravel")
-	if _Frost_Setting_NoWaiting.GetValueInt() == 2
-		Gameplay_DisableFT_OID = AddToggleOption("$FrostfallGameplaySettingFTToggle", true, OPTION_FLAG_DISABLED)
-	else
-		if _Frost_Setting_NoFastTravel.GetValueInt() == 2
-			Gameplay_DisableFT_OID = AddToggleOption("$FrostfallGameplaySettingFTToggle", true)
-		else
-			Gameplay_DisableFT_OID = AddToggleOption("$FrostfallGameplaySettingFTToggle", false)
-		endif
-	endif
-	if _Frost_Setting_NoWaiting.GetValueInt() == 2
-		Gameplay_DisableWaiting_OID = AddToggleOption("$FrostfallGameplaySettingFTWaiting", true)
-	else
-		Gameplay_DisableWaiting_OID = AddToggleOption("$FrostfallGameplaySettingFTWaiting", false)
-	endif
-
-	SetCursorPosition(1)
-
-	AddHeaderOption("$FrostfallGameplayHeaderWorld")
-	AddTextOption("$FrostfallComingSoon", "", OPTION_FLAG_DISABLED)
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-
-	AddHeaderOption("$FrostfallGameplayHeaderHotkeys")
-	Gameplay_WeathersenseHotkey_OID = AddKeyMapOption("$FrostfallHotkeyWeathersense", _Frost_HotkeyWeathersense.GetValueInt())
-
-endFunction
 
 function PageReset_Equipment()
 	SetCursorFillMode(TOP_TO_BOTTOM)
@@ -625,515 +443,8 @@ function PageReset_Equipment()
 	endif
 endFunction
 
-function PageReset_Interface()
-	SetCursorFillMode(TOP_TO_BOTTOM)
-	if FrostfallRunning.GetValueInt() != 2 || must_exit
-		AddTextOption("$FrostfallNotRunningError", "", OPTION_FLAG_DISABLED)
-		return
-	endif
-
-	AddHeaderOption("$FrostfallInterfaceHeaderEffects")
-	if _Frost_Setting_FrostShaderOn.GetValueInt() == 2
-		Interface_FrostShaderOn_OID = AddToggleOption("$FrostfallInterfaceSettingFrostShader", true)
-	else
-		Interface_FrostShaderOn_OID = AddToggleOption("$FrostfallInterfaceSettingFrostShader", false)
-	endif
-	if _Frost_Setting_WetShaderOn.GetValueInt() == 2
-		Interface_WetShaderOn_OID = AddToggleOption("$FrostfallInterfaceSettingWetShader", true)
-	else
-		Interface_WetShaderOn_OID = AddToggleOption("$FrostfallInterfaceSettingWetShader", false)
-	endif
-	if _Frost_Setting_SoundEffects.GetValueInt() == 2
-		Interface_SoundEffects_OID = AddToggleOption("$FrostfallInterfaceSettingSoundEffects", true)
-	else
-		Interface_SoundEffects_OID = AddToggleOption("$FrostfallInterfaceSettingSoundEffects", false)
-	endif
-	if _Frost_Setting_FullScreenEffects.GetValueInt() == 2
-		Interface_FullScreenEffects_OID = AddToggleOption("$FrostfallInterfaceSettingImagespaceModifiers", true)
-	else
-		Interface_FullScreenEffects_OID = AddToggleOption("$FrostfallInterfaceSettingImagespaceModifiers", false)
-	endif
-	if _Frost_Setting_ForceFeedback.GetValueInt() == 2
-		Interface_ForceFeedback_OID = AddToggleOption("$FrostfallInterfaceSettingForceFeedback", true)
-	else
-		Interface_ForceFeedback_OID = AddToggleOption("$FrostfallInterfaceSettingForceFeedback", false)
-	endif
-	Interface_Animation_OID = AddMenuOption("$FrostfallInterfaceSettingAnimation", AnimationList[_Frost_Setting_Animation.GetValueInt() - 1])
-	if _Frost_Setting_FollowerAnimation.GetValueInt() == 2
-		Interface_FollowerAnimation_OID = AddToggleOption("$FrostfallInterfaceSettingFollowerAnimation", true)
-	else
-		Interface_FollowerAnimation_OID = AddToggleOption("$FrostfallInterfaceSettingFollowerAnimation", false)
-	endif
-
-	SetCursorPosition(1)
-
-	AddHeaderOption("$FrostfallInterfaceHeaderNotifications")
-	if _Frost_Setting_ConditionMessages.GetValueInt() == 2
-		Interface_ConditionMessages_OID = AddToggleOption("$FrostfallInterfaceSettingCondition", true)
-	else
-		Interface_ConditionMessages_OID = AddToggleOption("$FrostfallInterfaceSettingCondition", false)
-	endif
-	if _Frost_Setting_WeatherMessages.GetValueInt() == 2
-		Interface_WeatherMessages_OID = AddToggleOption("$FrostfallInterfaceSettingWeather", true)
-	else
-		Interface_WeatherMessages_OID = AddToggleOption("$FrostfallInterfaceSettingWeather", false)
-	endif
-	Interface_WeathersenseDisplayMode_OID = AddMenuOption("$FrostfallInterfaceSettingWeathersenseDisplayMode", WeathersenseDisplayList[_Frost_Setting_WeathersenseDisplayMode.GetValueInt()])
-	
-	if _Frost_Setting_DisplayAttributesInWeathersense.GetValueInt() == 2
-		Interface_DisplayAttributesInWeathersense_OID = AddToggleOption("$FrostfallInterfaceSettingWeathersense", true)
-		if _Frost_Setting_DisplayAttributeValuesInWeathersense.GetValueInt() == 2
-			Interface_DisplayAttributeValuesInWeathersense_OID = AddToggleOption("$FrostfallInterfaceSettingWeathersenseDetail", true)
-		else
-			Interface_DisplayAttributeValuesInWeathersense_OID = AddToggleOption("$FrostfallInterfaceSettingWeathersenseDetail", false)
-		endif
-	else
-		Interface_DisplayAttributesInWeathersense_OID = AddToggleOption("$FrostfallInterfaceSettingWeathersense", false)
-		Interface_DisplayAttributeValuesInWeathersense_OID = AddToggleOption("$FrostfallInterfaceSettingWeathersenseDetail", false, OPTION_FLAG_DISABLED)
-	endif
-
-	if Compatibility.isUIPackageInstalled
-		; pass
-	else
-		if _Frost_Setting_Notifications_EquipmentValues.GetValueInt() == 2
-			Interface_Notifications_EquipmentValues_OID = AddToggleOption("$FrostfallInterfaceSettingEquipmentValues", true)
-		else
-			Interface_Notifications_EquipmentValues_OID = AddToggleOption("$FrostfallInterfaceSettingEquipmentValues", false)
-		endif
-		if _Frost_Setting_Notifications_EquipmentSummary.GetValueInt() == 2
-			Interface_Notifications_EquipmentSummary_OID = AddToggleOption("$FrostfallInterfaceSettingEquipmentSummary", true)
-		else
-			Interface_Notifications_EquipmentSummary_OID = AddToggleOption("$FrostfallInterfaceSettingEquipmentSummary", false)
-		endif
-	endif
-endFunction
-
-function PageReset_Meters()
-	if FrostfallRunning.GetValueInt() != 2 || must_exit
-		AddTextOption("$FrostfallNotRunningError", "", OPTION_FLAG_DISABLED)
-		return
-	endif
-
-	SetCursorFillMode(TOP_TO_BOTTOM)
-	AddHeaderOption("$FrostfallInterfaceHeaderMetersGeneral")
-	Meters_UIMeterDisplay_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterDisplay", MeterDisplayModeList[_Frost_Setting_MeterDisplayMode.GetValueInt()])
-	Meters_UIMeterDisplayTime_OID = AddSliderOption("$FrostfallInterfaceSettingMeterDisplaytime", _Frost_Setting_MeterDisplayTime.GetValue() * 2, "{0}")
-	Meters_UIMeterLayout_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterLayout", "$FrostfallSelect")
-	AddEmptyOption()
-	AddHeaderOption("$FrostfallInterfaceHeaderMetersExposureName")
-	Meters_UIExposureMeterShowAdvanced_OID = AddToggleOption("$FrostfallInterfaceSettingUIMeterShowAdvanced", meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE)
-	AddHeaderOption("$FrostfallInterfaceHeaderMetersWetnessName")
-	Meters_UIWetnessMeterShowAdvanced_OID = AddToggleOption("$FrostfallInterfaceSettingUIMeterShowAdvanced", meter_being_configured == METER_BEING_CONFIGURED_WETNESS)
-	AddHeaderOption("$FrostfallInterfaceHeaderMetersWeathersenseName")
-	Meters_UIWeathersenseMeterShowAdvanced_OID = AddToggleOption("$FrostfallInterfaceSettingUIMeterShowAdvanced", meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE)
-
-	SetCursorPosition(1)
-
-	; Advanced settings
-	if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-		AddHeaderOption("$FrostfallInterfaceHeaderMetersAdvanced")
-		AddTextOption("$FrostfallInterfaceSettingUIMeterConfiguring", "$FrostfallInterfaceHeaderMetersExposureName", OPTION_FLAG_DISABLED)
-		Meters_UIMeterColor_OID = AddColorOption("$FrostfallInterfaceSettingUIColorExposure", _Frost_Setting_MeterExposureColor.GetValueInt())
-		Meters_UIMeterColorAlt_OID = AddColorOption("$FrostfallInterfaceSettingUIColorExposureAlt", _Frost_Setting_MeterExposureColorWarm.GetValueInt())
-		Meters_UIMeterOpacity_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterOpacity", _Frost_Setting_MeterExposureOpacity.GetValue(), "{0}%")
-		Meters_UIMeterFillDirection_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterFillDirection", FillDirectionListLimited[_Frost_Setting_MeterExposureFillDirection.GetValueInt()])
-		Meters_UIMeterScale_OID = AddSliderOption("$FrostfallScale", GetMeterScale(_Frost_Setting_MeterExposureWidth.GetValue(), NORMAL_METER_WIDTH), "{2}")
-		Meters_UIMeterXPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterXPos", _Frost_Setting_MeterExposureXPos.GetValue(), "{1}")
-		Meters_UIMeterYPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterYPos", _Frost_Setting_MeterExposureYPos.GetValue(), "{1}")
-		Meters_UIMeterHAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterHAnchor", HorizontalAnchorList[_Frost_Setting_MeterExposureHAnchor.GetValueInt()])
-		Meters_UIMeterVAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterVAnchor", VerticalAnchorList[_Frost_Setting_MeterExposureVAnchor.GetValueInt()])
-	elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-		AddHeaderOption("$FrostfallInterfaceHeaderMetersAdvanced")
-		AddTextOption("$FrostfallInterfaceSettingUIMeterConfiguring", "$FrostfallInterfaceHeaderMetersWetnessName", OPTION_FLAG_DISABLED)
-		Meters_UIMeterColor_OID = AddColorOption("$FrostfallInterfaceSettingUIColor", _Frost_Setting_MeterWetnessColor.GetValueInt())
-		Meters_UIMeterOpacity_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterOpacity", _Frost_Setting_MeterWetnessOpacity.GetValue(), "{0}%")
-		Meters_UIMeterFillDirection_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterFillDirection", FillDirectionListLimited[_Frost_Setting_MeterWetnessFillDirection.GetValueInt()])
-		Meters_UIMeterScale_OID = AddSliderOption("$FrostfallScale", GetMeterScale(_Frost_Setting_MeterWetnessWidth.GetValue(), CHARGE_METER_WIDTH), "{2}")
-		Meters_UIMeterFlipped_OID = AddToggleOption("$FrostfallFlipped", (_Frost_Setting_MeterWetnessHeight.GetValue() < 0))
-		Meters_UIMeterXPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterXPos", _Frost_Setting_MeterWetnessXPos.GetValue(), "{1}")
-		Meters_UIMeterYPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterYPos", _Frost_Setting_MeterWetnessYPos.GetValue(), "{1}")
-		Meters_UIMeterHAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterHAnchor", HorizontalAnchorList[_Frost_Setting_MeterWetnessHAnchor.GetValueInt()])
-		Meters_UIMeterVAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterVAnchor", VerticalAnchorList[_Frost_Setting_MeterWetnessVAnchor.GetValueInt()])
-	elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-		AddHeaderOption("$FrostfallInterfaceHeaderMetersAdvanced")
-		AddTextOption("$FrostfallInterfaceSettingUIMeterConfiguring", "$FrostfallInterfaceHeaderMetersWeathersenseName", OPTION_FLAG_DISABLED)
-		Meters_UIMeterColor_OID = AddColorOption("$FrostfallInterfaceSettingUIColor", _Frost_Setting_MeterWeathersenseColor.GetValueInt())
-		Meters_UIMeterOpacity_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterOpacity", _Frost_Setting_MeterWeathersenseOpacity.GetValue(), "{0}%")
-		Meters_UIMeterFillDirection_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterFillDirection", FillDirectionList[_Frost_Setting_MeterWeathersenseFillDirection.GetValueInt()])
-		Meters_UIMeterScale_OID = AddSliderOption("$FrostfallScale", GetMeterScale(_Frost_Setting_MeterWeathersenseWidth.GetValue(), CHARGE_METER_WIDTH), "{2}")
-		Meters_UIMeterFlipped_OID = AddToggleOption("$FrostfallFlipped", (_Frost_Setting_MeterWeathersenseHeight.GetValue() < 0))
-		Meters_UIMeterXPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterXPos", _Frost_Setting_MeterWeathersenseXPos.GetValue(), "{1}")
-		Meters_UIMeterYPos_OID = AddSliderOption("$FrostfallInterfaceSettingUIMeterYPos", _Frost_Setting_MeterWeathersenseYPos.GetValue(), "{1}")
-		Meters_UIMeterHAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterHAnchor", HorizontalAnchorList[_Frost_Setting_MeterWeathersenseHAnchor.GetValueInt()])
-		Meters_UIMeterVAnchor_OID = AddMenuOption("$FrostfallInterfaceSettingUIMeterVAnchor", VerticalAnchorList[_Frost_Setting_MeterWeathersenseVAnchor.GetValueInt()])
-	endif
-endFunction
-
-function PageReset_SaveLoad()
-	SetCursorFillMode(TOP_TO_BOTTOM)
-	if FrostfallRunning.GetValueInt() != 2 || must_exit
-		AddTextOption("$FrostfallNotRunningError", "", OPTION_FLAG_DISABLED)
-		return
-	endif
-
-	AddHeaderOption("$FrostfallSaveLoadHeaderProfile")
-	if _Frost_Setting_AutoSaveLoad.GetValueInt() == 2
-		SaveLoad_SelectProfile_OID = AddMenuOption("$FrostfallSaveLoadCurrentProfile", GetProfileName(_Frost_Setting_CurrentProfile.GetValueInt()))
-	else
-		SaveLoad_SelectProfile_OID = AddMenuOption("$FrostfallSaveLoadCurrentProfile", GetProfileName(_Frost_Setting_CurrentProfile.GetValueInt()), OPTION_FLAG_DISABLED)
-	endif
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	SaveLoad_ProfileHelp_OID = AddTextOption("$FrostfallSaveLoadAboutProfiles", "")
-	if _Frost_Setting_AutoSaveLoad.GetValueInt() == 2
-		SaveLoad_Enable_OID = AddToggleOption("$FrostfallSaveLoadEnable", true)
-	else
-		SaveLoad_Enable_OID = AddToggleOption("$FrostfallSaveLoadEnable", false)
-	endif
-
-	SetCursorPosition(1) ; Move cursor to top right position
-
-	AddEmptyOption()
-	if _Frost_Setting_AutoSaveLoad.GetValueInt() == 2
-		SKI_Main skyui = Game.GetFormFromFile(0x00000814, "SkyUI.esp") as SKI_Main
-		if !skyui
-			skyui = Game.GetFormFromFile(0x00000814, "SkyUI_SE.esp") as SKI_Main
-		endif
-		int version = skyui.ReqSWFRelease
-		if version >= 1026 	; SkyUI 5.1+
-			SaveLoad_RenameProfile_OID = AddInputOption("", "$FrostfallSaveLoadRenameProfile")
-		else
-			SaveLoad_RenameProfile_OID = AddTextOption("$FrostfallSkyUI51Required", "$FrostfallSaveLoadRenameProfile", OPTION_FLAG_DISABLED)
-		endif
-		SaveLoad_DefaultProfile_OID = AddTextOption("", "$FrostfallSaveLoadDefaultProfile")
-	endif
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	AddEmptyOption()
-	if _Frost_Setting_AutoSaveLoad.GetValueInt() == 2
-		AddTextOption("$FrostfallSaveLoadSettingsSaved", "", OPTION_FLAG_DISABLED)
-	endif
-endFunction
-
-function PageReset_Advanced()
-	SetCursorFillMode(TOP_TO_BOTTOM)
-	if FrostfallRunning.GetValueInt() != 2 || must_exit
-		AddTextOption("$FrostfallNotRunningError", "", OPTION_FLAG_DISABLED)
-		return
-	endif
-
-	AddHeaderOption("$FrostfallAdvancedHeaderEnduranceSkill")
-	Advanced_EnduranceSkillRespec_OID = AddTextOption("$FrostfallAdvancedEnduranceSkillRespec", "")
-	Advanced_EnduranceSkillRestore_OID = AddToggleOption("$FrostfallAdvancedEnduranceSkillRestore", false)
-	Advanced_EnduranceSkillRestoreSlider_OID = AddSliderOption("$FrostfallAdvancedEnduranceSkillRestoreAmount", 0, "{0}", OPTION_FLAG_DISABLED)
-
-	SetCursorPosition(1)
-
-	AddHeaderOption("$FrostfallAdvancedHeaderTutorials")
-	if _Frost_Setting_DisplayTutorials.GetValueInt() == 2
-		Advanced_TutorialsToggle_OID = AddToggleOption("$FrostfallAdvancedSettingTutorialsShow", true)
-	else
-		Advanced_TutorialsToggle_OID = AddToggleOption("$FrostfallAdvancedSettingTutorialsShow", false)
-	endif
-	Advanced_TutorialsResetText_OID = AddTextOption("", "$FrostfallAdvancedSettingTutorialsReset")
-
-endFunction
-
 event OnOptionSelect(int option)
-	if option == Overview_RunStatusText_OID
-		if FrostfallRunning.GetValueInt() == 2
-			bool b = ShowMessage("$FrostfallOverviewShutDownPrompt")
-			if b
-				must_exit = true
-				FrostfallRunning.SetValue(1)
-				ForcePageReset()
-				FrostfallMain.RegisterForModEvents()
-				SendEvent_StopFrostfall()
-			endif
-		else
-			bool b = ShowMessage("$FrostfallOverviewStartUpPrompt")
-			if b
-				must_exit = true
-				FrostfallRunning.SetValue(2)
-				ForcePageReset()
-				FrostfallMain.RegisterForModEvents()
-				SendEvent_StartFrostfall()
-			endif
-		endif
-	elseif option == Gameplay_FrigidWater_OID
-		if _Frost_Setting_FrigidWaterIsLethal.GetValueInt() == 2
-			_Frost_Setting_FrigidWaterIsLethal.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_FrigidWater_OID, false)
-		else
-			_Frost_Setting_FrigidWaterIsLethal.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_FrigidWater_OID, true)
-		endif
-		SaveSettingToCurrentProfile("frigid_water_is_lethal", _Frost_Setting_FrigidWaterIsLethal.GetValueInt())
-	elseif option == Gameplay_ExposurePauseDialogue_OID
-		if _Frost_Setting_ExposurePauseDialogue.GetValueInt() == 2
-			_Frost_Setting_ExposurePauseDialogue.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_ExposurePauseDialogue_OID, false)
-		else
-			_Frost_Setting_ExposurePauseDialogue.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_ExposurePauseDialogue_OID, true)
-		endif
-		SaveSettingToCurrentProfile("exposure_pause_dialogue", _Frost_Setting_ExposurePauseDialogue.GetValueInt())
-	elseif option == Gameplay_ExposurePauseCombat_OID
-		if _Frost_Setting_ExposurePauseCombat.GetValueInt() == 2
-			_Frost_Setting_ExposurePauseCombat.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_ExposurePauseCombat_OID, false)
-		else
-			_Frost_Setting_ExposurePauseCombat.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_ExposurePauseCombat_OID, true)
-		endif
-		SaveSettingToCurrentProfile("exposure_pause_combat", _Frost_Setting_ExposurePauseCombat.GetValueInt())
-	elseif option == Gameplay_MovementPenalty_OID
-		if _Frost_Setting_MovementPenalty.GetValueInt() == 2
-			_Frost_Setting_MovementPenalty.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_MovementPenalty_OID, false)
-		else
-			_Frost_Setting_MovementPenalty.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_MovementPenalty_OID, true)
-		endif
-		SaveSettingToCurrentProfile("movement_penalty", _Frost_Setting_MovementPenalty.GetValueInt())
-	elseif option == Gameplay_DisableFT_OID
-		if _Frost_Setting_NoFastTravel.GetValueInt() == 2
-			_Frost_Setting_NoFastTravel.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_DisableFT_OID, false)
-		else
-			_Frost_Setting_NoFastTravel.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_DisableFT_OID, true)
-		endif
-		SaveSettingToCurrentProfile("no_fast_travel", _Frost_Setting_NoFastTravel.GetValueInt())
-	elseif option == Gameplay_DisableWaiting_OID
-		if _Frost_Setting_NoWaiting.GetValueInt() == 2
-			_Frost_Setting_NoWaiting.SetValueInt(1)
-			SetToggleOptionValue(Gameplay_DisableWaiting_OID, false)
-			ForcePageReset()
-		else
-			_Frost_Setting_NoWaiting.SetValueInt(2)
-			SetToggleOptionValue(Gameplay_DisableWaiting_OID, true)
-			ForcePageReset()
-		endif
-		SaveSettingToCurrentProfile("no_waiting", _Frost_Setting_NoWaiting.GetValueInt())
-	elseif option == Interface_FrostShaderOn_OID
-		if _Frost_Setting_FrostShaderOn.GetValueInt() == 2
-			_Frost_Setting_FrostShaderOn.SetValueInt(1)
-			SetToggleOptionValue(Interface_FrostShaderOn_OID, false)
-		else
-			_Frost_Setting_FrostShaderOn.SetValueInt(2)
-			SetToggleOptionValue(Interface_FrostShaderOn_OID, true)
-		endif
-		SaveSettingToCurrentProfile("frost_shader_on", _Frost_Setting_FrostShaderOn.GetValueInt())
-	elseif option == Interface_WetShaderOn_OID
-		if _Frost_Setting_WetShaderOn.GetValueInt() == 2
-			_Frost_Setting_WetShaderOn.SetValueInt(1)
-			SetToggleOptionValue(Interface_WetShaderOn_OID, false)
-		else
-			_Frost_Setting_WetShaderOn.SetValueInt(2)
-			SetToggleOptionValue(Interface_WetShaderOn_OID, true)
-		endif
-		SaveSettingToCurrentProfile("wet_shader_on", _Frost_Setting_WetShaderOn.GetValueInt())
-	elseif option == Interface_SoundEffects_OID
-		if _Frost_Setting_SoundEffects.GetValueInt() == 2
-			_Frost_Setting_SoundEffects.SetValueInt(1)
-			SetToggleOptionValue(Interface_SoundEffects_OID, false)
-		else
-			_Frost_Setting_SoundEffects.SetValueInt(2)
-			SetToggleOptionValue(Interface_SoundEffects_OID, true)
-		endif
-		SaveSettingToCurrentProfile("sound_effects", _Frost_Setting_SoundEffects.GetValueInt())
-	elseif option == Interface_FullScreenEffects_OID
-		if _Frost_Setting_FullScreenEffects.GetValueInt() == 2
-			_Frost_Setting_FullScreenEffects.SetValueInt(1)
-			SetToggleOptionValue(Interface_FullScreenEffects_OID, false)
-		else
-			_Frost_Setting_FullScreenEffects.SetValueInt(2)
-			SetToggleOptionValue(Interface_FullScreenEffects_OID, true)
-		endif
-		SaveSettingToCurrentProfile("full_screen_effects", _Frost_Setting_FullScreenEffects.GetValueInt())
-	elseif option == Interface_ForceFeedback_OID
-		if _Frost_Setting_ForceFeedback.GetValueInt() == 2
-			_Frost_Setting_ForceFeedback.SetValueInt(1)
-			SetToggleOptionValue(Interface_ForceFeedback_OID, false)
-		else
-			_Frost_Setting_ForceFeedback.SetValueInt(2)
-			SetToggleOptionValue(Interface_ForceFeedback_OID, true)
-		endif
-		SaveSettingToCurrentProfile("force_feedback", _Frost_Setting_ForceFeedback.GetValueInt())
-	elseif option == Interface_FollowerAnimation_OID
-		if _Frost_Setting_FollowerAnimation.GetValueInt() == 2
-			_Frost_Setting_FollowerAnimation.SetValueInt(1)
-			SetToggleOptionValue(Interface_FollowerAnimation_OID, false)
-		else
-			_Frost_Setting_FollowerAnimation.SetValueInt(2)
-			SetToggleOptionValue(Interface_FollowerAnimation_OID, true)
-		endif
-		SaveSettingToCurrentProfile("follower_animation", _Frost_Setting_FollowerAnimation.GetValueInt())
-	elseif option == Interface_DisplayAttributesInWeathersense_OID
-		if _Frost_Setting_DisplayAttributesInWeathersense.GetValueInt() == 2
-			_Frost_Setting_DisplayAttributesInWeathersense.SetValueInt(1)
-			SetToggleOptionValue(Interface_DisplayAttributesInWeathersense_OID, false)
-		else
-			_Frost_Setting_DisplayAttributesInWeathersense.SetValueInt(2)
-			SetToggleOptionValue(Interface_DisplayAttributesInWeathersense_OID, true)
-		endif
-		SaveSettingToCurrentProfile("display_attributes_in_weathersense", _Frost_Setting_DisplayAttributesInWeathersense.GetValueInt())
-		ForcePageReset()
-	elseif option == Interface_DisplayAttributeValuesInWeathersense_OID
-		if _Frost_Setting_DisplayAttributeValuesInWeathersense.GetValueInt() == 2
-			_Frost_Setting_DisplayAttributeValuesInWeathersense.SetValueInt(1)
-			SetToggleOptionValue(Interface_DisplayAttributeValuesInWeathersense_OID, false)
-		else
-			_Frost_Setting_DisplayAttributeValuesInWeathersense.SetValueInt(2)
-			SetToggleOptionValue(Interface_DisplayAttributeValuesInWeathersense_OID, true)
-		endif
-		SaveSettingToCurrentProfile("display_attribute_values_in_weathersense", _Frost_Setting_DisplayAttributeValuesInWeathersense.GetValueInt())
-	elseif option == Interface_ConditionMessages_OID
-		if _Frost_Setting_ConditionMessages.GetValueInt() == 2
-			_Frost_Setting_ConditionMessages.SetValueInt(1)
-			SetToggleOptionValue(Interface_ConditionMessages_OID, false)
-		else
-			_Frost_Setting_ConditionMessages.SetValueInt(2)
-			SetToggleOptionValue(Interface_ConditionMessages_OID, true)
-		endif
-		SaveSettingToCurrentProfile("condition_messages", _Frost_Setting_ConditionMessages.GetValueInt())
-	elseif option == Interface_WeatherMessages_OID
-		if _Frost_Setting_WeatherMessages.GetValueInt() == 2
-			_Frost_Setting_WeatherMessages.SetValueInt(1)
-			SetToggleOptionValue(Interface_WeatherMessages_OID, false)
-		else
-			_Frost_Setting_WeatherMessages.SetValueInt(2)
-			SetToggleOptionValue(Interface_WeatherMessages_OID, true)
-		endif
-		SaveSettingToCurrentProfile("weather_messages", _Frost_Setting_WeatherMessages.GetValueInt())
-	elseif option == Interface_Notifications_EquipmentValues_OID
-		if _Frost_Setting_Notifications_EquipmentValues.GetValueInt() == 2
-			_Frost_Setting_Notifications_EquipmentValues.SetValueInt(1)
-			SetToggleOptionValue(Interface_Notifications_EquipmentValues_OID, false)
-		else
-			_Frost_Setting_Notifications_EquipmentValues.SetValueInt(2)
-			SetToggleOptionValue(Interface_Notifications_EquipmentValues_OID, true)
-		endif
-		SaveSettingToCurrentProfile("notification_equipmentvalues", _Frost_Setting_Notifications_EquipmentValues.GetValueInt())
-	elseif option == Interface_Notifications_EquipmentSummary_OID
-		if _Frost_Setting_Notifications_EquipmentSummary.GetValueInt() == 2
-			_Frost_Setting_Notifications_EquipmentSummary.SetValueInt(1)
-			SetToggleOptionValue(Interface_Notifications_EquipmentSummary_OID, false)
-		else
-			_Frost_Setting_Notifications_EquipmentSummary.SetValueInt(2)
-			SetToggleOptionValue(Interface_Notifications_EquipmentSummary_OID, true)
-		endif
-		SaveSettingToCurrentProfile("notification_equipmentsummary", _Frost_Setting_Notifications_EquipmentSummary.GetValueInt())
-	elseif option == Meters_UIExposureMeterShowAdvanced_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			meter_being_configured = METER_BEING_CONFIGURED_NONE
-		else
-			meter_being_configured = METER_BEING_CONFIGURED_EXPOSURE
-		endif
-		ForcePageReset()
-	elseif option == Meters_UIWetnessMeterShowAdvanced_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			meter_being_configured = METER_BEING_CONFIGURED_NONE
-		else
-			meter_being_configured = METER_BEING_CONFIGURED_WETNESS
-		endif
-		ForcePageReset()
-	elseif option == Meters_UIWeathersenseMeterShowAdvanced_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			meter_being_configured = METER_BEING_CONFIGURED_NONE
-		else
-			meter_being_configured = METER_BEING_CONFIGURED_WEATHERSENSE
-		endif
-		ForcePageReset()
-	elseif option == Meters_UIMeterFlipped_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			float scale = GetMeterScale(_Frost_Setting_MeterWetnessWidth.GetValue(), CHARGE_METER_WIDTH)
-			if _Frost_Setting_MeterWetnessHeight.GetValue() > 0
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT_INV * scale)
-				SetToggleOptionValue(Meters_UIMeterFlipped_OID, true)
-			else
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT * scale)
-				SetToggleOptionValue(Meters_UIMeterFlipped_OID, false)
-			endif
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_height", _Frost_Setting_MeterWetnessHeight.GetValue())
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			float scale = GetMeterScale(_Frost_Setting_MeterWeathersenseWidth.GetValue(), CHARGE_METER_WIDTH)
-			if _Frost_Setting_MeterWeathersenseHeight.GetValue() > 0
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT_INV * scale)
-				SetToggleOptionValue(Meters_UIMeterFlipped_OID, true)
-			else
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT * scale)
-				SetToggleOptionValue(Meters_UIMeterFlipped_OID, false)
-			endif
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_height", _Frost_Setting_MeterWeathersenseHeight.GetValue())
-		endif
-	elseif option == SaveLoad_DefaultProfile_OID
-		bool b = ShowMessage("$FrostfallSaveLoadDefaultProfileConfirm")
-		if b
-			GenerateDefaultProfile(_Frost_Setting_CurrentProfile.GetValueInt())
-			SwitchToProfile(_Frost_Setting_CurrentProfile.GetValueInt())
-			ForcePageReset()
-		endif
-	elseif option == SaveLoad_Enable_OID
-		if _Frost_Setting_AutoSaveLoad.GetValueInt() == 2
-			_Frost_Setting_AutoSaveLoad.SetValueInt(1)
-			SetToggleOptionValue(SaveLoad_Enable_OID, false)
-			JsonUtil.SetIntValue(CONFIG_PATH + "common", "auto_load", 1)
-			JsonUtil.Save(CONFIG_PATH + "common")
-		elseif _Frost_Setting_AutoSaveLoad.GetValueInt() == 1
-			_Frost_Setting_AutoSaveLoad.SetValueInt(2)
-			SetToggleOptionValue(SaveLoad_Enable_OID, true)
-			JsonUtil.SetIntValue(CONFIG_PATH + "common", "auto_load", 2)
-			JsonUtil.Save(CONFIG_PATH + "common")
-			SaveAllSettings(_Frost_Setting_CurrentProfile.GetValueInt())
-		endIf
-		ForcePageReset()
-	elseif option == SaveLoad_ProfileHelp_OID
-		ShowProfileHelp()
-	elseif option == Advanced_EnduranceSkillRespec_OID
-		bool b = ShowMessage("$FrostfallAdvancedEnduranceSkillRespecConfirm")
-		if b
-			RefundEnduranceSkillPoints()
-			ShowMessage("$FrostfallAdvancedEnduranceSkillRestoreDone", false)
-		endif
-	elseif option == Advanced_EnduranceSkillRestore_OID
-		bool b = ShowMessage("$FrostfallAdvancedEnduranceSkillRestoreConfirm")
-		if b
-			ShowMessage("$FrostfallAdvancedEnduranceSkillRestoreSelect")
-			SetToggleOptionValue(Advanced_EnduranceSkillRestore_OID, true, true)
-			SetOptionFlags(Advanced_EnduranceSkillRestoreSlider_OID, OPTION_FLAG_NONE)
-		endif
-	elseif option == Advanced_TutorialsToggle_OID
-		if _Frost_Setting_DisplayTutorials.GetValueInt() == 2
-			_Frost_Setting_DisplayTutorials.SetValueInt(1)
-			SetToggleOptionValue(Advanced_TutorialsToggle_OID, false)
-		else
-			_Frost_Setting_DisplayTutorials.SetValueInt(2)
-			SetToggleOptionValue(Advanced_TutorialsToggle_OID, true)
-		endif
-		SaveSettingToCurrentProfile("display_tutorials", _Frost_Setting_DisplayTutorials.GetValueInt())
-	elseif option == Advanced_TutorialsResetText_OID
-		bool b = ShowMessage("$FrostfallTutorialResetPrompt")
-		if b
-			_Frost_HelpDone_Exposure.SetValueInt(1)
-			_Frost_HelpDone_Wet.SetValueInt(1)
-			_Frost_HelpDone_Cold.SetValueInt(1)
-		endif
-	elseif option == Armor_ShowTutorialOID
+	if option == Armor_ShowTutorialOID
 		ShowTutorial_ArmorPage(true)
 	elseif option == Armor_RepairDefaultsOID
 		RepairArmorDefaults()
@@ -1145,303 +456,10 @@ event OnOptionSelect(int option)
 endEvent
 
 event OnOptionDefault(int option)
-	if option == Interface_Animation_OID
-		_Frost_Setting_Animation.SetValueInt(2)
-		SetMenuOptionValue(Interface_Animation_OID, AnimationList[1])
-		SaveSettingToCurrentProfile("animation", _Frost_Setting_Animation.GetValueInt())
-	elseif option == Interface_FollowerAnimation_OID
-		_Frost_Setting_FollowerAnimation.SetValueInt(2)
-		SetToggleOptionValue(Interface_FollowerAnimation_OID, true)
-		SaveSettingToCurrentProfile("follower_animation", _Frost_Setting_FollowerAnimation.GetValueInt())
-	elseif option == Interface_ConditionMessages_OID
-		_Frost_Setting_ConditionMessages.SetValueInt(2)
-		SetToggleOptionValue(Interface_ConditionMessages_OID, true)
-		SaveSettingToCurrentProfile("condition_messages", _Frost_Setting_ConditionMessages.GetValueInt())
-	elseif option == Interface_DisplayAttributesInWeathersense_OID
-		_Frost_Setting_DisplayAttributesInWeathersense.SetValueInt(1)
-		SetToggleOptionValue(Interface_DisplayAttributesInWeathersense_OID, false)
-		SaveSettingToCurrentProfile("display_attributes_in_weathersense", _Frost_Setting_DisplayAttributesInWeathersense.GetValueInt())
-		ForcePageReset()
-	elseif option == Interface_DisplayAttributeValuesInWeathersense_OID
-		_Frost_Setting_DisplayAttributeValuesInWeathersense.SetValueInt(1)
-		SetToggleOptionValue(Interface_DisplayAttributeValuesInWeathersense_OID, false)
-		SaveSettingToCurrentProfile("display_attribute_values_in_weathersense", _Frost_Setting_DisplayAttributeValuesInWeathersense.GetValueInt())
-	elseif option == Interface_Notifications_EquipmentValues_OID
-		_Frost_Setting_Notifications_EquipmentValues.SetValueInt(2)
-		SetToggleOptionValue(Interface_Notifications_EquipmentValues_OID, true)
-		SaveSettingToCurrentProfile("notification_equipmentvalues", _Frost_Setting_Notifications_EquipmentValues.GetValueInt())
-	elseif option == Interface_Notifications_EquipmentSummary_OID
-		_Frost_Setting_Notifications_EquipmentSummary.SetValueInt(2)
-		SetToggleOptionValue(Interface_Notifications_EquipmentSummary_OID, true)
-		SaveSettingToCurrentProfile("notification_equipmentsummary", _Frost_Setting_Notifications_EquipmentSummary.GetValueInt())
-	elseif option == Gameplay_ExposurePauseCombat_OID
-		_Frost_Setting_ExposurePauseCombat.SetValueInt(2)
-		SetToggleOptionValue(Gameplay_ExposurePauseCombat_OID, true)
-		SaveSettingToCurrentProfile("exposure_pause_combat", _Frost_Setting_ExposurePauseCombat.GetValueInt())
-	elseif option == Gameplay_ExposurePauseDialogue_OID
-		_Frost_Setting_ExposurePauseDialogue.SetValueInt(2)
-		SetToggleOptionValue(Gameplay_ExposurePauseDialogue_OID, true)
-		SaveSettingToCurrentProfile("exposure_pause_dialogue", _Frost_Setting_ExposurePauseDialogue.GetValueInt())
-	elseif option == Interface_ForceFeedback_OID
-		_Frost_Setting_ForceFeedback.SetValueInt(2)
-		SetToggleOptionValue(Interface_ForceFeedback_OID, true)
-		SaveSettingToCurrentProfile("force_feedback", _Frost_Setting_ForceFeedback.GetValueInt())
-	elseif option == Interface_FrostShaderOn_OID
-		_Frost_Setting_FrostShaderOn.SetValueInt(2)
-		SetToggleOptionValue(Interface_FrostShaderOn_OID, true)
-		SaveSettingToCurrentProfile("frost_shader_on", _Frost_Setting_FrostShaderOn.GetValueInt())
-	elseif option == Interface_FullScreenEffects_OID
-		_Frost_Setting_FullScreenEffects.SetValueInt(2)
-		SetToggleOptionValue(Interface_FullScreenEffects_OID, true)
-		SaveSettingToCurrentProfile("full_screen_effects", _Frost_Setting_FullScreenEffects.GetValueInt())
-	elseif option == Gameplay_MovementPenalty_OID
-		_Frost_Setting_MovementPenalty.SetValueInt(2)
-		SetToggleOptionValue(Gameplay_MovementPenalty_OID, true)
-		SaveSettingToCurrentProfile("movement_penalty", _Frost_Setting_MovementPenalty.GetValueInt())
-	elseif option == Gameplay_DisableFT_OID
-		_Frost_Setting_NoFastTravel.SetValueInt(1)
-		SetToggleOptionValue(Gameplay_DisableFT_OID, false)
-		SaveSettingToCurrentProfile("no_fast_travel", _Frost_Setting_NoFastTravel.GetValueInt())
-	elseif option == Gameplay_DisableWaiting_OID
-		_Frost_Setting_NoWaiting.SetValueInt(1)
-		SetToggleOptionValue(Gameplay_DisableWaiting_OID, false)
-		SaveSettingToCurrentProfile("no_waiting", _Frost_Setting_NoWaiting.GetValueInt())
-	elseif option == Interface_WeatherMessages_OID
-		_Frost_Setting_WeatherMessages.SetValueInt(2)
-		SetToggleOptionValue(Interface_WeatherMessages_OID, true)
-		SaveSettingToCurrentProfile("weather_messages", _Frost_Setting_WeatherMessages.GetValueInt())
-	elseif option == Interface_WeathersenseDisplayMode_OID
-		_Frost_Setting_WeathersenseDisplayMode.SetValueInt(2)
-		SetMenuOptionValue(Interface_WeathersenseDisplayMode_OID, WeathersenseDisplayList[2])
-		SaveSettingToCurrentProfileFloat("weathersense_display_mode", 2)
-	elseif option == Interface_WetShaderOn_OID
-		_Frost_Setting_WetShaderOn.SetValueInt(2)
-		SetToggleOptionValue(Interface_WetShaderOn_OID, true)
-		SaveSettingToCurrentProfile("wet_shader_on", _Frost_Setting_WetShaderOn.GetValueInt())
-	elseif option == Gameplay_FrigidWater_OID
-		_Frost_Setting_FrigidWaterIsLethal.SetValueInt(2)
-		SetToggleOptionValue(Gameplay_FrigidWater_OID, true)
-		SaveSettingToCurrentProfile("frigid_water_is_lethal", _Frost_Setting_FrigidWaterIsLethal.GetValueInt())
-	elseif option == Interface_SoundEffects_OID
-		_Frost_Setting_SoundEffects.SetValueInt(2)
-		SetToggleOptionValue(Interface_SoundEffects_OID, true)
-		SaveSettingToCurrentProfile("sound_effects", _Frost_Setting_SoundEffects.GetValueInt())
-
-	elseif option == Gameplay_ExposureRate_OID
-		_Frost_Setting_ExposureRate.SetValue(1.0)
-		SetSliderOptionValue(Gameplay_ExposureRate_OID, 1.0, "{1}x")
-		SaveSettingToCurrentProfileFloat("exposure_rate", _Frost_Setting_ExposureRate.GetValue())
-
-	elseif option == Gameplay_MaxExposureMode_OID
-		_Frost_Setting_MaxExposureMode.SetValueInt(2)
-		SetMenuOptionValue(Gameplay_MaxExposureMode_OID, MaxExposureModeList[1])
-		SaveSettingToCurrentProfile("max_exposure_mode", _Frost_Setting_MaxExposureMode.GetValueInt())
-	elseif option == Gameplay_VampirismMode_OID
-		_Frost_Setting_VampireMode.SetValueInt(1)
-		SetMenuOptionValue(Gameplay_VampirismMode_OID, VampirismModeList[1])
-		SaveSettingToCurrentProfile("vampire_mode", _Frost_Setting_VampireMode.GetValueInt())
-
-	elseif option == Gameplay_WeathersenseHotkey_OID
-		UnregisterForKey(_Frost_HotkeyWeathersense.GetValueInt())
-		_Frost_HotkeyWeathersense.SetValue(0)
-		ForcePageReset()
-		PlayerRef.AddSpell(_Frost_Weathersense_Spell, false)
-		SaveSettingToCurrentProfile("hotkey_weathersense", 0)
-
-	elseif option == Meters_UIMeterDisplay_OID
-		SetMenuOptionValue(Meters_UIMeterDisplay_OID, MeterDisplayModeList[2])
-		_Frost_Setting_MeterDisplayMode.SetValueInt(2)
-		SaveSettingToCurrentProfile("meter_display_mode", 2)
-		RemoveAllMeters()
-	elseif option == Meters_UIMeterDisplayTime_OID
-		_Frost_Setting_MeterDisplayTime.SetValueInt(4)
-		SetSliderOptionValue(Meters_UIMeterDisplayTime_OID, _Frost_Setting_MeterDisplayTime.GetValueInt(), "{0}")
-		SaveSettingToCurrentProfile("meter_display_time", 4)
-	elseif option == Meters_UIMeterColor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureColor.SetValueInt(0x93D0FF)
-			SetColorOptionValue(option, _Frost_Setting_MeterExposureColor.GetValueInt())
-			if !IsMeterInverted(ExposureMeterHandler as CommonMeterInterfaceHandler)
-				ExposureMeterHandler.SetMeterColors(_Frost_Setting_MeterExposureColor.GetValueInt(), -1)
-			endif
-			SaveSettingToCurrentProfile("exposure_meter_color", _Frost_Setting_MeterExposureColor.GetValueInt())
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessColor.SetValueInt(0x2469F4)
-			SetColorOptionValue(option, _Frost_Setting_MeterWetnessColor.GetValueInt())
-			WetnessMeterHandler.SetMeterColors(_Frost_Setting_MeterWetnessColor.GetValueInt(), -1)
-			SaveSettingToCurrentProfile("wetness_meter_color", _Frost_Setting_MeterWetnessColor.GetValueInt())
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseColor.SetValueInt(0xFDC327)
-			SetColorOptionValue(option, _Frost_Setting_MeterWeathersenseColor.GetValueInt())
-			WeathersenseMeterHandler.SetMeterColors(_Frost_Setting_MeterWeathersenseColor.GetValueInt(), -1)
-			SaveSettingToCurrentProfile("weathersense_meter_color", _Frost_Setting_MeterWeathersenseColor.GetValueInt())
-		endif
-	elseif option == Meters_UIMeterColorAlt_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureColorWarm.SetValueInt(0xCC0000)
-			SetColorOptionValue(option, _Frost_Setting_MeterExposureColorWarm.GetValueInt())
-			if IsMeterInverted(ExposureMeterHandler as CommonMeterInterfaceHandler)
-				ExposureMeterHandler.SetMeterColors(_Frost_Setting_MeterExposureColorWarm.GetValueInt(), -1)
-			endif
-			SaveSettingToCurrentProfile("exposure_meter_color_warm", _Frost_Setting_MeterExposureColorWarm.GetValueInt())
-		endif
-	elseif option == Meters_UIMeterOpacity_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureOpacity.SetValue(100.0)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, 100.0, "{0}%")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_opacity", 100.0)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessOpacity.SetValue(100.0)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, 100.0, "{0}%")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_opacity", 100.0)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseOpacity.SetValue(100.0)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, 100.0, "{0}%")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_opacity", 100.0)
-		endif
-	elseif option == Meters_UIMeterScale_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureHeight.SetValue(NORMAL_METER_HEIGHT)
-			_Frost_Setting_MeterExposureWidth.SetValue(NORMAL_METER_WIDTH)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, 1.0, "{2}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_height", NORMAL_METER_HEIGHT)
-			SaveSettingToCurrentProfileFloat("exposure_meter_width", NORMAL_METER_WIDTH)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			if _Frost_Setting_MeterWetnessHeight.GetValue() > 0
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT)
-			else
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT_INV)
-			endif
-			_Frost_Setting_MeterWetnessWidth.SetValue(CHARGE_METER_WIDTH)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, 1.0, "{2}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_height", CHARGE_METER_HEIGHT_INV)
-			SaveSettingToCurrentProfileFloat("wetness_meter_width", CHARGE_METER_WIDTH)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			if _Frost_Setting_MeterWeathersenseHeight.GetValue() > 0
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT)
-			else
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT_INV)
-			endif
-			_Frost_Setting_MeterWeathersenseWidth.SetValue(CHARGE_METER_WIDTH)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, 1.0, "{2}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_height", CHARGE_METER_HEIGHT_INV)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_width", CHARGE_METER_WIDTH)
-		endif
-	elseif option == Meters_UIMeterXPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureXPos.SetValue(EXPOSURE_METER_TOPRIGHT_16_9_X)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, EXPOSURE_METER_TOPRIGHT_16_9_X, "{1}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_xpos", EXPOSURE_METER_TOPRIGHT_16_9_X)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessXPos.SetValue(WETNESS_METER_TOPRIGHT_16_9_X)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, WETNESS_METER_TOPRIGHT_16_9_X, "{1}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_xpos", WETNESS_METER_TOPRIGHT_16_9_X)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseXPos.SetValue(WEATHERSENSE_METER_TOPRIGHT_16_9_X)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, WEATHERSENSE_METER_TOPRIGHT_16_9_X, "{1}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_xpos", WEATHERSENSE_METER_TOPRIGHT_16_9_X)
-		endif
-	elseif option == Meters_UIMeterYPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureYPos.SetValue(EXPOSURE_METER_TOPRIGHT_16_9_X)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, EXPOSURE_METER_TOPRIGHT_16_9_Y, "{1}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_ypos", EXPOSURE_METER_TOPRIGHT_16_9_Y)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessYPos.SetValue(WETNESS_METER_TOPRIGHT_16_9_Y)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, WETNESS_METER_TOPRIGHT_16_9_Y, "{1}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_ypos", WETNESS_METER_TOPRIGHT_16_9_Y)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseYPos.SetValue(WEATHERSENSE_METER_TOPRIGHT_16_9_Y)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, WEATHERSENSE_METER_TOPRIGHT_16_9_Y, "{1}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_ypos", WEATHERSENSE_METER_TOPRIGHT_16_9_Y)
-		endif
-	endif
 endEvent
 
 Event OnOptionHighlight(int option)
-	if option == Overview_RunStatusText_OID
-		SetInfoText("$FrostfallOptionHighlightRunStatus")
-	elseif option == Overview_ExposureStatusText_OID
-		SetInfoText("$FrostfallOptionHighlightStatExposure")
-	elseif option == Overview_WetnessStatusText_OID
-		SetInfoText("$FrostfallOptionHighlightStatWetness")
-	elseif option == Overview_WarmthStatusText_OID
-		SetInfoText("$FrostfallOptionHighlightStatWarmth")
-	elseif option == Overview_CoverageStatusText_OID
-		SetInfoText("$FrostfallOptionHighlightStatCoverage")
-	elseif option == Gameplay_ExposureRate_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExposureRateSlider")
-	elseif option == Gameplay_MaxExposureMode_OID
-		SetInfoText("$FrostfallOptionHighlightSettingMaxExposure")
-	elseif option == Gameplay_FrigidWater_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExposureWaterText")
-	elseif option == Gameplay_ExposurePauseDialogue_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExposureDialogueText")
-	elseif option == Gameplay_ExposurePauseCombat_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExposureCombatText")
-	elseif option == Gameplay_MovementPenalty_OID
-		SetInfoText("$FrostfallOptionHighlightSettingMovementText")
-	elseif option == Gameplay_VampirismMode_OID
-		SetInfoText("$FrostfallOptionHighlightSettingVampirism")
-	elseif option == Interface_WeathersenseDisplayMode_OID
-		SetInfoText("$FrostfallInterfaceSettingWeathersenseDisplayModeHighlight")
-	elseif option == Gameplay_DisableFT_OID
-		SetInfoText("$FrostfallOptionHighlightSettingFTToggleText")
-	elseif option == Gameplay_DisableWaiting_OID
-		SetInfoText("$FrostfallOptionHighlightSettingWaitToggleText")
-	elseif option == Gameplay_WeathersenseHotkey_OID
-		SetInfoText("$FrostfallOptionHighlightHKWeathersense")
-	elseif option == SaveLoad_SelectProfile_OID
-		SetInfoText("$FrostfallOptionHighlightSettingSelectProfile")
-	elseif option == SaveLoad_RenameProfile_OID
-		SetInfoText("$FrostfallOptionHighlightSettingRenameProfile")
-	elseif option == SaveLoad_DefaultProfile_OID
-		SetInfoText("$FrostfallOptionHighlightSettingDefaultProfile")
-	elseif option == SaveLoad_Enable_OID
-		SetInfoText("$FrostfallOptionHighlightSettingEnableSaveLoad")
-	elseif option == Interface_FrostShaderOn_OID
-		SetInfoText("$FrostfallOptionHighlightSettingFrostShaderToggle")
-	elseif option == Interface_WetShaderOn_OID
-		SetInfoText("$FrostfallOptionHighlightSettingWetShaderToggle")
-	elseif option == Interface_SoundEffects_OID
-		SetInfoText("$FrostfallOptionHighlightSoundEffects")
-	elseif option == Interface_FullScreenEffects_OID
-		SetInfoText("$FrostfallOptionHighlightSettingFullScreenEffectsToggle")
-	elseif option == Interface_ForceFeedback_OID
-		SetInfoText("$FrostfallOptionHighlightForceFeedback")
-	elseif option == Interface_Animation_OID
-		SetInfoText("$FrostfallOptionHighlightAnimation")
-	elseif option == Interface_FollowerAnimation_OID
-		SetInfoText("$FrostfallOptionHighlightFollowerAnimation")
-	elseif option == Interface_ConditionMessages_OID
-		SetInfoText("$FrostfallOptionHighlightSettingConditionMsgToggle")
-	elseif option == Interface_WeatherMessages_OID
-		SetInfoText("$FrostfallOptionHighlightSettingWeatherMsgToggle")
-	elseif option == Interface_DisplayAttributesInWeathersense_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExpValueMsgToggle")
-	elseif option == Interface_DisplayAttributeValuesInWeathersense_OID
-		SetInfoText("$FrostfallOptionHighlightSettingExpValueMsgDetailToggle")
-	elseif option == Interface_Notifications_EquipmentValues_OID
-		SetInfoText("$FrostfallOptionHighlightSettingEquipValuesMsgToggle")
-	elseif option == Interface_Notifications_EquipmentSummary_OID
-		SetInfoText("$FrostfallOptionHighlightSettingEquipSummaryMsgToggle")
-	elseif option == Advanced_EnduranceSkillRespec_OID
-		SetInfoText("$FrostfallOptionHighlightSettingRespec")
-	elseif option == Advanced_EnduranceSkillRestore_OID
-		SetInfoText("$FrostfallOptionHighlightSettingRestore")
-	elseif option == Armor_RepairDefaultsOID
+	if option == Armor_RepairDefaultsOID
 		SetInfoText("$FrostfallOptionHighlightArmorRepairDefaults")
 	elseif option == Armor_DefaultWornArmorOID
 		SetInfoText("$FrostfallOptionHighlightArmorDefaultWornArmor")
@@ -1449,30 +467,6 @@ Event OnOptionHighlight(int option)
 		SetInfoText("$FrostfallOptionHighlightArmorDefaultAllArmor")
 	elseif option == Armor_ShowTutorialOID
 		SetInfoText("$FrostfallOptionHighlightArmorShowTutorial")
-	elseif option == Meters_UIMeterDisplay_OID
-		SetInfoText("$FrostfallOptionHightlightUIMeterDisplay")
-	elseif option == Meters_UIMeterLayout_OID
-		SetInfoText("$FrostfallMeterLayoutHighlight")
-	elseif option == Meters_UIMeterOpacity_OID
-		SetInfoText("$FrostfallMeterOpacityHighlight")
-	elseif option == Meters_UIMeterDisplayTime_OID
-		SetInfoText("$FrostfallOptionHightlightUIMeterDisplayTime")
-	elseif option == Meters_UIMeterFillDirection_OID
-		SetInfoText("$FrostfallMeterFillDirectionHighlight")
-	elseif option == Meters_UIMeterScale_OID
-		SetInfoText("$FrostfallMeterScaleHighlight")
-	elseif option == Meters_UIMeterFlipped_OID
-		SetInfoText("$FrostfallMeterFlippedHighlight")
-	elseif option == Meters_UIMeterColor_OID || option == Meters_UIMeterColorAlt_OID
-		SetInfoText("$FrostfallMeterColorHighlight")
-	elseif option == Meters_UIMeterXPos_OID
-		SetInfoText("$FrostfallMeterXPosHighlight")
-	elseif option == Meters_UIMeterYPos_OID
-		SetInfoText("$FrostfallMeterYPosHighlight")
-	elseif option == Meters_UIMeterHAnchor_OID
-		SetInfoText("$FrostfallMeterHAnchorHighlight")
-	elseif option == Meters_UIMeterVAnchor_OID
-		SetInfoText("$FrostfallMeterVAnchorHighlight")
 	else
 		bool found_armor_entry_oid = false
 		int idx = -1
@@ -1520,502 +514,111 @@ Event OnOptionHighlight(int option)
 EndEvent
 
 Event OnOptionSliderOpen(int option)
-	if option == Gameplay_ExposureRate_OID
-		SetSliderDialogStartValue(_Frost_Setting_ExposureRate.GetValue())
-		SetSliderDialogDefaultValue(1.0)
-		SetSliderDialogRange(0.0, 3.0)
-		SetSliderDialogInterval(0.1)
-	elseif option == Advanced_EnduranceSkillRestoreSlider_OID
-		SetSliderDialogStartValue(0.0)
-		SetSliderDialogDefaultValue(0.0)
-		SetSliderDialogRange(0, EndurancePerkPointsTotal.GetValue())
-		SetSliderDialogInterval(1.0)
-	elseif option == Meters_UIMeterDisplayTime_OID
-		SetSliderDialogStartValue(_Frost_Setting_MeterDisplayTime.GetValueInt() * 2)
-		SetSliderDialogDefaultValue(8.0)
-		SetSliderDialogRange(4.0, 20.0)
-		SetSliderDialogInterval(2.0)
-	elseif option == Meters_UIMeterOpacity_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetSliderDialogStartValue(_Frost_Setting_MeterExposureOpacity.GetValue())
-			SetSliderDialogDefaultValue(100.0)
-			SetSliderDialogRange(0.0, 100.0)
-			SetSliderDialogInterval(1.0)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetSliderDialogStartValue(_Frost_Setting_MeterWetnessOpacity.GetValue())
-			SetSliderDialogDefaultValue(100.0)
-			SetSliderDialogRange(0.0, 100.0)
-			SetSliderDialogInterval(1.0)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetSliderDialogStartValue(_Frost_Setting_MeterWeathersenseOpacity.GetValue())
-			SetSliderDialogDefaultValue(100.0)
-			SetSliderDialogRange(0.0, 100.0)
-			SetSliderDialogInterval(1.0)
-		endif
-	elseif option == Meters_UIMeterScale_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetSliderDialogStartValue(GetMeterScale(_Frost_Setting_MeterExposureWidth.GetValue(), NORMAL_METER_WIDTH))
-			SetSliderDialogDefaultValue(1.0)
-			SetSliderDialogRange(0.0, 1.0)
-			SetSliderDialogInterval(0.05)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetSliderDialogStartValue(GetMeterScale(_Frost_Setting_MeterWetnessWidth.GetValue(), CHARGE_METER_WIDTH))
-			SetSliderDialogDefaultValue(1.0)
-			SetSliderDialogRange(0.0, 1.0)
-			SetSliderDialogInterval(0.05)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetSliderDialogStartValue(GetMeterScale(_Frost_Setting_MeterWeathersenseWidth.GetValue(), CHARGE_METER_WIDTH))
-			SetSliderDialogDefaultValue(1.0)
-			SetSliderDialogRange(0.0, 1.0)
-			SetSliderDialogInterval(0.05)
-		endif
-	elseif option == Meters_UIMeterXPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetSliderDialogStartValue(_Frost_Setting_MeterExposureXPos.GetValue())
-			SetSliderDialogDefaultValue(EXPOSURE_METER_BOTTOMRIGHT_16_9_X)
-			SetSliderDialogRange(0.0, 1280.0)
-			SetSliderDialogInterval(0.1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetSliderDialogStartValue(_Frost_Setting_MeterWetnessXPos.GetValue())
-			SetSliderDialogDefaultValue(WETNESS_METER_BOTTOMRIGHT_16_9_X)
-			SetSliderDialogRange(0.0, 1800.0)
-			SetSliderDialogInterval(0.1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetSliderDialogStartValue(_Frost_Setting_MeterWeathersenseXPos.GetValue())
-			SetSliderDialogDefaultValue(WEATHERSENSE_METER_BOTTOMRIGHT_16_9_X)
-			SetSliderDialogRange(0.0, 1800.0)
-			SetSliderDialogInterval(0.1)
-		endif
-	elseif option == Meters_UIMeterYPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetSliderDialogStartValue(_Frost_Setting_MeterExposureYPos.GetValue())
-			SetSliderDialogDefaultValue(EXPOSURE_METER_BOTTOMRIGHT_16_9_Y)
-			SetSliderDialogRange(0.0, 720.0)
-			SetSliderDialogInterval(0.1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetSliderDialogStartValue(_Frost_Setting_MeterWetnessYPos.GetValue())
-			SetSliderDialogDefaultValue(WETNESS_METER_BOTTOMRIGHT_16_9_Y)
-			SetSliderDialogRange(0.0, 726.5)
-			SetSliderDialogInterval(0.1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetSliderDialogStartValue(_Frost_Setting_MeterWeathersenseYPos.GetValue())
-			SetSliderDialogDefaultValue(WEATHERSENSE_METER_BOTTOMRIGHT_16_9_Y)
-			SetSliderDialogRange(0.0, 726.5)
-			SetSliderDialogInterval(0.1)
-		endif
-	else
-		bool found_armor_entry_oid = false
-		int idx = -1
+	bool found_armor_entry_oid = false
+	int idx = -1
 
-		if !found_armor_entry_oid
-			idx = Armor_WarmthSliderOIDs.Find(option)
-			if idx != -1
-				SetWarmthSlider(idx)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_WarmthSliderOIDs.Find(option)
+		if idx != -1
+			SetWarmthSlider(idx)
+			found_armor_entry_oid = true
 		endif
-
-		if !found_armor_entry_oid
-			idx = Armor_CoverageSliderOIDs.Find(option)
-			if idx != -1
-				SetCoverageSlider(idx)
-				found_armor_entry_oid = true
-			endif
-		endif
-
 	endif
+
+	if !found_armor_entry_oid
+		idx = Armor_CoverageSliderOIDs.Find(option)
+		if idx != -1
+			SetCoverageSlider(idx)
+			found_armor_entry_oid = true
+		endif
+	endif
+
 EndEvent
 
 Event OnOptionSliderAccept(int option, float value)
-	if option == Gameplay_ExposureRate_OID
-		_Frost_Setting_ExposureRate.SetValue(value)
-		SetSliderOptionValue(Gameplay_ExposureRate_OID, value, "{1}x")
-		SaveSettingToCurrentProfileFloat("exposure_rate", _Frost_Setting_ExposureRate.GetValue())
-	elseif option == Advanced_EnduranceSkillRestoreSlider_OID
-		EndurancePerkPointProgress.SetValue(0.0)
-		EndurancePerkPoints.SetValue(value)
-		EndurancePerkPointsEarned.SetValue(value)
-		ClearEndurancePerks()
-		ShowMessage("$FrostfallAdvancedEnduranceSkillRestoreDone", false)
-		SetOptionFlags(Advanced_EnduranceSkillRestoreSlider_OID, OPTION_FLAG_DISABLED, true)
-		SetToggleOptionValue(Advanced_EnduranceSkillRestore_OID, false)
-	elseif option == Meters_UIMeterDisplayTime_OID
-		_Frost_Setting_MeterDisplayTime.SetValue(value/2)
-		SetSliderOptionValue(Meters_UIMeterDisplayTime_OID, value, "{0}")
-		SaveSettingToCurrentProfile("meter_display_time", _Frost_Setting_MeterDisplayTime.GetValueInt())
-	elseif option == Meters_UIMeterOpacity_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureOpacity.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, value, "{0}%")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_opacity", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessOpacity.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, value, "{0}%")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_opacity", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseOpacity.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterOpacity_OID, value, "{0}%")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_opacity", value)
-		endif
-	elseif option == Meters_UIMeterScale_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureHeight.SetValue(NORMAL_METER_HEIGHT * value)
-			_Frost_Setting_MeterExposureWidth.SetValue(NORMAL_METER_WIDTH * value)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, value, "{2}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_height", _Frost_Setting_MeterExposureHeight.GetValue())
-			SaveSettingToCurrentProfileFloat("exposure_meter_width", _Frost_Setting_MeterExposureWidth.GetValue())
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			if _Frost_Setting_MeterWetnessHeight.GetValue() > 0
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT * value)
-			else
-				_Frost_Setting_MeterWetnessHeight.SetValue(CHARGE_METER_HEIGHT_INV * value)
-			endif
-			_Frost_Setting_MeterWetnessWidth.SetValue(CHARGE_METER_WIDTH * value)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, value, "{2}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_height", _Frost_Setting_MeterWetnessHeight.GetValue())
-			SaveSettingToCurrentProfileFloat("wetness_meter_width", _Frost_Setting_MeterWetnessWidth.GetValue())
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			if _Frost_Setting_MeterWeathersenseHeight.GetValue() > 0
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT * value)
-			else
-				_Frost_Setting_MeterWeathersenseHeight.SetValue(CHARGE_METER_HEIGHT_INV * value)
-			endif
-			_Frost_Setting_MeterWeathersenseWidth.SetValue(CHARGE_METER_WIDTH * value)
-			SetSliderOptionValue(Meters_UIMeterScale_OID, value, "{2}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_height", _Frost_Setting_MeterWeathersenseHeight.GetValue())
-			SaveSettingToCurrentProfileFloat("weathersense_meter_width", _Frost_Setting_MeterWeathersenseWidth.GetValue())
-		endif
-	elseif option == Meters_UIMeterXPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureXPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, value, "{1}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_xpos", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessXPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, value, "{1}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_xpos", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseXPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterXPos_OID, value, "{1}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_xpos", value)
-		endif
-	elseif option == Meters_UIMeterYPos_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureYPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, value, "{1}")
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfileFloat("exposure_meter_ypos", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessYPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, value, "{1}")
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfileFloat("wetness_meter_ypos", value)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseYPos.SetValue(value)
-			SetSliderOptionValue(Meters_UIMeterYPos_OID, value, "{1}")
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfileFloat("weathersense_meter_ypos", value)
-		endif
-	else
-		bool found_armor_entry_oid = false
-		int idx = -1
+	bool found_armor_entry_oid = false
+	int idx = -1
 
-		if !found_armor_entry_oid
-			idx = Armor_WarmthSliderOIDs.Find(option)
-			if idx != -1
-				ModifyGearWarmth(idx, value as int)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_WarmthSliderOIDs.Find(option)
+		if idx != -1
+			ModifyGearWarmth(idx, value as int)
+			found_armor_entry_oid = true
 		endif
+	endif
 
-		if !found_armor_entry_oid
-			idx = Armor_CoverageSliderOIDs.Find(option)
-			if idx != -1
-				ModifyGearCoverage(idx, value as int)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_CoverageSliderOIDs.Find(option)
+		if idx != -1
+			ModifyGearCoverage(idx, value as int)
+			found_armor_entry_oid = true
 		endif
 	endif
 EndEvent
 
 Event OnOptionMenuOpen(int option)
-	if option == Gameplay_MaxExposureMode_OID
-		SetMenuDialogOptions(MaxExposureModeList)
-		SetMenuDialogStartIndex(_Frost_Setting_MaxExposureMode.GetValueInt() - 1)
-		SetMenuDialogDefaultIndex(0)
-	elseif option == Gameplay_VampirismMode_OID
-		SetMenuDialogOptions(VampirismModeList)
-		SetMenuDialogStartIndex(_Frost_Setting_VampireMode.GetValueInt())
-		SetMenuDialogDefaultIndex(0)
-	elseif option == Interface_WeathersenseDisplayMode_OID
-		SetMenuDialogOptions(WeathersenseDisplayList)
-		SetMenuDialogStartIndex(_Frost_Setting_WeathersenseDisplayMode.GetValueInt())
-		SetMenuDialogDefaultIndex(2)
-	elseif option == Interface_Animation_OID
-		SetMenuDialogOptions(AnimationList)
-		SetMenuDialogStartIndex(_Frost_Setting_Animation.GetValueInt() - 1)
-		SetMenuDialogDefaultIndex(1)
-	elseif option == SaveLoad_SelectProfile_OID
-		string[] profile_list = new string[10]
-		int i = 0
-		while i < 10
-			string pname = GetProfileName(i + 1)
-			profile_list[i] = pname
-			i += 1
-		endWhile
-		SetMenuDialogOptions(profile_list)
-		SetMenuDialogStartIndex(_Frost_Setting_CurrentProfile.GetValueInt() - 1)
-		SetMenuDialogDefaultIndex(0)
-	elseif option == Meters_UIMeterDisplay_OID
-		SetMenuDialogOptions(MeterDisplayModeList)
-		SetMenuDialogStartIndex(_Frost_Setting_MeterDisplayMode.GetValueInt())
-		SetMenuDialogDefaultIndex(0)
-	elseif option == Meters_UIMeterLayout_OID
-		SetMenuDialogOptions(MeterLayoutList)
-		SetMenuDialogStartIndex(0)
-		SetMenuDialogDefaultIndex(0)
-	elseif option == Meters_UIMeterFillDirection_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetMenuDialogOptions(FillDirectionListLimited)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterExposureFillDirection.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetMenuDialogOptions(FillDirectionListLimited)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWetnessFillDirection.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetMenuDialogOptions(FillDirectionList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWeathersenseFillDirection.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		endif
-	elseif option == Meters_UIMeterHAnchor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetMenuDialogOptions(HorizontalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterExposureHAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetMenuDialogOptions(HorizontalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWetnessHAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetMenuDialogOptions(HorizontalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWeathersenseHAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		endif
-	elseif option == Meters_UIMeterVAnchor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			SetMenuDialogOptions(VerticalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterExposureVAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			SetMenuDialogOptions(VerticalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWetnessVAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			SetMenuDialogOptions(VerticalAnchorList)
-			SetMenuDialogStartIndex(_Frost_Setting_MeterWeathersenseVAnchor.GetValueInt())
-			SetMenuDialogDefaultIndex(1)
-		endif
-	else
-		bool found_armor_entry_oid = false
-		int idx = -1
+	bool found_armor_entry_oid = false
+	int idx = -1
 
-		if !found_armor_entry_oid
-			idx = Armor_GearTypeOIDs.Find(option)
-			if idx != -1
-				SetMenuDialogOptions(GearTypeList)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_GearTypeOIDs.Find(option)
+		if idx != -1
+			SetMenuDialogOptions(GearTypeList)
+			found_armor_entry_oid = true
 		endif
+	endif
 
-		if !found_armor_entry_oid
-			idx = Armor_SetProtectionOIDs.Find(option)
-			if idx != -1
-				SetMenuDialogOptions(ProtectionList)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_SetProtectionOIDs.Find(option)
+		if idx != -1
+			SetMenuDialogOptions(ProtectionList)
+			found_armor_entry_oid = true
 		endif
+	endif
 
-		if !found_armor_entry_oid
-			idx = Armor_ModifyPartsOIDs.Find(option)
-			if idx != -1
-				SetMenuDialogOptions(GetExtraPartChoiceList(idx))
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_ModifyPartsOIDs.Find(option)
+		if idx != -1
+			SetMenuDialogOptions(GetExtraPartChoiceList(idx))
+			found_armor_entry_oid = true
 		endif
 	endif
 EndEvent
 
 Event OnOptionMenuAccept(int option, int index)
-	if option == Gameplay_MaxExposureMode_OID
-		SetMenuOptionValue(Gameplay_MaxExposureMode_OID, MaxExposureModeList[index])
-		_Frost_Setting_MaxExposureMode.SetValueInt(index + 1)
-		SaveSettingToCurrentProfile("max_exposure_mode", _Frost_Setting_MaxExposureMode.GetValueInt())
-	elseif option == Interface_WeathersenseDisplayMode_OID
-		SetMenuOptionValue(Interface_WeathersenseDisplayMode_OID, WeathersenseDisplayList[index])
-		_Frost_Setting_WeathersenseDisplayMode.SetValueInt(index)
-		SaveSettingToCurrentProfile("weathersense_display_mode", _Frost_Setting_WeathersenseDisplayMode.GetValueInt())
-	elseif option == Interface_Animation_OID
-		SetMenuOptionValue(Interface_Animation_OID, AnimationList[index])
-		_Frost_Setting_Animation.SetValueInt(index + 1)
-		SaveSettingToCurrentProfile("animation", _Frost_Setting_Animation.GetValueInt())
-	elseif option == Gameplay_VampirismMode_OID
-		SetMenuOptionValue(Gameplay_VampirismMode_OID, VampirismModeList[index])
-		_Frost_Setting_VampireMode.SetValueInt(index)
-		SaveSettingToCurrentProfile("vampire_mode", _Frost_Setting_VampireMode.GetValueInt())
-	elseif option == SaveLoad_SelectProfile_OID
-		bool b = ShowMessage("$FrostfallSaveLoadConfirm")
-		if b
-			SwitchToProfile(index + 1)
-			ForcePageReset()
-		endif
-	elseif option == Meters_UIMeterDisplay_OID
-		SetMenuOptionValue(Meters_UIMeterDisplay_OID, MeterDisplayModeList[index])
-		_Frost_Setting_MeterDisplayMode.SetValueInt(index)
-		if index == 1
-			ForceAllMeters()
-		else
-			RemoveAllMeters()
-		endif
-		SaveSettingToCurrentProfile("meter_display_mode", _Frost_Setting_MeterDisplayMode.GetValueInt())
-	elseif option == Meters_UIMeterLayout_OID
-		bool result = ShowMessage("$FrostfallInterfaceSettingUIMeterLayoutConfirm")
-		if result == true
-			ApplyMeterPreset(index)
-			ShowMessage("$FrostfallInterfaceSettingUIMeterLayoutConfirmDone", false)
-			SaveAllSettings(_Frost_Setting_CurrentProfile.GetValueInt())
-			ForcePageReset()
-		endif
-	elseif option == Meters_UIMeterFillDirection_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureFillDirection.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterFillDirection_OID, FillDirectionListLimited[index])
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfile("exposure_meter_fill_direction", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessFillDirection.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterFillDirection_OID, FillDirectionListLimited[index])
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfile("wetness_meter_fill_direction", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseFillDirection.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterFillDirection_OID, FillDirectionList[index])
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfile("weathersense_meter_fill_direction", index)
-		endif
-	elseif option == Meters_UIMeterHAnchor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureHAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterHAnchor_OID, HorizontalAnchorList[index])
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfile("exposure_meter_hanchor", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessHAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterHAnchor_OID, HorizontalAnchorList[index])
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfile("wetness_meter_hanchor", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseHAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterHAnchor_OID, HorizontalAnchorList[index])
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfile("weathersense_meter_hanchor", index)
-		endif
-	elseif option == Meters_UIMeterVAnchor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureVAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterVAnchor_OID, VerticalAnchorList[index])
-			UpdateMeterConfiguration(0)
-			SaveSettingToCurrentProfile("exposure_meter_vanchor", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessVAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterVAnchor_OID, VerticalAnchorList[index])
-			UpdateMeterConfiguration(1)
-			SaveSettingToCurrentProfile("wetness_meter_vanchor", index)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseVAnchor.SetValueInt(index)
-			SetMenuOptionValue(Meters_UIMeterVAnchor_OID, VerticalAnchorList[index])
-			UpdateMeterConfiguration(2)
-			SaveSettingToCurrentProfile("weathersense_meter_vanchor", index)
-		endif
-	else
-		bool found_armor_entry_oid = false
-		int idx = -1
+	bool found_armor_entry_oid = false
+	int idx = -1
 
-		if !found_armor_entry_oid
-			idx = Armor_GearTypeOIDs.Find(option)
-			if idx != -1
-				ModifyGearType(idx, index)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_GearTypeOIDs.Find(option)
+		if idx != -1
+			ModifyGearType(idx, index)
+			found_armor_entry_oid = true
 		endif
+	endif
 
-		if !found_armor_entry_oid
-			idx = Armor_SetProtectionOIDs.Find(option)
-			if idx != -1
-				ModifyGearProtection(idx, index)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_SetProtectionOIDs.Find(option)
+		if idx != -1
+			ModifyGearProtection(idx, index)
+			found_armor_entry_oid = true
 		endif
+	endif
 
-		if !found_armor_entry_oid
-			idx = Armor_ModifyPartsOIDs.Find(option)
-			if idx != -1
-				ModifyGearExtraParts(idx, index)
-				found_armor_entry_oid = true
-			endif
+	if !found_armor_entry_oid
+		idx = Armor_ModifyPartsOIDs.Find(option)
+		if idx != -1
+			ModifyGearExtraParts(idx, index)
+			found_armor_entry_oid = true
 		endif
 	endif
 EndEvent
 
 event OnOptionColorAccept(int option, int color)
-	if option == Meters_UIMeterColor_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureColor.SetValueInt(color)
-			SetColorOptionValue(option, color)
-			if !IsMeterInverted(ExposureMeterHandler as CommonMeterInterfaceHandler)
-				ExposureMeterHandler.SetMeterColors(_Frost_Setting_MeterExposureColor.GetValueInt(), -1)
-			endif
-			SaveSettingToCurrentProfile("exposure_meter_color", color)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WETNESS
-			_Frost_Setting_MeterWetnessColor.SetValueInt(color)
-			SetColorOptionValue(option, color)
-			WetnessMeterHandler.SetMeterColors(color, -1)
-			SaveSettingToCurrentProfile("wetness_meter_color", color)
-		elseif meter_being_configured == METER_BEING_CONFIGURED_WEATHERSENSE
-			_Frost_Setting_MeterWeathersenseColor.SetValueInt(color)
-			SetColorOptionValue(option, color)
-			WeathersenseMeterHandler.SetMeterColors(color, -1)
-			SaveSettingToCurrentProfile("weathersense_meter_color", color)
-		endif
-	elseif option == Meters_UIMeterColorAlt_OID
-		if meter_being_configured == METER_BEING_CONFIGURED_EXPOSURE
-			_Frost_Setting_MeterExposureColorWarm.SetValueInt(color)
-			SetColorOptionValue(option, color)
-			if IsMeterInverted(ExposureMeterHandler as CommonMeterInterfaceHandler)
-				ExposureMeterHandler.SetMeterColors(color, -1)
-			endif
-			SaveSettingToCurrentProfile("exposure_meter_color", color)
-		endif
-	endif
 endEvent
 
 Event OnOptionKeyMapChange(int option, int keyCode, string conflictControl, string conflictName)
 	bool success
-	if option == Gameplay_WeathersenseHotkey_OID
-		success = RemapHotkey(option, keyCode, conflictControl, conflictName, _Frost_HotkeyWeathersense, _Frost_Weathersense_Spell)
-		if success
-			SaveSettingToCurrentProfile("hotkey_weathersense", keyCode)
-		endif
-	endif
 EndEvent
 
 bool function RemapHotkey(int option, int keyCode, string conflictControl, string conflictName, GlobalVariable akHotkeyGlobal, Spell akHotkeySpell)
@@ -2046,22 +649,9 @@ bool function RemapHotkey(int option, int keyCode, string conflictControl, strin
 endFunction
 
 event OnOptionInputOpen(int option)
-	if option == SaveLoad_RenameProfile_OID
-		SetInputDialogStartText(GetProfileName(_Frost_Setting_CurrentProfile.GetValueInt()))
-	endif
 endEvent
 
 event OnOptionInputAccept(int option, string str)
-	if option == SaveLoad_RenameProfile_OID
-		if str != ""
-			string profile_path = CONFIG_PATH + "profile" + _Frost_Setting_CurrentProfile.GetValueInt()
-			JsonUtil.SetStringValue(profile_path, "profile_name", str)
-			JsonUtil.Save(profile_path)
-			ForcePageReset()
-		else
-			ShowMessage("$FrostfallSaveLoadRenameErrorBlank", false)
-		endif
-	endif
 endEvent
 
 function SaveSettingToCurrentProfile(string asKeyName, int aiValue)
@@ -2600,6 +1190,25 @@ function ClearEndurancePerks()
 	_Frost_PerkRank_InnerFire.SetValueInt(0)
 	_Frost_PerkRank_WellInsulated.SetValueInt(0)
 	_Frost_PerkRank_Windbreaker.SetValueInt(0)
+endFunction
+
+; Called by Frostfall.dll (SKSE Menu Framework settings pages), which writes the global and the profile key itself.
+function NativeSetHotkey(int aiKeyCode)
+	UnregisterForKey(_Frost_HotkeyWeathersense.GetValueInt())
+	_Frost_HotkeyWeathersense.SetValueInt(aiKeyCode)
+	if aiKeyCode > 0
+		RegisterForKey(aiKeyCode)
+		PlayerRef.RemoveSpell(_Frost_Weathersense_Spell)
+	else
+		PlayerRef.AddSpell(_Frost_Weathersense_Spell, false)
+	endif
+endFunction
+
+function NativeRestoreSkillPoints(int aiPoints)
+	EndurancePerkPointProgress.SetValue(0.0)
+	EndurancePerkPoints.SetValue(aiPoints)
+	EndurancePerkPointsEarned.SetValue(aiPoints)
+	ClearEndurancePerks()
 endFunction
 
 function RefundEnduranceSkillPoints()

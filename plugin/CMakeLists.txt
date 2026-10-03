@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 # Frostfall.dll — the SKSE plugin behind Frostfall's HUD bars, start-up logo and SKSE Menu Framework page.
-project(Frostfall VERSION 4.0.0 LANGUAGES CXX)
+project(Frostfall VERSION 4.1.0 LANGUAGES CXX)
 
 find_package(CommonLibSSE CONFIG REQUIRED)
 
@@ -14,6 +14,8 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "Frostfall" AUTHOR "CageTV" SOURCES
     src/Game.cpp
     src/Hud.cpp
     src/Menu.cpp
+    src/NativeMcm.cpp
+    src/Hotkeys.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
