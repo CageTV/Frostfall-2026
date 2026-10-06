@@ -64,6 +64,6 @@ To build it yourself, see [`BUILDING.md`](BUILDING.md).
 
 ## Credits and licence
 
-Based on Chesko's MIT-licensed source (github.com/chesko256/Campfire); the combined work is released under the GPL-3.0-or-later; thanks to Chesko and to everyone credited in
+Based on Chesko's MIT-licensed source (github.com/chesko256/Campfire); released under the MIT License; thanks to Chesko and to everyone credited in
 `release-contents/README.txt`. See [`LICENSE.txt`](LICENSE.txt) for what the licence covers (Chesko's own work and these
 changes; third-party assets credited on the original Nexus page are not included and stay with their authors).

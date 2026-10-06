@@ -5,7 +5,7 @@ Files identical in both builds are installed always (common/); the ones that dif
 Everything is taken from the published regular and ESL zips (release-src/), so each choice installs byte-identical content to them.
 The main download also asks which SKSE library its Frostfall.dll is built on: "new" (alandtse's CommonLibSSE-NG, Skyrim 1.6.1170 and newer) or
 "older" (CharmedBaryon's, Skyrim VR and 1.6.1130 and older). The DLLs come from the build folders, not from release-src; everything else is
-still byte-identical to the published zips. Its LICENSE.txt is the repository's (GPL-3.0-or-later).
+still byte-identical to the published zips. Its LICENSE.txt is the repository's (MIT).
 Usage: python tools/make_release_combined.py <main version> <leather tent version>
 """
 import hashlib
