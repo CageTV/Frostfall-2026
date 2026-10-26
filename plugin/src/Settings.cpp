@@ -69,6 +69,9 @@ void Settings::Load()
 	f("fbarthickness", barThickness);
 	f("fspacing", spacing);
 	f("fcontextualseconds", contextualSeconds);
+	f("fchangepercent", changePercent);
+	f("fstayexposurepercent", stayExposurePercent);
+	f("fstaywetnesspercent", stayWetnessPercent);
 	b("bshowexposure", showExposure);
 	b("bshowwetness", showWetness);
 	b("bshowtemperature", showTemperature);
@@ -88,6 +91,9 @@ void Settings::Load()
 	barThickness = std::clamp(barThickness, 3.0f, 30.0f);
 	spacing = std::clamp(spacing, 2.0f, 40.0f);
 	contextualSeconds = std::clamp(contextualSeconds, 1.0f, 60.0f);
+	changePercent = std::clamp(changePercent, 0.1f, 20.0f);
+	stayExposurePercent = std::clamp(stayExposurePercent, 0.0f, 100.0f);
+	stayWetnessPercent = std::clamp(stayWetnessPercent, 0.0f, 100.0f);
 	SKSE::log::info("Loaded {}", kPath.string());
 
 	if (version < kVersion) {
@@ -114,6 +120,7 @@ void Settings::Save() const
 	out << "iLayout=" << layout << "\n";
 	out << std::format("fPosX={:.4f}\nfPosY={:.4f}\nfScale={:.3f}\nfOpacity={:.3f}\n", posX, posY, scale, opacity);
 	out << std::format("fBarLength={:.1f}\nfBarThickness={:.1f}\nfSpacing={:.1f}\nfContextualSeconds={:.1f}\n", barLength, barThickness, spacing, contextualSeconds);
+	out << std::format("fChangePercent={:.1f}\nfStayExposurePercent={:.0f}\nfStayWetnessPercent={:.0f}\n", changePercent, stayExposurePercent, stayWetnessPercent);
 	out << "bShowExposure=" << (showExposure ? 1 : 0) << "\n";
 	out << "bShowWetness=" << (showWetness ? 1 : 0) << "\n";
 	out << "bShowTemperature=" << (showTemperature ? 1 : 0) << "\n";

@@ -44,13 +44,15 @@ namespace Hud
 			return std::clamp(Game::Value(a_value) / max, 0.0f, 1.0f);
 		}
 
-		void Track(Tracked& a_t, float a_frac, float a_dt)
+		// a_threshold: how far the value must move from the last reference to count as a change (fraction of its range). Slow steady drift, such as
+		// exposure creeping up a little every second, then stops resetting the contextual timer; a step or a bigger move still does.
+		void Track(Tracked& a_t, float a_frac, float a_dt, float a_threshold)
 		{
 			if (a_t.shown < 0.0f) {
 				a_t.shown = a_frac;
 				a_t.last = a_frac;
 			}
-			if (std::abs(a_frac - a_t.last) > 0.001f) {
+			if (std::abs(a_frac - a_t.last) > a_threshold) {
 				a_t.sinceChange = 0.0f;
 				a_t.last = a_frac;
 			} else {
@@ -148,17 +150,18 @@ namespace Hud
 			const float fTemp = Frac(g.tempLevel, g.tempLevelMax, 10.0f);
 			const float fWarmth = Frac(g.warmth, g.warmthMax, 550.0f);
 			const float fCoverage = Frac(g.coverage, g.coverageMax, 360.0f);
-			Track(exposureT, fExposure, a_dt);
-			Track(wetnessT, fWet, a_dt);
-			Track(tempT, fTemp, a_dt);
-			Track(warmthT, fWarmth, a_dt);
-			Track(coverageT, fCoverage, a_dt);
+			const float thr = std::max(0.001f, s.changePercent / 100.0f);
+			Track(exposureT, fExposure, a_dt, thr);
+			Track(wetnessT, fWet, a_dt, thr);
+			Track(tempT, fTemp, a_dt, thr);
+			Track(warmthT, fWarmth, a_dt, thr);
+			Track(coverageT, fCoverage, a_dt, thr);
 
 			// Contextual: stay visible while something changed recently or the player is not comfortable
 			float target = 1.0f;
 			if (s.displayMode == 1 && !a_preview) {
 				const float recent = std::min({ exposureT.sinceChange, wetnessT.sinceChange, tempT.sinceChange, warmthT.sinceChange, coverageT.sinceChange });
-				const bool  uncomfortable = fExposure > 0.20f || fWet > 0.01f;
+				const bool  uncomfortable = fExposure * 100.0f > s.stayExposurePercent || fWet * 100.0f > s.stayWetnessPercent;
 				target = (recent < s.contextualSeconds || uncomfortable) ? 1.0f : 0.0f;
 			}
 			groupAlpha += (target - groupAlpha) * std::min(1.0f, a_dt * 3.0f);

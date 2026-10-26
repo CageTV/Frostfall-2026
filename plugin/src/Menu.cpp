@@ -138,6 +138,15 @@ namespace Menu
 			Changed(Combo("Display", &s.displayMode, displayModes, 2));
 			if (s.displayMode == 1) {
 				Changed(SliderFloat("Stay visible after a change (s)", &s.contextualSeconds, 1.0f, 30.0f, "%.0f"));
+				Changed(SliderFloat("A change counts after (% of the bar)", &s.changePercent, 0.1f, 20.0f, "%.1f"));
+				if (IsItemHovered()) {
+					SetTooltip("A bar only counts as changed once it has moved this far. Raise it if the bars never fade because a value creeps a little all the time.");
+				}
+				Changed(SliderFloat("Stay visible while exposure is above (%)", &s.stayExposurePercent, 0.0f, 100.0f, "%.0f"));
+				Changed(SliderFloat("Stay visible while wetness is above (%)", &s.stayWetnessPercent, 0.0f, 100.0f, "%.0f"));
+				if (IsItemHovered()) {
+					SetTooltip("100 means the bars never stay up because of this. Set both to 100 and the bars show only when something changes.");
+				}
 			}
 			static const char* layouts[] = { "2 x 2 grid", "Single row" };
 			Changed(Combo("Layout", &s.layout, layouts, 2));

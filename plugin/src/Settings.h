@@ -24,6 +24,9 @@ struct Settings
 	float barThickness = 8.0f;
 	float spacing = 10.0f;
 	float contextualSeconds = 6.0f;
+	float changePercent = 2.0f;      // contextual: a bar counts as changed only after it has moved by this share of its range (%)
+	float stayExposurePercent = 40.0f;  // contextual: stay visible while exposure is above this (%); 100 = never because of exposure
+	float stayWetnessPercent = 10.0f;   // contextual: stay visible while wetness is above this (%); 100 = never because of wetness
 	bool  showExposure = true;
 	bool  showWetness = true;
 	bool  showTemperature = true;
