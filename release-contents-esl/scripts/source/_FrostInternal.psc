@@ -17,8 +17,9 @@ bool function PrecacheHasArmorData(string asArmorName, Keyword akPrecache) globa
 endFunction
 
 function TryToAddArmorToPrecache(Form akBaseItem, Keyword akPrecache) global
-	if CampUtil.GetSKSELoaded()
-		if akBaseItem as Armor
+	; Cheap type test first: this runs for EVERY item added to the player (meat, bones, ingredients...), and CampUtil.GetSKSELoaded() is a five-call chain.
+	if akBaseItem as Armor
+		if CampUtil.GetSKSELoaded()
 			string armorName = akBaseItem.GetName()
 			if armorName != ""
 				if StorageUtil.IntListGet(akPrecache, "FF__" + armorName, 0) == 0
@@ -32,18 +33,20 @@ function TryToAddArmorToPrecache(Form akBaseItem, Keyword akPrecache) global
 endFunction
 
 function TryToAddArmorDataToPrecache(Form akBaseItem, Int[] aiArmorData, Keyword akPrecache) global
-	if CampUtil.GetSKSELoaded()
-		if aiArmorData[0] != 0 && akBaseItem as Armor
-			;debug.trace("Adding " + armorName + " to precache.")
-			string armorName = akBaseItem.GetName()
-			bool result = StorageUtil.IntListCopy(akPrecache, "FF__" + armorName, aiArmorData)
+	if akBaseItem as Armor
+		if CampUtil.GetSKSELoaded()
+			if aiArmorData[0] != 0
+				;debug.trace("Adding " + armorName + " to precache.")
+				string armorName = akBaseItem.GetName()
+				bool result = StorageUtil.IntListCopy(akPrecache, "FF__" + armorName, aiArmorData)
+			endif
 		endif
 	endif
 endFunction
 
 function TryToRemoveArmorFromPrecache(Form akBaseItem, Keyword akPrecache) global
-	if CampUtil.GetSKSELoaded()
-		if akBaseItem as Armor
+	if akBaseItem as Armor
+		if CampUtil.GetSKSELoaded()
 			string armorName = akBaseItem.GetName()
 			if armorName != ""
 				if StorageUtil.IntListGet(akPrecache, "FF__" + armorName, 0) != 0
