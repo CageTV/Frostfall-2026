@@ -10,12 +10,14 @@
 #include "Settings.h"
 
 #include "SKSEMenuFramework.h"
+#include "BarKit.h"
 
 namespace Hud
 {
 	namespace
 	{
 		using namespace ImGuiMCP;
+		using namespace BarKit;
 
 		constexpr const char* kLogoPath = "Data\\Interface\\frostfall\\frostfall_logo.png";
 		constexpr float       kLogoAspect = 100.0f / 460.0f;
@@ -29,6 +31,8 @@ namespace Hud
 		float             saveTimer = -1.0f;
 		bool              meterModeChecked = false;
 		float             groupAlpha = 1.0f;
+		bool              editMode = false;  // free layout: drag the bars with the mouse while the settings window is open
+		int               dragBar = -1;
 
 		struct Tracked
 		{
@@ -61,30 +65,6 @@ namespace Hud
 			a_t.shown += (a_frac - a_t.shown) * std::min(1.0f, a_dt * 6.0f);  // smooth fill movement
 		}
 
-		ImU32 Col(float r, float g, float b, float a)
-		{
-			return IM_COL32(static_cast<int>(std::clamp(r, 0.0f, 255.0f)), static_cast<int>(std::clamp(g, 0.0f, 255.0f)),
-				static_cast<int>(std::clamp(b, 0.0f, 255.0f)), static_cast<int>(std::clamp(a, 0.0f, 1.0f) * 255.0f));
-		}
-
-		struct Rgb { float r, g, b; };
-		Rgb Lerp(Rgb a, Rgb b, float t) { return { a.r + (b.r - a.r) * t, a.g + (b.g - a.g) * t, a.b + (b.b - a.b) * t }; }
-
-		// One flat vertical bar: dark track, fill from the bottom, slightly lighter at the top of the fill. No border.
-		void DrawBar(ImDrawList* a_dl, float a_x, float a_y, float a_w, float a_h, float a_fill, Rgb a_color, float a_alpha)
-		{
-			const float rounding = std::min(a_w * 0.35f, 4.0f);
-			ImDrawListManager::AddRectFilled(a_dl, ImVec2(a_x, a_y), ImVec2(a_x + a_w, a_y + a_h), Col(10, 12, 16, 0.55f * a_alpha), rounding, 0);
-			const float fh = a_h * std::clamp(a_fill, 0.0f, 1.0f);
-			if (fh < 0.5f) {
-				return;
-			}
-			const float top = a_y + a_h - fh;
-			const ImU32 cTop = Col(a_color.r + 35, a_color.g + 35, a_color.b + 35, 0.95f * a_alpha);
-			const ImU32 cBot = Col(a_color.r * 0.8f, a_color.g * 0.8f, a_color.b * 0.8f, 0.95f * a_alpha);
-			ImDrawListManager::AddRectFilledMultiColor(a_dl, ImVec2(a_x, top), ImVec2(a_x + a_w, a_y + a_h), cTop, cTop, cBot, cBot);
-		}
-
 		// White glyphs on transparent PNGs (Interface/frostfall/icons, drawn by tools/make_icons.py), tinted here.
 		// SKSE Menu Framework's icon font lacks these glyphs and drew "?" instead.
 		enum Icon { kExposure, kWetness, kTemperature, kWarmth, kIconCount };
@@ -111,18 +91,7 @@ namespace Hud
 			return textures[a_icon];
 		}
 
-		void DrawIcon(ImDrawList* a_dl, Icon a_icon, float a_cx, float a_top, float a_size, float a_alpha)
-		{
-			auto* tex = IconTexture(a_icon);
-			if (!tex) {
-				return;
-			}
-			const float x = a_cx - a_size * 0.5f;
-			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x + 1.0f, a_top + 1.0f), ImVec2(x + a_size + 1.0f, a_top + a_size + 1.0f),
-				ImVec2(0, 0), ImVec2(1, 1), Col(0, 0, 0, 0.55f * a_alpha));
-			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x, a_top), ImVec2(x + a_size, a_top + a_size),
-				ImVec2(0, 0), ImVec2(1, 1), Col(225, 232, 240, 0.9f * a_alpha));
-		}
+		void IconFor(ImDrawList* a_dl, Icon a_icon, const Bar& a_b, float a_k, float a_alpha) { DrawIconFor(a_dl, IconTexture(a_icon), a_b, a_k, a_alpha); }
 
 		bool HudHiddenByGame()
 		{
@@ -134,6 +103,21 @@ namespace Hud
 				return true;
 			}
 			return !ui->IsShowingMenus();  // the HUD was toggled off (tm)
+		}
+
+		Group GroupOf(const Settings& s)
+		{
+			Group g;
+			g.layout = s.layout;
+			g.orientation = s.orientation;
+			g.flip = s.flipFill;
+			g.icons = s.showIcons;
+			g.thickness = s.barThickness;
+			g.length = s.barLength;
+			g.spacing = s.spacing;
+			g.posX = s.posX;
+			g.posY = s.posY;
+			return g;
 		}
 
 		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview)
@@ -170,33 +154,15 @@ namespace Hud
 				return;
 			}
 
-			const float t = s.barThickness * k;
-			const float L = s.barLength * k;
-			const float gap = s.spacing * k;
-			const float icon = s.showIcons ? 16.0f * k : 0.0f;
-			const float rowGap = gap + icon + (s.showIcons ? 6.0f * k : 0.0f);
-			const float right = s.posX * W;
-			const float centerY = s.posY * H;
-
-			// Slot positions: grid = 2 columns x 2 rows; row = 4 across
-			struct Slot { float x, y; };
-			Slot slots[4];
-			if (s.layout == 0) {
-				const float groupW = 2 * t + gap * 1.6f;
-				const float groupH = 2 * L + rowGap;
-				const float x0 = right - groupW;
-				const float y0 = centerY - groupH * 0.5f;
-				slots[0] = { x0, y0 };
-				slots[1] = { x0 + t + gap * 1.6f, y0 };
-				slots[2] = { x0, y0 + L + rowGap };
-				slots[3] = { x0 + t + gap * 1.6f, y0 + L + rowGap };
-			} else {
-				const float step = t + gap * 1.6f;
-				const float x0 = right - (4 * t + 3 * gap * 1.6f);
-				const float y0 = centerY - (L + icon) * 0.5f;
+			Bar slots[4];
+			if (s.layout == 2) {
+				Placed placed[4];
 				for (int i = 0; i < 4; ++i) {
-					slots[i] = { x0 + i * step, y0 };
+					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip };
 				}
+				FreeSlots(placed, s.barThickness, s.barLength, W, H, k, slots);
+			} else {
+				GroupedSlots(GroupOf(s), W, H, k, slots);
 			}
 
 			const Rgb iceLight{ 175, 215, 255 }, iceDeep{ 70, 135, 255 };
@@ -205,27 +171,50 @@ namespace Hud
 
 			auto iconAt = [&](int a_slot, Icon a_icon) {
 				if (s.showIcons) {
-					DrawIcon(a_dl, a_icon, slots[a_slot].x + t * 0.5f, slots[a_slot].y + L + 5.0f * k, 14.0f * k, alpha);
+					IconFor(a_dl, a_icon, slots[a_slot], k, alpha);
 				}
 			};
 
 			if (s.showExposure) {
-				DrawBar(a_dl, slots[0].x, slots[0].y, t, L, exposureT.shown, Lerp(iceLight, iceDeep, fExposure), alpha * pulse);
+				DrawBar(a_dl, slots[0], exposureT.shown, Lerp(iceLight, iceDeep, fExposure), alpha * pulse);
 				iconAt(0, kExposure);
 			}
 			if (s.showWetness) {
-				DrawBar(a_dl, slots[1].x, slots[1].y, t, L, wetnessT.shown, { 80, 190, 210 }, alpha);
+				DrawBar(a_dl, slots[1], wetnessT.shown, { 80, 190, 210 }, alpha);
 				iconAt(1, kWetness);
 			}
 			if (s.showTemperature) {
-				DrawBar(a_dl, slots[2].x, slots[2].y, t, L, tempT.shown, Lerp(cold, warm, fTemp), alpha);
+				DrawBar(a_dl, slots[2], tempT.shown, Lerp(cold, warm, fTemp), alpha);
 				iconAt(2, kTemperature);
 			}
-			if (s.showWarmth) {  // warmth (left half) and coverage (right half) share the 4th slot
-				const float half = std::max(1.0f, (t - 2.0f * k) * 0.5f);
-				DrawBar(a_dl, slots[3].x, slots[3].y, half, L, warmthT.shown, { 235, 155, 75 }, alpha);
-				DrawBar(a_dl, slots[3].x + t - half, slots[3].y, half, L, coverageT.shown, { 165, 185, 205 }, alpha);
+			if (s.showWarmth) {  // warmth and coverage share the 4th slot: side by side when standing, one above the other when flat
+				const Bar& sl = slots[3];
+				Bar        a = sl, c = sl;
+				if (!sl.horizontal) {
+					const float half = std::max(1.0f, (sl.w - 2.0f * k) * 0.5f);
+					a.w = c.w = half;
+					c.x = sl.x + sl.w - half;
+				} else {
+					const float half = std::max(1.0f, (sl.h - 2.0f * k) * 0.5f);
+					a.h = c.h = half;
+					c.y = sl.y + sl.h - half;
+				}
+				DrawBar(a_dl, a, warmthT.shown, { 235, 155, 75 }, alpha);
+				DrawBar(a_dl, c, coverageT.shown, { 165, 185, 205 }, alpha);
 				iconAt(3, kWarmth);
+			}
+
+			if (a_preview && editMode && s.layout == 2) {
+				float dx = 0, dy = 0;
+				const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy);
+				if (moved >= 0) {
+					auto& fb = s.freeBar[moved];
+					fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
+					fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
+					MarkSettingsDirty();
+				}
+			} else {
+				dragBar = -1;
 			}
 		}
 
@@ -275,6 +264,8 @@ namespace Hud
 	void MarkPreviewFrame() { previewFrames = 2; }
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
+
+	bool& EditMode() { return editMode; }
 
 	void __stdcall Render()
 	{

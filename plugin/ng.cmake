@@ -5,7 +5,7 @@ foreach(variant Regular ESL)
     if(variant STREQUAL "ESL")
         set(defs FROSTFALL_ESL)
     endif()
-    ng_plugin(TARGET Frostfall${variant} NAME Frostfall VERSION 4.1.0 ROOT "${CMAKE_CURRENT_LIST_DIR}"
+    ng_plugin(TARGET Frostfall${variant} NAME Frostfall VERSION 4.2.0 ROOT "${CMAKE_CURRENT_LIST_DIR}"
         SOURCES src/main.cpp src/Settings.cpp src/Game.cpp src/Hud.cpp src/Menu.cpp src/NativeMcm.cpp src/Hotkeys.cpp
         INCLUDES "${CMAKE_CURRENT_LIST_DIR}/src" "${CMAKE_CURRENT_LIST_DIR}/include"
         PCH "${CMAKE_CURRENT_LIST_DIR}/src/PCH.h" DEFINES ${defs})

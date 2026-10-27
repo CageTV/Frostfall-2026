@@ -61,6 +61,15 @@ void Settings::Load()
 	b("bhudenabled", hudEnabled);
 	i("idisplaymode", displayMode);
 	i("ilayout", layout);
+	i("iorientation", orientation);
+	b("bflipfill", flipFill);
+	for (int n = 0; n < kBars; ++n) {
+		const std::string p = "free" + std::to_string(n);
+		f((p + "x").c_str(), freeBar[n].x);
+		f((p + "y").c_str(), freeBar[n].y);
+		i((p + "orient").c_str(), freeBar[n].orient);
+		b((p + "flip").c_str(), freeBar[n].flip);
+	}
 	f("fposx", posX);
 	f("fposy", posY);
 	f("fscale", scale);
@@ -82,7 +91,13 @@ void Settings::Load()
 	i("iversion", version);
 
 	displayMode = std::clamp(displayMode, 0, 1);
-	layout = std::clamp(layout, 0, 1);
+	layout = std::clamp(layout, 0, 2);
+	orientation = std::clamp(orientation, 0, 1);
+	for (auto& fb : freeBar) {
+		fb.x = std::clamp(fb.x, 0.0f, 1.0f);
+		fb.y = std::clamp(fb.y, 0.0f, 1.0f);
+		fb.orient = std::clamp(fb.orient, 0, 1);
+	}
 	posX = std::clamp(posX, 0.0f, 1.0f);
 	posY = std::clamp(posY, 0.0f, 1.0f);
 	scale = std::clamp(scale, 0.5f, 3.0f);
@@ -118,6 +133,12 @@ void Settings::Save() const
 	out << "bHudEnabled=" << (hudEnabled ? 1 : 0) << "\n";
 	out << "iDisplayMode=" << displayMode << "\n";
 	out << "iLayout=" << layout << "\n";
+	out << "iOrientation=" << orientation << "\n";
+	out << "bFlipFill=" << (flipFill ? 1 : 0) << "\n";
+	for (int n = 0; n < kBars; ++n) {
+		out << std::format("fFree{0}X={1:.4f}\nfFree{0}Y={2:.4f}\niFree{0}Orient={3}\nbFree{0}Flip={4}\n", n, freeBar[n].x, freeBar[n].y, freeBar[n].orient,
+			freeBar[n].flip ? 1 : 0);
+	}
 	out << std::format("fPosX={:.4f}\nfPosY={:.4f}\nfScale={:.3f}\nfOpacity={:.3f}\n", posX, posY, scale, opacity);
 	out << std::format("fBarLength={:.1f}\nfBarThickness={:.1f}\nfSpacing={:.1f}\nfContextualSeconds={:.1f}\n", barLength, barThickness, spacing, contextualSeconds);
 	out << std::format("fChangePercent={:.1f}\nfStayExposurePercent={:.0f}\nfStayWetnessPercent={:.0f}\n", changePercent, stayExposurePercent, stayWetnessPercent);
@@ -134,6 +155,11 @@ void Settings::ResetHudLayout()
 	const Settings d;
 	displayMode = d.displayMode;
 	layout = d.layout;
+	orientation = d.orientation;
+	flipFill = d.flipFill;
+	for (int n = 0; n < kBars; ++n) {
+		freeBar[n] = d.freeBar[n];
+	}
 	posX = d.posX;
 	posY = d.posY;
 	scale = d.scale;

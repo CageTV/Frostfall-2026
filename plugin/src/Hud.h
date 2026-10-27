@@ -18,6 +18,9 @@ namespace Hud
 	// SKSE Menu Framework's window is open.
 	void MarkPreviewFrame();
 
+	// Free layout: while true (and the settings page is open) the bars can be dragged with the mouse. Not saved.
+	bool& EditMode();
+
 	// Mark settings as changed; they are written to the INI shortly after the last change.
 	void MarkSettingsDirty();
 }
