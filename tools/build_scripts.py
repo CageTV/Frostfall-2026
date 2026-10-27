@@ -16,8 +16,10 @@ COMPILER = os.path.join(GAME, "Papyrus Compiler", "PapyrusCompiler.exe")
 FLAGS = os.path.join(GAME, "Data", "Source", "Scripts", "TESV_Papyrus_Flags.flg")
 IMPORTS = [
     os.path.join(HERE, "src", "scripts"),
-    os.path.join(HERE, "upstream-chesko", "Scripts", "Source"),          # Campfire (+ Chesko's shared code)
-    os.path.join(HERE, "imports", "skyui"),                              # SkyUI SDK (compile-time only)
+    (os.path.join(HERE, "upstream-chesko", "Scripts", "Source") if os.path.isdir(os.path.join(HERE, "upstream-chesko"))
+     else r"E:\WorkSpace\Frostfall-Modernized\upstream-chesko\Scripts\Source"),  # Campfire (+ Chesko's shared code); a clone of chesko256/Campfire
+    (os.path.join(HERE, "imports", "skyui") if os.path.isdir(os.path.join(HERE, "imports", "skyui"))
+     else r"E:\WorkSpace\Frostfall-Modernized\imports\skyui"),           # SkyUI SDK (compile-time only)
     os.path.join(HERE, "imports", "chesko-shared"),                      # CheskoPapyrusShared (MIT) - FallbackEvent*, Common*
     os.path.join(HERE, "imports", "stubs"),                              # compile-only stubs for optional third-party types
     os.path.join(MODS, "Skyrim Script Extender (SKSE64)", "Scripts", "Source"),

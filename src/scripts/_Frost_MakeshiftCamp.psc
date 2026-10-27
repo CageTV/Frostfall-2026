@@ -8,16 +8,15 @@ being a master of Frostfall.esp.}
 ; The 8 "with Bedroll" backpacks of ccfsvsse001-backpacks.esl are its even FormIDs 0x802..0x810.
 ; The camp's shelter is the Creation Club Camping lean-to mesh (ccqdrsse002-firewood.esl's archive), referenced by path:
 ; Frostfall ships no copy of it. Without that CC there is no mesh to show, so the camp is not offered.
-; The optional add-on plugin (ESL-flagged) that holds the leather camp: its ACT is 000801, its menu 000802.
-string function GetLeatherPlugin() global
-	return "Frostfall 2026 - Leather Tent.esp"
+; The leather camp lives in the regular Frostfall.esp (it was the separate "Frostfall 2026 - Leather Tent" add-on until 4.2.0):
+; its ACT is 095021, its menu 095022. The ESL build of Frostfall.esp does not have them, so these lookups come back empty
+; there (their ids are above 0xFFF) and only the simple camp is offered.
+Form function GetLeatherCamp() global
+	return Game.GetFormFromFile(0x095021, "Frostfall.esp")
 endFunction
 
 Message function GetLeatherMenu() global
-	if !Game.IsPluginInstalled(GetLeatherPlugin())
-		return none
-	endif
-	return Game.GetFormFromFile(0x000802, GetLeatherPlugin()) as Message
+	return Game.GetFormFromFile(0x095022, "Frostfall.esp") as Message
 endFunction
 
 bool function HasCampingCC() global
@@ -58,7 +57,7 @@ bool function OfferCamp(ObjectReference akCampfire) global
 	int have_linen = player.GetItemCount(linen)
 	bool basic = have_branches >= 4 && have_linen >= 2
 
-	; With the optional "Frostfall 2026 - Leather Tent" add-on, a better camp is offered as well.
+	; In the regular (non-ESL) Frostfall.esp a better, leather camp is offered as well.
 	Message leather_menu = GetLeatherMenu()
 	MiscObject leather_item = Game.GetFormFromFile(0x0DB5D2, "Skyrim.esm") as MiscObject
 	bool leather = leather_menu && leather_item && have_branches >= 4 && have_linen >= 1 && player.GetItemCount(leather_item) >= 2
@@ -145,8 +144,8 @@ function DestroyCampNear(ObjectReference akCampfire) global
 	if camp
 		found = Game.FindClosestReferenceOfType(camp, akCampfire.GetPositionX(), akCampfire.GetPositionY(), akCampfire.GetPositionZ(), 500.0)
 	endif
-	if !found && Game.IsPluginInstalled(GetLeatherPlugin())
-		Form leather_camp = Game.GetFormFromFile(0x000801, GetLeatherPlugin())
+	if !found
+		Form leather_camp = GetLeatherCamp()
 		if leather_camp
 			found = Game.FindClosestReferenceOfType(leather_camp, akCampfire.GetPositionX(), akCampfire.GetPositionY(), akCampfire.GetPositionZ(), 500.0)
 		endif
@@ -163,7 +162,7 @@ function MakeLeatherCamp(ObjectReference akCampfire) global
 	MiscObject branches = Game.GetFormFromFile(0x02564C, "Campfire.esm") as MiscObject
 	MiscObject linen = Game.GetFormFromFile(0x034CD6, "Skyrim.esm") as MiscObject
 	MiscObject leather_item = Game.GetFormFromFile(0x0DB5D2, "Skyrim.esm") as MiscObject
-	Activator camp = Game.GetFormFromFile(0x000801, GetLeatherPlugin()) as Activator
+	Activator camp = GetLeatherCamp() as Activator
 	if !branches || !linen || !leather_item || !camp || !akCampfire || !FrostfallNative.IsInstalled()
 		return
 	endif
