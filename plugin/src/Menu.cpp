@@ -128,6 +128,9 @@ namespace Menu
 		{
 			auto& s = Settings::Get();
 			Hud::MarkPreviewFrame();  // keep the bars visible while this page is open
+			if ((s.layout == 2 && Hud::EditTarget() == 4) || (s.layout != 2 && Hud::EditTarget() >= 0 && Hud::EditTarget() < 4)) {
+				Hud::EditTarget() = -1;  // the layout changed under an unlocked bar
+			}
 
 			Changed(Checkbox("Show Frostfall bars", &s.hudEnabled), [] { Game::RefreshOldMeters(); });
 			TextWrapped("While on, these replace Frostfall's SkyUI meters. Turning them off brings the SkyUI meters back.");
@@ -163,6 +166,15 @@ namespace Menu
 				}
 				Changed(SliderFloat("Horizontal (right edge)", &s.posX, 0.0f, 1.0f, "%.3f"));
 				Changed(SliderFloat("Vertical (centre)", &s.posY, 0.0f, 1.0f, "%.3f"));
+				if (Hud::EditTarget() == 4) {
+					if (Button("Lock the group")) {
+						Hud::EditTarget() = -1;
+					}
+					SameLine();
+					TextDisabled("Unlocked: click the bars on the screen and drag the whole group.");
+				} else if (Button("Unlock to move the group with the mouse")) {
+					Hud::EditTarget() = 4;
+				}
 			}
 			Changed(SliderFloat("Scale", &s.scale, 0.5f, 3.0f, "%.2f"));
 			Changed(SliderFloat("Bar length", &s.barLength, 30.0f, 400.0f, "%.0f"));
@@ -174,20 +186,35 @@ namespace Menu
 				Spacing();
 				Separator();
 				Text("Each bar");
-				Checkbox("Move the bars with the mouse", &Hud::EditMode());
-				if (IsItemHovered()) {
-					SetTooltip("While this is ticked, click a bar on the screen and drag it where you want it. The sliders below do the same, to the pixel.");
-				}
+				TextWrapped("Unlock one bar at a time, then click it on the screen and drag it where you want it. The sliders do the same, to the pixel.");
 				static const char* names[Settings::kBars] = { "Exposure", "Wetness", "Temperature", "Warmth and coverage" };
 				static const char* orients[] = { "Standing", "Lying flat" };
 				for (int n = 0; n < Settings::kBars; ++n) {
 					auto& fb = s.freeBar[n];
 					PushID(n);
+					Separator();
 					Text("%s", names[n]);
+					if (Hud::EditTarget() == n) {
+						if (Button("Lock")) {
+							Hud::EditTarget() = -1;
+						}
+						SameLine();
+						TextDisabled("Unlocked: drag it on the screen.");
+					} else if (Button("Unlock to move with the mouse")) {
+						Hud::EditTarget() = n;
+					}
 					Changed(SliderFloat("Horizontal", &fb.x, 0.0f, 1.0f, "%.3f"));
 					Changed(SliderFloat("Vertical", &fb.y, 0.0f, 1.0f, "%.3f"));
 					Changed(Combo("Direction", &fb.orient, orients, 2));
 					Changed(Checkbox("Flip: fill from the other end", &fb.flip));
+					float length = fb.length > 0.0f ? fb.length : s.barLength;
+					if (Changed(SliderFloat("Length", &length, 30.0f, 400.0f, "%.0f"))) {
+						fb.length = length;
+					}
+					float thickness = fb.thickness > 0.0f ? fb.thickness : s.barThickness;
+					if (Changed(SliderFloat("Thickness", &thickness, 3.0f, 30.0f, "%.0f"))) {
+						fb.thickness = thickness;
+					}
 					PopID();
 				}
 			}

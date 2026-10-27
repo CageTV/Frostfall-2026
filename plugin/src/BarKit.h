@@ -81,6 +81,19 @@ namespace BarKit
 		}
 	}
 
+	// The smallest rectangle holding all the given bars (and their icons, when a_icons), as one Bar.
+	inline Bar Bounds(const Bar* a_bars, int a_count, float a_pad)
+	{
+		float x0 = 1e9f, y0 = 1e9f, x1 = -1e9f, y1 = -1e9f;
+		for (int i = 0; i < a_count; ++i) {
+			x0 = std::min(x0, a_bars[i].x - a_pad);
+			y0 = std::min(y0, a_bars[i].y - a_pad);
+			x1 = std::max(x1, a_bars[i].x + a_bars[i].w + a_pad);
+			y1 = std::max(y1, a_bars[i].y + a_bars[i].h + a_pad);
+		}
+		return { x0, y0, x1 - x0, y1 - y0, false, false };
+	}
+
 	// What a grouped layout needs. posX is the group's right edge, posY its vertical centre (fractions of the screen); k is the pixel scale
 	// (screen height / 1080 * scale); the sizes are in 1080p pixels before k.
 	struct Group
@@ -180,14 +193,16 @@ namespace BarKit
 		float y = 0.5f;
 		int   orient = 0;  // 0 = standing, 1 = lying flat
 		bool  flip = false;
+		float length = 0.0f;     // 0 = the shared length
+		float thickness = 0.0f;  // 0 = the shared thickness
 	};
 
 	template <std::size_t N>
 	inline void FreeSlots(const Placed (&a_placed)[N], float a_thickness, float a_length, float W, float H, float k, Bar (&out)[N])
 	{
-		const float t = a_thickness * k;
-		const float L = a_length * k;
 		for (std::size_t i = 0; i < N; ++i) {
+			const float t = (a_placed[i].thickness > 0.0f ? a_placed[i].thickness : a_thickness) * k;
+			const float L = (a_placed[i].length > 0.0f ? a_placed[i].length : a_length) * k;
 			const bool  horiz = a_placed[i].orient == 1;
 			const float w = horiz ? L : t;
 			const float h = horiz ? t : L;
@@ -197,7 +212,8 @@ namespace BarKit
 
 	// Drag bars with the mouse. a_drag keeps the bar being dragged between frames (-1 = none). Returns the index of the bar that moved this frame
 	// (-1 = none) and its move as fractions of the screen in a_dx / a_dy. Draws a frame around every bar.
-	inline int HandleDrag(ImDrawList* a_dl, const Bar* a_bars, int a_count, int& a_drag, float W, float H, float& a_dx, float& a_dy)
+	// a_only >= 0: only that bar can be picked up and framed (the rest stay locked).
+	inline int HandleDrag(ImDrawList* a_dl, const Bar* a_bars, int a_count, int& a_drag, float W, float H, float& a_dx, float& a_dy, int a_only = -1)
 	{
 		auto*        io = GetIO();
 		const ImVec2 m = io->MousePos;
@@ -209,7 +225,7 @@ namespace BarKit
 		a_dx = a_dy = 0.0f;
 		if (a_drag < 0 && IsMouseClicked(0) && !io->WantCaptureMouse) {
 			for (int i = 0; i < a_count; ++i) {
-				if (inside(a_bars[i])) {
+				if ((a_only < 0 || i == a_only) && inside(a_bars[i])) {
 					a_drag = i;
 					break;
 				}
@@ -225,6 +241,9 @@ namespace BarKit
 			}
 		}
 		for (int i = 0; i < a_count; ++i) {
+			if (a_only >= 0 && i != a_only) {
+				continue;
+			}
 			const Bar& b = a_bars[i];
 			const bool active = i == a_drag || (a_drag < 0 && inside(b));
 			ImDrawListManager::AddRect(a_dl, ImVec2(b.x - 5, b.y - 5), ImVec2(b.x + b.w + 5, b.y + b.h + 5), active ? Col(255, 220, 110, 0.95f) : Col(255, 255, 255, 0.45f), 3.0f, 0,

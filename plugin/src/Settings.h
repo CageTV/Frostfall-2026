@@ -44,6 +44,8 @@ struct Settings
 		float y = 0.5f;
 		int   orient = 0;  // 0 = standing, 1 = lying flat
 		bool  flip = false;
+		float length = 0.0f;     // 0 = the shared bar length
+		float thickness = 0.0f;  // 0 = the shared bar thickness
 	};
 	FreeBar freeBar[kBars] = { { 0.975f, 0.40f, 0, false }, { 0.945f, 0.40f, 0, false }, { 0.975f, 0.60f, 0, false }, { 0.945f, 0.60f, 0, false } };
 

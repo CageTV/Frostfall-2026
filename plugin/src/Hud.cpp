@@ -31,7 +31,7 @@ namespace Hud
 		float             saveTimer = -1.0f;
 		bool              meterModeChecked = false;
 		float             groupAlpha = 1.0f;
-		bool              editMode = false;  // free layout: drag the bars with the mouse while the settings window is open
+		int               editTarget = -1;  // see Hud::EditTarget
 		int               dragBar = -1;
 
 		struct Tracked
@@ -120,7 +120,7 @@ namespace Hud
 			return g;
 		}
 
-		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview)
+		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview, bool a_demo)
 		{
 			auto&       s = Settings::Get();
 			const auto& g = Game::G();
@@ -129,11 +129,12 @@ namespace Hud
 			const float H = io->DisplaySize.y;
 			const float k = (H / 1080.0f) * s.scale;
 
-			const float fExposure = Frac(g.exposure, g.exposureMax, 100.0f);
-			const float fWet = Frac(g.wetness, g.wetnessMax, 750.0f);
-			const float fTemp = Frac(g.tempLevel, g.tempLevelMax, 10.0f);
-			const float fWarmth = Frac(g.warmth, g.warmthMax, 550.0f);
-			const float fCoverage = Frac(g.coverage, g.coverageMax, 360.0f);
+			// While the settings page is open before Frostfall is running, sample values stand in so the bars can still be placed.
+			const float fExposure = a_demo ? 0.55f : Frac(g.exposure, g.exposureMax, 100.0f);
+			const float fWet = a_demo ? 0.35f : Frac(g.wetness, g.wetnessMax, 750.0f);
+			const float fTemp = a_demo ? 0.62f : Frac(g.tempLevel, g.tempLevelMax, 10.0f);
+			const float fWarmth = a_demo ? 0.70f : Frac(g.warmth, g.warmthMax, 550.0f);
+			const float fCoverage = a_demo ? 0.50f : Frac(g.coverage, g.coverageMax, 360.0f);
 			const float thr = std::max(0.001f, s.changePercent / 100.0f);
 			Track(exposureT, fExposure, a_dt, thr);
 			Track(wetnessT, fWet, a_dt, thr);
@@ -158,7 +159,7 @@ namespace Hud
 			if (s.layout == 2) {
 				Placed placed[4];
 				for (int i = 0; i < 4; ++i) {
-					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip };
+					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip, s.freeBar[i].length, s.freeBar[i].thickness };
 				}
 				FreeSlots(placed, s.barThickness, s.barLength, W, H, k, slots);
 			} else {
@@ -204,14 +205,26 @@ namespace Hud
 				iconAt(3, kWarmth);
 			}
 
-			if (a_preview && editMode && s.layout == 2) {
+			if (a_preview && editTarget >= 0) {
 				float dx = 0, dy = 0;
-				const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy);
-				if (moved >= 0) {
-					auto& fb = s.freeBar[moved];
-					fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
-					fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
-					MarkSettingsDirty();
+				if (s.layout == 2 && editTarget < 4) {  // one unlocked bar
+					const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy, editTarget);
+					if (moved >= 0) {
+						auto& fb = s.freeBar[moved];
+						fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
+						fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
+						MarkSettingsDirty();
+					}
+				} else if (s.layout != 2 && editTarget == 4) {  // the whole group
+					const Bar bounds = Bounds(slots, 4, 14.0f * k);
+					const int moved = HandleDrag(a_dl, &bounds, 1, dragBar, W, H, dx, dy);
+					if (moved >= 0) {
+						s.posX = std::clamp(s.posX + dx, 0.0f, 1.0f);
+						s.posY = std::clamp(s.posY + dy, 0.0f, 1.0f);
+						MarkSettingsDirty();
+					}
+				} else {
+					dragBar = -1;
 				}
 			} else {
 				dragBar = -1;
@@ -265,7 +278,7 @@ namespace Hud
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
 
-	bool& EditMode() { return editMode; }
+	int& EditTarget() { return editTarget; }
 
 	void __stdcall Render()
 	{
@@ -290,16 +303,17 @@ namespace Hud
 
 		DrawLogo(dl, dt);
 
-		auto& s = Settings::Get();
-		if (!Game::IsRunning()) {
+		auto&      s = Settings::Get();
+		const bool running = Game::IsRunning();
+		if (!running && !preview) {
 			return;
 		}
-		if (!meterModeChecked) {
+		if (running && !meterModeChecked) {
 			meterModeChecked = true;
 			Game::RestoreMeterMode();
 		}
 		if (s.hudEnabled) {
-			DrawBars(dl, dt, preview);
+			DrawBars(dl, dt, preview, !running);
 		}
 	}
 }
