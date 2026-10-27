@@ -8,9 +8,8 @@ being a master of Frostfall.esp.}
 ; The 8 "with Bedroll" backpacks of ccfsvsse001-backpacks.esl are its even FormIDs 0x802..0x810.
 ; The camp's shelter is the Creation Club Camping lean-to mesh (ccqdrsse002-firewood.esl's archive), referenced by path:
 ; Frostfall ships no copy of it. Without that CC there is no mesh to show, so the camp is not offered.
-; The leather camp lives in the regular Frostfall.esp (it was the separate "Frostfall 2026 - Leather Tent" add-on until 4.2.0):
-; its ACT is 095021, its menu 095022. The ESL build of Frostfall.esp does not have them, so these lookups come back empty
-; there (their ids are above 0xFFF) and only the simple camp is offered.
+; The leather camp is part of Frostfall.esp, in both builds (it was the separate "Frostfall 2026 - Leather Tent" add-on until 4.3.0):
+; its ACT is 095021 and its menu 095022 (the ESL build renumbers them, and the ESL scripts are rewritten to match).
 Form function GetLeatherCamp() global
 	return Game.GetFormFromFile(0x095021, "Frostfall.esp")
 endFunction
@@ -57,7 +56,7 @@ bool function OfferCamp(ObjectReference akCampfire) global
 	int have_linen = player.GetItemCount(linen)
 	bool basic = have_branches >= 4 && have_linen >= 2
 
-	; In the regular (non-ESL) Frostfall.esp a better, leather camp is offered as well.
+	; With 2 Leather, a better, leather camp is offered as well.
 	Message leather_menu = GetLeatherMenu()
 	MiscObject leather_item = Game.GetFormFromFile(0x0DB5D2, "Skyrim.esm") as MiscObject
 	bool leather = leather_menu && leather_item && have_branches >= 4 && have_linen >= 1 && player.GetItemCount(leather_item) >= 2

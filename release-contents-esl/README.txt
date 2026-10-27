@@ -1,5 +1,5 @@
 FROSTFALL 2026 — Hypothermia, Camping, Survival
-Version 4.1.0, ESL BUILD, an update layer for Chesko's Frostfall
+Version 4.3.0, ESL BUILD, an update layer for Chesko's Frostfall
 Updated for Skyrim Special Edition / Anniversary Edition (1.6.x)
 ==================================================================
 
@@ -7,7 +7,7 @@ Frostfall by Chesko, rebuilt from Chesko's own MIT-licensed source with the fixe
 separate add-ons for years, plus bugs that were never fixed anywhere.
 
 THIS IS AN UPDATE LAYER, NOT A FULL MOD. It contains only the plugin, scripts, SKSE plugin, interface files, a few
-sounds. It deliberately contains no meshes and no
+sounds and one mesh, the leather camp's lean-to (see Credits). It deliberately contains no other meshes and no
 model or world textures: those belong to Chesko and to the artists credited on the original Frostfall page, so you get
 them from the original download, which stays installed.
 
@@ -118,11 +118,12 @@ The "Make Camp" makeshift shelter uses the Creation Club Camping lean-to mesh by
 layer. It needs the Creation Club Camping content (ccqdrsse002-firewood.esl). With CC Camping - Comfy Sleeping installed
 the lean-to gets a raised hay platform and bedroll, and the camp's bedroll, lamp and lie-down spot line up with it.
 
-OPTIONAL ADD-ON: LEATHER CAMP
------------------------------
-"Frostfall 2026 - Leather Tent" (a separate download, ESL-flagged) adds a second, better camp to the same menu: 4 Branches,
-1 Linen Wrap and 2 Leather make a leather camp with its own lean-to, which shelters better than the simple camp (the cold
-is held back by one more exposure level while you sit or lie in it). Install it after this mod; this mod works without it.
+LEATHER CAMP
+------------
+With 4 Branches, 1 Linen Wrap and 2 Leather, "Make Camp" also offers a leather camp with its own lean-to, which shelters better
+than the simple camp (the cold is held back by one more exposure level while you sit or lie in it). It is part of this mod's
+plugin and needs nothing else. It replaces the separate "Frostfall 2026 - Leather Tent" add-on: if you have that installed,
+remove it (its plugin would only be left over).
 
 
 CREDITS
@@ -130,7 +131,7 @@ CREDITS
 - Chesko — Frostfall, Campfire and CheskoPapyrusShared. The parts that are Chesko's own work are MIT-licensed
   (github.com/chesko256/Campfire). The meshes, textures and other assets credited on Frostfall's Nexus page are NOT
   included in this layer: Isoku and OpticShooter (water drip shaders), Gerauld and Yuril (snowberry bottle), Tumbajamba
-  (small hide tent mesh), Lorelai (fur cloaks), Hypno88 (stone arrows), Foster Xbl (bound equipment shaders and
+  (small hide tent mesh, which the leather camp's lean-to is made from, used with permission and included here), Lorelai (fur cloaks), Hypno88 (stone arrows), Foster Xbl (bound equipment shaders and
   textures), Doccdr (Survivor's Guide texture), DanielCoffey (Survivor's Guide mesh). Thank you to all of them.
 - Bethesda — the Creation Club Camping lean-to used by Make Camp; Missile — Comfy Camping (optional)
 - SkyUI team — SkyUI and its SDK, which the HUD widgets build on

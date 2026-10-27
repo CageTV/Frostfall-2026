@@ -6,7 +6,7 @@ Everything is taken from the published regular and ESL zips (release-src/), so e
 The main download also asks which SKSE library its Frostfall.dll is built on: "new" (alandtse's CommonLibSSE-NG, Skyrim 1.6.1170 and newer) or
 "older" (CharmedBaryon's, Skyrim VR and 1.6.1130 and older). The DLLs come from the build folders, not from release-src; everything else is
 still byte-identical to the published zips. Its LICENSE.txt is the repository's (MIT).
-Usage: python tools/make_release_combined.py <main version> <leather tent version>
+Usage: python tools/make_release_combined.py <main version>
 """
 import hashlib
 import os
@@ -158,12 +158,8 @@ def esl_main_fix(t):
     return t.replace(old, new)
 
 
-mv, tv = sys.argv[1], sys.argv[2]
-build("Frostfall 2026", "Frostfall.2026.4.1.0.zip", "Frostfall.2026.4.1.0.ESL.zip", mv,
+mv = sys.argv[1]
+build("Frostfall 2026", "Frostfall.2026.4.3.0.zip", "Frostfall.2026.4.3.0.ESL.zip", mv,
       "The normal build: Frostfall.esp as a regular plugin with the original FormIDs. Works with existing saves and with patches made for Frostfall.",
       "Frostfall.esp as a light (ESL) plugin with renumbered records. New game only, and only with the ESL build of Campfire 2026. Never mix it with the regular build.",
       "One installer for both builds: it asks Regular or ESL, then which Frostfall.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). The README below has both builds' texts; read the one you pick.", esl_main_fix, with_dlls=True)
-build("Frostfall 2026 - Leather Tent", "Frostfall.2026.-.Leather.Tent.1.0.0.zip", "Frostfall.2026.-.Leather.Tent.1.0.0.ESL.zip", tv,
-      "For the regular Frostfall 2026. Its plugin is already light-flagged and takes no regular slot.",
-      "For Frostfall 2026 (ESL), the new-game build. Pick the same build as your Frostfall 2026.",
-      "One installer for both builds: it asks Regular or ESL (pick the same as your Frostfall 2026).")
