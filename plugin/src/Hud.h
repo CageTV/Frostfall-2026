@@ -24,4 +24,7 @@ namespace Hud
 
 	// Mark settings as changed; they are written to the INI shortly after the last change.
 	void MarkSettingsDirty();
+
+	// Write any setting change that is still waiting for its short delay (called when the game is saved, so nothing is lost on a quick exit).
+	void FlushSettings();
 }

@@ -159,7 +159,7 @@ def esl_main_fix(t):
 
 
 mv = sys.argv[1]
-build("Frostfall 2026", "Frostfall.2026.4.3.0.zip", "Frostfall.2026.4.3.0.ESL.zip", mv,
+build("Frostfall 2026", "Frostfall.2026.4.4.0.zip", "Frostfall.2026.4.4.0.ESL.zip", mv,
       "The normal build: Frostfall.esp as a regular plugin with the original FormIDs. Works with existing saves and with patches made for Frostfall.",
       "Frostfall.esp as a light (ESL) plugin with renumbered records. New game only, and only with the ESL build of Campfire 2026. Never mix it with the regular build.",
       "One installer for both builds: it asks Regular or ESL, then which Frostfall.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). The README below has both builds' texts; read the one you pick.", esl_main_fix, with_dlls=True)

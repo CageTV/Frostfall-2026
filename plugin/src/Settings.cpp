@@ -89,6 +89,17 @@ void Settings::Load()
 	b("bshowwarmth", showWarmth);
 	b("bshowicons", showIcons);
 	i("isavedmetermode", savedMeterMode);
+	b("bitemcardvalues", itemCardValues);
+	f("fcardx", cardX);
+	f("fcardy", cardY);
+	f("fcardsize", cardSize);
+	f("fcardgridx", cardGridX);
+	f("fcardgridy", cardGridY);
+	cardGridX = std::clamp(cardGridX, 0.0f, 1.0f);
+	cardGridY = std::clamp(cardGridY, 0.0f, 1.0f);
+	cardX = std::clamp(cardX, 0.0f, 1.0f);
+	cardY = std::clamp(cardY, 0.0f, 1.0f);
+	cardSize = std::clamp(cardSize, 10.0f, 80.0f);
 	int version = 1;
 	i("iversion", version);
 
@@ -124,11 +135,7 @@ void Settings::Load()
 
 void Settings::Save() const
 {
-	std::ofstream out(kPath, std::ios::trunc);
-	if (!out) {
-		SKSE::log::error("Could not write {}", kPath.string());
-		return;
-	}
+	std::ostringstream out;  // built in memory and written in one go (see the end of this function)
 	out << "; Frostfall.dll settings. Edit them in game from the SKSE Menu Framework page (Frostfall).\n\n";
 	out << "[General]\n";
 	out << "iVersion=" << kVersion << "\n";
@@ -152,6 +159,38 @@ void Settings::Save() const
 	out << "bShowWarmth=" << (showWarmth ? 1 : 0) << "\n";
 	out << "bShowIcons=" << (showIcons ? 1 : 0) << "\n";
 	out << "iSavedMeterMode=" << savedMeterMode << "\n";
+	out << "bItemCardValues=" << (itemCardValues ? 1 : 0) << "\n";
+	out << std::format("fCardX={:.3f}\nfCardY={:.3f}\nfCardSize={:.0f}\nfCardGridX={:.3f}\nfCardGridY={:.3f}\n", cardX, cardY, cardSize, cardGridX, cardGridY);
+
+	// Written to a temporary file and moved over the INI, so a crash or a full disk in the middle of the write can never leave a half-written
+	// or empty Frostfall.ini behind (which the next start would read as "all defaults": bar positions back to where they began).
+	const std::string text = out.str();
+	std::error_code   ec;
+	const auto        absolute = std::filesystem::absolute(kPath, ec);
+	auto              tmp = kPath;
+	tmp += ".tmp";
+	{
+		std::ofstream file(tmp, std::ios::trunc | std::ios::binary);
+		file << text;
+		file.flush();
+		if (!file) {
+			SKSE::log::error("Could not write {} (is the folder read-only?); the HUD settings are NOT saved", tmp.string());
+			return;
+		}
+	}
+	std::filesystem::rename(tmp, kPath, ec);
+	if (ec) {
+		SKSE::log::warn("Could not replace {} by moving ({}); writing it directly", kPath.string(), ec.message());
+		std::ofstream direct(kPath, std::ios::trunc | std::ios::binary);
+		direct << text;
+		direct.flush();
+		if (!direct) {
+			SKSE::log::error("Could not write {}; the HUD settings are NOT saved", kPath.string());
+			return;
+		}
+	}
+	std::filesystem::remove(tmp, ec);
+	SKSE::log::info("Saved {} ({} bytes)", absolute.string(), text.size());
 }
 
 void Settings::ResetHudLayout()

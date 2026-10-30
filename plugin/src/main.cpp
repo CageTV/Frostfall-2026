@@ -7,6 +7,7 @@
 #include "PCH.h"
 #include "Game.h"
 #include "Hud.h"
+#include "ItemCard.h"
 #include "Menu.h"
 #include "Settings.h"
 
@@ -116,6 +117,9 @@ namespace
 		case SKSE::MessagingInterface::kDataLoaded:
 			Game::Init();
 			break;
+		case SKSE::MessagingInterface::kSaveGame:
+			Hud::FlushSettings();  // a HUD change still waiting for its short delay is written now, so a quick exit loses nothing
+			break;
 		default:
 			break;
 		}
@@ -127,12 +131,13 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 	SKSE::Init(a_skse);
 	SetupLog();
 	#ifdef FROSTFALL_ESL
-	SKSE::log::info("Frostfall.dll 4.2.0 (ESL build), game {}", REL::Module::get().version().string());
+	SKSE::log::info("Frostfall.dll 4.4.0 (ESL build), game {}", REL::Module::get().version().string());
 #else
-	SKSE::log::info("Frostfall.dll 4.2.0, game {}", REL::Module::get().version().string());
+	SKSE::log::info("Frostfall.dll 4.4.0, game {}", REL::Module::get().version().string());
 #endif
 	Settings::Get().Load();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);
+	ItemCard::Register();
 	return true;
 }

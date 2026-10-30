@@ -7,6 +7,7 @@
 #include "PCH.h"
 #include "Menu.h"
 #include "Game.h"
+#include "ItemCard.h"
 #include "Hud.h"
 #include "NativeMcm.h"
 #include "Settings.h"
@@ -134,6 +135,7 @@ namespace Menu
 
 			Changed(Checkbox("Show Frostfall bars", &s.hudEnabled), [] { Game::RefreshOldMeters(); });
 			TextWrapped("While on, these replace Frostfall's SkyUI meters. Turning them off brings the SkyUI meters back.");
+			Changed(Checkbox("Show warmth and coverage on the item card", &s.itemCardValues));
 			Spacing();
 
 			BeginDisabled(!s.hudEnabled);
@@ -234,6 +236,32 @@ namespace Menu
 				s.ResetHudLayout();
 				Hud::MarkSettingsDirty();
 			}
+
+			Spacing();
+			Separator();
+			Text("Item cards");
+			TextWrapped("Switched on or off at the top of this page. Hover armor or clothing in the inventory or a container: Frostfall's own warmth and coverage numbers for it appear on a line below the item card, "
+						"on the right. While this page is open a sample line shows, so you can place it without opening the inventory. "
+						"Not drawn when Frostfall's SkyUI item-card package is installed.");
+			BeginDisabled(!s.itemCardValues);
+			Changed(SliderFloat("Line position: horizontal (centre)", &s.cardX, 0.0f, 1.0f, "%.3f"));
+			Changed(SliderFloat("Line position: vertical", &s.cardY, 0.0f, 1.0f, "%.3f"));
+			Changed(SliderFloat("Text size", &s.cardSize, 10.0f, 80.0f, "%.0f"));
+			if (ItemCard::GridInventoryFound()) {
+				TextWrapped("Grid Inventory is installed. It does not say which item the cursor is on, so with it the line shows what you are wearing (Frostfall's totals), at the lower left:");
+				Changed(SliderFloat("Grid Inventory: horizontal (centre)", &s.cardGridX, 0.0f, 1.0f, "%.3f"));
+				Changed(SliderFloat("Grid Inventory: vertical", &s.cardGridY, 0.0f, 1.0f, "%.3f"));
+			}
+			if (Button("Reset line positions and size")) {
+				const Settings d;
+				s.cardX = d.cardX;
+				s.cardY = d.cardY;
+				s.cardSize = d.cardSize;
+				s.cardGridX = d.cardGridX;
+				s.cardGridY = d.cardGridY;
+				Hud::MarkSettingsDirty();
+			}
+			EndDisabled();
 		}
 	}
 

@@ -7,6 +7,7 @@
 #include "PCH.h"
 #include "Hud.h"
 #include "Game.h"
+#include "ItemCard.h"
 #include "Settings.h"
 
 #include "SKSEMenuFramework.h"
@@ -278,6 +279,14 @@ namespace Hud
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
 
+	void FlushSettings()
+	{
+		if (saveTimer >= 0.0f) {
+			saveTimer = -1.0f;
+			Settings::Get().Save();
+		}
+	}
+
 	int& EditTarget() { return editTarget; }
 
 	void __stdcall Render()
@@ -297,6 +306,7 @@ namespace Hud
 		}
 
 		auto* dl = GetForegroundDrawList();
+		ItemCard::Draw(dl, GetIO()->DisplaySize.x, GetIO()->DisplaySize.y, preview);  // over the inventory item card, whatever the HUD is doing
 		if (!preview && (SKSEMenuFramework::IsAnyBlockingWindowOpened() || HudHiddenByGame())) {
 			return;
 		}

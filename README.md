@@ -67,3 +67,6 @@ To build it yourself, see [`BUILDING.md`](BUILDING.md).
 Based on Chesko's MIT-licensed source (github.com/chesko256/Campfire); released under the MIT License; thanks to Chesko and to everyone credited in
 `release-contents/README.txt`. See [`LICENSE.txt`](LICENSE.txt) for what the licence covers (Chesko's own work and these
 changes; third-party assets credited on the original Nexus page are not included and stay with their authors).
+
+- The SKSE Menu Framework 3 author - `plugin/include/SKSEMenuFramework.h` is that project's SDK header, unmodified, under its own terms.
+- Grid Inventory (Nexus) - `plugin/include/GridInventoryAPI.h` is its extension header, vendored unmodified as the header asks, under Grid Inventory's GPL-3.0 with its modding exception. It is used only to learn whether the grid is open (the item-card line then shows what you wear).

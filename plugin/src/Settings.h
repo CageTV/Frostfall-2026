@@ -52,6 +52,14 @@ struct Settings
 	// Frostfall's own SkyUI meter display mode, remembered while the HUD bars replace those meters (-1 = none saved)
 	int savedMeterMode = -1;
 
+	// Warmth and coverage drawn over the item card of the inventory and container lists (ItemCard.cpp).
+	bool  itemCardValues = true;
+	float cardX = 0.725f;      // centre of the line, fraction of the screen width (under the item card on the right)
+	float cardY = 0.80f;       // top of the line, fraction of the screen height
+	float cardSize = 26.0f;    // text size, pixels at 1080p
+	float cardGridX = 0.31f;   // with Grid Inventory: centre of the line (what you wear), fraction of the screen width
+	float cardGridY = 0.915f;  // with Grid Inventory: top of the line, fraction of the screen height (just under its stats panel, lower left)
+
 	// INI layout version. 2: contextual display became the default (older INIs are moved to it once).
 	static constexpr int kVersion = 2;
 
