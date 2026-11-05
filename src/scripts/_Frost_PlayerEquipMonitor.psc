@@ -25,9 +25,13 @@ Event OnRaceSwitchComplete()
     endif
 endEvent
 
-Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemReference, ObjectReference akSourceContainer)
-	TryToAddArmorToPrecache(akBaseItem, _FrostData_ArmorPrecache)
-EndEvent
+; No OnItemAdded here any more. It precached the armour data of every armour the player received,
+; one Papyrus stack per item, so a big Take All / Store All (hundreds or thousands of items, e.g. a container or sort mod)
+; queued that many stacks and froze the script VM ("VM is freezing", _frost_playerequipmonitor.OnItemAdded x127 in the
+; stack dump summary). Every reader already fills the cache on a miss (_Frost_ClothingSystem and
+; _Frost_ArmorProtectionDatastoreHandler: PrecacheHasArmorData -> else compute -> TryToAddArmorDataToPrecache), so the
+; first equip of a new armour does the work once instead - the same path as armour that was never picked up (starting
+; gear, items added by script). With no handler the engine sends this script no item events at all.
 
 Event OnObjectEquipped(Form akBaseObject, ObjectReference akReference)
 	if akBaseObject as Light
