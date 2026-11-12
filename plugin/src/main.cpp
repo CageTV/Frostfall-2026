@@ -10,6 +10,7 @@
 #include "ItemCard.h"
 #include "Menu.h"
 #include "Settings.h"
+#include "SpellMonitor.h"
 
 namespace
 {
@@ -116,6 +117,7 @@ namespace
 			break;
 		case SKSE::MessagingInterface::kDataLoaded:
 			Game::Init();
+			SpellMonitor::Register();
 			break;
 		case SKSE::MessagingInterface::kSaveGame:
 			Hud::FlushSettings();  // a HUD change still waiting for its short delay is written now, so a quick exit loses nothing
@@ -131,9 +133,9 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 	SKSE::Init(a_skse);
 	SetupLog();
 	#ifdef FROSTFALL_ESL
-	SKSE::log::info("Frostfall.dll 4.4.0 (ESL build), game {}", REL::Module::get().version().string());
+	SKSE::log::info("Frostfall.dll 4.5.0 (ESL build), game {}", REL::Module::get().version().string());
 #else
-	SKSE::log::info("Frostfall.dll 4.4.0, game {}", REL::Module::get().version().string());
+	SKSE::log::info("Frostfall.dll 4.5.0, game {}", REL::Module::get().version().string());
 #endif
 	Settings::Get().Load();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);

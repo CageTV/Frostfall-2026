@@ -15,30 +15,43 @@ EffectShader property SteamFXShader auto
 bool fire_damage_lock = false
 bool frost_damage_lock = false
 
-; Frostfall 3.5: the vanilla OnMagicEffectApply event fired for EVERY magic effect applied to the player (potions,
-; enchantments, abilities, other mods' cloaks...), and each one ran this script only to be ignored. With a large load
-; order that is a steady stream of wasted script work. Papyrus Extender's filtered event is only raised for effects
-; carrying the two keywords this monitor cares about. Registrations are refreshed on every load, which also upgrades
-; saves made with the old script.
+; Frostfall 4.5: the vanilla OnMagicEffectApply event fired for EVERY magic effect applied to the player (potions,
+; enchantments, abilities, other mods' cloaks...), and each one ran this script only to be ignored. Frostfall.dll now
+; listens to the game's effect-applied event itself, checks the target and the vanilla fire / frost damage keywords in
+; native code, and raises the mod event below only for a match (afNumArg: 1 = fire, 2 = frost, 3 = both). This script keeps
+; the gameplay (wetness, exposure, the 4 second locks). Papyrus Extender is no longer needed.
+; (Frostfall 3.5 to 4.4 registered Papyrus Extender's filtered event instead. Saves made then still hold that registration:
+; it is removed once, only when Papyrus Extender is installed.)
+;
+; MagicDamageFire / MagicDamageFrost are no longer read here; the properties stay declared so existing saves and the plugin's
+; property list stay valid.
 
 Event OnInit()
-	RegisterDamageFilters()
+	RegisterMonitorEvent()
 EndEvent
 
 Event OnPlayerLoadGame()
-	RegisterDamageFilters()
+	RegisterMonitorEvent()
 EndEvent
 
-function RegisterDamageFilters()
-	UnregisterForAllMagicEffectApplyEx(self)
-	RegisterForMagicEffectApplyEx(self, MagicDamageFire, true)
-	RegisterForMagicEffectApplyEx(self, MagicDamageFrost, true)
+function RegisterMonitorEvent()
+	RemoveLegacyFilters()
+	RegisterForModEvent("Frostfall_PlayerMagicDamage", "OnPlayerMagicDamage")
 endFunction
 
-Event OnMagicEffectApplyEx(ObjectReference akCaster, MagicEffect akEffect, Form akSource, bool abApplied)
-	if !fire_damage_lock && akEffect.HasKeyword(MagicDamageFire)
+function RemoveLegacyFilters()
+	if SKSE.GetPluginVersion("powerofthree's Papyrus Extender") > 0
+		UnregisterForAllMagicEffectApplyEx(self)
+	endif
+endFunction
+
+Event OnPlayerMagicDamage(string asEventName, string asStrArg, float afNumArg, Form akSender)
+	; Same order as before: fire first (when not locked), otherwise frost (when not locked).
+	bool isFire = afNumArg == 1.0 || afNumArg == 3.0
+	bool isFrost = afNumArg == 2.0 || afNumArg == 3.0
+	if !fire_damage_lock && isFire
 		DecreaseExposureWetnessFireDamage()
-	elseif !frost_damage_lock && akEffect.HasKeyword(MagicDamageFrost)
+	elseif !frost_damage_lock && isFrost
 		IncreaseExposureFrostDamage()
 	endif
 EndEvent

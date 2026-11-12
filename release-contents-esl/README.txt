@@ -34,7 +34,6 @@ REQUIREMENTS
   lean-to mesh, used by reference. Without it the Make Camp option is simply not offered.
 - Skyrim Script Extender (SKSE64) and Address Library for SKSE Plugins
 - PapyrusUtil SE (Nexus 13048)
-- powerofthree's Papyrus Extender (Nexus 22854)
 - SKSE Menu Framework 3 (Nexus 120352) — for the HUD bars, the start-up logo, all settings pages and auto-start.
   Without it Frostfall has no settings pages (only the SkyUI Equipment page) and falls back to its SkyUI meters, start-up messages and manual start.
 - SkyUI SE (for the Equipment page in the Mod Configuration Menu)
@@ -99,8 +98,9 @@ WHAT'S FIXED
 - Throat of the World cold outside Skyrim. The high-altitude summit check applied in every worldspace, so mod
   worldspaces (Falskaar, Bruma, Wyrmstooth, ...) whose coordinates fell in that area froze you for no reason. Limited to
   Tamriel. (Chesko's own 2017 fix, never released before.)
-- Script load. The spell monitor used to run for every magic effect applied to the player; it now only wakes up for
-  fire and frost effects (Papyrus Extender's filtered event). Saves made with the old script are upgraded on load.
+- Script load. The spell monitor used to run for every magic effect applied to the player. Frostfall.dll now checks each
+  effect in native code and wakes the script only for fire and frost effects applied to you; Papyrus Extender is no longer
+  needed. Saves made with the old script are upgraded on load (an old Papyrus Extender registration is removed once).
 - Chesko's post-release script fixes (previously only available through the Unofficial SSE Update) are included.
 - Embers XD fires now warm you and your followers (Frostfall_Embers_FLM.ini, via FormList Manipulator).
 
